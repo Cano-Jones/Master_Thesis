@@ -1,0 +1,4 @@
+\contentsline {chapter}{\numberline {1}First Chapter}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}First section}{3}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Second Chapter}{3}{chapter.2}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

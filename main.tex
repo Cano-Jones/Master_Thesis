@@ -1,0 +1,138 @@
+\documentclass[pt=11, openany,twoside,a4paper]{scrbook}
+
+\input{Preamble.sty}
+
+\DeclareRobustCommand{\rchi}{{\mathpalette\irchi\relax}}
+\newcommand{\irchi}[2]{\raisebox{\depth}{$#1\chi$}} % inner command, used by \rchi
+
+\begin{document}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%FRONTMATTER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\frontmatter
+	\input{Frontmatter/Cover}
+	\newpage
+	\pdfbookmark[0]{Table of Contents}{Table of Contents}
+	\tableofcontents
+	\newpage
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%MAINMATTER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\mainmatter
+	\pdfbookmark[-1]{Chapters}{Chapters}
+	\newchapter{First Chapter}
+	FLRW metric
+	\begin{equation}
+		\td l^2 =c^2\td t^2 -a^2(t)\left[\frac{\td r^2}{1-\kappa r^2}+r^2\td\Omega^2\right]
+	\end{equation}
+	Weyl tensor =0 therefore the metric is conformally flat, i.e. independently of the curvature $\kappa$ there must exist a coordinate system where 
+	\begin{equation}
+		\td l^2=a(t)\eta_{\mu\nu}\td x^\mu\td x^\nu=a(t)\left[c^2\td t^2-\td\mathbf{x}^2\right]
+	\end{equation}
+	the standard action describing  the dynamics of a (non-minimally coupled to gravity) real scalar field is
+	\begin{equation}
+		s=\int\frac{1}{2}\Big[\nabla_\nu\phi\,\nabla^\nu\phi-\mu^2\phi^2-\xi R\phi^2\Big]\sqrt{-g}\;\td^4 x
+	\end{equation}
+	$\sqrt{-g}=a^4$ $\rchi=a\phi$
+	\begin{equation}
+		s=\int\frac{1}{2}\Big[\partial_\nu\rchi\,\partial^\nu\rchi-\left(\mu^2a^2+\xi R a^2-c^2\frac{a''}{a}\right)\rchi^2-\partial_t\left(c^2\rchi^2\frac{a'}{a}\right)\Big]\td^4 x
+	\end{equation}
+	dropping the time drivative
+	\begin{equation}
+		s=\int\frac{1}{2}\Big[\partial_\nu\rchi\,\partial^\nu\rchi-\left(\mu^2a^2+\xi R a^2-c^2\frac{a''}{a}\right)\rchi^2\Big]\td^4 x
+	\end{equation}
+	by Euler-Lagrange
+	\begin{equation}
+		\left[\partial_\nu\partial^\nu+\mu_{\text{eff}}^2(t)\right]\rchi=0
+	\end{equation}
+	where
+	\begin{equation}
+		\mu_{\text{eff}}^2(t)=\left(\mu^2+\xi R\right)a^2-c^2\frac{a''}{a}
+	\end{equation}
+	solutions of previous equation have the form
+	\begin{equation}
+		\rchi=a\,v(t)e^{\pm i\mathbf{kx}\hbar^{-1}}
+	\end{equation}
+	meaning that, the dispersion relation is
+	\begin{equation}
+		v''\hbar^2+\omega^2(t)\,v=0
+	\end{equation}
+	where $\omega(t)$ is defined as
+	\begin{equation}
+		\omega^2(t)=\mathbf{k}^2+\hbar^2\mu_{\text{eff}}^2(t)=\mathbf{k}^2+\left(m^2c^2+\xi\hbar^2 R\right)a(t)-\hbar^2c^2\frac{a''}{a}
+	\end{equation}
+	now, proof that Im$(v'v^*)$ is constant through time
+	\begin{equation}
+		\frac{\partial}{\partial t}\text{Im}(v'v^*)=\frac{\partial}{\partial t}\left(\frac{v'v^*-v^{*'}v}{2i}\right)=\frac{v''v^*-v^{*''}v}{2i}=0
+	\end{equation}
+	last step is result from dispersion relation. Since dispersion relation is scalable by a time independent function, Im$(v'v^*)$ can be determined to be a chosen value, a particular useful choice is to consider it momentum independent.
+	
+	
+	
+	The most general solution to the main equation is
+	\begin{equation}
+		\rchi=\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^3}\left[a_\mathbf{k}v_\mathbf{k}(t)e^{i\mathbf{kx}\hbar^{-1}}\!\!+a_\mathbf{k}^*v_\mathbf{k}^*(t)e^{-i\mathbf{kx}\hbar^{-1}}\right]
+	\end{equation}
+	
+	
+	The field $\rchi$ and its conjugate momentum $\Pi=\partial_{c\,t} \rchi$ are promoted to operators on the quantum Hilbert space, with the standar canonical conmutation relations
+	\begin{equation}
+		\left[\hat{\rchi}(t,\mathbf{x}),\hat{\Pi}(t,\mathbf{y})\right]=i\hbar \,\delta^3(\mathbf{x}-\mathbf{y})
+	\end{equation}
+	\begin{equation}
+		\Big[\hat{\rchi}(t,\mathbf{x}),\hat{\rchi}(t,\mathbf{y})\Big]=\left[\hat{\Pi}(t,\mathbf{x}),\hat{\Pi}(t,\mathbf{y})\right]=0
+	\end{equation}
+	where the operational nature of the fields arrise from the promotion of the mode amplitudes, i.e.
+	\begin{equation}
+		a_\mathbf{k}\;\longrightarrow\;\hat{a}_\mathbf{k}\hspace{1.0cm}a_\mathbf{k}^*\;\longrightarrow\;\hat{a}_\mathbf{k}^\dagger
+	\end{equation}
+	this operators fulfill the following conmutation relations
+	\begin{equation}
+		[\hat{a}_\mathbf{k},\hat{a}_\mathbf{q}^\dagger]=\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(v'v^*)}\delta^3(\mathbf{k}-\mathbf{q})\,,\hspace{1.0cm}[\hat{a}_\mathbf{k},\hat{a}_\mathbf{q}]=[\hat{a}_\mathbf{k}^\dagger,\hat{a}_\mathbf{q}^\dagger]=0
+	\end{equation}
+	To prove this, consider that
+	\begin{multline}
+		\left[\hat{\rchi}(\mathbf{x}),\,\hat{\Pi}(\mathbf{y})\right]=\frac{1}{c}\int\frac{\td^3\mathbf{k}\td^3\mathbf{q}}{(2\pi\hbar)^6}\left\{\left[\hat{a}_\mathbf{k},\hat{a}_\mathbf{q}\right]v_\mathbf{k}v'_\mathbf{q}e^{i\left(\mathbf{kx}+\mathbf{qy}\right)\hbar^{-1}}+\left[\hat{a}_\mathbf{k}^\dagger, \hat{a}_\mathbf{q}^\dagger\right]v_\mathbf{k}^*v_\mathbf{q}^{*'}e^{i(\mathbf{kx}-\mathbf{qy})\hbar^{-1}}\right.+\\
+		+\left.\left[\hat{a}_\mathbf{k},\hat{a}_\mathbf{q}^\dagger\right] v_\mathbf{k}v^{*'}_\mathbf{q}e^{i(\mathbf{kx}-\mathbf{qy})\hbar^{-1}}-\left[\hat{a}_\mathbf{q},\hat{a}_\mathbf{k}^\dagger\right]v^*_\mathbf{k}v_\mathbf{q}'e^{-i(\mathbf{kx}-\mathbf{qy})\hbar^{-1}}\right\}
+	\end{multline}
+	if the operators $\hat{a}$ and $\hat{a}^\dagger$ are to be understood as creation and annihilation operators, they must fulfill
+	\begin{equation}
+		[\hat{a}_\mathbf{k},\hat{a}_\mathbf{q}^\dagger]=\alpha\delta^3(\mathbf{k}-\mathbf{q})\,,\hspace{1.0cm}[\hat{a}_\mathbf{k},\hat{a}_\mathbf{q}]=[\hat{a}_\mathbf{k}^\dagger,\hat{a}_\mathbf{q}^\dagger]=0
+	\end{equation}
+	where $\alpha\in\mathbb{C}$, and thus
+	\begin{equation}
+		\left[\hat{\rchi}(\mathbf{x}),\,\hat{\Pi}(\mathbf{y})\right]=\frac{\alpha}{c}\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^6}2i\text{Im}(v_\mathbf{k}v_\mathbf{k}^{*'})e^{i(\mathbf{kx}-\mathbf{qy})\hbar^{-1}}
+	\end{equation}
+	considering Im$(v'v^*)$ momentum independent, and remembering the canonical conmutation relations, one finds that
+	\begin{equation}
+		\alpha\text{Im}(vv^{*'})=\frac{1}{2}\hbar c(2\pi\hbar)^3
+	\end{equation}
+	The hamiltonian
+	\begin{equation}
+		\hat{\mathcal{H}}(t)=\int\frac{1}{2}\left[\hat{\Pi}^2+\left(\mathbf{\nabla}\hat{\rchi}\right)^2+\mu_{\text{eff}}^2(t)\hat{\rchi}^2\right]\td^3\mathbf{x}
+	\end{equation}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%BACKMATTER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\backmatter
+	\appendix
+	\pdfbookmark[-1]{Appendix}{Appendix}
+	\newchapter{Notas sobre unidades}
+	\begin{itemize}
+		\item $[s]=[\hbar]$
+		\item $[a]=[\xi]=1$
+		\item $[R]=[\mu]=[L]^{-2}$
+		\item $[\phi]=[\rchi]=[\hbar]^{1/2}[L]^{-1}$
+		\item $[\Pi]=[\hbar]^{1/2}[L]^{-2}$
+		\item $[a_\mathbf{k}]=[\hbar]^{1/2}[L]^2$
+	\end{itemize}
+	\pagenumbering{Roman}
+	\bookmarksetup{startatroot}
+	\nocite{*}
+	\bibliography{Biblio} %Fichero de bibliografía
+	\bibliographystyle{plain} %Estilo de bibliografía y cita
+\end{document}

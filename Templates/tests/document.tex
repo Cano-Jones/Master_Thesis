@@ -1,0 +1,32 @@
+\documentclass[pt=11]{scrbook}
+\usepackage{etoolbox}
+\usepackage{hyperref}
+\usepackage[inactive, movetips]{fancytooltips}
+\makeatletter
+\patchcmd{\scr@startchapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+\makeatother
+\usepackage{xcolor}
+\usepackage[top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
+
+\renewcommand*{\chapterformat}{{%
+		\thechapter\;
+		\textcolor{gray!100}{\rule[-0.9\dp\strutbox]{4pt}{1\baselineskip}}
+		
+}}
+\title{Test}
+\author{CANO}
+\addtokomafont{chapter}{}
+\begin{document}
+	\maketitle
+	\tableofcontents
+	\newpage
+	\chapter{First Chapter}\label{ch: first chapter}
+	blaoi afoibuefwa bouyyfs
+	\section{First section}
+	This is the text of the first section blablabl ouhgeowDFU9GOFWE	 WFEDuiogadsoiugear soidufhosiuhgr sgdpouhgserpuhrse sregujphbuasepfubfaewr arpfgeuohpuoajhrg agrgghujrdf faripouahergpui
+	\begin{equation}\label{eq: first equation}
+		s=\int\sqrt{-g}\frac{1}{2}\left(\partial_\mu\phi\partial^\mu\phi-\mu^2\phi^2\right)
+	\end{equation}
+	\chapter{Second Chapter}
+	hola hola \ref{eq: first equation}, \ref{ch: first chapter}
+\end{document}
