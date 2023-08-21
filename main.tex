@@ -68,7 +68,7 @@
 	\begin{equation}
 		\frac{\partial}{\partial t}\text{Im}(vv'^{*})=\frac{\partial}{\partial t}\left(\frac{vv'^{*}-v^{*}v'}{2i}\right)=\frac{vv''^*-v^{*}v''}{2i}=0
 	\end{equation}
-	last step is result from dispersion relation. Since dispersion relation is scalable by a time independent function, Im$(v'v^*)$ can be determined to be a chosen value, a particular useful choice is to consider it momentum independent.
+	last step is result from dispersion relation. Since dispersion relation is scalable by a time independent function, Im$(v'v^*)$ can be determined to be a chosen value, a particular useful choice is to consider it momentum independent. Im$(v'v^*)=W[v,v^*]$ therefore, if  its not equal to 0, they are linearly independent solutions to dispersion relation.
 	
 	
 	
@@ -181,6 +181,35 @@
 		\hat{\mathcal{H}}(t_0)=\text{Im}(vv^{'*})\frac{1}{\hbar}\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^3}\left(2\hat{a}_\mathbf{k}^\dagger\hat{a}_\mathbf{k}+\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(v'v^*)}\delta^3(\mathbf{0})\right)\omega_\mathbf{k}(t_0)
 	\end{equation}
 	which is equivalent to the standard Hamiltonian for a scalar field without the presence of gravity.
+	\paragraph{Bogolyubov Transformation}
+	\begin{equation}
+		u_\mathbf{k}(t)=\alpha_\mathbf{k}v_\mathbf{k}(t)+\beta_\mathbf{k}v^*_\mathbf{k}(t)
+	\end{equation}
+	$\alpha_\mathbf{k},\,\beta_\mathbf{k}\in\mathbb{C}$ (time independent)
+	\begin{equation}
+		\text{Im}(u'_\mathbf{k}u^*_\mathbf{k})=\text{Im}(v'_\mathbf{k}v^*_\mathbf{k})\Big(|\alpha_\mathbf{k}|^2-|\beta_\mathbf{k}|^2\Big)
+	\end{equation}
+	Changing the $v$ functions would entail a change in the creation and annihilation, therefore if we could write the field as
+	\begin{equation}
+		\hat{\rchi}=\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^3}\left[\hat{b}_\mathbf{k}u_\mathbf{k}e^{i\mathbf{kx}\hbar^{-1}}+\hat{b}^\dagger_\mathbf{k}u^*_\mathbf{k}e^{-i\mathbf{kx}\hbar^{-1}}\right]
+	\end{equation}
+	the field must be tha same as if it was written with de $v$ functions and $\hat{a}$ operators, that means that
+	\begin{equation}
+		\hat{b}_\mathbf{k}u_\mathbf{k}+\hat{b}_{-\mathbf{k}}^\dagger u^*_\mathbf{k}=\hat{a}_\mathbf{k}v_\mathbf{k}+\hat{a}_{-\mathbf{k}}^\dagger v^*_\mathbf{k}
+	\end{equation}
+	and thus, the relation between the operators would be
+	\begin{equation}
+		\hat{a}_\mathbf{k}=\alpha_\mathbf{k}\hat{b}_\mathbf{k}+\beta_\mathbf{k}^*\hat{b}^\dagger_{-\mathbf{k}}\hspace{1.0cm}\hat{a}^\dagger_\mathbf{k}=\beta_\mathbf{k}\hat{b}_\mathbf{-k}+\alpha^*_\mathbf{k}\hat{b}^\dagger_{\mathbf{k}}
+	\end{equation}
+	now, there are '$a$' particles in the '$b$' vacuum
+	\begin{equation}
+		\langle_{(b)}0|\hat{\mathcal{N}}_\mathbf{k}^{(a)}|_{(b)}0\rangle=\langle_{(b)}0|\hat{a}^\dagger_\mathbf{k}\hat{a}_\mathbf{k}|_{(b)}0\rangle=\Big|\beta_\mathbf{k}\Big|^2\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(u'u^*)}\delta^3(\mathbf{0})
+	\end{equation}
+	therefore
+	\begin{equation}
+		\langle_{(t_0)}0|\hat{\mathcal{H}}(t)|_{(t_0)}0\rangle=\delta^3(\mathbf{0})\int\td^3\mathbf{k}\left(\frac{|\beta_\mathbf{k}|^2}{|\alpha_\mathbf{k}|^2-|\beta_\mathbf{k}|^2}+\frac{ 1}{2}\right)c\,\omega_\mathbf{k}(t)
+	\end{equation}
+	meaning, if $\beta_\mathbf{k}\not=0$ for all $\mathbf{k}$ then, at a time $t>t_0$ the energy density will be different in relation to the original vacuum.
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%BACKMATTER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
