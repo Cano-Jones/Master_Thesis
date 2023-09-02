@@ -1,0 +1,186 @@
+FLRW metric
+\begin{equation}
+	\td l^2 =c^2\td t^2 -a^2(t)\left[\frac{\td r^2}{1-\kappa r^2}+r^2\td\Omega^2\right]
+\end{equation}
+Weyl tensor =0 therefore the metric is conformally flat, i.e. independently of the curvature $\kappa$ there must exist a coordinate system where 
+\begin{equation}
+	\td l^2=a(t)\eta_{\mu\nu}\td x^\mu\td x^\nu=a(t)\left[c^2\td t^2-\td\mathbf{x}^2\right]
+\end{equation}
+the standard action describing  the dynamics of a (non-minimally coupled to gravity) real scalar field is
+\begin{equation}
+	s=\int\frac{1}{2}\Big[\nabla_\nu\phi\,\nabla^\nu\phi-\mu^2\phi^2-\xi R\phi^2\Big]\sqrt{-g}\;\td^4 x
+\end{equation}
+$\sqrt{-g}=a^4$ $\rchi=a\phi$
+\begin{equation}
+	s=\int\frac{1}{2}\Big[\partial_\nu\rchi\,\partial^\nu\rchi-\left(\mu^2a^2+\xi R a^2-c^2\frac{a''}{a}\right)\rchi^2-\partial_t\left(c^2\rchi^2\frac{a'}{a}\right)\Big]\td^4 x
+\end{equation}
+dropping the time drivative
+\begin{equation}
+	s=\int\frac{1}{2}\Big[\partial_\nu\rchi\,\partial^\nu\rchi-\left(\mu^2a^2+\xi R a^2-c^2\frac{a''}{a}\right)\rchi^2\Big]\td^4 x
+\end{equation}
+by Euler-Lagrange
+\begin{equation}
+	\left[\partial_\nu\partial^\nu+\mu_{\text{eff}}^2(t)\right]\rchi=0
+\end{equation}
+where
+\begin{equation}
+	\mu_{\text{eff}}^2(t)=\left(\mu^2+\xi R\right)a^2-c^2\frac{a''}{a}
+\end{equation}
+solutions of previous equation have the form
+\begin{equation}
+	\rchi=a\,v(t)e^{\pm i\mathbf{kx}\hbar^{-1}}
+\end{equation}
+meaning that, the dispersion relation is
+\begin{equation}
+	v''\hbar^2+\omega^2(t)\,v=0
+\end{equation}
+where $\omega(t)$ is defined as
+\begin{equation}
+	\omega^2(t)=\mathbf{k}^2+\hbar^2\mu_{\text{eff}}^2(t)=\mathbf{k}^2+\left(m^2c^2+\xi\hbar^2 R\right)a(t)-\hbar^2c^2\frac{a''}{a}
+\end{equation}
+now, proof that Im$(vv'^{*})$ is constant through time
+\begin{equation}
+	\frac{\partial}{\partial t}\text{Im}(vv'^{*})=\frac{\partial}{\partial t}\left(\frac{vv'^{*}-v^{*}v'}{2i}\right)=\frac{vv''^*-v^{*}v''}{2i}=0
+\end{equation}
+last step is result from dispersion relation. Since dispersion relation is scalable by a time independent function, Im$(v'v^*)$ can be determined to be a chosen value, a particular useful choice is to consider it momentum independent. Im$(v'v^*)=W[v,v^*]$ therefore, if  its not equal to 0, they are linearly independent solutions to dispersion relation.
+
+
+
+The most general solution to the main equation is
+\begin{equation}
+	\rchi=\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^3}\left[a_\mathbf{k}v_\mathbf{k}(t)e^{i\mathbf{kx}\hbar^{-1}}\!\!+a_\mathbf{k}^*v_\mathbf{k}^*(t)e^{-i\mathbf{kx}\hbar^{-1}}\right]
+\end{equation}
+
+
+The field $\rchi$ and its conjugate momentum $\Pi=\partial_{c\,t} \rchi$ are promoted to operators on the quantum Hilbert space, with the standar canonical conmutation relations
+\begin{equation}
+	\left[\hat{\rchi}(t,\mathbf{x}),\hat{\Pi}(t,\mathbf{y})\right]=i\hbar \,\delta^3(\mathbf{x}-\mathbf{y})
+\end{equation}
+\begin{equation}
+	\Big[\hat{\rchi}(t,\mathbf{x}),\hat{\rchi}(t,\mathbf{y})\Big]=\left[\hat{\Pi}(t,\mathbf{x}),\hat{\Pi}(t,\mathbf{y})\right]=0
+\end{equation}
+where the operational nature of the fields arrise from the promotion of the mode amplitudes, i.e.
+\begin{equation}
+	a_\mathbf{k}\;\longrightarrow\;\hat{a}_\mathbf{k}\hspace{1.0cm}a_\mathbf{k}^*\;\longrightarrow\;\hat{a}_\mathbf{k}^\dagger
+\end{equation}
+this operators fulfill the following conmutation relations
+\begin{equation}
+	[\hat{a}_\mathbf{k},\hat{a}_\mathbf{q}^\dagger]=\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(v'v^*)}\delta^3(\mathbf{k}-\mathbf{q})\,,\hspace{1.0cm}[\hat{a}_\mathbf{k},\hat{a}_\mathbf{q}]=[\hat{a}_\mathbf{k}^\dagger,\hat{a}_\mathbf{q}^\dagger]=0
+\end{equation}
+(note that $\hat{a}_\mathbf{k}\not=\hat{a}_{-\mathbf{k}}$)
+
+To prove this, consider that
+\begin{multline}
+	\left[\hat{\rchi}(\mathbf{x}),\,\hat{\Pi}(\mathbf{y})\right]=\frac{1}{c}\int\frac{\td^3\mathbf{k}\td^3\mathbf{q}}{(2\pi\hbar)^6}\left\{\left[\hat{a}_\mathbf{k},\hat{a}_\mathbf{q}\right]v_\mathbf{k}v'_\mathbf{q}e^{i\left(\mathbf{kx}+\mathbf{qy}\right)\hbar^{-1}}+\left[\hat{a}_\mathbf{k}^\dagger, \hat{a}_\mathbf{q}^\dagger\right]v_\mathbf{k}^*v_\mathbf{q}^{*'}e^{i(\mathbf{kx}-\mathbf{qy})\hbar^{-1}}\right.+\\
+	+\left.\left[\hat{a}_\mathbf{k},\hat{a}_\mathbf{q}^\dagger\right] v_\mathbf{k}v^{*'}_\mathbf{q}e^{i(\mathbf{kx}-\mathbf{qy})\hbar^{-1}}-\left[\hat{a}_\mathbf{q},\hat{a}_\mathbf{k}^\dagger\right]v^*_\mathbf{k}v_\mathbf{q}'e^{-i(\mathbf{kx}-\mathbf{qy})\hbar^{-1}}\right\}
+\end{multline}
+if the operators $\hat{a}$ and $\hat{a}^\dagger$ are to be understood as creation and annihilation operators, they must fulfill
+\begin{equation}
+	[\hat{a}_\mathbf{k},\hat{a}_\mathbf{q}^\dagger]=\alpha\delta^3(\mathbf{k}-\mathbf{q})\,,\hspace{1.0cm}[\hat{a}_\mathbf{k},\hat{a}_\mathbf{q}]=[\hat{a}_\mathbf{k}^\dagger,\hat{a}_\mathbf{q}^\dagger]=0
+\end{equation}
+where $\alpha\in\mathbb{C}$, and thus
+\begin{equation}
+	\left[\hat{\rchi}(\mathbf{x}),\,\hat{\Pi}(\mathbf{y})\right]=\frac{\alpha}{c}\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^6}2i\text{Im}(v_\mathbf{k}v_\mathbf{k}^{*'})e^{i(\mathbf{kx}-\mathbf{qy})\hbar^{-1}}
+\end{equation}
+considering Im$(v'v^*)$ momentum independent, and remembering the canonical conmutation relations, one finds that
+\begin{equation}
+	\alpha\text{Im}(vv^{*'})=\frac{1}{2}\hbar c(2\pi\hbar)^3
+\end{equation}
+The hamiltonian
+\begin{equation}
+	\hat{\mathcal{H}}(t)=\int\frac{c}{2}\left[\hat{\Pi}^2+\left(\mathbf{\nabla}\hat{\rchi}\right)^2+\mu_{\text{eff}}^2(t)\hat{\rchi}^2\right]\td^3\mathbf{x}
+\end{equation}
+\begin{multline}
+	\hat{\Pi}^2=\frac{1}{c^2}\int\frac{\td^3\mathbf{k}\td^3\mathbf{q}}{(2\pi\hbar)^6}\left[\hat{a}_\mathbf{k}\hat{a}_\mathbf{q}v'_\mathbf{k}v'_\mathbf{q}e^{i(\mathbf{k}+\mathbf{q})\mathbf{x}\hbar^{-1}}+\hat{a}_\mathbf{k}\hat{a}_\mathbf{q}^\dagger v'_\mathbf{k}v^{'*}_\mathbf{q}e^{i(\mathbf{k}-\mathbf{q})\mathbf{x}\hbar^{-1}}\right.+\\
+	+\left.\hat{a}^\dagger_\mathbf{k}\hat{a}_\mathbf{q}v^{'*}_\mathbf{k}v'_\mathbf{q}e^{-i(\mathbf{k}-\mathbf{q})\mathbf{x}\hbar^{-1}}+\hat{a}_\mathbf{k}^\dagger\hat{a}_\mathbf{q}^\dagger v^{'*}_\mathbf{k}v^{'*}_\mathbf{q}e^{-i(\mathbf{k}+\mathbf{q})\mathbf{x}\hbar^{-1}}\right]
+\end{multline}
+\begin{multline}
+	\left(\mathbf{\nabla}\hat{\rchi}\right)^2=-\frac{1}{\hbar^2}\int\frac{\td^3\mathbf{k}\td^3\mathbf{q}}{(2\pi\hbar)^6}\mathbf{k}\mathbf{q}\left[\hat{a}_\mathbf{k}\hat{a}_\mathbf{q}v_\mathbf{k}v_\mathbf{q}e^{i(\mathbf{k}+\mathbf{q})\mathbf{x}\hbar^{-1}}-\hat{a}_\mathbf{k}\hat{a}_\mathbf{q}^\dagger v_\mathbf{k}v^*_\mathbf{q}e^{i(\mathbf{k}-\mathbf{q})\mathbf{x}\hbar^{-1}}-\right.\\
+	-\left.\hat{a}_\mathbf{k}^\dagger\hat{a}_\mathbf{q}v_\mathbf{k}^*v_\mathbf{q}e^{-i(\mathbf{k}-\mathbf{q})\mathbf{x}\hbar^{-1}}+\hat{a}^\dagger_\mathbf{k}\hat{a}^\dagger_\mathbf{q}v^*_\mathbf{k}v^*_\mathbf{q}e^{-i(\mathbf{k}+\mathbf{q})\mathbf{x}\hbar^{-1}}\right]
+\end{multline}
+\begin{multline}
+	\hat{\rchi}^2=\int\frac{\td^3\mathbf{k}\td^3\mathbf{q}}{(2\pi\hbar)^6}\left[\hat{a}_\mathbf{k}\hat{a}_\mathbf{q}v_\mathbf{k}v_\mathbf{q}e^{i(\mathbf{k}+\mathbf{q})\mathbf{x}\hbar^{-1}}+\hat{a}_\mathbf{k}\hat{a}_\mathbf{q}^\dagger v_\mathbf{k}v^*_\mathbf{q}e^{i(\mathbf{k}-\mathbf{q})\mathbf{x}\hbar^{-1}}+\right.\\
+	+\left.\hat{a}_\mathbf{k}^\dagger\hat{a}_\mathbf{q}v_\mathbf{k}^*v_\mathbf{q}e^{-i(\mathbf{k}-\mathbf{q})\mathbf{x}\hbar^{-1}}+\hat{a}^\dagger_\mathbf{k}\hat{a}^\dagger_\mathbf{q}v^*_\mathbf{k}v^*_\mathbf{q}e^{-i(\mathbf{k}+\mathbf{q})\mathbf{x}\hbar^{-1}}\right]
+\end{multline}
+\begin{multline}
+	\hat{\mathcal{H}}=\frac{c}{2}\int\frac{\td^3\mathbf{k}\td^3\mathbf{q}}{(2\pi\hbar)^3}\left\{\hat{a}_\mathbf{k}\hat{a}_\mathbf{q}\left[\frac{1}{c^2}v'_\mathbf{k}v'_\mathbf{q}-\left(\frac{1}{\hbar^2}\mathbf{k}\mathbf{q}-\mu^2_{\text{eff}}\right)v_\mathbf{k}v_\mathbf{q}\right]\delta^3(\mathbf{k}+\mathbf{q})+\right.\\
+	+\left.\hat{a}_\mathbf{k}\hat{a}^\dagger_\mathbf{q}\left[\frac{1}{c^2}v'_\mathbf{k}v^{'*}_\mathbf{q}+\left(\frac{1}{\hbar^2}\mathbf{k}\mathbf{q}+\mu^2_{\text{eff}}\right)v_\mathbf{k}v^*_\mathbf{q}\right]\delta^3(\mathbf{k}-\mathbf{q})+\right.\\
+	+\left.\hat{a}^\dagger_\mathbf{k}\hat{a}_\mathbf{q}\left[\frac{1}{c^2}v^{'*}_\mathbf{k}v^{'}_\mathbf{q}+\left(\frac{1}{\hbar^2}\mathbf{k}\mathbf{q}+\mu^2_{\text{eff}}\right)v^*_\mathbf{k}v_\mathbf{q}\right]\delta^3(\mathbf{k}-\mathbf{q})+\right.\\
+	+\left.\hat{a}^\dagger_\mathbf{k}\hat{a}^\dagger_\mathbf{q}\left[\frac{1}{c^2}v^{'*}_\mathbf{k}v^{'*}_\mathbf{q}-\left(\frac{1}{\hbar^2}\mathbf{k}\mathbf{q}-\mu^2_{\text{eff}}\right)v^*_\mathbf{k}v^*_\mathbf{q}\right]\delta^3(\mathbf{k}+\mathbf{q})\right\}
+\end{multline}
+\begin{multline}
+	\hat{\mathcal{H}}=\frac{c}{2}\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^3}\left\{\hat{a}_\mathbf{k}\hat{a}_{-\mathbf{k}}\left[\frac{1}{c^2}v'_\mathbf{k}v'_\mathbf{k}+\frac{1}{\hbar^2}\omega^2_\mathbf{k}(t)v_\mathbf{k}v_\mathbf{k}\right]+\right.\\
+	+\left.\hat{a}_\mathbf{k}\hat{a}^\dagger_\mathbf{k}\left[\frac{1}{c^2}v'_\mathbf{k}v^{'*}_\mathbf{k}+\frac{1}{\hbar^2}\omega^2_\mathbf{k}(t)v_\mathbf{k}v^*_\mathbf{k}\right]+\right.\\
+	+\left.\hat{a}^\dagger_\mathbf{k}\hat{a}_\mathbf{k}\left[\frac{1}{c^2}v^{'*}_\mathbf{k}v^{'}_\mathbf{k}+\frac{1}{\hbar^2}\omega^2_\mathbf{k}(t)v^*_\mathbf{k}v_\mathbf{k}\right]+\right.\\
+	+\left.\hat{a}^\dagger_\mathbf{k}\hat{a}^\dagger_{-\mathbf{k}}\left[\frac{1}{c^2}v^{'*}_\mathbf{k}v^{'*}_\mathbf{k}+\frac{1}{\hbar^2}\omega^2_\mathbf{k}(t)v^*_\mathbf{k}v^*_\mathbf{k}\right]\right\}
+\end{multline}
+\begin{equation}
+	\hat{\mathcal{H}}=\frac{c}{2}\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^3}\left[\hat{a}_\mathbf{k}\hat{a}_{-\mathbf{k}}F_\mathbf{k}+\hat{a}^\dagger_\mathbf{k}\hat{a}^\dagger_{-\mathbf{k}}F_\mathbf{k}^*+\left(2\hat{a}_\mathbf{k}^\dagger\hat{a}_\mathbf{k}+\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(v'v^*)}\delta^3(\mathbf{0})\right)E_\mathbf{k}\right]
+\end{equation}
+where
+\begin{equation}
+	F_\mathbf{k}(t)=\left(\frac{1}{\hbar c}\right)^2\left[\hbar^2v^{'2}_\mathbf{k}+\omega^2_\mathbf{k}(t)\,c^2 v_\mathbf{k}^2\right]
+\end{equation}
+\begin{equation}
+	E_\mathbf{k}(t)=\left(\frac{1}{\hbar c}\right)^2\left[\hbar^2\big|v'_\mathbf{k}\big|^2+\omega^2_\mathbf{k}(t)\,c^2 \big|v_\mathbf{k}\big|^2\right]
+\end{equation}
+Now, the expectation value of the hamiltonian at time $t_0$ in the state $|_{(v)}0\rangle$
+\begin{equation}
+	\langle_{(v)}0|\hat{\mathcal{H}}(t_0)|_{(v)}0\rangle=\rho(t_0)\delta^3(\mathbf{0})=\frac{\hbar c^2 \,\delta^3(\mathbf{0})}{4\text{Im}(v'v^*)}\int\td^3\mathbf{k}\,E_\mathbf{k}
+\end{equation}
+To minimise the energy density of de vacuum state is to fin the set of functions $v_\mathbf{k}$ that minimise $E_\mathbf{k}$. Suppose that $v_\mathbf{k}$ can be written as
+\begin{equation}
+	v_\mathbf{k}=r_\mathbf{k}e^{i\alpha_\mathbf{k}}
+\end{equation}
+since Im$(vv^{'*})$ was constant through time
+\begin{equation}
+	\text{Im}(v_\mathbf{k}v^{'*}_\mathbf{k})=-r_\mathbf{k}^2\alpha'_\mathbf{k}
+\end{equation}
+this means
+\begin{equation}
+	E_\mathbf{k}=\left(\frac{1}{\hbar c}\right)^2\left\{\hbar^2\left[r^{'2}_\mathbf{k}+\text{Im}^2\left(v_\mathbf{k}v^{'*}_\mathbf{k}\right)\frac{1}{r_\mathbf{k}^2}\right]+\omega^2_\mathbf{k}\,c^2r_\mathbf{k}^2\right\}
+\end{equation}
+the minimum of this function must fulfil $r'_\mathbf{k}(t_0)=0$. Now, if $\omega_\mathbf{k}^2(t_0)$ and $\text{Im}(v_\mathbf{k}v^{'*}_\mathbf{k})$ have the same sign, the minimum of $E_\mathbf{k}$ happens when $r_\mathbf{k}(t_0)=\left[\frac{\hbar\text{Im}(v_\mathbf{k}v^{'*}_\mathbf{k})}{\omega_\mathbf{k}(t_0)\,c}\right]^{1/2}$.
+
+If there is a minimum, then
+\begin{equation}
+	v_\mathbf{k}(t_0)=\left[\frac{\hbar\text{Im}(v_\mathbf{k}v^{'*}_\mathbf{k})}{\omega_\mathbf{k}(t_0)\,c}\right]^{1/2}\!\!\!\!e^{i\alpha_\mathbf{k}(t_0)}\hspace{1.0cm}v'_\mathbf{k}(t_0)=-c\frac{\omega_\mathbf{k}(t_0)}{ih}\,v_\mathbf{k}(t_0)
+\end{equation}
+under these functions,
+\begin{equation}
+	E_\mathbf{k}(t_0)=2\frac{\text{Im}(v_\mathbf{k}v^{'*}_\mathbf{k})}{\hbar c}\omega_\mathbf{k}(t_0)\hspace{1.0cm}F_\mathbf{k}(t_0)=0
+\end{equation}
+meaning
+\begin{equation}
+	\hat{\mathcal{H}}(t_0)=\text{Im}(vv^{'*})\frac{1}{\hbar}\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^3}\left(2\hat{a}_\mathbf{k}^\dagger\hat{a}_\mathbf{k}+\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(v'v^*)}\delta^3(\mathbf{0})\right)\omega_\mathbf{k}(t_0)
+\end{equation}
+which is equivalent to the standard Hamiltonian for a scalar field without the presence of gravity.
+\paragraph{Bogolyubov Transformation}
+\begin{equation}
+	u_\mathbf{k}(t)=\alpha_\mathbf{k}v_\mathbf{k}(t)+\beta_\mathbf{k}v^*_\mathbf{k}(t)
+\end{equation}
+$\alpha_\mathbf{k},\,\beta_\mathbf{k}\in\mathbb{C}$ (time independent)
+\begin{equation}
+	\text{Im}(u'_\mathbf{k}u^*_\mathbf{k})=\text{Im}(v'_\mathbf{k}v^*_\mathbf{k})\Big(|\alpha_\mathbf{k}|^2-|\beta_\mathbf{k}|^2\Big)
+\end{equation}
+Changing the $v$ functions would entail a change in the creation and annihilation, therefore if we could write the field as
+\begin{equation}
+	\hat{\rchi}=\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^3}\left[\hat{b}_\mathbf{k}u_\mathbf{k}e^{i\mathbf{kx}\hbar^{-1}}+\hat{b}^\dagger_\mathbf{k}u^*_\mathbf{k}e^{-i\mathbf{kx}\hbar^{-1}}\right]
+\end{equation}
+the field must be tha same as if it was written with de $v$ functions and $\hat{a}$ operators, that means that
+\begin{equation}
+	\hat{b}_\mathbf{k}u_\mathbf{k}+\hat{b}_{-\mathbf{k}}^\dagger u^*_\mathbf{k}=\hat{a}_\mathbf{k}v_\mathbf{k}+\hat{a}_{-\mathbf{k}}^\dagger v^*_\mathbf{k}
+\end{equation}
+and thus, the relation between the operators would be
+\begin{equation}
+	\hat{a}_\mathbf{k}=\alpha_\mathbf{k}\hat{b}_\mathbf{k}+\beta_\mathbf{k}^*\hat{b}^\dagger_{-\mathbf{k}}\hspace{1.0cm}\hat{a}^\dagger_\mathbf{k}=\beta_\mathbf{k}\hat{b}_\mathbf{-k}+\alpha^*_\mathbf{k}\hat{b}^\dagger_{\mathbf{k}}
+\end{equation}
+now, there are '$a$' particles in the '$b$' vacuum
+\begin{equation}
+	\langle_{(b)}0|\hat{\mathcal{N}}_\mathbf{k}^{(a)}|_{(b)}0\rangle=\langle_{(b)}0|\hat{a}^\dagger_\mathbf{k}\hat{a}_\mathbf{k}|_{(b)}0\rangle=\Big|\beta_\mathbf{k}\Big|^2\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(u'u^*)}\delta^3(\mathbf{0})
+\end{equation}
+therefore
+\begin{equation}
+	\langle_{(t_0)}0|\hat{\mathcal{H}}(t)|_{(t_0)}0\rangle=\delta^3(\mathbf{0})\int\td^3\mathbf{k}\left(\frac{|\beta_\mathbf{k}|^2}{|\alpha_\mathbf{k}|^2-|\beta_\mathbf{k}|^2}+\frac{ 1}{2}\right)c\,\omega_\mathbf{k}(t)
+\end{equation}
+meaning, if $\beta_\mathbf{k}\not=0$ for all $\mathbf{k}$ then, at a time $t>t_0$ the energy density will be different in relation to the original vacuum.
