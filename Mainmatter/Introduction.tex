@@ -1,0 +1,40 @@
+\begin{equation}
+	\td l^2=g_{\mu\nu}\td x^\mu\td x^\nu
+\end{equation}
+\begin{equation}
+	S=\int\left[\frac{1}{2\kappa}\left(R-2\Lambda\right)+\mathcal{L}_{\text{M}}\right]\sqrt{-g}\,\td^4 x
+\end{equation}
+$\kappa\equiv\frac{8\pi G}{c^4}$
+
+Variation of $S$ with respect to the inverse metric ($g^{\mu\nu}$) gives
+\begin{multline}
+	\delta S=\int \left[\frac{\sqrt{-g}}{2\kappa}\frac{\delta R}{\delta g^{\mu\nu}}+\frac{R}{2\kappa}\frac{1}{\sqrt{-g}}\frac{\delta \sqrt{-g}}{\delta g^{\mu\nu}}-\frac{\Lambda}{\kappa}\frac{1}{\sqrt{-g}}\frac{\delta\sqrt{-g}}{\delta g^{\mu\nu}}+\frac{\delta\mathcal{L}_{\text{M}}}{\delta g^{\mu\nu}}+\frac{\mathcal{L}_{\text{M}}}{\sqrt{-g}}\frac{\delta\sqrt{-g}}{\delta g^{\mu\nu}}\right]\delta g^{\mu\nu}\,\sqrt{-g}\,\td^4x
+\end{multline}
+$\delta S=0$ and
+\begin{equation}
+	\frac{\delta R}{\delta g^{\mu\nu}}=R_{\mu\nu}\hspace{1.0cm}\frac{1}{\sqrt{-g}}\frac{\delta\sqrt{-g}}{\delta g^{\mu\nu}}=-\frac{1}{2}g_{\mu\nu}
+\end{equation}
+\begin{equation}
+	R_{\mu\nu}-\frac{1}{2}g_{\mu\nu}R+\Lambda g_{\mu\nu}=-2\frac{8\pi G}{c^4}\left(\frac{\delta\mathcal{L}_{\text{M}}}{\delta g^{\mu\nu}}-\frac{1}{2}\mathcal{L}_{\text{M}}g_{\mu\nu}\right)
+\end{equation}
+\begin{equation}
+	T_{\mu\nu}\equiv \mathcal{L}_{\text{M}}g_{\mu\nu}-\frac{\delta\mathcal{L}_{\text{M}}}{\delta g^{\mu\nu}}=\frac{-2}{\sqrt{-g}}\frac{\delta \left(\mathcal{L}_{\text{M}}\sqrt{-g}\right)}{\delta g^{\mu\nu}}
+\end{equation}
+\cite{Energy-MomentumTensor}
+\begin{equation}
+	\nabla_\mu T^{\mu\nu}=0
+\end{equation}
+(and its symmetric)
+
+Now, in order to obtain the equations of motion for the matter fields, consider the lagrangian
+\begin{equation}
+	\mathcal{L}_{\text{M}}=\mathcal{L}_{\text{M}}\big[\phi^\alpha(x),\,\nabla_\mu\phi^\alpha(x)\big]
+\end{equation}
+variations of $S$ with respect of $\phi^\alpha$ result in
+\begin{equation}
+	\delta S=\int\left[\frac{\partial \mathcal{L}_\text{M}}{\partial \phi^\alpha}\delta\phi^\alpha+\frac{\partial \mathcal{L}_\text{M}}{\partial\left(\nabla_\mu\phi^\alpha\right)}\nabla_\mu\left(\delta\phi^\alpha\right)\right]\sqrt{-g}\,\td^4x
+\end{equation}
+and thus, after applying the generalized Gauss Theorem on a curved background, and considering that field variations vanish at the boundaries, one obtains
+\begin{equation}
+	\frac{\partial \mathcal{L}_\text{M}}{\partial \phi^\alpha}-\nabla_\mu\left[\frac{\partial \mathcal{L}_\text{M}}{\partial\left(\nabla_\mu\phi^\alpha\right)}\right]=0
+\end{equation}

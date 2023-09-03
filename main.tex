@@ -1,4 +1,4 @@
-\documentclass[pt=11, openany,twoside,a4paper]{scrbook}
+\documentclass[pt=11, openany,oneside,a4paper]{scrbook}
 
 \input{Preamble.sty}
 
@@ -17,18 +17,20 @@
 	\tableofcontents
 	\newpage
 	
+	\newchapter{Preface}
+	\input{Frontmatter/Preface}
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%MAINMATTER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\mainmatter
 	\pdfbookmark[-1]{Chapters}{Chapters}
-	\newchapter{Preface}
 	\newchapter{Introduction to QFT in curved spacetimes}
+	\input{Mainmatter/Introduction}
 	\newchapter{Scalar field in an expanding universe}
-	\input{Frontmatter/ExpandingUniverse}
+	\input{Mainmatter/ExpandingUniverse}
 	\newchapter{de Sitter Universe}
-	\input{Frontmatter/Sitter}
+	\input{Mainmatter/Sitter}
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%BACKMATTER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
