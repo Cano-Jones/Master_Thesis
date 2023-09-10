@@ -41,10 +41,11 @@ and thus, after applying the generalized Gauss Theorem on a curved background, a
 \begin{equation}
 	\Pi_\alpha\equiv \frac{\partial\mathcal{L}_\text{M}}{\partial\left(\nabla_0\phi^\alpha\right)}
 \end{equation}
-
+\section{Scalar field}
 \begin{equation}
 	S\big[\phi\big]=\int\frac{1}{2}\Big[\nabla_\nu\phi\,\nabla^\nu\phi-\mu^2\phi^2-\xi R\phi^2\Big]\sqrt{-g}\;\td^4 x
 \end{equation}
+equations of motion (Klein-Gordon)
 \begin{equation}
 	\big[\nabla_\nu\nabla^\nu-\mu^2-\xi R\big]\phi=0
 \end{equation}
@@ -52,3 +53,67 @@ and thus, after applying the generalized Gauss Theorem on a curved background, a
 	T_{\mu\nu}=\nabla_\mu\phi\,\nabla_\nu\phi -\frac{1}{2}g_{\mu\nu}\left[\nabla^\sigma\phi\nabla_\sigma\phi-\mu^2\phi^2\right]+\xi\left[R_{\mu\nu}-\frac{1}{2}g_{\mu\nu}+g_{\mu\nu}\nabla^\sigma\nabla_\sigma-\nabla_\mu\nabla_\nu\right]\phi^2
 \end{equation}
 note that for minimally coupled field ($\xi=0$) the energy-momentum tensor is equivalent to the Noether energy-momentum tensor.
+
+Scalar product
+\begin{equation}
+	\langle \phi_1(x),\,\phi_2(x)\rangle\equiv i\int g^{0\nu}\left(\phi_1\overset{\text{\tiny$\leftrightarrow$}}{\nabla}_\nu\phi_2^*\right)\sqrt{-g}\,\td^3\mathbf{x}
+\end{equation}
+
+Let $v(x)$ be a solution of the Klein-Gordon equation, then $v^*(x)$ will also be an (linearly independent) solution. Let $i$ represent the set of parameters that univocally describe a par of solutions $v_i(x),\,v^*(x)$, therefore, the general solution of the Klein-Gordon equation will be of the form
+\begin{equation}
+	\phi(x)=\sum_ i\left[a_iv_i(x)+a^*_iv^*_i(x)\right]
+\end{equation} 
+where $a_i,\,a^*_i$ are constant factors that can be written as
+\begin{equation}
+	a_i = \langle v_i(x),\,\phi(x)\rangle\hspace{1.0cm} a_i^* = \langle v_i^*(x),\,\phi(x)\rangle
+\end{equation}
+Quantization of the field is done by promoting the fields to operators
+\begin{equation}
+	\phi(x)\longrightarrow\hat{\phi}(x)\hspace{1.0cm}\Pi(x)\longrightarrow\hat{\Pi}(x)
+\end{equation}
+this is done by promoting the constant factors to operators as well, that is
+\begin{equation}
+	a_i\longrightarrow\hat{a}_i\hspace{1.0cm}a_i^*\longrightarrow\hat{a}_i^\dagger
+\end{equation}
+and therefore
+\begin{equation}
+	\hat{\phi}(x)=\sum\left[\hat{a}_iv_i(x)+\hat{a}_i^\dagger v^*_i(x)\right]
+\end{equation}
+after the promotion of the fields to operators, commutation relations are imposed; the easiest choice would be to assume canonical quantization relations,
+\begin{equation}
+	\left[\hat{\phi}(\mathbf{x}),\,\hat{\Pi}(\mathbf{y})\right]=i\hbar \,\delta^3\left(\mathbf{x}-\mathbf{y}\right)\hspace{1.0cm}\left[\hat{\phi}(\mathbf{x}),\,\hat{\phi}(\mathbf{y})\right]=\left[\hat{\Pi}(\mathbf{x}),\,\hat{\Pi}(\mathbf{y})\right]=0
+\end{equation}
+It would be desirable to obtain a formulation similar to the well known scalar field in a flat background, where the Fock space is generated from a vacuum state and a set of creation and annihilation operators that follow some commutation rules. To do so, we will force the $\hat{a}_i,\,\hat{a}^\dagger_i$ operators to assume this roll, in such a way that
+\begin{equation}
+	\left[\hat{a}_i,\,\hat{a}_j^\dagger\right]\propto \delta_{ij}\hspace{1.0cm}\left[\hat{a}_i,\,\hat{a}_j\right]=\left[\hat{a}_i^\dagger,\,\hat{a}_j^\dagger\right]=0
+\end{equation}
+Thanks to the relation between the constant factors $a_i$ and the scalar product $\langle v_i,\,\phi\rangle$, one can obtain
+\begin{multline}
+	\left[\hat{a}_i,\,\hat{a}_j^\dagger\right]=-\int\left[\left(v_i\hat{\Pi}-g^{0\nu}\left(\nabla_\nu v_i\right)\hat{\phi}\sqrt{-g}\right)\Big|_\mathbf{x},\,\left(v_j^*\hat{\Pi}-g^{0\nu}\left(\nabla_\nu v_j\right)\hat{\phi}\sqrt{-g}\right)\Big|_\mathbf{y}\right]\td^3\mathbf{x}\td^3\mathbf{y}=\\
+	=i\hbar\int g^{0\nu}\left(v_i\overset{\text{\tiny$\leftrightarrow$}}{\nabla}_\nu v_j^*\right)\sqrt{-g}\,\td^3\mathbf{x}=\hbar\langle v_i,\,v_j\rangle
+\end{multline}
+where the field commutators where used. Equivalently 
+\begin{equation}
+	\left[\hat{a}_i,\,\hat{a}_j\right]=-\hbar\,\langle v_i,\,v_j^*\rangle\hspace{1.0cm}\left[\hat{a}_i^\dagger,\,\hat{a}_j^\dagger\right]=-\hbar\,\langle v_i^*,\,v_j\rangle
+\end{equation}
+
+Therefore we must find a set of solutions $\left\{v_i(x),\,v_i^*(x)\right\}$ such that
+\begin{equation}
+	\langle v_i^*,\,v_j\rangle\propto \delta_{ij}\hspace{1.0cm}\langle v_i,\,v_j^*\rangle=\langle v_i^*,\,v_j\rangle=0
+\end{equation}
+With this, we can define the Fock space the usual way, starting with a vacuum state $|0\rangle$ such that the action of the annihilation operation fulfils
+\begin{equation}
+	\hat{a}_i\,|0\rangle=0\hspace{1.0cm}\forall i
+\end{equation}
+where single particle states are formed from the creation operator
+\begin{equation}
+	|i\rangle\equiv \hat{a}^\dagger_i\,|0\rangle
+\end{equation}
+and multiparticle states like
+\begin{equation}
+	|i,\,j,\,\hdots\rangle=\hdots \hat{a}_j^\dagger\,\hat{a}_i^\dagger\,|0\rangle
+\end{equation}
+Since this is a scalar field, one might assume that the states are symmetric (describing boson particles), and this is easily confirmed, since
+\begin{equation}
+	|i,\,j\rangle=\hat{a}_j^\dagger\,\hat{a}_i^\dagger\,|0\rangle=\left[\hat{a}_i^\dagger,\,\hat{a}_j^\dagger\right]|0\rangle+\hat{a}_i^\dagger\,\hat{a}_j^\dagger|0\rangle=|j,\,i\rangle
+\end{equation}
