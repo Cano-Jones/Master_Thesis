@@ -77,7 +77,7 @@ this is done by promoting the constant factors to operators as well, that is
 \end{equation}
 and therefore
 \begin{equation}
-	\hat{\phi}(x)=\sum\left[\hat{a}_iv_i(x)+\hat{a}_i^\dagger v^*_i(x)\right]
+	\hat{\phi}(x)=\sum_i\left[\hat{a}_iv_i(x)+\hat{a}_i^\dagger v^*_i(x)\right]
 \end{equation}
 after the promotion of the fields to operators, commutation relations are imposed; the easiest choice would be to assume canonical quantization relations,
 \begin{equation}
@@ -99,7 +99,7 @@ where the field commutators where used. Equivalently
 
 Therefore we must find a set of solutions $\left\{v_i(x),\,v_i^*(x)\right\}$ such that
 \begin{equation}
-	\langle v_i^*,\,v_j\rangle\propto \delta_{ij}\hspace{1.0cm}\langle v_i,\,v_j^*\rangle=\langle v_i^*,\,v_j\rangle=0
+	\langle v_i,\,v_j\rangle\propto \delta_{ij}\hspace{1.0cm}\langle v_i,\,v_j^*\rangle=\langle v_i^*,\,v_j\rangle=0
 \end{equation}
 With this, we can define the Fock space the usual way, starting with a vacuum state $|0\rangle$ such that the action of the annihilation operation fulfils
 \begin{equation}
@@ -117,3 +117,38 @@ Since this is a scalar field, one might assume that the states are symmetric (de
 \begin{equation}
 	|i,\,j\rangle=\hat{a}_j^\dagger\,\hat{a}_i^\dagger\,|0\rangle=\left[\hat{a}_i^\dagger,\,\hat{a}_j^\dagger\right]|0\rangle+\hat{a}_i^\dagger\,\hat{a}_j^\dagger|0\rangle=|j,\,i\rangle
 \end{equation}
+\section{Bogoliubov transformations}
+Consider now a second set $\left\{u_i(x),\,u_i^*(x)\right\}$ of solutions to the Klein-Gordon equation such that they meet the inner product rule; the field would then be written as
+\begin{equation}
+	\phi(x)=\sum_j\left[b_ju_j(x)+b_j^*u_j^*(x)\right]
+\end{equation}
+quantization of the field and creation and annihilation is straightforward. The relation between the $v$ and $u$ solutions would be
+\begin{equation}
+	v_i(x)\equiv\sum_j\left[\alpha_{ij}u_j(x)+\beta_{ij}u^*_j(x)\right]
+\end{equation}
+where $\alpha_{ij}$ and $\beta_{ij}$ are known as Bogoliubov coefficients, that can be obtained as
+\begin{equation}
+	\alpha_{ij}\propto\langle v_i,\,u_j\rangle\hspace{1.0cm}\beta_{ij}\propto -\langle v_i,\,u_j^*\rangle
+\end{equation}
+
+Since the field is the same independently of the mode set chosen
+\begin{equation}
+	\sum_i\left[\hat{a}_iv_i(x)+\hat{a}_i^\dagger v^*_i(x)\right]=\sum_j\left[\hat{b}_ju_j(x)+\hat{b}_j^\dagger u_j^*(x)\right]
+\end{equation}
+and, as a result of the orthogonality of the mode functions
+\begin{equation}
+	\hat{a}_i=\sum_j\left(\alpha_{ij}^*\hat{b}_j-\beta_{ij}^*\hat{b}_j^\dagger\right)\hspace{1.0cm}\hat{a}_i^\dagger=\sum_j\left(-\beta_{ij}\hat{b}_j+\alpha_{ij}\hat{b}_j^\dagger\right)
+\end{equation}
+creation and annihilation commutation relations give new restrictions to the Bogoliubov coefficients
+\begin{equation}
+	\left[\hat{a}_i,\,\hat{a}_j^\dagger\right]\propto\delta_{ij}\implies \sum_k\left(\alpha_{ik}^*\alpha_{jk}-\beta^*_{ik}\beta_{jk}\right)\propto\delta_{ij}
+\end{equation}
+\begin{equation}
+	\left[\hat{a}_i,\,\hat{a}_j\right]=0\implies \sum_k\left(\alpha_{jk}^*\beta_{ik}^*-\alpha_{ik}^*\beta_{jk}^*\right)=0
+\end{equation}
+
+Now, the relevance of the Bogoliubov transformations comes from the fact that the vacuum in the $u$ solutions, have (in general) $v$ particles,
+\begin{equation}
+	\langle_u0|\hat{N}_v|_u0\rangle=\sum_i\langle_u0|\hat{a}_i^\dagger\hat{a}_i|_u0\rangle=\sum_{i}\left[\sum_{jk}\beta_{ij}\beta^*_{ik}\langle_u0|\hat{b}_j\hat{b}_k^\dagger|_u0\rangle\right]\propto \sum_{ij}|\beta_{ij}|^2
+\end{equation}
+therefore, there is not a unique vacuum.
