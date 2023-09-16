@@ -152,3 +152,34 @@ Now, the relevance of the Bogoliubov transformations comes from the fact that th
 	\langle_u0|\hat{N}_v|_u0\rangle=\sum_i\langle_u0|\hat{a}_i^\dagger\hat{a}_i|_u0\rangle=\sum_{i}\left[\sum_{jk}\beta_{ij}\beta^*_{ik}\langle_u0|\hat{b}_j\hat{b}_k^\dagger|_u0\rangle\right]\propto \sum_{ij}|\beta_{ij}|^2
 \end{equation}
 therefore, there is not a unique vacuum.
+
+\section{A leap towards a continuum}
+Until now, it has been considered that the set of Klein-Gordon solutions could be categorised by a discrete set of parameters $i$, from a standard course in QFT, one of the main results is the fact that the solutions of the flat Klein-Gordon equations can be parametrised by a continuous $3$-dimensional vector $\mathbf{k}$ (which is interpreted to be the momentum of the particle). Since all computations in this section where made by considering a discrete set of parameters, it is relevant to consider the continuum case.
+
+A common computation in many fields of physics is the determination of the density of states $D(\mathbf{k})$ describing the number of modes with momentum between $\mathbf{k}$ and $\mathbf{k}+\td \mathbf{k}$. Consider a system with volume $V$, where the field goes to zero at its boundary; in this case, the permitted values of momenta must meet
+\begin{equation}
+	k^i=n^i\frac{\pi\hbar}{V^{\sfrac{1}{3}}}\,,\hspace{1.0cm}n^i\in\mathbb{Z}
+\end{equation}
+Let $N(k)$ be the number of states with momentum modulus less than $k$, that is, the states such that
+\begin{equation}
+	n=\sqrt{\left(n^1\right)^2+\left(n^2\right)^2+\left(n^3\right)^2}<k\frac{V^{\sfrac{1}{3}}}{\pi\hbar}
+\end{equation}
+considering a flat momentum space\footnote{In contrast to modified theories of relativity in which this is not the case, like the $\kappa$-Poincaré relativity.} and a large enough volume, $N(k)$ will be essentially equal to an eight of the volume of a sphere with radius $kV^{\sfrac{1}{3}}\sfrac{}{\pi\hbar}$, that is
+\begin{equation}
+	N(k)\approx\frac{1}{8}\frac{4}{3}\pi\left(k\frac{V^{\sfrac{1}{3}}}{\pi\hbar}\right)^3=\frac{V}{6\pi^2\hbar^3}k^3
+\end{equation} 
+meaning, that the density of states will be
+\begin{equation}
+	D(\mathbf{k})\equiv D(k)=\frac{\td N(k)}{\td k}\approx\frac{V}{2\pi^2\hbar^3}k^2
+\end{equation}
+
+With this, one could approximate a discrete sum over a parameter $i$ to an integral over a continuum $\mathbf{k}$
+\begin{equation}
+	\sum_i f_i=\int_0^\infty D(k)f_k\td k\approx\int_0^\infty\frac{V}{2\pi^2\hbar^3} f_k k^2\td k\equiv\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^3}f_\mathbf{k}
+\end{equation}
+where it has been defined.
+\begin{equation}
+	4\pi V f_k k^2\equiv \int_{\theta=0}^{2\pi}\int_{\varphi=0}^\pi f_\mathbf{k}\sin\varphi \td\theta\td\varphi
+\end{equation}
+
+therefore $\sfrac{\td^3\mathbf{k}}{(2\pi\hbar)^3}$ is to be understood as the volume element of the momentum space.
