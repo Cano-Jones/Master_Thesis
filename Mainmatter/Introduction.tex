@@ -25,6 +25,37 @@ $\delta S=0$ and
 	\nabla_\mu T^{\mu\nu}=0
 \end{equation}
 (and its symmetric)
+\section{Construction of covariant actions}
+The equivalence principle says that field equations must be invariant with respect to local Lorentz transformations $\Lambda(x)$. To work on a local flat spacetime, we use the tetrad formalism
+\begin{equation}
+	g_{\mu\nu}=e^a_\mu e^b_\nu \eta_{ab}
+\end{equation}
+partial derivatives transform like
+\begin{equation}
+	\partial_\mu\to\frac{\partial x^\nu}{\partial y^\mu}\partial_\nu
+\end{equation}
+but, we see that $e^\mu_a\partial_\mu$ is not covariant, since
+\begin{equation}
+	e^\mu_a\partial^a\phi(x)\to \Lambda^b_ae^\mu_b\partial_\mu\left[\rho\left(\Lambda\right)\phi(x)\right]= \Lambda^b_ae^\mu_b\left[\rho\left(\Lambda\right)\partial_\mu\phi+\partial_\mu\rho\left(\Lambda\right)\,\phi\right]
+\end{equation}
+a covariant derivative $D_\mu$ should transform as
+\begin{equation}
+	D_a\phi\to\Lambda_a^b\rho\left(\Lambda\right)D_b\phi
+\end{equation}
+therefore we need to define a better derivative, a common option is
+\begin{equation}
+	D_a\equiv e^\mu_a\left(\partial_\mu+\Gamma_\mu\right)
+\end{equation}
+where, for the derivative to be covariant, the connection $\Gamma_\mu$ must transform as
+\begin{equation}
+	\Gamma_\mu\to \rho\left(\Lambda\right)\Gamma_\mu\rho^{-1}\left(\Gamma\right)-\left[\partial_\mu\rho\left(\Lambda\right)\right]\rho^{-1}\left(\Lambda\right)
+\end{equation} 
+such connection can be written as
+\begin{equation}
+	\Gamma_\mu=\frac{1}{2}\Sigma^{ab}e^\nu_a\nabla_\mu e_{b\nu}
+\end{equation}
+where $\Sigma^{ab}$ are the Lorentz generators and $e^\nu_a\nabla_\mu e_{b\nu}\equiv \omega_{ab\mu}$ is the torsion free spin connection.
+
 
 Now, in order to obtain the equations of motion for the matter fields, consider the lagrangian
 \begin{equation}
