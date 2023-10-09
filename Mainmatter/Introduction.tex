@@ -56,21 +56,29 @@ such connection can be written as
 \end{equation}
 where $\Sigma^{ab}$ are the Lorentz generators and $e^\nu_a\nabla_\mu e_{b\nu}\equiv \omega_{ab\mu}$ is the torsion free spin connection.
 
+Under the presence of a gauge field, we would also want the derivative to be gauge invariant, and thus, the gauge four-potential $A$ must be considered in the definition of the derivative
+\begin{equation}
+	D_a\equiv e^\mu_a\left(\partial_\mu+\Gamma_\mu-\frac{i}{\hbar}eA_\mu\right)
+\end{equation}
+where $e$ is the coupling constant.
+
+This derivative of course will 
+
 
 Now, in order to obtain the equations of motion for the matter fields, consider the lagrangian
 \begin{equation}
-	\mathcal{L}_{\text{M}}=\mathcal{L}_{\text{M}}\big[\phi^\alpha(x),\,\nabla_\mu\phi^\alpha(x)\big]
+	\mathcal{L}_{\text{M}}=\mathcal{L}_{\text{M}}\big[\phi^\alpha(x),\,D_\mu\phi^\alpha(x)\big]
 \end{equation}
 variations of $S$ with respect of $\phi^\alpha$ result in
 \begin{equation}
-	\delta S=\int\left[\frac{\partial \mathcal{L}_\text{M}}{\partial \phi^\alpha}\delta\phi^\alpha+\frac{\partial \mathcal{L}_\text{M}}{\partial\left(\nabla_\mu\phi^\alpha\right)}\nabla_\mu\left(\delta\phi^\alpha\right)\right]\sqrt{-g}\,\td^4x
+	\delta S=\int\left[\frac{\partial \mathcal{L}_\text{M}}{\partial \phi^\alpha}\delta\phi^\alpha+\frac{\partial \mathcal{L}_\text{M}}{\partial\left(D_\mu\phi^\alpha\right)}D_a\left(\delta\phi^\alpha\right)\right]\sqrt{-g}\,\td^4x
 \end{equation}
 and thus, after applying the generalized Gauss Theorem on a curved background, and considering that field variations vanish at the boundaries, one obtains
 \begin{equation}
-	\frac{\partial \mathcal{L}_\text{M}}{\partial \phi^\alpha}-\nabla_\mu\left[\frac{\partial \mathcal{L}_\text{M}}{\partial\left(\nabla_\mu\phi^\alpha\right)}\right]=0
+	\frac{\partial \mathcal{L}_\text{M}}{\partial \phi^\alpha}-D_\mu\left[\frac{\partial \mathcal{L}_\text{M}}{\partial\left(D_\mu\phi^\alpha\right)}\right]=0
 \end{equation}
 \begin{equation}
-	\Pi_\alpha\equiv \frac{\partial\mathcal{L}_\text{M}}{\partial\left(\nabla_0\phi^\alpha\right)}
+	\Pi_\alpha\equiv \frac{\partial\mathcal{L}_\text{M}}{\partial\left(D_0\phi^\alpha\right)}
 \end{equation}
 \section{Scalar field}
 \begin{equation}
