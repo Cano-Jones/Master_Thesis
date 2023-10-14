@@ -84,10 +84,27 @@ and thus, after applying the generalized Gauss Theorem on a curved background, a
 \begin{equation}
 	S\big[\phi\big]=\int\frac{1}{2}\Big[\nabla_\nu\phi\,\nabla^\nu\phi-\mu^2\phi^2-\xi R\phi^2\Big]\sqrt{-g}\;\td^4 x
 \end{equation}
-equations of motion (Klein-Gordon)
+where $\mu\equiv\sfrac{m c}{\hbar}$, $R$ is the curvature scalar of the manifold. For $\xi=0$ the scalar field is said to be minimally coupled to gravity (nonminimally coupled otherwise); this is the simplest interactive term that couples the scalar field with the manifold; in curved spacetimes \cite{Bunch_Renorm} a self interactive $\lambda\phi^4$ theory needs a term proportional to $R\phi^2$ to be renormalizable. For $\xi=\sfrac{1}{6}$ its said to be conformally coupled, and, in the case of a massless field ($\mu=0$) the action will be invariant under conformal transformations, i.e.
+\begin{equation}
+	g_{\mu\nu}\rightarrow \tilde{g}_{\mu\nu}\equiv \Omega^2(x)g_{\mu\nu},
+\end{equation}
+This can be seen from the equations of motion (Klein-Gordon)
 \begin{equation}
 	\big[\nabla_\nu\nabla^\nu-\mu^2-\xi R\big]\phi=0
 \end{equation}
+considering $\phi\rightarrow\tilde{\phi}=\Omega^\beta\phi$ one gets that
+\begin{multline}
+	0=\mu^2\Omega^{\beta-2}\left(\Omega^2-1\right)\phi+2\left(1+\beta\right)\Omega^{\beta-3}\nabla^\nu\Omega\nabla_\nu\phi+\\
+	+(6\xi+\beta)\Omega^{\beta-3}\left(\nabla_\nu\nabla^\nu\Omega\right)\phi+\beta(1+\beta)\Omega^{\beta-4}\nabla_\nu\Omega\nabla^\nu\Omega\,\phi
+\end{multline}
+this equation has a solution for massless fields, corresponding to
+\begin{subequations}
+	\begin{gather}
+		\beta=-1,\hspace{1.0cm} \xi=\frac{1}{6}\tag{\theequation \,\,a,b}
+	\end{gather}
+\end{subequations}
+
+The energy momentum tensor has the following form
 \begin{equation}
 	T_{\mu\nu}=\nabla_\mu\phi\,\nabla_\nu\phi -\frac{1}{2}g_{\mu\nu}\left[\nabla^\sigma\phi\nabla_\sigma\phi-\mu^2\phi^2\right]+\xi\left[R_{\mu\nu}-\frac{1}{2}g_{\mu\nu}+g_{\mu\nu}\nabla^\sigma\nabla_\sigma-\nabla_\mu\nabla_\nu\right]\phi^2
 \end{equation}
