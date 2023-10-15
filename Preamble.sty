@@ -15,6 +15,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%Commands%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\td}{\text{d}}
 \newcommand{\newchapter}[1]{{\vspace*{-0.7cm}\let\clearpage\relax \chapter{#1}\vspace*{-0.5cm}}}
+\newcommand\capmystring[1]{\capmystringaux#1\relax}
+\def\capmystringaux#1#2\relax{\uppercase{#1}\lowercase{#2}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%Other%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \addtokomafont{disposition}{\rmfamily} %Font

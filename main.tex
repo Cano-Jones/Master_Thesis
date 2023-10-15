@@ -6,17 +6,28 @@
 \newcommand{\irchi}[2]{\raisebox{\depth}{$#1\chi$}} % inner command, used by \rchi
 
 \begin{document}
-	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%FRONTMATTER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\frontmatter
 	\input{Frontmatter/Cover}
 	\newpage
+	\leavevmode\thispagestyle{empty}
+	\newpage
+	\clearpage
+	\newpage
+	\pdfbookmark[0]{Abstract}{Abstract}
+	\input{Frontmatter/Abstract}
+	
+	
+	
+	
 	\pdfbookmark[0]{Table of Contents}{Table of Contents}
 	\tableofcontents
 	\newpage
-	
+	\newchapter{Conventions}
+	\input{Frontmatter/Conventions}
+	\newpage
 	\newchapter{Preface}
 	\input{Frontmatter/Preface}
 	
@@ -27,10 +38,16 @@
 	\pdfbookmark[-1]{Chapters}{Chapters}
 	\newchapter{Introduction to QFT in curved spacetimes}
 	\input{Mainmatter/Introduction}
+	\newpage
 	\newchapter{Scalar field in an expanding universe}
 	\input{Mainmatter/ExpandingUniverse}
-	\newchapter{de Sitter Universe}
+	\newpage
+	\newchapter{Scalar field in a de Sitter Universe}
 	\input{Mainmatter/Sitter}
+	\bookmarksetup{startatroot}
+	\nocite{*}
+	\bibliography{Biblio} %Fichero de bibliografía
+	\bibliographystyle{plain} %Estilo de bibliografía y cita
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%BACKMATTER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -42,13 +59,10 @@
 	\input{Appendix/StandardScalarField}
 	\newchapter{Units}
 	\input{Appendix/Units}
-	\newchapter{Questions}
+	\newchapter{Questions \& To-Do}
 	\input{Appendix/Dudas}
 	\newchapter{Computations}
 	\input{Appendix/Calculos.tex}
 	
-	\bookmarksetup{startatroot}
-	\nocite{*}
-	\bibliography{Biblio} %Fichero de bibliografía
-	\bibliographystyle{plain} %Estilo de bibliografía y cita
+	
 \end{document}
