@@ -1,57 +1,60 @@
-FLRW metric
-\begin{equation}
-	\td l^2 =c^2\td t^2 -a^2(t)\left[\frac{\td r^2}{1-\kappa r^2}+r^2\td\Omega^2\right]
+The methodology for the analysis of scalar fields in a general manifold was presented in the previous chapter as a  preliminary for the rest of this work, and in particular of the present chapter. It is clear that the presence of symmetries of the theory will simplify computations, and thus, a great start might be an isotropic and homogeneous expanding universe, which is described by the so called Friedmann–Lemaître–Robertson–Walker metric. Using  reduced-circumference polar coordinates, the line element associated with such metric is written as
+\begin{subequations}\label{eq: FLRW metric}
+	\begin{gather}
+		\td l^2 =c^2\td t^2 -a^2(t)\left[\frac{\td r^2}{1-\kappa r^2}+r^2\td\Omega^2\right],\quad \td\Omega\equiv \td\theta^2+\sin^2\varphi\td\varphi^2,\tag{\theequation \,\,a,b}
+	\end{gather}
+\end{subequations}
+where $\kappa$ is the curvature of the space and $a(t)$ is the scale factor determining the expansion.
+\section{Expanding scalar field action}
+The Weyl tensor associated to the metric presented in \cref{eq: FLRW metric} is identically zero, meaning that the metric is conformally flat, i.e. independently of the space curvature $\kappa$, and therefore there must exist a coordinate system where
+\begin{equation}\label{eq: Conformal FLRW}
+	\td l^2=a(t)\eta_{\mu\nu}\td x^\mu\td x^\nu=a(\eta)\left[c^2\td \eta^2-\td\mathbf{x}^2\right],
 \end{equation}
-Weyl tensor =0 therefore the metric is conformally flat, i.e. independently of the curvature $\kappa$ there must exist a coordinate system where 
+working in such coordinate system will give the opportunity to use some results of standard scalar field theory. To do so, the action presented in \cref{eq: General scalar field action} will be rewritten in terms of a new field $\rchi(x)\equiv a(\eta)\,\phi(x)$ using the fact that $\sqrt{-g}=a^4$ 
 \begin{equation}
-	\td l^2=a(t)\eta_{\mu\nu}\td x^\mu\td x^\nu=a(t)\left[c^2\td t^2-\td\mathbf{x}^2\right]
+	S[\rchi]=\int\frac{1}{2}\left[\partial_\nu\rchi\,\partial^\nu\rchi-\left(\mu^2a^2+\xi R a^2-c^2\frac{a''}{a}\right)\rchi^2-\partial_\eta\left(c^2\rchi^2\frac{a'}{a}\right)\right]\td^4 x,
 \end{equation}
-the standard action describing  the dynamics of a (non-minimally coupled to gravity) real scalar field is
-\begin{equation}
-	s=\int\frac{1}{2}\Big[\nabla_\nu\phi\,\nabla^\nu\phi-\mu^2\phi^2-\xi R\phi^2\Big]\sqrt{-g}\;\td^4 x
-\end{equation}
-$\sqrt{-g}=a^4$ $\rchi=a\phi$
-\begin{equation}
-	s=\int\frac{1}{2}\Big[\partial_\nu\rchi\,\partial^\nu\rchi-\left(\mu^2a^2+\xi R a^2-c^2\frac{a''}{a}\right)\rchi^2-\partial_t\left(c^2\rchi^2\frac{a'}{a}\right)\Big]\td^4 x
-\end{equation}
-dropping the time derivative
-\begin{equation}
-	s=\int\frac{1}{2}\Big[\partial_\nu\rchi\,\partial^\nu\rchi-\left(\mu^2a^2+\xi R a^2-c^2\frac{a''}{a}\right)\rchi^2\Big]\td^4 x
-\end{equation}
-by Euler-Lagrange
-\begin{equation}
-	\left[\partial_\nu\partial^\nu+\mu_{\text{eff}}^2(t)\right]\rchi=0
-\end{equation}
-where
-\begin{equation}
-	\mu_{\text{eff}}^2(t)=\left(\mu^2+\xi R\right)a^2-\frac{a''}{ac^2}
-\end{equation}
-solutions of previous equation have the form
-\begin{equation}
-	\rchi=a\,v(t)e^{\pm i\mathbf{kx}\hbar^{-1}} 
-\end{equation}
-meaning that, the dispersion relation is
-\begin{equation}
-	v''\hbar^2+\omega^2(t)\,v=0
-\end{equation}
-where $\omega(t)$ is defined as
-\begin{equation}
-	\omega^2_{\mathbf k}(t)=\mathbf{k}^2+\hbar^2\mu_{\text{eff}}^2(t)=\mathbf{k}^2+\left(m^2c^2+\xi\hbar^2 R\right)a^2(t)-\hbar^2\frac{a''}{ac^2}
-\end{equation}
-now, proof that Im$(vv'^{*})$ is constant through time
-\begin{equation}
-	\frac{\partial}{\partial t}\text{Im}(vv'^{*})=\frac{\partial}{\partial t}\left(\frac{vv'^{*}-v^{*}v'}{2i}\right)=\frac{vv''^*-v^{*}v''}{2i}=0
-\end{equation}
-last step is result from dispersion relation. Since dispersion relation is scalable by a time independent function, Im$(v'v^*)$ can be determined to be a chosen value, a particular useful choice is to consider it momentum independent. Im$(v'v^*)=W[v,v^*]$ therefore, if  its not equal to 0, they are linearly independent solutions to dispersion relation.
+where $a'\equiv \partial_\eta a(\eta)$ and equivalently with $a''$.
 
-
-
-The most general solution to the main equation is
+Dropping the time derivative will result on the following action for the sacalar $\rchi$ field
 \begin{equation}
-	\rchi=\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^3}\left[a_\mathbf{k}v_\mathbf{k}(t)e^{i\mathbf{kx}\hbar^{-1}}\!\!+a_\mathbf{k}^*v_\mathbf{k}^*(t)e^{-i\mathbf{kx}\hbar^{-1}}\right]
+	S[\rchi]=\int\frac{1}{2}\Big[\partial_\nu\rchi\,\partial^\nu\rchi-\left(\mu^2a^2+\xi R a^2-c^2\frac{a''}{a}\right)\rchi^2\Big]\td^4 x,
+\end{equation}
+being the main source for the current study. In order to obtain the expressions describing the dynamics of this field, the Euler-Lagrange equations in \cref{eq: Euler-Lagrange} will be used, resulting in the generalized Klein-Gordon equation
+\begin{subequations}\label{eq: Generalized Klein-Gordon}
+	\begin{gather}
+		\left[\partial_\nu\partial^\nu+\mu_{\text{eff}}^2(t)\right]\rchi=0,\hspace{1.0cm}\mu_{\text{eff}}^2(t)=\left(\mu^2+\xi R\right)a^2-\frac{a''}{ac^2}.\tag{\theequation \,\,a,b}
+	\end{gather}
+\end{subequations}
+
+Solutions of the \cref{eq: Generalized Klein-Gordon} are dependent on an integration constant related to the momentum $\mathbf{k}$, and are of the form
+\begin{equation}
+	\rchi_{\mathbf{k}}(x)=\alpha_\mathbf{k}v_\mathbf{k}(\eta)e^{ i\mathbf{kx}\hbar^{-1}}+\bar\alpha_\mathbf{k}\bar v_\mathbf{k}(\eta)e^{- i\mathbf{kx}\hbar^{-1}},
+\end{equation}
+and upon substitution in \eqref{eq: Generalized Klein-Gordon}, one gets the following differential equation
+\begin{equation}\label{eq: Expanding diff v}
+	v_\mathbf{k}''\,\hbar^2+\omega^2_\mathbf{k}(\eta)\,v_\mathbf{k}=0
+\end{equation}
+where the dispersion relation $\omega_\mathbf{k}(\eta)$ is defined as,
+\begin{equation}\label{eq: Expanding dispersion relation}
+	\omega^2_{\mathbf k}(\eta)=\mathbf{k}^2+\hbar^2\mu_{\text{eff}}^2(\eta)=\mathbf{k}^2+\left(m^2c^2+\xi\hbar^2 R\right)a^2-\hbar^2\frac{a''}{ac^2}.
 \end{equation}
 
+Solving \cref{eq: Expanding diff v} will in turn give the form of the set of solutions $\left\{\rchi_{\mathbf{k}}\right\}$ needed to describe the general expression of $\rchi(x)$; since we are currently considering general expansion parameters and curvature scalars, the following computations will be made using a general set of $v_\mathbf{k}$ functions. This functions nevertheless have some interesting properties, such as being capable of a choice of normalization, and a constant of motion: the imaginary part of $v_\mathbf{k}\bar{v}_\mathbf{k}'$. Lets check the last statement
+\begin{equation}
+	\frac{\partial}{\partial \eta }\text{Im}(v_\mathbf{k}\bar{v}_\mathbf{k}')=\frac{\partial}{\partial \eta}\left(\frac{v_\mathbf{k}\bar{v}_\mathbf{k}'-\bar v_\mathbf{k}v'_\mathbf{k}}{2i}\right)=\frac{v_\mathbf{k}\bar v_\mathbf{k}'*-\bar v_\mathbf{k}v_\mathbf{k}''}{2i}=0
+\end{equation}
+last step is result from dispersion relation. Since the functions $v_\mathbf{k}$ are capable to a choice in normalization, we will choose a set of solutions of \cref{eq: Expanding diff v} such that $\text{Im}(v_\mathbf{k}\bar{v}_\mathbf{k}')$ its independent of the momentum $\mathbf{k}$, and equal for all modes, this constant of motion will simply be defined as
+\begin{equation}
+	\text{Im}(v\bar{v}')\equiv \text{Im}(v_\mathbf{k}\bar{v}_\mathbf{k}'),\quad \forall\,\mathbf{k}.
+\end{equation}
 
+The most general solution $\rchi(x)$ of equation \cref{eq: Generalized Klein-Gordon} can be written as a Fourier mode expansion
+\begin{equation}
+	\rchi(x)=\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^3}\left[a_\mathbf{k}v_\mathbf{k}(\eta)e^{i\mathbf{kx}\hbar^{-1}}\!\!+\bar a_\mathbf{k}\bar v_\mathbf{k}(\eta)e^{-i\mathbf{kx}\hbar^{-1}}\right]
+\end{equation}
+
+\section{Quantization}
 The field $\rchi$ and its conjugate momentum $\Pi=\partial_{c\,t} \rchi$ are promoted to operators on the quantum Hilbert space, with the standar canonical conmutation relations
 \begin{equation}
 	\left[\hat{\rchi}(t,\mathbf{x}),\hat{\Pi}(t,\mathbf{y})\right]=i\hbar \,\delta^3(\mathbf{x}-\mathbf{y})
