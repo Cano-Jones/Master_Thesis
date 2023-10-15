@@ -1,30 +1,49 @@
-\begin{equation}
-	\td l^2=g_{\mu\nu}\td x^\mu\td x^\nu
+Consider a dynamic universe consisting of dark energy characterized by a cosmological constant $\Lambda$ and some material content described by a Lagrangian density $\mathcal{L}_{\text{M}}$. The action associated with such system would be
+\begin{equation}\label{eq: General Action}
+	S=\int\left[\frac{1}{2\kappa}\left(R-2\Lambda\right)+\mathcal{L}_{\text{M}}\right]\sqrt{-g}\,\td^4 x,
 \end{equation}
-\begin{equation}
-	S=\int\left[\frac{1}{2\kappa}\left(R-2\Lambda\right)+\mathcal{L}_{\text{M}}\right]\sqrt{-g}\,\td^4 x
-\end{equation}
-$\kappa\equiv\frac{8\pi G}{c^4}$
+where $\kappa\equiv\frac{8\pi G}{c^4}$ is known as the Einstein gravitational constant.
 
-Variation of $S$ with respect to the inverse metric ($g^{\mu\nu}$) gives
-\begin{multline}
-	\delta S=\int \left[\frac{\sqrt{-g}}{2\kappa}\frac{\delta R}{\delta g^{\mu\nu}}+\frac{R}{2\kappa}\frac{1}{\sqrt{-g}}\frac{\delta \sqrt{-g}}{\delta g^{\mu\nu}}-\frac{\Lambda}{\kappa}\frac{1}{\sqrt{-g}}\frac{\delta\sqrt{-g}}{\delta g^{\mu\nu}}+\frac{\delta\mathcal{L}_{\text{M}}}{\delta g^{\mu\nu}}+\frac{\mathcal{L}_{\text{M}}}{\sqrt{-g}}\frac{\delta\sqrt{-g}}{\delta g^{\mu\nu}}\right]\delta g^{\mu\nu}\,\sqrt{-g}\,\td^4x
-\end{multline}
-$\delta S=0$ and
+The equations that would describe the dynamics of the system can be obtained by variations of the action presented in \cref{eq: General Action} and the stationary-action principle, which states that the path taken by the system will result in $\delta S=0$. The equations of motion of the matter content are dependant on its formulation; let the Lagrangian density of matter be described by some set $\left\{\phi^\alpha(x)\right\}$ of fields and their first covariant derivatives, i.e.
 \begin{equation}
-	\frac{\delta R}{\delta g^{\mu\nu}}=R_{\mu\nu}\hspace{1.0cm}\frac{1}{\sqrt{-g}}\frac{\delta\sqrt{-g}}{\delta g^{\mu\nu}}=-\frac{1}{2}g_{\mu\nu}
+	\mathcal{L}_{\text{M}}=\mathcal{L}_{\text{M}}\big[\phi^\alpha(x),\,\nabla_\mu\phi^\alpha(x)\big],
 \end{equation}
+then, variations of the action $S$ with respect of $\phi^\alpha$ will result in
 \begin{equation}
+	\delta S=\int\left[\frac{\partial \mathcal{L}_\text{M}}{\partial \phi^\alpha}\delta\phi^\alpha+\frac{\partial \mathcal{L}_\text{M}}{\partial\left(D_\mu\phi^\alpha\right)}D_a\left(\delta\phi^\alpha\right)\right]\sqrt{-g}\,\td^4x,
+\end{equation}
+and thus, after applying the generalized Gauss Theorem on a general manifold, alongside the stationary-action principle, one obtains the well known Euler-Lagrange equations
+\begin{equation}\label{eq: Euler-Lagrange}
+	\frac{\partial\mathcal{L}_{\text{M}}}{\partial\phi^\alpha}-\nabla_\mu\left[\frac{\partial \mathcal{L}_{\text{M}}}{\partial\left(\nabla_\mu\phi^\alpha\right)}\right]=0.
+\end{equation}
+
+On the other hand, variations of $S$ with respect to the inverse metric ($g^{\mu\nu}$) results in
+\begin{multline}
+	\delta S=\int \left[\frac{\sqrt{-g}}{2\kappa}\frac{\delta R}{\delta g^{\mu\nu}}+\frac{R}{2\kappa}\frac{1}{\sqrt{-g}}\frac{\delta \sqrt{-g}}{\delta g^{\mu\nu}}-\frac{\Lambda}{\kappa}\frac{1}{\sqrt{-g}}\frac{\delta\sqrt{-g}}{\delta g^{\mu\nu}}+\frac{\delta\mathcal{L}_{\text{M}}}{\delta g^{\mu\nu}}+\frac{\mathcal{L}_{\text{M}}}{\sqrt{-g}}\frac{\delta\sqrt{-g}}{\delta g^{\mu\nu}}\right]\delta g^{\mu\nu}\,\sqrt{-g}\,\td^4x;
+\end{multline}
+and again, by imposing $\delta S=0$ and considering that
+\begin{subequations}
+	\begin{gather}
+		\frac{\delta R}{\delta g^{\mu\nu}}=R_{\mu\nu},\hspace{1.0cm}\frac{1}{\sqrt{-g}}\frac{\delta\sqrt{-g}}{\delta g^{\mu\nu}}=-\frac{1}{2}g_{\mu\nu},\tag{\theequation \,\,a,b}
+	\end{gather}
+\end{subequations}
+one obtains the Einstein field equations
+\begin{equation}\label{eq: Einstein Field Equations}
 	R_{\mu\nu}-\frac{1}{2}g_{\mu\nu}R+\Lambda g_{\mu\nu}=-2\frac{8\pi G}{c^4}\left(\frac{\delta\mathcal{L}_{\text{M}}}{\delta g^{\mu\nu}}-\frac{1}{2}\mathcal{L}_{\text{M}}g_{\mu\nu}\right)
 \end{equation}
-\begin{equation}
-	T_{\mu\nu}\equiv \mathcal{L}_{\text{M}}g_{\mu\nu}-\frac{\delta\mathcal{L}_{\text{M}}}{\delta g^{\mu\nu}}=\frac{-2}{\sqrt{-g}}\frac{\delta \left(\mathcal{L}_{\text{M}}\sqrt{-g}\right)}{\delta g^{\mu\nu}}
+which are most commonly written in terms of the Hilbert energy-momentum tensor
+\begin{equation}\label{eq: Hilbert energy-momentum tensor}
+	T_{\mu\nu}\equiv \mathcal{L}_{\text{M}}g_{\mu\nu}-\frac{\delta\mathcal{L}_{\text{M}}}{\delta g^{\mu\nu}}=\frac{-2}{\sqrt{-g}}\frac{\delta \left(\mathcal{L}_{\text{M}}\sqrt{-g}\right)}{\delta g^{\mu\nu}}.
 \end{equation}
-\cite{Energy-MomentumTensor}
+This tensor is the source of the spacetime curvature, and must not be confused with the Noether's energy-momentum tensor since the two are not, in general, equivalent \cite{Energy-MomentumTensor}. In addition of being symmetric, the Hilbert energy-momentum tensor is covariantly conserved, i.e.
 \begin{equation}
-	\nabla_\mu T^{\mu\nu}=0
+	\nabla_\mu T^{\mu\nu}=0;
 \end{equation}
-(and its symmetric)
+this fact is of great use once the material Hamiltonian $\mathcal{H}_{\text{M}}$ is defined:
+\begin{equation}\label{eq: General Hamiltonian}
+	\mathcal{H}_{\text{M}}\equiv \int T^{00}\,\sqrt{-g}\,\td^3\mathbf{x},
+\end{equation}
+since it will later be used to spawn the Fock space after the quantization procedure; and thus assure no energy loses will be present on the theory.
 \section{Construction of covariant actions}
 The equivalence principle says that field equations must be invariant with respect to local Lorentz transformations $\Lambda(x)$. To work on a local flat spacetime, we use the tetrad formalism
 \begin{equation}
@@ -62,24 +81,6 @@ Under the presence of a gauge field, we would also want the derivative to be gau
 \end{equation}
 where $e$ is the coupling constant.
 
-This derivative of course will 
-
-
-Now, in order to obtain the equations of motion for the matter fields, consider the lagrangian
-\begin{equation}
-	\mathcal{L}_{\text{M}}=\mathcal{L}_{\text{M}}\big[\phi^\alpha(x),\,D_\mu\phi^\alpha(x)\big]
-\end{equation}
-variations of $S$ with respect of $\phi^\alpha$ result in
-\begin{equation}
-	\delta S=\int\left[\frac{\partial \mathcal{L}_\text{M}}{\partial \phi^\alpha}\delta\phi^\alpha+\frac{\partial \mathcal{L}_\text{M}}{\partial\left(D_\mu\phi^\alpha\right)}D_a\left(\delta\phi^\alpha\right)\right]\sqrt{-g}\,\td^4x
-\end{equation}
-and thus, after applying the generalized Gauss Theorem on a curved background, and considering that field variations vanish at the boundaries, one obtains
-\begin{equation}
-	\frac{\partial \mathcal{L}_\text{M}}{\partial \phi^\alpha}-D_\mu\left[\frac{\partial \mathcal{L}_\text{M}}{\partial\left(D_\mu\phi^\alpha\right)}\right]=0
-\end{equation}
-\begin{equation}
-	\Pi_\alpha\equiv \frac{\partial\mathcal{L}_\text{M}}{\partial\left(D_0\phi^\alpha\right)}
-\end{equation}
 \section{Scalar field}
 \begin{equation}
 	S\big[\phi\big]=\int\frac{1}{2}\Big[\nabla_\nu\phi\,\nabla^\nu\phi-\mu^2\phi^2-\xi R\phi^2\Big]\sqrt{-g}\;\td^4 x
