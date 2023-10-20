@@ -1,4 +1,4 @@
-\section{Einstein-Hilber Action}
+\section{The Universal Action}
 Consider a dynamic universe consisting of dark energy characterized by a cosmological constant $\Lambda$ and some material content described by a Lagrangian density $\mathcal{L}_{\text{M}}$. The action associated with such system would be
 \begin{equation}\label{eq: General Action}
 	S=\int\left[\frac{1}{2\kappa}\left(R-2\Lambda\right)+\mathcal{L}_{\text{M}}\right]\sqrt{-g}\,\td^4 x,
@@ -11,7 +11,7 @@ The equations that would describe the dynamics of the system can be obtained by 
 \end{equation}
 then, variations of the action $S$ with respect of $\phi^\alpha$ will result in
 \begin{equation}
-	\delta S=\int\left[\frac{\partial \mathcal{L}_\text{M}}{\partial \phi^\alpha}\delta\phi^\alpha+\frac{\partial \mathcal{L}_\text{M}}{\partial\left(D_\mu\phi^\alpha\right)}D_a\left(\delta\phi^\alpha\right)\right]\sqrt{-g}\,\td^4x,
+	\delta S=\int\left[\frac{\partial \mathcal{L}_\text{M}}{\partial \phi^\alpha}\delta\phi^\alpha+\frac{\partial \mathcal{L}_\text{M}}{\partial\left(\nabla_\mu\phi^\alpha\right)}\nabla_\mu\left(\delta\phi^\alpha\right)\right]\sqrt{-g}\,\td^4x,
 \end{equation}
 and thus, after applying the generalized Gauss Theorem on a general manifold, alongside the stationary-action principle, one obtains the well known Euler-Lagrange equations
 \begin{equation}\label{eq: Euler-Lagrange}
@@ -36,16 +36,16 @@ which are most commonly written in terms of the Hilbert energy-momentum tensor
 \begin{equation}\label{eq: Hilbert energy-momentum tensor}
 	T_{\mu\nu}\equiv \mathcal{L}_{\text{M}}g_{\mu\nu}-\frac{\delta\mathcal{L}_{\text{M}}}{\delta g^{\mu\nu}}=\frac{-2}{\sqrt{-g}}\frac{\delta \left(\mathcal{L}_{\text{M}}\sqrt{-g}\right)}{\delta g^{\mu\nu}}.
 \end{equation}
-This tensor is the source of the spacetime curvature, and must not be confused with the Noether's energy-momentum tensor since the two are not, in general, equivalent \cite{Energy-MomentumTensor}. In addition of being symmetric, the Hilbert energy-momentum tensor is covariantly conserved, i.e.
+This tensor is the source of the spacetime curvature, and must not be confused with the Noether's energy-momentum tensor since the two are not, in general, equivalent \cite{Energy-MomentumTensor}, but upon integration of the corresponding conserved currents, results are the same \cite{NoetherVsHilbert}. In addition of being symmetric, the Hilbert energy-momentum tensor is covariantly conserved, i.e.
 \begin{equation}
 	\nabla_\mu T^{\mu\nu}=0;
 \end{equation}
 this fact is of great use once the material Hamiltonian $\mathcal{H}_{\text{M}}$ is defined:
 \begin{equation}\label{eq: General Hamiltonian}
-	\mathcal{H}_{\text{M}}\equiv \int T^{00}\,\sqrt{-g}\,\td^3\mathbf{x},
+	\mathcal{H}_{\text{M}}\equiv \int T^{00}c\,\sqrt{-g}\,\td^3\mathbf{x},
 \end{equation}
 since it will later be used to spawn the Fock space after the quantization procedure; and thus assure no energy loses will be present on the theory.
-\section{Construction of covariant actions}
+\section{Construction of Covariant Actions}
 The equivalence principle says that field equations must be invariant with respect to local Lorentz transformations $\Lambda(x)$. To work on a local flat spacetime, we use the tetrad formalism
 \begin{equation}
 	g_{\mu\nu}=e^a_\mu e^b_\nu \eta_{ab}
@@ -58,13 +58,13 @@ but, we see that $e^\mu_a\partial_\mu$ is not covariant, since
 \begin{equation}
 	e^\mu_a\partial^a\phi(x)\to \Lambda^b_ae^\mu_b\partial_\mu\left[\rho\left(\Lambda\right)\phi(x)\right]= \Lambda^b_ae^\mu_b\left[\rho\left(\Lambda\right)\partial_\mu\phi+\partial_\mu\rho\left(\Lambda\right)\,\phi\right]
 \end{equation}
-a covariant derivative $D_\mu$ should transform as
+a covariant derivative $\nabla_\mu$ of some field $\varphi$ should transform as
 \begin{equation}
-	D_a\phi\to\Lambda_a^b\rho\left(\Lambda\right)D_b\phi
+	\nabla_a\varphi\to\Lambda_a^b\rho\left(\Lambda\right)\nabla_b\varphi
 \end{equation}
 therefore we need to define a better derivative, a common option is
 \begin{equation}
-	D_a\equiv e^\mu_a\left(\partial_\mu+\Gamma_\mu\right)
+	\nabla_a\equiv e^\mu_a\left(\partial_\mu+\Gamma_\mu\right)
 \end{equation}
 where, for the derivative to be covariant, the connection $\Gamma_\mu$ must transform as
 \begin{equation}
@@ -72,17 +72,17 @@ where, for the derivative to be covariant, the connection $\Gamma_\mu$ must tran
 \end{equation} 
 such connection can be written as
 \begin{equation}
-	\Gamma_\mu=\frac{1}{2}\Sigma^{ab}e^\nu_a\nabla_\mu e_{b\nu}
+	\Gamma_\mu=\frac{1}{2}\Sigma^{ab}e^\nu_a\left(\partial_\mu e_{b\nu}-\Gamma^\sigma_{\nu\mu}e_{b\sigma}\right)\equiv \frac{1}{2}\Sigma^{ab}\omega_{ab\mu}
 \end{equation}
-where $\Sigma^{ab}$ are the Lorentz generators and $e^\nu_a\nabla_\mu e_{b\nu}\equiv \omega_{ab\mu}$ is the torsion free spin connection.
+where $\Sigma^{ab}$ are the Lorentz generators and $\omega_{ab\mu}\equiv e^\nu_a\left(\partial_\mu e_{b\nu}-\Gamma^\sigma_{\nu\mu}e_{b\sigma}\right)$ is the torsion free spin connection.
 
 Under the presence of a gauge field, we would also want the derivative to be gauge invariant, and thus, the gauge four-potential $A$ must be considered in the definition of the derivative
 \begin{equation}
-	D_a\equiv e^\mu_a\left(\partial_\mu+\Gamma_\mu-\frac{i}{\hbar}eA_\mu\right)
+	\nabla_a\equiv e^\mu_a\left(\partial_\mu+\Gamma_\mu-\frac{i}{\hbar}eA_\mu\right)
 \end{equation}
 where $e$ is the coupling constant.
-
-\section{Scalar field}
+\subsection{Some Basic Examples}
+\subsubsection{Scalar Field}
 \begin{equation}\label{eq: General scalar field action}
 	S\big[\phi\big]=\int\frac{1}{2}\Big[\partial_\nu\phi\,\partial^\nu\phi-\mu^2\phi^2-\xi R\phi^2\Big]\sqrt{-g}\;\td^4 x
 \end{equation}
@@ -92,7 +92,7 @@ where $\mu\equiv\sfrac{m c}{\hbar}$, $R$ is the curvature scalar of the manifold
 \end{equation}
 This can be seen from the equations of motion (Klein-Gordon)
 \begin{equation}
-	\big[\partial_\nu\partial^\nu-\mu^2-\xi R\big]\phi=0
+	\big[\partial_\nu\partial^\nu-\mu^2-\xi R\big]\phi=0,
 \end{equation}
 considering $\phi\rightarrow\tilde{\phi}=\Omega^\beta\phi$ one gets that
 \begin{multline}
@@ -107,10 +107,54 @@ this equation has a solution for massless fields, corresponding to
 \end{subequations}
 
 The energy momentum tensor has the following form
-\begin{equation}
-	T_{\mu\nu}=\partial_\mu\phi\,\partial_\nu\phi -\frac{1}{2}g_{\mu\nu}\left[\partial^\sigma\phi\partial_\sigma\phi-\mu^2\phi^2\right]+\xi\left[R_{\mu\nu}-\frac{1}{2}g_{\mu\nu}+g_{\mu\nu}\partial^\sigma\partial_\sigma-\partial_\mu\partial_\nu\right]\phi^2
+\begin{equation}\label{eq: Energy-Momentum scalar}
+	T_{\mu\nu}=\partial_\mu\phi\,\partial_\nu\phi -\frac{1}{2}g_{\mu\nu}\left[\partial^\sigma\phi\partial_\sigma\phi-\mu^2\phi^2\right]+\xi\left[-R_{\mu\nu}+\frac{1}{2}g_{\mu\nu}R-g_{\mu\nu}\partial^\sigma\partial_\sigma+\partial_\mu\partial_\nu\right]\phi^2,
 \end{equation}
-note that for minimally coupled field ($\xi=0$) the energy-momentum tensor is equivalent to the Noether energy-momentum tensor.
+and its trace equals
+\begin{equation}
+	T^\nu_\nu=\frac{1}{2}\left(6\xi-1\right)\partial_\sigma\partial^\sigma\phi^2+\mu^2\phi^2,
+\end{equation}
+meaning that, for a free scalar theory with conformal symmetry, the energy-momentum tensor \ref{eq: Energy-Momentum scalar} is traceless.
+\subsubsection{Dirac Field}
+\begin{equation}
+	\Gamma_\mu=\frac{1}{8}\omega_{\mu}^{ab}\left[\gamma_a,\,\gamma_b\right]
+\end{equation}
+\begin{equation}
+	S[\psi]=\int \bar{\psi}\left[i\gamma^\mu\left(\partial_\mu+\Gamma_\mu\right)-\mu\right]\psi\sqrt{-g}\td^4x
+\end{equation}
+\begin{equation}
+	\left\{\gamma^\mu,\,\gamma^\nu\right\}=2g^{\mu\nu}
+\end{equation}
+\begin{equation}
+	\left[i\gamma^\mu\left(\partial_\mu+\Gamma_\mu\right)-\mu\right]\psi=0
+\end{equation}
+\begin{equation}
+	T_{\mu\nu}=\frac{1}{4}i\left\{\bar{\psi}\left(\gamma_\mu\nabla_\nu-\gamma_\nu\nabla_\mu\right)-\left[\left(\nabla_\mu\bar{\psi}\right)\gamma_\nu-\left(\nabla_\nu\bar{\psi}\right)\gamma_\mu\right]\right\}\psi
+\end{equation}
+Schrödinger-Dirac equation
+\begin{equation}
+	\left[\nabla_\nu\nabla^\nu-\mu^2-\frac{1}{4}R\right]\psi=0
+\end{equation}
+
+\subsubsection{Electromagnetic Field}
+\begin{equation}
+	S[A_\mu]=\int\left(-\frac{1}{4\mu_0 c}F_{\mu\nu}F^{\mu\nu}+\mathcal{L}_{\text{Gauge}}\right)\sqrt{-g}\td^4x
+\end{equation}
+\begin{equation}
+	F_{\mu\nu}=\nabla_\mu A_\nu-\nabla_\nu A_\mu=\partial_\mu A_\nu-\partial_\nu A_\mu
+\end{equation}
+\begin{equation}
+	\mathcal{L}_{\text{Gauge}}=-\frac{1}{2\alpha}\left(\nabla_\nu A^\nu\right)^2
+\end{equation}
+\begin{equation}
+	\nabla^\nu\nabla_\nu A_\mu+R_\mu^\alpha A_\alpha-\left(1-\alpha\right)\nabla_\mu\nabla^\nu A_\nu=0
+\end{equation}
+\begin{multline}
+	T_{\mu\nu}=-\frac{1}{\mu_0}\left(F_{\mu\alpha}F^{\alpha\nu}-\frac{1}{4}g_{\mu\nu}F_{\alpha\beta}F^{\alpha\beta}\right)+\\
+	+\alpha\left\{A_\mu\left(\nabla_\nu\nabla_\rho A^\rho\right)+\left(\nabla_\mu\nabla_\rho A^\rho\right)A_\nu-g_{\mu\nu}\left[A^\rho\left(\nabla\rho\nabla_\sigma A^\sigma\right)+\frac{1}{2}\left(\nabla_\rho A^\rho\right)^2\right]\right\}
+\end{multline}
+\section{Scalar field Quantization}
+
 
 Scalar product
 \begin{equation}
@@ -175,9 +219,7 @@ Since this is a scalar field, one might assume that the states are symmetric (de
 \begin{equation}
 	|i,\,j\rangle=\hat{a}_j^\dagger\,\hat{a}_i^\dagger\,|0\rangle=\left[\hat{a}_i^\dagger,\,\hat{a}_j^\dagger\right]|0\rangle+\hat{a}_i^\dagger\,\hat{a}_j^\dagger|0\rangle=|j,\,i\rangle
 \end{equation}
-\section{Dirac Field}
-\section{Electromagnetic field}
-\section{Bogoliubov transformations}
+\subsection{Bogoliubov Transformations}
 Consider now a second set $\left\{u_i(x),\,u_i^*(x)\right\}$ of solutions to the Klein-Gordon equation such that they meet the inner product rule; the field would then be written as
 \begin{equation}
 	\phi(x)=\sum_j\left[b_ju_j(x)+b_j^*u_j^*(x)\right]
@@ -213,12 +255,12 @@ Now, the relevance of the Bogoliubov transformations comes from the fact that th
 \end{equation}
 therefore, there is not a unique vacuum.
 
-\section{A leap towards a continuum}
+\subsection{A Leap Towards a Continuum}
 Until now, it has been considered that the set of Klein-Gordon solutions could be categorised by a discrete set of parameters $i$, from a standard course in QFT, one of the main results is the fact that the solutions of the flat Klein-Gordon equations can be parametrised by a continuous $3$-dimensional vector $\mathbf{k}$ (which is interpreted to be the momentum of the particle). Since all computations in this section where made by considering a discrete set of parameters, it is relevant to consider the continuum case.
 
 A common computation in many fields of physics is the determination of the density of states $D(\mathbf{k})$ describing the number of modes with momentum between $\mathbf{k}$ and $\mathbf{k}+\td \mathbf{k}$. Consider a system with volume $V$, where the field goes to zero at its boundary; in this case, the permitted values of momenta must meet
 \begin{equation}
-	k^i=n^i\frac{\pi\hbar}{V^{\sfrac{1}{3}}}\,,\hspace{1.0cm}n^i\in\mathbb{Z}
+	k^i=n^i\frac{\pi\hbar}{V^{\sfrac{1}{3}}}\,,\hspace{1.0cm}n^i\in\mathbb{N}
 \end{equation}
 Let $N(k)$ be the number of states with momentum modulus less than $k$, that is, the states such that
 \begin{equation}
