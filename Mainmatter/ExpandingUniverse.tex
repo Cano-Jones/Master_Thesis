@@ -81,30 +81,33 @@ Let $\xi=0$, i.e. work in the nonminimally coupled scalar field; then the Hamilt
 \begin{equation}
 	\hat{\mathcal{H}}(t)=\int\frac{c}{2}\left[\hat{\Pi}^2+\left(\mathbf{\nabla}\hat{\rchi}\right)^2+\mu_{\text{eff}}^2(t)\hat{\rchi}^2\right]\td^3\mathbf{x}
 \end{equation}
-\begin{multline}
-	\hat{\Pi}^2=\frac{1}{c^2}\int\frac{\td^3\mathbf{k}\td^3\mathbf{q}}{(2\pi\hbar)^6}\left[\hat{a}_\mathbf{k}\hat{a}_\mathbf{q}v'_\mathbf{k}v'_\mathbf{q}e^{-i(\mathbf{k}+\mathbf{q})\mathbf{x}\hbar^{-1}}+\hat{a}_\mathbf{k}\hat{a}_\mathbf{q}^\dagger v'_\mathbf{k}v^{'*}_\mathbf{q}e^{-i(\mathbf{k}-\mathbf{q})\mathbf{x}\hbar^{-1}}\right.+\\
-	+\left.\hat{a}^\dagger_\mathbf{k}\hat{a}_\mathbf{q}v^{'*}_\mathbf{k}v'_\mathbf{q}e^{i(\mathbf{k}-\mathbf{q})\mathbf{x}\hbar^{-1}}+\hat{a}_\mathbf{k}^\dagger\hat{a}_\mathbf{q}^\dagger v^{'*}_\mathbf{k}v^{'*}_\mathbf{q}e^{i(\mathbf{k}+\mathbf{q})\mathbf{x}\hbar^{-1}}\right]
-\end{multline}
-\begin{multline}
-	\left(\mathbf{\nabla}\hat{\rchi}\right)^2=-\frac{1}{\hbar^2}\int\frac{\td^3\mathbf{k}\td^3\mathbf{q}}{(2\pi\hbar)^6}\mathbf{k}\mathbf{q}\left[\hat{a}_\mathbf{k}\hat{a}_\mathbf{q}v_\mathbf{k}v_\mathbf{q}e^{-i(\mathbf{k}+\mathbf{q})\mathbf{x}\hbar^{-1}}-\hat{a}_\mathbf{k}\hat{a}_\mathbf{q}^\dagger v_\mathbf{k}v^*_\mathbf{q}e^{-i(\mathbf{k}-\mathbf{q})\mathbf{x}\hbar^{-1}}-\right.\\
-	-\left.\hat{a}_\mathbf{k}^\dagger\hat{a}_\mathbf{q}v_\mathbf{k}^*v_\mathbf{q}e^{i(\mathbf{k}-\mathbf{q})\mathbf{x}\hbar^{-1}}+\hat{a}^\dagger_\mathbf{k}\hat{a}^\dagger_\mathbf{q}v^*_\mathbf{k}v^*_\mathbf{q}e^{i(\mathbf{k}+\mathbf{q})\mathbf{x}\hbar^{-1}}\right]
-\end{multline}
-\begin{multline}
-	\hat{\rchi}^2=\int\frac{\td^3\mathbf{k}\td^3\mathbf{q}}{(2\pi\hbar)^6}\left[\hat{a}_\mathbf{k}\hat{a}_\mathbf{q}v_\mathbf{k}v_\mathbf{q}e^{-i(\mathbf{k}+\mathbf{q})\mathbf{x}\hbar^{-1}}+\hat{a}_\mathbf{k}\hat{a}_\mathbf{q}^\dagger v_\mathbf{k}v^*_\mathbf{q}e^{-i(\mathbf{k}-\mathbf{q})\mathbf{x}\hbar^{-1}}+\right.\\
-	+\left.\hat{a}_\mathbf{k}^\dagger\hat{a}_\mathbf{q}v_\mathbf{k}^*v_\mathbf{q}e^{i(\mathbf{k}-\mathbf{q})\mathbf{x}\hbar^{-1}}+\hat{a}^\dagger_\mathbf{k}\hat{a}^\dagger_\mathbf{q}v^*_\mathbf{k}v^*_\mathbf{q}e^{i(\mathbf{k}+\mathbf{q})\mathbf{x}\hbar^{-1}}\right]
-\end{multline}
-\begin{multline}
-	\hat{\mathcal{H}}=\frac{c}{2}\int\frac{\td^3\mathbf{k}\td^3\mathbf{q}}{(2\pi\hbar)^3}\left\{\hat{a}_\mathbf{k}\hat{a}_\mathbf{q}\left[\frac{1}{c^2}v'_\mathbf{k}v'_\mathbf{q}-\left(\frac{1}{\hbar^2}\mathbf{k}\mathbf{q}-\mu^2_{\text{eff}}\right)v_\mathbf{k}v_\mathbf{q}\right]\delta^3(\mathbf{k}+\mathbf{q})+\right.\\
-	+\left.\hat{a}_\mathbf{k}\hat{a}^\dagger_\mathbf{q}\left[\frac{1}{c^2}v'_\mathbf{k}v^{'*}_\mathbf{q}+\left(\frac{1}{\hbar^2}\mathbf{k}\mathbf{q}+\mu^2_{\text{eff}}\right)v_\mathbf{k}v^*_\mathbf{q}\right]\delta^3(\mathbf{k}-\mathbf{q})+\right.\\
-	+\left.\hat{a}^\dagger_\mathbf{k}\hat{a}_\mathbf{q}\left[\frac{1}{c^2}v^{'*}_\mathbf{k}v^{'}_\mathbf{q}+\left(\frac{1}{\hbar^2}\mathbf{k}\mathbf{q}+\mu^2_{\text{eff}}\right)v^*_\mathbf{k}v_\mathbf{q}\right]\delta^3(\mathbf{k}-\mathbf{q})+\right.\\
-	+\left.\hat{a}^\dagger_\mathbf{k}\hat{a}^\dagger_\mathbf{q}\left[\frac{1}{c^2}v^{'*}_\mathbf{k}v^{'*}_\mathbf{q}-\left(\frac{1}{\hbar^2}\mathbf{k}\mathbf{q}-\mu^2_{\text{eff}}\right)v^*_\mathbf{k}v^*_\mathbf{q}\right]\delta^3(\mathbf{k}+\mathbf{q})\right\}
-\end{multline}
-\begin{multline}
-	\hat{\mathcal{H}}=\frac{c}{2}\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^3}\left\{\hat{a}_\mathbf{k}\hat{a}_{-\mathbf{k}}\left[\frac{1}{c^2}v'_\mathbf{k}v'_\mathbf{k}+\frac{1}{\hbar^2}\omega^2_\mathbf{k}(t)v_\mathbf{k}v_\mathbf{k}\right]+\right.\\
-	+\left.\hat{a}_\mathbf{k}\hat{a}^\dagger_\mathbf{k}\left[\frac{1}{c^2}v'_\mathbf{k}v^{'*}_\mathbf{k}+\frac{1}{\hbar^2}\omega^2_\mathbf{k}(t)v_\mathbf{k}v^*_\mathbf{k}\right]+\right.\\
-	+\left.\hat{a}^\dagger_\mathbf{k}\hat{a}_\mathbf{k}\left[\frac{1}{c^2}v^{'*}_\mathbf{k}v^{'}_\mathbf{k}+\frac{1}{\hbar^2}\omega^2_\mathbf{k}(t)v^*_\mathbf{k}v_\mathbf{k}\right]+\right.\\
-	+\left.\hat{a}^\dagger_\mathbf{k}\hat{a}^\dagger_{-\mathbf{k}}\left[\frac{1}{c^2}v^{'*}_\mathbf{k}v^{'*}_\mathbf{k}+\frac{1}{\hbar^2}\omega^2_\mathbf{k}(t)v^*_\mathbf{k}v^*_\mathbf{k}\right]\right\}
-\end{multline}
+\begin{comment}
+	\begin{multline}
+		\hat{\Pi}^2=\frac{1}{c^2}\int\frac{\td^3\mathbf{k}\td^3\mathbf{q}}{(2\pi\hbar)^6}\left[\hat{a}_\mathbf{k}\hat{a}_\mathbf{q}v'_\mathbf{k}v'_\mathbf{q}e^{-i(\mathbf{k}+\mathbf{q})\mathbf{x}\hbar^{-1}}+\hat{a}_\mathbf{k}\hat{a}_\mathbf{q}^\dagger v'_\mathbf{k}v^{'*}_\mathbf{q}e^{-i(\mathbf{k}-\mathbf{q})\mathbf{x}\hbar^{-1}}\right.+\\
+		+\left.\hat{a}^\dagger_\mathbf{k}\hat{a}_\mathbf{q}v^{'*}_\mathbf{k}v'_\mathbf{q}e^{i(\mathbf{k}-\mathbf{q})\mathbf{x}\hbar^{-1}}+\hat{a}_\mathbf{k}^\dagger\hat{a}_\mathbf{q}^\dagger v^{'*}_\mathbf{k}v^{'*}_\mathbf{q}e^{i(\mathbf{k}+\mathbf{q})\mathbf{x}\hbar^{-1}}\right]
+	\end{multline}
+	\begin{multline}
+		\left(\mathbf{\nabla}\hat{\rchi}\right)^2=-\frac{1}{\hbar^2}\int\frac{\td^3\mathbf{k}\td^3\mathbf{q}}{(2\pi\hbar)^6}\mathbf{k}\mathbf{q}\left[\hat{a}_\mathbf{k}\hat{a}_\mathbf{q}v_\mathbf{k}v_\mathbf{q}e^{-i(\mathbf{k}+\mathbf{q})\mathbf{x}\hbar^{-1}}-\hat{a}_\mathbf{k}\hat{a}_\mathbf{q}^\dagger v_\mathbf{k}v^*_\mathbf{q}e^{-i(\mathbf{k}-\mathbf{q})\mathbf{x}\hbar^{-1}}-\right.\\
+		-\left.\hat{a}_\mathbf{k}^\dagger\hat{a}_\mathbf{q}v_\mathbf{k}^*v_\mathbf{q}e^{i(\mathbf{k}-\mathbf{q})\mathbf{x}\hbar^{-1}}+\hat{a}^\dagger_\mathbf{k}\hat{a}^\dagger_\mathbf{q}v^*_\mathbf{k}v^*_\mathbf{q}e^{i(\mathbf{k}+\mathbf{q})\mathbf{x}\hbar^{-1}}\right]
+	\end{multline}
+	\begin{multline}
+		\hat{\rchi}^2=\int\frac{\td^3\mathbf{k}\td^3\mathbf{q}}{(2\pi\hbar)^6}\left[\hat{a}_\mathbf{k}\hat{a}_\mathbf{q}v_\mathbf{k}v_\mathbf{q}e^{-i(\mathbf{k}+\mathbf{q})\mathbf{x}\hbar^{-1}}+\hat{a}_\mathbf{k}\hat{a}_\mathbf{q}^\dagger v_\mathbf{k}v^*_\mathbf{q}e^{-i(\mathbf{k}-\mathbf{q})\mathbf{x}\hbar^{-1}}+\right.\\
+		+\left.\hat{a}_\mathbf{k}^\dagger\hat{a}_\mathbf{q}v_\mathbf{k}^*v_\mathbf{q}e^{i(\mathbf{k}-\mathbf{q})\mathbf{x}\hbar^{-1}}+\hat{a}^\dagger_\mathbf{k}\hat{a}^\dagger_\mathbf{q}v^*_\mathbf{k}v^*_\mathbf{q}e^{i(\mathbf{k}+\mathbf{q})\mathbf{x}\hbar^{-1}}\right]
+	\end{multline}
+	\begin{multline}
+		\hat{\mathcal{H}}=\frac{c}{2}\int\frac{\td^3\mathbf{k}\td^3\mathbf{q}}{(2\pi\hbar)^3}\left\{\hat{a}_\mathbf{k}\hat{a}_\mathbf{q}\left[\frac{1}{c^2}v'_\mathbf{k}v'_\mathbf{q}-\left(\frac{1}{\hbar^2}\mathbf{k}\mathbf{q}-\mu^2_{\text{eff}}\right)v_\mathbf{k}v_\mathbf{q}\right]\delta^3(\mathbf{k}+\mathbf{q})+\right.\\
+		+\left.\hat{a}_\mathbf{k}\hat{a}^\dagger_\mathbf{q}\left[\frac{1}{c^2}v'_\mathbf{k}v^{'*}_\mathbf{q}+\left(\frac{1}{\hbar^2}\mathbf{k}\mathbf{q}+\mu^2_{\text{eff}}\right)v_\mathbf{k}v^*_\mathbf{q}\right]\delta^3(\mathbf{k}-\mathbf{q})+\right.\\
+		+\left.\hat{a}^\dagger_\mathbf{k}\hat{a}_\mathbf{q}\left[\frac{1}{c^2}v^{'*}_\mathbf{k}v^{'}_\mathbf{q}+\left(\frac{1}{\hbar^2}\mathbf{k}\mathbf{q}+\mu^2_{\text{eff}}\right)v^*_\mathbf{k}v_\mathbf{q}\right]\delta^3(\mathbf{k}-\mathbf{q})+\right.\\
+		+\left.\hat{a}^\dagger_\mathbf{k}\hat{a}^\dagger_\mathbf{q}\left[\frac{1}{c^2}v^{'*}_\mathbf{k}v^{'*}_\mathbf{q}-\left(\frac{1}{\hbar^2}\mathbf{k}\mathbf{q}-\mu^2_{\text{eff}}\right)v^*_\mathbf{k}v^*_\mathbf{q}\right]\delta^3(\mathbf{k}+\mathbf{q})\right\}
+	\end{multline}
+	\begin{multline}
+		\hat{\mathcal{H}}=\frac{c}{2}\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^3}\left\{\hat{a}_\mathbf{k}\hat{a}_{-\mathbf{k}}\left[\frac{1}{c^2}v'_\mathbf{k}v'_\mathbf{k}+\frac{1}{\hbar^2}\omega^2_\mathbf{k}(t)v_\mathbf{k}v_\mathbf{k}\right]+\right.\\
+		+\left.\hat{a}_\mathbf{k}\hat{a}^\dagger_\mathbf{k}\left[\frac{1}{c^2}v'_\mathbf{k}v^{'*}_\mathbf{k}+\frac{1}{\hbar^2}\omega^2_\mathbf{k}(t)v_\mathbf{k}v^*_\mathbf{k}\right]+\right.\\
+		+\left.\hat{a}^\dagger_\mathbf{k}\hat{a}_\mathbf{k}\left[\frac{1}{c^2}v^{'*}_\mathbf{k}v^{'}_\mathbf{k}+\frac{1}{\hbar^2}\omega^2_\mathbf{k}(t)v^*_\mathbf{k}v_\mathbf{k}\right]+\right.\\
+		+\left.\hat{a}^\dagger_\mathbf{k}\hat{a}^\dagger_{-\mathbf{k}}\left[\frac{1}{c^2}v^{'*}_\mathbf{k}v^{'*}_\mathbf{k}+\frac{1}{\hbar^2}\omega^2_\mathbf{k}(t)v^*_\mathbf{k}v^*_\mathbf{k}\right]\right\}
+	\end{multline}
+\end{comment}
+
 \begin{equation}
 	\hat{\mathcal{H}}=\frac{c}{2}\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^3}\left[\hat{a}_\mathbf{k}\hat{a}_{-\mathbf{k}}F_\mathbf{k}+\hat{a}^\dagger_\mathbf{k}\hat{a}^\dagger_{-\mathbf{k}}\bar F_\mathbf{k}+\left(2\hat{a}_\mathbf{k}^\dagger\hat{a}_\mathbf{k}+\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(v\bar v')}\delta^3(\mathbf{0})\right)E_\mathbf{k}\right]
 \end{equation}
