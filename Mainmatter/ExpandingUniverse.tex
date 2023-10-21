@@ -29,7 +29,7 @@ being the main source for the current study. In order to obtain the expressions 
 
 Solutions of the \cref{eq: Generalized Klein-Gordon} are dependent on an integration constant related to the momentum $\mathbf{k}$, and are of the form
 \begin{equation}
-	\rchi_{\mathbf{k}}(x)=\alpha_\mathbf{k}v_\mathbf{k}(\eta)e^{ i\mathbf{kx}\hbar^{-1}}+\bar\alpha_\mathbf{k}\bar v_\mathbf{k}(\eta)e^{- i\mathbf{kx}\hbar^{-1}},
+	\rchi_{\mathbf{k}}(x)=\alpha_\mathbf{k}v_\mathbf{k}(\eta)e^{ -i\mathbf{kx}\hbar^{-1}}+\bar\alpha_\mathbf{k}\bar v_\mathbf{k}(\eta)e^{ i\mathbf{kx}\hbar^{-1}},
 \end{equation}
 and upon substitution in \eqref{eq: Generalized Klein-Gordon}, one gets the following differential equation
 \begin{equation}\label{eq: Expanding diff v}
@@ -51,59 +51,47 @@ last step is result from dispersion relation. Since the functions $v_\mathbf{k}$
 
 The most general solution $\rchi(x)$ of equation \cref{eq: Generalized Klein-Gordon} can be written as a Fourier mode expansion
 \begin{equation}
-	\rchi(x)=\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^3}\left[a_\mathbf{k}v_\mathbf{k}(\eta)e^{i\mathbf{kx}\hbar^{-1}}\!\!+\bar a_\mathbf{k}\bar v_\mathbf{k}(\eta)e^{-i\mathbf{kx}\hbar^{-1}}\right]
+	\rchi(x)=\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^3}\left[a_\mathbf{k}v_\mathbf{k}(\eta)e^{-i\mathbf{kx}\hbar^{-1}}\!\!+\bar a_\mathbf{k}\bar v_\mathbf{k}(\eta)e^{i\mathbf{kx}\hbar^{-1}}\right]
 \end{equation}
 
 \section{Quantization}
-The field $\rchi$ and its conjugate momentum $\Pi=\partial_{c\,t} \rchi$ are promoted to operators on the quantum Hilbert space, with the standar canonical conmutation relations
-\begin{equation}
-	\left[\hat{\rchi}(t,\mathbf{x}),\hat{\Pi}(t,\mathbf{y})\right]=i\hbar \,\delta^3(\mathbf{x}-\mathbf{y})
-\end{equation}
-\begin{equation}
-	\Big[\hat{\rchi}(t,\mathbf{x}),\hat{\rchi}(t,\mathbf{y})\Big]=\left[\hat{\Pi}(t,\mathbf{x}),\hat{\Pi}(t,\mathbf{y})\right]=0
-\end{equation}
-where the operational nature of the fields arrise from the promotion of the mode amplitudes, i.e.
-\begin{equation}
-	a_\mathbf{k}\;\longrightarrow\;\hat{a}_\mathbf{k}\hspace{1.0cm}a_\mathbf{k}^*\;\longrightarrow\;\hat{a}_\mathbf{k}^\dagger
-\end{equation}
-this operators fulfill the following conmutation relations
-\begin{equation}
-	[\hat{a}_\mathbf{k},\hat{a}_\mathbf{q}^\dagger]=\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(v'v^*)}\delta^3(\mathbf{k}-\mathbf{q})\,,\hspace{1.0cm}[\hat{a}_\mathbf{k},\hat{a}_\mathbf{q}]=[\hat{a}_\mathbf{k}^\dagger,\hat{a}_\mathbf{q}^\dagger]=0
-\end{equation}
-(note that $\hat{a}_\mathbf{k}\not=\hat{a}_{-\mathbf{k}}$)
-
-To prove this, consider that
+\begin{subequations}\label{eq: a commutators expanding}
+	\begin{gather}
+		[\hat{a}_\mathbf{k},\hat{a}_\mathbf{q}^\dagger]=\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(v\bar v')}\delta^3(\mathbf{k}-\mathbf{q})\,,\hspace{1.0cm}[\hat{a}_\mathbf{k},\hat{a}_\mathbf{q}]=[\hat{a}_\mathbf{k}^\dagger,\hat{a}_\mathbf{q}^\dagger]=0\tag{\theequation \,\,a-c}
+	\end{gather}
+\end{subequations}
 \begin{multline}
-	\left[\hat{\rchi}(\mathbf{x}),\,\hat{\Pi}(\mathbf{y})\right]=\frac{1}{c}\int\frac{\td^3\mathbf{k}\td^3\mathbf{q}}{(2\pi\hbar)^6}\left\{\left[\hat{a}_\mathbf{k},\hat{a}_\mathbf{q}\right]v_\mathbf{k}v'_\mathbf{q}e^{i\left(\mathbf{kx}+\mathbf{qy}\right)\hbar^{-1}}+\left[\hat{a}_\mathbf{k}^\dagger, \hat{a}_\mathbf{q}^\dagger\right]v_\mathbf{k}^*v_\mathbf{q}^{*'}e^{i(\mathbf{kx}-\mathbf{qy})\hbar^{-1}}\right.+\\
-	+\left.\left[\hat{a}_\mathbf{k},\hat{a}_\mathbf{q}^\dagger\right] v_\mathbf{k}v^{*'}_\mathbf{q}e^{i(\mathbf{kx}-\mathbf{qy})\hbar^{-1}}-\left[\hat{a}_\mathbf{q},\hat{a}_\mathbf{k}^\dagger\right]v^*_\mathbf{k}v_\mathbf{q}'e^{-i(\mathbf{kx}-\mathbf{qy})\hbar^{-1}}\right\}
+	\left[\hat{\rchi}(\mathbf{x}),\,\hat{\Pi}(\mathbf{y})\right]=\frac{1}{c}\int\frac{\td^3\mathbf{k}\td^3\mathbf{q}}{(2\pi\hbar)^6}\left\{\left[\hat{a}_\mathbf{k},\hat{a}_\mathbf{q}\right]v_\mathbf{k}v'_\mathbf{q}e^{-i\left(\mathbf{kx}+\mathbf{qy}\right)\hbar^{-1}}+\left[\hat{a}_\mathbf{k}^\dagger, \hat{a}_\mathbf{q}^\dagger\right]\bar v_\mathbf{k}\bar v_\mathbf{q}'e^{-i(\mathbf{kx}-\mathbf{qy})\hbar^{-1}}\right.+\\
+	+\left.\left[\hat{a}_\mathbf{k},\hat{a}_\mathbf{q}^\dagger\right] v_\mathbf{k}\bar v'_\mathbf{q}e^{-i(\mathbf{kx}-\mathbf{qy})\hbar^{-1}}-\left[\hat{a}_\mathbf{q},\hat{a}_\mathbf{k}^\dagger\right]\bar v_\mathbf{k}v_\mathbf{q}'e^{i(\mathbf{kx}-\mathbf{qy})\hbar^{-1}}\right\}
 \end{multline}
-if the operators $\hat{a}$ and $\hat{a}^\dagger$ are to be understood as creation and annihilation operators, they must fulfill
+using \cref{eq: a commutators expanding} and considering that the proportional factor of \ref{eq: a commutators expanding}.a to be $\alpha$
 \begin{equation}
-	[\hat{a}_\mathbf{k},\hat{a}_\mathbf{q}^\dagger]=\alpha\delta^3(\mathbf{k}-\mathbf{q})\,,\hspace{1.0cm}[\hat{a}_\mathbf{k},\hat{a}_\mathbf{q}]=[\hat{a}_\mathbf{k}^\dagger,\hat{a}_\mathbf{q}^\dagger]=0
+	\left[\hat{\rchi}(\mathbf{x}),\,\hat{\Pi}(\mathbf{y})\right]=\frac{\alpha}{c}\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^6}2i\text{Im}(v_\mathbf{k}\bar v_\mathbf{k}')e^{-i(\mathbf{kx}-\mathbf{qy})\hbar^{-1}}
 \end{equation}
-where $\alpha\in\mathbb{C}$, and thus
+since $\text{Im}(v_\mathbf{k}\bar v_\mathbf{k}')$ was considered to be momentum independent,
 \begin{equation}
-	\left[\hat{\rchi}(\mathbf{x}),\,\hat{\Pi}(\mathbf{y})\right]=\frac{\alpha}{c}\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^6}2i\text{Im}(v_\mathbf{k}v_\mathbf{k}^{*'})e^{i(\mathbf{kx}-\mathbf{qy})\hbar^{-1}}
+	\left[\hat{\rchi}(\mathbf{x}),\,\hat{\Pi}(\mathbf{y})\right]=\frac{2\alpha\text{Im}(v\bar v')}{c(2\pi\hbar)^3}\delta^3(\mathbf{x}-\mathbf{y})
 \end{equation}
-considering Im$(v'v^*)$ momentum independent, and remembering the canonical conmutation relations, one finds that
-\begin{equation}
-	\alpha\text{Im}(vv^{*'})=\frac{1}{2}\hbar c(2\pi\hbar)^3
-\end{equation}
+and, from equation \ref{eq: General canonical commutator}.a one can solve for $\alpha$, resulting in the value present in equation \ref{eq: a commutators expanding}.
+
+
+
+
 Let $\xi=0$, i.e. work in the nonminimally coupled scalar field; then the Hamiltonian will be
 \begin{equation}
 	\hat{\mathcal{H}}(t)=\int\frac{c}{2}\left[\hat{\Pi}^2+\left(\mathbf{\nabla}\hat{\rchi}\right)^2+\mu_{\text{eff}}^2(t)\hat{\rchi}^2\right]\td^3\mathbf{x}
 \end{equation}
 \begin{multline}
-	\hat{\Pi}^2=\frac{1}{c^2}\int\frac{\td^3\mathbf{k}\td^3\mathbf{q}}{(2\pi\hbar)^6}\left[\hat{a}_\mathbf{k}\hat{a}_\mathbf{q}v'_\mathbf{k}v'_\mathbf{q}e^{i(\mathbf{k}+\mathbf{q})\mathbf{x}\hbar^{-1}}+\hat{a}_\mathbf{k}\hat{a}_\mathbf{q}^\dagger v'_\mathbf{k}v^{'*}_\mathbf{q}e^{i(\mathbf{k}-\mathbf{q})\mathbf{x}\hbar^{-1}}\right.+\\
-	+\left.\hat{a}^\dagger_\mathbf{k}\hat{a}_\mathbf{q}v^{'*}_\mathbf{k}v'_\mathbf{q}e^{-i(\mathbf{k}-\mathbf{q})\mathbf{x}\hbar^{-1}}+\hat{a}_\mathbf{k}^\dagger\hat{a}_\mathbf{q}^\dagger v^{'*}_\mathbf{k}v^{'*}_\mathbf{q}e^{-i(\mathbf{k}+\mathbf{q})\mathbf{x}\hbar^{-1}}\right]
+	\hat{\Pi}^2=\frac{1}{c^2}\int\frac{\td^3\mathbf{k}\td^3\mathbf{q}}{(2\pi\hbar)^6}\left[\hat{a}_\mathbf{k}\hat{a}_\mathbf{q}v'_\mathbf{k}v'_\mathbf{q}e^{-i(\mathbf{k}+\mathbf{q})\mathbf{x}\hbar^{-1}}+\hat{a}_\mathbf{k}\hat{a}_\mathbf{q}^\dagger v'_\mathbf{k}v^{'*}_\mathbf{q}e^{-i(\mathbf{k}-\mathbf{q})\mathbf{x}\hbar^{-1}}\right.+\\
+	+\left.\hat{a}^\dagger_\mathbf{k}\hat{a}_\mathbf{q}v^{'*}_\mathbf{k}v'_\mathbf{q}e^{i(\mathbf{k}-\mathbf{q})\mathbf{x}\hbar^{-1}}+\hat{a}_\mathbf{k}^\dagger\hat{a}_\mathbf{q}^\dagger v^{'*}_\mathbf{k}v^{'*}_\mathbf{q}e^{i(\mathbf{k}+\mathbf{q})\mathbf{x}\hbar^{-1}}\right]
 \end{multline}
 \begin{multline}
-	\left(\mathbf{\nabla}\hat{\rchi}\right)^2=-\frac{1}{\hbar^2}\int\frac{\td^3\mathbf{k}\td^3\mathbf{q}}{(2\pi\hbar)^6}\mathbf{k}\mathbf{q}\left[\hat{a}_\mathbf{k}\hat{a}_\mathbf{q}v_\mathbf{k}v_\mathbf{q}e^{i(\mathbf{k}+\mathbf{q})\mathbf{x}\hbar^{-1}}-\hat{a}_\mathbf{k}\hat{a}_\mathbf{q}^\dagger v_\mathbf{k}v^*_\mathbf{q}e^{i(\mathbf{k}-\mathbf{q})\mathbf{x}\hbar^{-1}}-\right.\\
-	-\left.\hat{a}_\mathbf{k}^\dagger\hat{a}_\mathbf{q}v_\mathbf{k}^*v_\mathbf{q}e^{-i(\mathbf{k}-\mathbf{q})\mathbf{x}\hbar^{-1}}+\hat{a}^\dagger_\mathbf{k}\hat{a}^\dagger_\mathbf{q}v^*_\mathbf{k}v^*_\mathbf{q}e^{-i(\mathbf{k}+\mathbf{q})\mathbf{x}\hbar^{-1}}\right]
+	\left(\mathbf{\nabla}\hat{\rchi}\right)^2=-\frac{1}{\hbar^2}\int\frac{\td^3\mathbf{k}\td^3\mathbf{q}}{(2\pi\hbar)^6}\mathbf{k}\mathbf{q}\left[\hat{a}_\mathbf{k}\hat{a}_\mathbf{q}v_\mathbf{k}v_\mathbf{q}e^{-i(\mathbf{k}+\mathbf{q})\mathbf{x}\hbar^{-1}}-\hat{a}_\mathbf{k}\hat{a}_\mathbf{q}^\dagger v_\mathbf{k}v^*_\mathbf{q}e^{-i(\mathbf{k}-\mathbf{q})\mathbf{x}\hbar^{-1}}-\right.\\
+	-\left.\hat{a}_\mathbf{k}^\dagger\hat{a}_\mathbf{q}v_\mathbf{k}^*v_\mathbf{q}e^{i(\mathbf{k}-\mathbf{q})\mathbf{x}\hbar^{-1}}+\hat{a}^\dagger_\mathbf{k}\hat{a}^\dagger_\mathbf{q}v^*_\mathbf{k}v^*_\mathbf{q}e^{i(\mathbf{k}+\mathbf{q})\mathbf{x}\hbar^{-1}}\right]
 \end{multline}
 \begin{multline}
-	\hat{\rchi}^2=\int\frac{\td^3\mathbf{k}\td^3\mathbf{q}}{(2\pi\hbar)^6}\left[\hat{a}_\mathbf{k}\hat{a}_\mathbf{q}v_\mathbf{k}v_\mathbf{q}e^{i(\mathbf{k}+\mathbf{q})\mathbf{x}\hbar^{-1}}+\hat{a}_\mathbf{k}\hat{a}_\mathbf{q}^\dagger v_\mathbf{k}v^*_\mathbf{q}e^{i(\mathbf{k}-\mathbf{q})\mathbf{x}\hbar^{-1}}+\right.\\
-	+\left.\hat{a}_\mathbf{k}^\dagger\hat{a}_\mathbf{q}v_\mathbf{k}^*v_\mathbf{q}e^{-i(\mathbf{k}-\mathbf{q})\mathbf{x}\hbar^{-1}}+\hat{a}^\dagger_\mathbf{k}\hat{a}^\dagger_\mathbf{q}v^*_\mathbf{k}v^*_\mathbf{q}e^{-i(\mathbf{k}+\mathbf{q})\mathbf{x}\hbar^{-1}}\right]
+	\hat{\rchi}^2=\int\frac{\td^3\mathbf{k}\td^3\mathbf{q}}{(2\pi\hbar)^6}\left[\hat{a}_\mathbf{k}\hat{a}_\mathbf{q}v_\mathbf{k}v_\mathbf{q}e^{-i(\mathbf{k}+\mathbf{q})\mathbf{x}\hbar^{-1}}+\hat{a}_\mathbf{k}\hat{a}_\mathbf{q}^\dagger v_\mathbf{k}v^*_\mathbf{q}e^{-i(\mathbf{k}-\mathbf{q})\mathbf{x}\hbar^{-1}}+\right.\\
+	+\left.\hat{a}_\mathbf{k}^\dagger\hat{a}_\mathbf{q}v_\mathbf{k}^*v_\mathbf{q}e^{i(\mathbf{k}-\mathbf{q})\mathbf{x}\hbar^{-1}}+\hat{a}^\dagger_\mathbf{k}\hat{a}^\dagger_\mathbf{q}v^*_\mathbf{k}v^*_\mathbf{q}e^{i(\mathbf{k}+\mathbf{q})\mathbf{x}\hbar^{-1}}\right]
 \end{multline}
 \begin{multline}
 	\hat{\mathcal{H}}=\frac{c}{2}\int\frac{\td^3\mathbf{k}\td^3\mathbf{q}}{(2\pi\hbar)^3}\left\{\hat{a}_\mathbf{k}\hat{a}_\mathbf{q}\left[\frac{1}{c^2}v'_\mathbf{k}v'_\mathbf{q}-\left(\frac{1}{\hbar^2}\mathbf{k}\mathbf{q}-\mu^2_{\text{eff}}\right)v_\mathbf{k}v_\mathbf{q}\right]\delta^3(\mathbf{k}+\mathbf{q})+\right.\\
@@ -118,51 +106,50 @@ Let $\xi=0$, i.e. work in the nonminimally coupled scalar field; then the Hamilt
 	+\left.\hat{a}^\dagger_\mathbf{k}\hat{a}^\dagger_{-\mathbf{k}}\left[\frac{1}{c^2}v^{'*}_\mathbf{k}v^{'*}_\mathbf{k}+\frac{1}{\hbar^2}\omega^2_\mathbf{k}(t)v^*_\mathbf{k}v^*_\mathbf{k}\right]\right\}
 \end{multline}
 \begin{equation}
-	\hat{\mathcal{H}}=\frac{c}{2}\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^3}\left[\hat{a}_\mathbf{k}\hat{a}_{-\mathbf{k}}F_\mathbf{k}+\hat{a}^\dagger_\mathbf{k}\hat{a}^\dagger_{-\mathbf{k}}F_\mathbf{k}^*+\left(2\hat{a}_\mathbf{k}^\dagger\hat{a}_\mathbf{k}+\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(v'v^*)}\delta^3(\mathbf{0})\right)E_\mathbf{k}\right]
+	\hat{\mathcal{H}}=\frac{c}{2}\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^3}\left[\hat{a}_\mathbf{k}\hat{a}_{-\mathbf{k}}F_\mathbf{k}+\hat{a}^\dagger_\mathbf{k}\hat{a}^\dagger_{-\mathbf{k}}\bar F_\mathbf{k}+\left(2\hat{a}_\mathbf{k}^\dagger\hat{a}_\mathbf{k}+\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(v\bar v')}\delta^3(\mathbf{0})\right)E_\mathbf{k}\right]
 \end{equation}
 where
-\begin{equation}
-	F_\mathbf{k}(t)=\left(\frac{1}{\hbar c}\right)^2\left[\hbar^2v^{'2}_\mathbf{k}+\omega^2_\mathbf{k}(t)\,c^2 v_\mathbf{k}^2\right]
-\end{equation}
-\begin{equation}
-	E_\mathbf{k}(t)=\left(\frac{1}{\hbar c}\right)^2\left[\hbar^2\big|v'_\mathbf{k}\big|^2+\omega^2_\mathbf{k}(t)\,c^2 \big|v_\mathbf{k}\big|^2\right]
-\end{equation}
+\begin{subequations}
+	\begin{gather}
+		F_\mathbf{k}(t)=\left(\frac{1}{\hbar c}\right)^2\left[\hbar^2v^{'2}_\mathbf{k}+\omega^2_\mathbf{k}(t)\,c^2 v_\mathbf{k}^2\right],\quad E_\mathbf{k}(t)=\left(\frac{1}{\hbar c}\right)^2\left[\hbar^2\big|v'_\mathbf{k}\big|^2+\omega^2_\mathbf{k}(t)\,c^2 \big|v_\mathbf{k}\big|^2\right].\tag{\theequation \,\,a,b}
+	\end{gather}
+\end{subequations}
 Now, the expectation value of the hamiltonian at time $t_0$ in the state $|_{(v)}0\rangle$
 \begin{equation}
-	\langle_{(v)}0|\hat{\mathcal{H}}(t_0)|_{(v)}0\rangle=\rho(t_0)\delta^3(\mathbf{0})=\frac{\hbar c^2 \,\delta^3(\mathbf{0})}{4\text{Im}(v'v^*)}\int\td^3\mathbf{k}\,E_\mathbf{k}
+	\langle_{(v)}0|\hat{\mathcal{H}}(t_0)|_{(v)}0\rangle=\rho(t_0)\delta^3(\mathbf{0})=\frac{\hbar c^2 \,\delta^3(\mathbf{0})}{4\text{Im}(v\bar v')}\int\td^3\mathbf{k}\,E_\mathbf{k}
 \end{equation}
 To minimise the energy density of the vacuum state is to find the set of functions $v_\mathbf{k}$ that minimise $E_\mathbf{k}$. Suppose that $v_\mathbf{k}$ can be written as
 \begin{equation}
 	v_\mathbf{k}=r_\mathbf{k}e^{i\alpha_\mathbf{k}}
 \end{equation}
-since Im$(vv^{'*})$ was constant through time
+since Im$(v\bar v')$ was constant through time
 \begin{equation}
-	\text{Im}(v_\mathbf{k}v^{'*}_\mathbf{k})=-r_\mathbf{k}^2\alpha'_\mathbf{k}
+	r_\mathbf{k}^2\alpha'_\mathbf{k}=-\text{Im}(v\bar v')
 \end{equation}
 this means
 \begin{equation}
-	E_\mathbf{k}=\left(\frac{1}{\hbar c}\right)^2\left\{\hbar^2\left[r^{'2}_\mathbf{k}+\text{Im}^2\left(v_\mathbf{k}v^{'*}_\mathbf{k}\right)\frac{1}{r_\mathbf{k}^2}\right]+\omega^2_\mathbf{k}\,c^2r_\mathbf{k}^2\right\}
+	E_\mathbf{k}=\left(\frac{1}{\hbar c}\right)^2\left\{\hbar^2\left[r^{'2}_\mathbf{k}+\text{Im}^2\left(v\bar v'\right)\frac{1}{r_\mathbf{k}^2}\right]+\omega^2_\mathbf{k}\,c^2r_\mathbf{k}^2\right\}
 \end{equation}
-the minimum of this function must fulfil $r'_\mathbf{k}(t_0)=0$. Now, if $\omega_\mathbf{k}^2(t_0)$ and $\text{Im}(v_\mathbf{k}v^{'*}_\mathbf{k})$ have the same sign, the minimum of $E_\mathbf{k}$ happens when $r_\mathbf{k}(t_0)=\left[\frac{\hbar\text{Im}(v_\mathbf{k}v^{'*}_\mathbf{k})}{\omega_\mathbf{k}(t_0)\,c}\right]^{1/2}$.
+the minimum of this function must fulfil $r'_\mathbf{k}(t_0)=0$. Now, if $\omega_\mathbf{k}^2(t_0)$ and $\text{Im}(v\bar v')$ have the same sign, the minimum of $E_\mathbf{k}$ happens when $r_\mathbf{k}(t_0)=\left[\frac{\hbar\text{Im}(v\bar v')}{\omega_\mathbf{k}(t_0)\,c}\right]^{1/2}$.
 
 If there is a minimum, then
 \begin{equation}
-	v_\mathbf{k}(t_0)=\left[\frac{\hbar\text{Im}(v_\mathbf{k}v^{'*}_\mathbf{k})}{\omega_\mathbf{k}(t_0)\,c}\right]^{1/2}\!\!\!\!e^{i\alpha_\mathbf{k}(t_0)}\hspace{1.0cm}v'_\mathbf{k}(t_0)=-c\frac{\omega_\mathbf{k}(t_0)}{ih}\,v_\mathbf{k}(t_0)
+	v_\mathbf{k}(t_0)=\left[\frac{\hbar\text{Im}(v\bar v')}{\omega_\mathbf{k}(t_0)\,c}\right]^{1/2}\!\!\!\!e^{i\alpha_\mathbf{k}(t_0)}\hspace{1.0cm}v'_\mathbf{k}(t_0)=-c\frac{\omega_\mathbf{k}(t_0)}{ih}\,v_\mathbf{k}(t_0)
 \end{equation}
 under these functions,
 \begin{equation}
-	E_\mathbf{k}(t_0)=2\frac{\text{Im}(v_\mathbf{k}v^{'*}_\mathbf{k})}{\hbar c}\omega_\mathbf{k}(t_0)\hspace{1.0cm}F_\mathbf{k}(t_0)=0
+	E_\mathbf{k}(t_0)=2\frac{\text{Im}(v\bar v')}{\hbar c}\omega_\mathbf{k}(t_0)\hspace{1.0cm}F_\mathbf{k}(t_0)=0
 \end{equation}
 meaning
 \begin{equation}
-	\hat{\mathcal{H}}(t_0)=\text{Im}(vv^{'*})\frac{1}{\hbar}\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^3}\left(2\hat{a}_\mathbf{k}^\dagger\hat{a}_\mathbf{k}+\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(v'v^*)}\delta^3(\mathbf{0})\right)\omega_\mathbf{k}(t_0)
+	\hat{\mathcal{H}}(t_0)=\text{Im}(vv^{'*})\frac{1}{\hbar}\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^3}\left(2\hat{a}_\mathbf{k}^\dagger\hat{a}_\mathbf{k}+\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(v\bar v')}\delta^3(\mathbf{0})\right)\omega_\mathbf{k}(t_0)
 \end{equation}
 which is equivalent to the standard Hamiltonian for a scalar field without the presence of gravity.
 \paragraph{Bogolyubov Transformation}
 
 The expression of the field $\rchi$ at two different times must be related to a Bogoliubov transformation, with coefficients
 \begin{equation}
-	\alpha_{\mathbf{kp}}=\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(v'v^*)}\langle \rchi_\mathbf{k}(t_0),\,\rchi_\mathbf{p}(t)\rangle\hspace{1.0cm}\beta_{\mathbf{kp}}=-\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(v'v^*)}\langle \rchi_\mathbf{k}(t_0),\,\rchi_\mathbf{p}^*(t)\rangle
+	\alpha_{\mathbf{kp}}=\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(v\bar v')}\langle \rchi_\mathbf{k}(t_0),\,\rchi_\mathbf{p}(t)\rangle\hspace{1.0cm}\beta_{\mathbf{kp}}=-\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(v\bar v')}\langle \rchi_\mathbf{k}(t_0),\,\rchi_\mathbf{p}^*(t)\rangle
 \end{equation}
 since the field can be written as $\rchi_\mathbf{k}=v_\mathbf{k}e^{-i\mathbf{kx}\sfrac{}{h}}$ from the expression of the inner product one can see that
 \begin{equation}
@@ -180,7 +167,7 @@ To obtain the value of $\langle_{(t_0)}0|\hat{\mathcal{H}}(t)|_{(t_0)}0\rangle$ 
 
 
 \begin{equation}
-	\langle_{(t_0)}0|\hat{\mathcal{N}}_\mathbf{k}^{(a)}(t)|_{(t_0)}0\rangle=\langle_{(t_0)}0|\hat{a}^\dagger_\mathbf{k}(t)\hat{a}_\mathbf{k}(t)|_{(t_0)}0\rangle=\Big|\beta_\mathbf{k}\Big|^2\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(vv^{'*})}\delta^3(\mathbf{0})
+	\langle_{(t_0)}0|\hat{\mathcal{N}}_\mathbf{k}^{(a)}(t)|_{(t_0)}0\rangle=\langle_{(t_0)}0|\hat{a}^\dagger_\mathbf{k}(t)\hat{a}_\mathbf{k}(t)|_{(t_0)}0\rangle=\Big|\beta_\mathbf{k}\Big|^2\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(v\bar v')}\delta^3(\mathbf{0})
 \end{equation}
 therefore
 \begin{equation}

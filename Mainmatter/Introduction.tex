@@ -18,6 +18,7 @@ and thus, after applying the generalized Gauss Theorem on a general manifold, al
 	\frac{\partial\mathcal{L}_{\text{M}}}{\partial\phi^\alpha}-\nabla_\mu\left[\frac{\partial \mathcal{L}_{\text{M}}}{\partial\left(\nabla_\mu\phi^\alpha\right)}\right]=0.
 \end{equation}
 
+ 
 On the other hand, variations of $S$ with respect to the inverse metric ($g^{\mu\nu}$) results in
 \begin{multline}
 	\delta S=\int \left[\frac{\sqrt{-g}}{2\kappa}\frac{\delta R}{\delta g^{\mu\nu}}+\frac{R}{2\kappa}\frac{1}{\sqrt{-g}}\frac{\delta \sqrt{-g}}{\delta g^{\mu\nu}}-\frac{\Lambda}{\kappa}\frac{1}{\sqrt{-g}}\frac{\delta\sqrt{-g}}{\delta g^{\mu\nu}}+\frac{\delta\mathcal{L}_{\text{M}}}{\delta g^{\mu\nu}}+\frac{\mathcal{L}_{\text{M}}}{\sqrt{-g}}\frac{\delta\sqrt{-g}}{\delta g^{\mu\nu}}\right]\delta g^{\mu\nu}\,\sqrt{-g}\,\td^4x;
@@ -135,6 +136,7 @@ Schrödinger-Dirac equation
 \begin{equation}
 	\left[\nabla_\nu\nabla^\nu-\mu^2-\frac{1}{4}R\right]\psi=0
 \end{equation}
+$\xi=\frac{1}{4}$
 
 \subsubsection{Electromagnetic Field}
 \begin{equation}
@@ -143,6 +145,7 @@ Schrödinger-Dirac equation
 \begin{equation}
 	F_{\mu\nu}=\nabla_\mu A_\nu-\nabla_\nu A_\mu=\partial_\mu A_\nu-\partial_\nu A_\mu
 \end{equation}
+where the last equality is a result of the symmetry of the lower indices on the Christoffel symbols.
 \begin{equation}
 	\mathcal{L}_{\text{Gauge}}=-\frac{1}{2\alpha}\left(\nabla_\nu A^\nu\right)^2
 \end{equation}
@@ -169,7 +172,7 @@ where $a_i,\,a^*_i$ are constant factors that can be written as
 \begin{equation}
 	a_i = \langle v_i(x),\,\phi(x)\rangle\hspace{1.0cm} a_i^* = \langle v_i^*(x),\,\phi(x)\rangle
 \end{equation}
-Quantization of the field is done by promoting the fields to operators
+Quantization of the field is done by promoting the field $\rchi$ and its conjugate momentum $\Pi\equiv\partial_{ct}\rchi$ to operators
 \begin{equation}
 	\phi(x)\longrightarrow\hat{\phi}(x)\hspace{1.0cm}\Pi(x)\longrightarrow\hat{\Pi}(x)
 \end{equation}
@@ -182,9 +185,11 @@ and therefore
 	\hat{\phi}(x)=\sum_i\left[\hat{a}_iv_i(x)+\hat{a}_i^\dagger v^*_i(x)\right]
 \end{equation}
 after the promotion of the fields to operators, commutation relations are imposed; the easiest choice would be to assume canonical quantization relations,
-\begin{equation}
-	\left[\hat{\phi}(\mathbf{x}),\,\hat{\Pi}(\mathbf{y})\right]=i\hbar \,\delta^3\left(\mathbf{x}-\mathbf{y}\right)\hspace{1.0cm}\left[\hat{\phi}(\mathbf{x}),\,\hat{\phi}(\mathbf{y})\right]=\left[\hat{\Pi}(\mathbf{x}),\,\hat{\Pi}(\mathbf{y})\right]=0
-\end{equation}
+\begin{subequations}\label{eq: General canonical commutator}
+	\begin{gather}
+		\left[\hat{\phi}(\mathbf{x}),\,\hat{\Pi}(\mathbf{y})\right]=i\hbar \,\delta^3\left(\mathbf{x}-\mathbf{y}\right)\hspace{1.0cm}\left[\hat{\phi}(\mathbf{x}),\,\hat{\phi}(\mathbf{y})\right]=\left[\hat{\Pi}(\mathbf{x}),\,\hat{\Pi}(\mathbf{y})\right]=0.\tag{\theequation \,\,a-c}
+	\end{gather}
+\end{subequations}
 It would be desirable to obtain a formulation similar to the well known scalar field in a flat background, where the Fock space is generated from a vacuum state and a set of creation and annihilation operators that follow some commutation rules. To do so, we will force the $\hat{a}_i,\,\hat{a}^\dagger_i$ operators to assume this roll, in such a way that
 \begin{equation}
 	\left[\hat{a}_i,\,\hat{a}_j^\dagger\right]\propto \delta_{ij}\hspace{1.0cm}\left[\hat{a}_i,\,\hat{a}_j\right]=\left[\hat{a}_i^\dagger,\,\hat{a}_j^\dagger\right]=0
