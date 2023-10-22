@@ -70,7 +70,7 @@ using \cref{eq: a commutators expanding} and considering that the proportional f
 \end{equation}
 since $\text{Im}(v_\mathbf{k}\bar v_\mathbf{k}')$ was considered to be momentum independent,
 \begin{equation}
-	\left[\hat{\rchi}(\mathbf{x}),\,\hat{\Pi}(\mathbf{y})\right]=\frac{2\alpha\text{Im}(v\bar v')}{c(2\pi\hbar)^3}\delta^3(\mathbf{x}-\mathbf{y})
+	\left[\hat{\rchi}(\mathbf{x}),\,\hat{\Pi}(\mathbf{y})\right]=i\frac{2\alpha\text{Im}(v\bar v')}{c(2\pi\hbar)^3}\delta^3(\mathbf{x}-\mathbf{y})
 \end{equation}
 and, from equation \ref{eq: General canonical commutator}.a one can solve for $\alpha$, resulting in the value present in equation \ref{eq: a commutators expanding}.
 
@@ -117,7 +117,18 @@ where
 		F_\mathbf{k}(t)=\left(\frac{1}{\hbar c}\right)^2\left[\hbar^2v^{'2}_\mathbf{k}+\omega^2_\mathbf{k}(t)\,c^2 v_\mathbf{k}^2\right],\quad E_\mathbf{k}(t)=\left(\frac{1}{\hbar c}\right)^2\left[\hbar^2\big|v'_\mathbf{k}\big|^2+\omega^2_\mathbf{k}(t)\,c^2 \big|v_\mathbf{k}\big|^2\right].\tag{\theequation \,\,a,b}
 	\end{gather}
 \end{subequations}
-Now, the expectation value of the hamiltonian at time $t_0$ in the state $|_{(v)}0\rangle$
+\section{Instantaneous Vacuum State}
+Note that the only way a vacuum state $|0\rangle$ could remain an eigenstate of the Hamiltonian at all times, would be if $F_\mathbf{k}=0$, which would mean
+\begin{equation}
+	F_\mathbf{k}(t)=\left(\frac{1}{\hbar c}\right)^2\left[\hbar^2v^{'2}_\mathbf{k}+\omega^2_\mathbf{k}(t)\,c^2 v_\mathbf{k}^2\right]=0,
+\end{equation}
+solving for $v_\mathbf{k}$ gives the following expression
+\begin{equation}
+	v_\mathbf{k}(t)=\text{C}\exp{\left[\pm \frac{c}{i\hbar}\int\omega_\mathbf{k}\left(\eta\right)\td \eta\right]},
+\end{equation}
+which is not compatible with \ref{eq: Expanding diff v} except for a time independent dispersion relation $\omega_\mathbf{k}$.
+
+The last result implies that, at different times one can (and should) define different vacuum states; and thus, we will define the \textit{instantaneous vacuum state} $|_{(v)}0\rangle$ as the one that at some time $t_0$ will minimize the energy density. Since all possible states are related by Bogolyubov transformations, finding the instantaneous vacumm state is the same as finding the set of functions $v_\mathbf{f}$ that are simultaneously solution of \ref{eq: Expanding diff v} and minimize
 \begin{equation}
 	\langle_{(v)}0|\hat{\mathcal{H}}(t_0)|_{(v)}0\rangle=\rho(t_0)\delta^3(\mathbf{0})=\frac{\hbar c^2 \,\delta^3(\mathbf{0})}{4\text{Im}(v\bar v')}\int\td^3\mathbf{k}\,E_\mathbf{k}
 \end{equation}
@@ -145,24 +156,24 @@ under these functions,
 \end{equation}
 meaning
 \begin{equation}
-	\hat{\mathcal{H}}(t_0)=\text{Im}(vv^{'*})\frac{1}{\hbar}\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^3}\left(2\hat{a}_\mathbf{k}^\dagger\hat{a}_\mathbf{k}+\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(v\bar v')}\delta^3(\mathbf{0})\right)\omega_\mathbf{k}(t_0)
+	\hat{\mathcal{H}}(t_0)=\text{Im}(v\bar v')\frac{1}{\hbar}\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^3}\left(2\hat{a}_\mathbf{k}^\dagger\hat{a}_\mathbf{k}+\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(v\bar v')}\delta^3(\mathbf{0})\right)\omega_\mathbf{k}(t_0)
 \end{equation}
 which is equivalent to the standard Hamiltonian for a scalar field without the presence of gravity.
 \paragraph{Bogolyubov Transformation}
 
 The expression of the field $\rchi$ at two different times must be related to a Bogoliubov transformation, with coefficients
 \begin{equation}
-	\alpha_{\mathbf{kp}}=\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(v\bar v')}\langle \rchi_\mathbf{k}(t_0),\,\rchi_\mathbf{p}(t)\rangle\hspace{1.0cm}\beta_{\mathbf{kp}}=-\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(v\bar v')}\langle \rchi_\mathbf{k}(t_0),\,\rchi_\mathbf{p}^*(t)\rangle
+	\alpha_{\mathbf{kp}}=\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(v\bar v')}\langle \rchi_\mathbf{k}(t_0),\,\rchi_\mathbf{p}(t)\rangle\hspace{1.0cm}\beta_{\mathbf{kp}}=-\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(v\bar v')}\langle \rchi_\mathbf{k}(t_0),\,\bar \rchi_\mathbf{p}(t)\rangle
 \end{equation}
-since the field can be written as $\rchi_\mathbf{k}=v_\mathbf{k}e^{-i\mathbf{kx}\sfrac{}{h}}$ from the expression of the inner product one can see that
+since the field can be written as $\rchi_\mathbf{k}=v_\mathbf{k}e^{i\mathbf{kx}\sfrac{}{h}}$ from the expression of the inner product one can see that
 \begin{equation}
 	\alpha_{\mathbf{kp}}\propto \delta^3(\mathbf{k}-\mathbf{p})\hspace{1.0cm}\beta_{\mathbf{kp}}\propto \delta^3(\mathbf{k}+\mathbf{p})
 \end{equation}
 therefore it is possible to write
 \begin{equation}
-	v_\mathbf{k}(t)=\alpha_\mathbf{k}v_\mathbf{k}(t_0)+\beta_\mathbf{k}v^*_\mathbf{k}(t_0)
+	v_\mathbf{k}(t)=\alpha_\mathbf{k}v_\mathbf{k}(t_0)+\beta_\mathbf{k}\bar v_\mathbf{k}(t_0)
 \end{equation}
-where, recalling that $\text{Im}(v'_\mathbf{k}v^*_\mathbf{k})$ is constant through time, 
+where, recalling that $\text{Im}(v\bar v')$ is constant through time, 
 \begin{equation}
 	|\alpha_\mathbf{k}|^2-|\beta_\mathbf{k}|^2=1
 \end{equation}
