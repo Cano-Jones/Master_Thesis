@@ -42,7 +42,7 @@ where the dispersion relation $\omega_\mathbf{k}(\eta)$ is defined as,
 
 Solving \cref{eq: Expanding diff v} will in turn give the form of the set of solutions $\left\{\rchi_{\mathbf{k}}\right\}$ needed to describe the general expression of $\rchi(x)$; since we are currently considering general expansion parameters and curvature scalars, the following computations will be made using a general set of $v_\mathbf{k}$ functions. This functions nevertheless have some interesting properties, such as being capable of a choice of normalization, and a constant of motion: the imaginary part of $v_\mathbf{k}\bar{v}_\mathbf{k}'$. Lets check the last statement
 \begin{equation}
-	\frac{\partial}{\partial \eta }\text{Im}(v_\mathbf{k}\bar{v}_\mathbf{k}')=\frac{\partial}{\partial \eta}\left(\frac{v_\mathbf{k}\bar{v}_\mathbf{k}'-\bar v_\mathbf{k}v'_\mathbf{k}}{2i}\right)=\frac{v_\mathbf{k}\bar v_\mathbf{k}'*-\bar v_\mathbf{k}v_\mathbf{k}''}{2i}=0
+	\frac{\partial}{\partial \eta }\text{Im}(v_\mathbf{k}\bar{v}_\mathbf{k}')=\frac{\partial}{\partial \eta}\left(\frac{v_\mathbf{k}\bar{v}_\mathbf{k}'-\bar v_\mathbf{k}v'_\mathbf{k}}{2i}\right)=\frac{v_\mathbf{k}\bar v_\mathbf{k}'-\bar v_\mathbf{k}v_\mathbf{k}''}{2i}=0
 \end{equation}
 last step is result from dispersion relation. Since the functions $v_\mathbf{k}$ are capable to a choice in normalization, we will choose a set of solutions of \cref{eq: Expanding diff v} such that $\text{Im}(v_\mathbf{k}\bar{v}_\mathbf{k}')$ its independent of the momentum $\mathbf{k}$, and equal for all modes, this constant of motion will simply be defined as
 \begin{equation}
@@ -50,8 +50,8 @@ last step is result from dispersion relation. Since the functions $v_\mathbf{k}$
 \end{equation}
 
 The most general solution $\rchi(x)$ of equation \cref{eq: Generalized Klein-Gordon} can be written as a Fourier mode expansion
-\begin{equation}
-	\rchi(x)=\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^3}\left[a_\mathbf{k}v_\mathbf{k}(\eta)e^{-i\mathbf{kx}\hbar^{-1}}\!\!+\bar a_\mathbf{k}\bar v_\mathbf{k}(\eta)e^{i\mathbf{kx}\hbar^{-1}}\right]
+\begin{equation}\label{eq: Expanding General Solution}
+	\rchi(x)=\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^3}\left[a_\mathbf{k}v_\mathbf{k}(\eta)e^{-i\mathbf{kx}\hbar^{-1}}\!\!+\bar a_\mathbf{k}\bar v_\mathbf{k}(\eta)e^{i\mathbf{kx}\hbar^{-1}}\right].
 \end{equation}
 
 \section{Quantization}

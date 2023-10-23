@@ -78,44 +78,48 @@ such connection can be written as
 where $\Sigma^{ab}$ are the Lorentz generators and $\omega_{ab\mu}\equiv e^\nu_a\left(\partial_\mu e_{b\nu}-\Gamma^\sigma_{\nu\mu}e_{b\sigma}\right)$ is the torsion free spin connection.
 
 Under the presence of a gauge field, we would also want the derivative to be gauge invariant, and thus, the gauge four-potential $A$ must be considered in the definition of the derivative
-\begin{equation}
+\begin{equation}\label{eq: Covariant derivative}
 	\nabla_a\equiv e^\mu_a\left(\partial_\mu+\Gamma_\mu-\frac{i}{\hbar}eA_\mu\right)
 \end{equation}
 where $e$ is the coupling constant.
 \subsection{Some Basic Examples}
 \subsubsection{Scalar Field}
+The very first example given for a classical field is usually a (real) free scalar field $\phi(x)$ with some mass $m$; whose dynamics are given by the following action
 \begin{equation}\label{eq: General scalar field action}
-	S\big[\phi\big]=\int\frac{1}{2}\Big[\partial_\nu\phi\,\partial^\nu\phi-\mu^2\phi^2-\xi R\phi^2\Big]\sqrt{-g}\;\td^4 x
+	S\big[\phi\big]=\int\frac{1}{2}\Big[\partial_\nu\phi\,\partial^\nu\phi-\mu^2\phi^2-\xi R\phi^2\Big]\sqrt{-g}\;\td^4 x.
 \end{equation}
-where $\mu\equiv\sfrac{m c}{\hbar}$, $R$ is the curvature scalar of the manifold. For $\xi=0$ the scalar field is said to be minimally coupled to gravity (nonminimally coupled otherwise); this is the simplest interactive term that couples the scalar field with the manifold; in curved spacetimes \cite{Bunch_Renorm} a self interactive $\lambda\phi^4$ theory needs a term proportional to $R\phi^2$ to be renormalizable. For $\xi=\sfrac{1}{6}$ its said to be conformally coupled, and, in the case of a massless field ($\mu=0$) the action will be invariant under conformal transformations, i.e.
-\begin{equation}
+The construction of such action arises from its Minkowskian counterpart (a primary study of the standard quantum field theory can be found in the appendix \ref{sec: Minkosky Scalar}); since the field in question is a scalar one, the covariant derivative \ref{eq: Covariant derivative} its simply $\partial_\nu$, the massive term of the action is dependant on a parameter $\mu\equiv\sfrac{mc}{\hbar}$, and an term is added as a coupling to gravity (through the Ricci scalar $R$) with a coupling constant $\xi$ \footnote{The field is said to be minimally coupled to gravity if $\xi=0$ and nonminimally coupled otherwise.}.
+
+The inclusion of such coupling is not a mere curiosity, since it's been proven \cite{Bunch_Renorm} that a self interactive $\lambda\phi^4$ theory needs a term proportional to $R\phi^2$ to be renormalizable. Besides this, de addition of a term proportional to $R\phi^2$ adds a new symmetry to de action, since for a massless field $\mu=0$ with a coupling constant $\xi=\sfrac{1}{6}$, the action is invariant under conformal transformations, i.e.
+\begin{equation}\label{eq: Conformal Transformation}
 	g_{\mu\nu}\rightarrow \tilde{g}_{\mu\nu}\equiv \Omega^2(x)g_{\mu\nu},
 \end{equation}
-This can be seen from the equations of motion (Klein-Gordon)
+to prove this, lets first obtain the equations of motion using the Euler-Lagrange equation \ref{eq: Euler-Lagrange}, resulting in the generalized Klein-Gordon equation
 \begin{equation}
 	\big[\partial_\nu\partial^\nu-\mu^2-\xi R\big]\phi=0,
 \end{equation}
-considering $\phi\rightarrow\tilde{\phi}=\Omega^\beta\phi$ one gets that
+and then, a conformal transformation can be made to then, considering that the field will transform as $\phi\rightarrow\tilde{\phi}=\Omega^\beta\phi$, resulting on the following expression:
 \begin{multline}
 	0=\mu^2\Omega^{\beta-2}\left(\Omega^2-1\right)\phi+2\left(1+\beta\right)\Omega^{\beta-3}\partial^\nu\Omega\partial_\nu\phi+\\
-	+(6\xi+\beta)\Omega^{\beta-3}\left(\partial_\nu\partial^\nu\Omega\right)\phi+\beta(1+\beta)\Omega^{\beta-4}\partial_\nu\Omega\partial^\nu\Omega\,\phi
+	+(6\xi+\beta)\Omega^{\beta-3}\left(\partial_\nu\partial^\nu\Omega\right)\phi+\beta(1+\beta)\Omega^{\beta-4}\partial_\nu\Omega\partial^\nu\Omega\,\phi.
 \end{multline}
-this equation has a solution for massless fields, corresponding to
+Considering a massless field, a solution of this equation corresponds to the following values:
 \begin{subequations}
 	\begin{gather}
-		\beta=-1,\hspace{1.0cm} \xi=\frac{1}{6}\tag{\theequation \,\,a,b}
+		\beta=-1,\hspace{1.0cm} \xi=\frac{1}{6},\tag{\theequation \,\,a,b}
 	\end{gather}
 \end{subequations}
+proving the conformal invariance for such scenario.
 
-The energy momentum tensor has the following form
+From its definition in equation \ref{eq: Hilbert energy-momentum tensor} and the action \ref{eq: General scalar field action}, one can obtain the expression for the energy momentum tensor
 \begin{equation}\label{eq: Energy-Momentum scalar}
 	T_{\mu\nu}=\partial_\mu\phi\,\partial_\nu\phi -\frac{1}{2}g_{\mu\nu}\left[\partial^\sigma\phi\partial_\sigma\phi-\mu^2\phi^2\right]+\xi\left[-R_{\mu\nu}+\frac{1}{2}g_{\mu\nu}R-g_{\mu\nu}\partial^\sigma\partial_\sigma+\partial_\mu\partial_\nu\right]\phi^2,
 \end{equation}
-and its trace equals
+which has an interesting property of its trace,
 \begin{equation}
 	T^\nu_\nu=\frac{1}{2}\left(6\xi-1\right)\partial_\sigma\partial^\sigma\phi^2+\mu^2\phi^2,
 \end{equation}
-meaning that, for a free scalar theory with conformal symmetry, the energy-momentum tensor \ref{eq: Energy-Momentum scalar} is traceless.
+as it is zero, for a conformal theory.
 \subsubsection{Dirac Field}
 \begin{equation}
 	\Gamma_\mu=\frac{1}{8}\omega_{\mu}^{ab}\left[\gamma_a,\,\gamma_b\right]
@@ -126,88 +130,108 @@ meaning that, for a free scalar theory with conformal symmetry, the energy-momen
 \begin{equation}
 	\left\{\gamma^\mu,\,\gamma^\nu\right\}=2g^{\mu\nu}
 \end{equation}
+
+From the Euler-Lagrange equation \ref{eq: Euler-Lagrange}, its obtained the generalized Dirac equation
 \begin{equation}
-	\left[i\gamma^\mu\left(\partial_\mu+\Gamma_\mu\right)-\mu\right]\psi=0
+	\left[i\gamma^\mu\left(\partial_\mu+\Gamma_\mu\right)-\mu\right]\psi=0.
 \end{equation}
+And from its definition in equation \ref{eq: Hilbert energy-momentum tensor}, the energy momentum tensor will have the following expression
 \begin{equation}
-	T_{\mu\nu}=\frac{1}{4}i\left\{\bar{\psi}\left(\gamma_\mu\nabla_\nu-\gamma_\nu\nabla_\mu\right)-\left[\left(\nabla_\mu\bar{\psi}\right)\gamma_\nu-\left(\nabla_\nu\bar{\psi}\right)\gamma_\mu\right]\right\}\psi
+	T_{\mu\nu}=\frac{1}{4}i\left\{\bar{\psi}\left(\gamma_\mu\nabla_\nu-\gamma_\nu\nabla_\mu\right)-\left[\left(\nabla_\mu\bar{\psi}\right)\gamma_\nu-\left(\nabla_\nu\bar{\psi}\right)\gamma_\mu\right]\right\}\psi.
 \end{equation}
-Schrödinger-Dirac equation
+
+A particularly interesting outcome of this field is the so called Schrödinger-Dirac equation, result of squaring the generalized Dirac operator $\left[i\gamma^\mu\left(\partial_\mu+\Gamma_\mu\right)-\mu\right]$ just as its done in a Minkowskian background to recover the Klein-Gordon equation,
 \begin{equation}
-	\left[\nabla_\nu\nabla^\nu-\mu^2-\frac{1}{4}R\right]\psi=0
+	\left[\nabla_\nu\nabla^\nu-\mu^2-\frac{1}{4}R\right]\psi=0,
 \end{equation}
-$\xi=\frac{1}{4}$
+this expression gives another "natural" choice for the scalar field coupling to gravity $\xi$, comparing it with the generalized Klein-Gordon equation \ref{eq: Generalized Klein-Gordon} finding $\xi=\sfrac{1}{4}$.
 
 \subsubsection{Electromagnetic Field}
-\begin{equation}
-	S[A_\mu]=\int\left(-\frac{1}{4\mu_0 c}F_{\mu\nu}F^{\mu\nu}+\mathcal{L}_{\text{Gauge}}\right)\sqrt{-g}\td^4x
+Having previously studied the Dirac field, it is expected to also include the electromagnetic field, which is described by the same action as in the Minkowskian background, that is,
+\begin{equation}\label{eq: Electromagnetic action}
+	S[A_\mu]=\int\left(-\frac{1}{4\mu_0 c}F_{\mu\nu}F^{\mu\nu}+\mathcal{L}_{\text{Gauge}}\right)\sqrt{-g}\td^4x,
 \end{equation}
+where $\mathcal{L}_{\text{Gauge}}$ is a gauge fixing term of the form
 \begin{equation}
-	F_{\mu\nu}=\nabla_\mu A_\nu-\nabla_\nu A_\mu=\partial_\mu A_\nu-\partial_\nu A_\mu
+	\mathcal{L}_{\text{Gauge}}=-\frac{1}{2\alpha}\left(\nabla_\nu A^\nu\right)^2.
+\end{equation}
+The Faraday tensor is defined as
+\begin{equation}
+	F_{\mu\nu}=\nabla_\mu A_\nu-\nabla_\nu A_\mu=\partial_\mu A_\nu-\partial_\nu A_\mu,
 \end{equation}
 where the last equality is a result of the symmetry of the lower indices on the Christoffel symbols.
+
+
+The equations of motion resulting from the action \ref{eq: Electromagnetic action} and Euler-Lagrange \ref{eq: Euler-Lagrange} are
 \begin{equation}
-	\mathcal{L}_{\text{Gauge}}=-\frac{1}{2\alpha}\left(\nabla_\nu A^\nu\right)^2
+	\nabla^\nu\nabla_\nu A_\mu+R_\mu^\sigma A_\sigma-\left(1-\alpha\right)\nabla_\mu\nabla^\nu A_\nu=0.
 \end{equation}
-\begin{equation}
-	\nabla^\nu\nabla_\nu A_\mu+R_\mu^\alpha A_\alpha-\left(1-\alpha\right)\nabla_\mu\nabla^\nu A_\nu=0
-\end{equation}
+
+And finally, as for completeness, the energy-momentum tensor given by \ref{eq: Hilbert energy-momentum tensor} is
 \begin{multline}
 	T_{\mu\nu}=-\frac{1}{\mu_0}\left(F_{\mu\alpha}F^{\alpha\nu}-\frac{1}{4}g_{\mu\nu}F_{\alpha\beta}F^{\alpha\beta}\right)+\\
-	+\alpha\left\{A_\mu\left(\nabla_\nu\nabla_\rho A^\rho\right)+\left(\nabla_\mu\nabla_\rho A^\rho\right)A_\nu-g_{\mu\nu}\left[A^\rho\left(\nabla\rho\nabla_\sigma A^\sigma\right)+\frac{1}{2}\left(\nabla_\rho A^\rho\right)^2\right]\right\}
+	+\alpha\left\{A_\mu\left(\nabla_\nu\nabla_\rho A^\rho\right)+\left(\nabla_\mu\nabla_\rho A^\rho\right)A_\nu-g_{\mu\nu}\left[A^\rho\left(\nabla\rho\nabla_\sigma A^\sigma\right)+\frac{1}{2}\left(\nabla_\rho A^\rho\right)^2\right]\right\}.
 \end{multline}
 \section{Scalar field Quantization}
+Thanks to its simplicity, the scalar field is a great field to work with, with the intent of showing some properties of a theory. For that reason, for what follows, all work will be done considering a real scalar field described by the action \ref{eq: General scalar field action}.
 
+Now, let $v(x)$ be a solution of the generalized Klein-Gordon equation \ref{eq: Generalized Klein-Gordon}, then its complex conjugated $\bar{v}$ will also be an independent solution. Now consider $i$ to be a set of parameters that univocally describe a par of solutions $v_i,\,\bar v_i$ in such a way that the most general solution of \ref{eq: Generalized Klein-Gordon} will be
+\begin{equation}
+	\phi(x)=\sum_ i\left[a_iv_i(x)+\bar a_i\bar v_i(x)\right],
+\end{equation}
+where $a_i$ and $\bar a_i$ are constant factors, determined by the following external binary operation
+\begin{equation}
+	\langle \phi_1(x),\,\phi_2(x)\rangle\equiv i\int g^{0\nu}\left(\phi_1\overset{\text{\tiny$\leftrightarrow$}}{\partial}_\nu\bar \phi_2\right)\sqrt{-g}\,\td^3\mathbf{x},
+\end{equation}
+such that
+\begin{subequations}
+	\begin{gather}
+		a_i = \langle v_i(x),\,\phi(x)\rangle,\quad \bar a_i = \langle \bar v_i(x),\,\phi(x)\rangle.\tag{\theequation \,\,a,b}
+	\end{gather}
+\end{subequations}
 
-Scalar product
-\begin{equation}
-	\langle \phi_1(x),\,\phi_2(x)\rangle\equiv i\int g^{0\nu}\left(\phi_1\overset{\text{\tiny$\leftrightarrow$}}{\partial}_\nu\phi_2^*\right)\sqrt{-g}\,\td^3\mathbf{x}
-\end{equation}
-
-Let $v(x)$ be a solution of the Klein-Gordon equation, then $v^*(x)$ will also be an (linearly independent) solution. Let $i$ represent the set of parameters that univocally describe a par of solutions $v_i(x),\,v^*(x)$, therefore, the general solution of the Klein-Gordon equation will be of the form
-\begin{equation}
-	\phi(x)=\sum_ i\left[a_iv_i(x)+a^*_iv^*_i(x)\right]
-\end{equation} 
-where $a_i,\,a^*_i$ are constant factors that can be written as
-\begin{equation}
-	a_i = \langle v_i(x),\,\phi(x)\rangle\hspace{1.0cm} a_i^* = \langle v_i^*(x),\,\phi(x)\rangle
-\end{equation}
-Quantization of the field is done by promoting the field $\rchi$ and its conjugate momentum $\Pi\equiv\partial_{ct}\rchi$ to operators
-\begin{equation}
-	\phi(x)\longrightarrow\hat{\phi}(x)\hspace{1.0cm}\Pi(x)\longrightarrow\hat{\Pi}(x)
-\end{equation}
-this is done by promoting the constant factors to operators as well, that is
-\begin{equation}
-	a_i\longrightarrow\hat{a}_i\hspace{1.0cm}a_i^*\longrightarrow\hat{a}_i^\dagger
-\end{equation}
+The quantization procedure is done by promoting the field $\rchi$ and its conjugate momentum $\Pi\equiv\partial_{ct}\rchi$ to operators
+\begin{equation*}
+	\phi(x)\longrightarrow\hat{\phi}(x),\hspace{1.0cm}\Pi(x)\longrightarrow\hat{\Pi}(x),
+\end{equation*}
+by promoting the constant factors to operators as well, that is
+\begin{equation*}
+	a_i\longrightarrow\hat{a}_i\hspace{1.0cm}\bar a_i\longrightarrow\hat{a}_i^\dagger
+\end{equation*}
 and therefore
 \begin{equation}
-	\hat{\phi}(x)=\sum_i\left[\hat{a}_iv_i(x)+\hat{a}_i^\dagger v^*_i(x)\right]
+	\hat{\phi}(x)=\sum_i\left[\hat{a}_iv_i(x)+\hat{a}_i^\dagger \bar v_i(x)\right].
 \end{equation}
-after the promotion of the fields to operators, commutation relations are imposed; the easiest choice would be to assume canonical quantization relations,
+One the promotion of the field to operators have been done, commutation relations between those operators must be imposed; the easiest choice would be to assume canonical quantization relations, that is,
 \begin{subequations}\label{eq: General canonical commutator}
 	\begin{gather}
 		\left[\hat{\phi}(\mathbf{x}),\,\hat{\Pi}(\mathbf{y})\right]=i\hbar \,\delta^3\left(\mathbf{x}-\mathbf{y}\right)\hspace{1.0cm}\left[\hat{\phi}(\mathbf{x}),\,\hat{\phi}(\mathbf{y})\right]=\left[\hat{\Pi}(\mathbf{x}),\,\hat{\Pi}(\mathbf{y})\right]=0.\tag{\theequation \,\,a-c}
 	\end{gather}
 \end{subequations}
-It would be desirable to obtain a formulation similar to the well known scalar field in a flat background, where the Fock space is generated from a vacuum state and a set of creation and annihilation operators that follow some commutation rules. To do so, we will force the $\hat{a}_i,\,\hat{a}^\dagger_i$ operators to assume this roll, in such a way that
-\begin{equation}
-	\left[\hat{a}_i,\,\hat{a}_j^\dagger\right]\propto \delta_{ij}\hspace{1.0cm}\left[\hat{a}_i,\,\hat{a}_j\right]=\left[\hat{a}_i^\dagger,\,\hat{a}_j^\dagger\right]=0
-\end{equation}
-Thanks to the relation between the constant factors $a_i$ and the scalar product $\langle v_i,\,\phi\rangle$, one can obtain
+It would be desirable to obtain a formulation similar to the well known scalar field in a Minkoswskian background, where the Fock space is generated from a vacuum state and a set of creation and annihilation operators that follow some commutation rules. To do so, we will force the $\hat{a}_i,\,\hat{a}^\dagger_i$ operators to assume this roll, in such a way that
+\begin{subequations}\label{eq: general a operator commutator rules}
+	\begin{gather}
+		\left[\hat{a}_i,\,\hat{a}_j^\dagger\right]\propto \delta_{ij},\hspace{1.0cm}\left[\hat{a}_i,\,\hat{a}_j\right]=\left[\hat{a}_i^\dagger,\,\hat{a}_j^\dagger\right]=0.\tag{\theequation \,\,a-c}
+	\end{gather}
+\end{subequations}
+Thanks to the relation between the constant factors $a_i$ and the operation $\langle v_i,\,\phi\rangle$, one can obtain the following relation
 \begin{multline}
-	\left[\hat{a}_i,\,\hat{a}_j^\dagger\right]=-\int\left[\left(v_i\hat{\Pi}-g^{0\nu}\left(\partial_\nu v_i\right)\hat{\phi}\sqrt{-g}\right)\Big|_\mathbf{x},\,\left(v_j^*\hat{\Pi}-g^{0\nu}\left(\partial_\nu v_j\right)\hat{\phi}\sqrt{-g}\right)\Big|_\mathbf{y}\right]\td^3\mathbf{x}\td^3\mathbf{y}=\\
-	=i\hbar\int g^{0\nu}\left(v_i\overset{\text{\tiny$\leftrightarrow$}}{\partial}_\nu v_j^*\right)\sqrt{-g}\,\td^3\mathbf{x}=\hbar\langle v_i,\,v_j\rangle
+	\left[\hat{a}_i,\,\hat{a}_j^\dagger\right]=-\int\left[\left(v_i\hat{\Pi}-g^{0\nu}\left(\partial_\nu v_i\right)\hat{\phi}\sqrt{-g}\right)\Big|_\mathbf{x},\,\left(\bar v_j\hat{\Pi}-g^{0\nu}\left(\partial_\nu v_j\right)\hat{\phi}\sqrt{-g}\right)\Big|_\mathbf{y}\right]\td^3\mathbf{x}\td^3\mathbf{y}=\\
+	=i\hbar\int g^{0\nu}\left(v_i\overset{\text{\tiny$\leftrightarrow$}}{\partial}_\nu \bar v_j\right)\sqrt{-g}\,\td^3\mathbf{x}=\hbar\langle v_i,\,v_j\rangle,
 \end{multline}
-where the field commutators where used. Equivalently 
-\begin{equation}
-	\left[\hat{a}_i,\,\hat{a}_j\right]=-\hbar\,\langle v_i,\,v_j^*\rangle\hspace{1.0cm}\left[\hat{a}_i^\dagger,\,\hat{a}_j^\dagger\right]=-\hbar\,\langle v_i^*,\,v_j\rangle
-\end{equation}
+where the field commutators where used. Equivalently
+\begin{subequations}
+	\begin{gather}
+		\left[\hat{a}_i,\,\hat{a}_j\right]=-\hbar\,\langle v_i,\,\bar v_j\rangle,\quad \left[\hat{a}_i^\dagger,\,\hat{a}_j^\dagger\right]=-\hbar\,\langle \bar v_i,\,v_j\rangle. \tag{\theequation \,\,a,b}
+	\end{gather}
+\end{subequations}
 
-Therefore we must find a set of solutions $\left\{v_i(x),\,v_i^*(x)\right\}$ such that
-\begin{equation}
-	\langle v_i,\,v_j\rangle\propto \delta_{ij}\hspace{1.0cm}\langle v_i,\,v_j^*\rangle=\langle v_i^*,\,v_j\rangle=0
-\end{equation}
+Therefore we must find a set of solutions $\left\{v_i(x),\,\bar v_i(x)\right\}$ such that
+\begin{subequations}\label{eq: Operational Rules}
+	\begin{gather}
+		\langle v_i,\,v_j\rangle\propto \delta_{ij},\quad \langle v_i,\,\bar v_j\rangle=\langle \bar v_i,\,v_j\rangle=0. \tag{\theequation \,\,a-c}
+	\end{gather}
+\end{subequations}
 With this, we can define the Fock space the usual way, starting with a vacuum state $|0\rangle$ such that the action of the annihilation operation fulfils
 \begin{equation}
 	\hat{a}_i\,|0\rangle=0\hspace{1.0cm}\forall i
@@ -225,40 +249,42 @@ Since this is a scalar field, one might assume that the states are symmetric (de
 	|i,\,j\rangle=\hat{a}_j^\dagger\,\hat{a}_i^\dagger\,|0\rangle=\left[\hat{a}_i^\dagger,\,\hat{a}_j^\dagger\right]|0\rangle+\hat{a}_i^\dagger\,\hat{a}_j^\dagger|0\rangle=|j,\,i\rangle
 \end{equation}
 \subsection{Bogoliubov Transformations}
-Consider now a second set $\left\{u_i(x),\,u_i^*(x)\right\}$ of solutions to the Klein-Gordon equation such that they meet the inner product rule; the field would then be written as
+Consider now a second set $\left\{u_i(x),\,\bar u_i(x)\right\}$ of solutions to the Klein-Gordon equation \ref{eq: Generalized Klein-Gordon} such that they meet the operational rules \ref{eq: Operational Rules}; the field would then be written as
 \begin{equation}
-	\phi(x)=\sum_j\left[b_ju_j(x)+b_j^*u_j^*(x)\right]
+	\phi(x)=\sum_j\left[b_ju_j(x)+\bar b_j\bar u_j(x)\right].
 \end{equation}
-quantization of the field and creation and annihilation is straightforward. The relation between the $v$ and $u$ solutions would be
+Quantization of the field is straightforward and equivalent to the method previously presented. The relation between the $v$ and $u$ solutions (mode functions) will be
 \begin{equation}
-	v_i(x)\equiv\sum_j\left[\alpha_{ij}u_j(x)+\beta_{ij}u^*_j(x)\right]
+	v_i(x)\equiv\sum_j\left[\alpha_{ij}u_j(x)+\beta_{ij}\bar u_j(x)\right],
 \end{equation}
 where $\alpha_{ij}$ and $\beta_{ij}$ are known as Bogoliubov coefficients, that can be obtained as
 \begin{equation}
-	\alpha_{ij}\propto\langle v_i,\,u_j\rangle\hspace{1.0cm}\beta_{ij}\propto -\langle v_i,\,u_j^*\rangle
+	\alpha_{ij}\propto\langle v_i,\,u_j\rangle\hspace{1.0cm}\beta_{ij}\propto -\langle v_i,\,\bar u_j\rangle.
 \end{equation}
 
-Since the field is the same independently of the mode set chosen
+Since the field is the same independently of the mode set chosen:
 \begin{equation}
 	\sum_i\left[\hat{a}_iv_i(x)+\hat{a}_i^\dagger v^*_i(x)\right]=\sum_j\left[\hat{b}_ju_j(x)+\hat{b}_j^\dagger u_j^*(x)\right]
 \end{equation}
-and, as a result of the orthogonality of the mode functions
+and, as a result of the orthogonality of the mode functions, the relation between the creation and annihilation operators will be 
+\begin{subequations}
+	\begin{gather}
+		\hat{a}_i=\sum_j\left(\bar \alpha_{ij}\hat{b}_j-\bar \beta_{ij}\hat{b}_j^\dagger\right),\quad \hat{a}_i^\dagger=\sum_j\left(-\beta_{ij}\hat{b}_j+\alpha_{ij}\hat{b}_j^\dagger\right).\tag{\theequation \,\,a,b}
+	\end{gather}
+\end{subequations}
+Applying commutator rules \ref{eq: general a operator commutator rules} give new restrictions to the Bogoliubov coefficients
 \begin{equation}
-	\hat{a}_i=\sum_j\left(\alpha_{ij}^*\hat{b}_j-\beta_{ij}^*\hat{b}_j^\dagger\right)\hspace{1.0cm}\hat{a}_i^\dagger=\sum_j\left(-\beta_{ij}\hat{b}_j+\alpha_{ij}\hat{b}_j^\dagger\right)
+	\left[\hat{a}_i,\,\hat{a}_j^\dagger\right]\propto\delta_{ij}\implies \sum_k\left(\bar \alpha_{ik}\alpha_{jk}-\bar \beta_{ik}\beta_{jk}\right)\propto\delta_{ij},
 \end{equation}
-creation and annihilation commutation relations give new restrictions to the Bogoliubov coefficients
 \begin{equation}
-	\left[\hat{a}_i,\,\hat{a}_j^\dagger\right]\propto\delta_{ij}\implies \sum_k\left(\alpha_{ik}^*\alpha_{jk}-\beta^*_{ik}\beta_{jk}\right)\propto\delta_{ij}
-\end{equation}
-\begin{equation}
-	\left[\hat{a}_i,\,\hat{a}_j\right]=0\implies \sum_k\left(\alpha_{jk}^*\beta_{ik}^*-\alpha_{ik}^*\beta_{jk}^*\right)=0
+	\left[\hat{a}_i,\,\hat{a}_j\right]=0\implies \sum_k\left(\bar \alpha_{jk}\bar \beta_{ik}-\bar \alpha_{ik}\bar \beta_{jk}\right)=0.
 \end{equation}
 
-Now, the relevance of the Bogoliubov transformations comes from the fact that the vacuum in the $u$ solutions, have (in general) $v$ particles,
+The reader might ask what the relevance of this transformation is, and it would be in its right to do so, since it is not a mere mathematical result. To see the reason of this transformation, one could compute the number of $v$ particles that are present in the $u$ vacuum; the computation is given by
 \begin{equation}
-	\langle_u0|\hat{N}_v|_u0\rangle=\sum_i\langle_u0|\hat{a}_i^\dagger\hat{a}_i|_u0\rangle=\sum_{i}\left[\sum_{jk}\beta_{ij}\beta^*_{ik}\langle_u0|\hat{b}_j\hat{b}_k^\dagger|_u0\rangle\right]\propto \sum_{ij}|\beta_{ij}|^2
+	\langle_u0|\hat{N}_v|_u0\rangle=\sum_i\langle_u0|\hat{a}_i^\dagger\hat{a}_i|_u0\rangle=\sum_{i}\left[\sum_{jk}\beta_{ij}\bar \beta_{ik}\langle_u0|\hat{b}_j\hat{b}_k^\dagger|_u0\rangle\right]\propto \sum_{ij}|\beta_{ij}|^2.
 \end{equation}
-therefore, there is not a unique vacuum.
+The usual expectation value of a term of the form $\langle0|\hat{N}|0\rangle$ is to be zero, and yet, it has been proven that this is not the case (in general) for the current scenario. The interpretation of such result is that the notion of "particle" is dependent on the choice of solutions of the Klein-Gorton equation; and thus, one could define different vacuum states for different situations.
 
 \subsection{A Leap Towards a Continuum}
 Until now, it has been considered that the set of Klein-Gordon solutions could be categorised by a discrete set of parameters $i$, from a standard course in QFT, one of the main results is the fact that the solutions of the flat Klein-Gordon equations can be parametrised by a continuous $3$-dimensional vector $\mathbf{k}$ (which is interpreted to be the momentum of the particle). Since all computations in this section where made by considering a discrete set of parameters, it is relevant to consider the continuum case.
