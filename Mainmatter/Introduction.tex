@@ -47,6 +47,8 @@ this fact is of great use once the material Hamiltonian $\mathcal{H}_{\text{M}}$
 \end{equation}
 since it will later be used to spawn the Fock space after the quantization procedure; and thus assure no energy loses will be present on the theory.
 \section{Construction of Covariant Actions}
+Standard quantum field theory alongside the standard model of particle physics is one of (if not the) best tested theories of physics, reason which, one doesn't need to reinvent the actions that are used on it, only a small tweak is needed to make the theory general covariant; it has been previously given for granted that the  volume element will be $\sqrt{-g}\td^4x$, but there is another consideration, the derivatives, since in a general spacetime, they are not covariant, and thus, the inclusion of a covariant derivative $\nabla_\mu$ is needed.
+
 Let $\Xi(x)$ be a tensorial field such that under a local Lorentzian transformation $\Lambda(x)$ transforms as $\tilde{\Xi}\equiv\rho_\Lambda\Xi$. The usual covariant derivative of the transformed field will be
 \begin{multline}\label{eq: covariant derivative general}
 	\nabla_\mu\tilde\Xi^{a_1,a_2,\hdots}_{\quad b_1,b_2,\hdots}\equiv \partial_\mu\tilde{\Xi}^{a_1,a_2,\hdots}_{\quad b_1,b_2,\hdots}+\Gamma^{a_1}_{\sigma\mu}\tilde\Xi^{\sigma,a_2,\hdots}_{\quad b_1,b_2,\hdots}+\hdots-\Gamma^{\sigma}_{b_1\mu}\tilde\Xi^{a_1,a_2,\hdots}_{\quad \sigma,b_2,\hdots}-\hdots=\\
@@ -57,7 +59,7 @@ From this one can conclude that, for $\nabla_\mu\tilde{\Xi}(x)$ to transform as 
 	\tilde{\Gamma}_\mu\equiv \rho_\Lambda\Gamma_\mu\rho_\Lambda^{-1}-\left(\partial_\mu\rho_\Lambda\right)\rho_\Lambda^{-1},
 \end{equation}
 such term (that we should call connection), can be written as
-\begin{equation}
+\begin{equation}\label{eq: connection}
 	\Gamma_\mu\equiv \frac{1}{2}\Sigma^{AB}\omega_{AB\mu};
 \end{equation}
 where $\Sigma^{AB}$ are to be understood as the Lorentz generators (the uppercase Latin indexes represent sums over a Minkowski background), and $\omega_{AB\mu}$ is the so called torsion free spin connection, defined as
@@ -114,14 +116,24 @@ which has an interesting property of its trace,
 \end{equation}
 as it is zero, for a conformal theory.
 \subsubsection{Dirac Field}
+For spin $\sfrac{1}{2}$ particles, the Lorentz generators are
 \begin{equation}
-	\Gamma_\mu=\frac{1}{8}\omega_{\mu}^{ab}\left[\gamma_a,\,\gamma_b\right]
+	\Sigma^{AB}=-\frac{i}{2}\sigma^{AB}=\frac{1}{4}\left[\gamma^A,\,\gamma^B\right],
 \end{equation}
+where $\Gamma^A$ are the flat gamma matrices. Therefore the covariant derivative \ref{eq: Covariant derivative} and the connection \ref{eq: connection} can be written as
+\begin{subequations}
+	\begin{gather}
+		\nabla_\mu\equiv\partial_\mu+\Gamma_\mu,\quad \Gamma_\mu=\frac{1}{8}\omega_{AB\mu}\left[\gamma^A,\,\gamma^B\right].
+	\end{gather}
+\end{subequations}
+
+Taking the Dirac theory as inspiration, one could define de Dirac action in curved spacetimes as
 \begin{equation}
-	S[\psi]=\int \bar{\psi}\left[i\gamma^\mu\left(\partial_\mu+\Gamma_\mu\right)-\mu\right]\psi\sqrt{-g}\td^4x
+	S[\psi]=\int \bar{\psi}\left[i\gamma^\nu\nabla_\nu-\mu\right]\psi\sqrt{-g}\td^4x,
 \end{equation}
+where $\Gamma^\nu\equiv \gamma^Ae^\nu_A$ are the general gamma functions, which follow the next relation similar to their flat counterparts,
 \begin{equation}
-	\left\{\gamma^\mu,\,\gamma^\nu\right\}=2g^{\mu\nu}
+	\left\{\gamma^\mu,\,\gamma^\nu\right\}=2g^{\mu\nu}.
 \end{equation}
 
 From the Euler-Lagrange equation \ref{eq: Euler-Lagrange}, its obtained the generalized Dirac equation
