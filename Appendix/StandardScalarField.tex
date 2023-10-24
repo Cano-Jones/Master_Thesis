@@ -13,3 +13,38 @@
 \begin{equation}
 	k_\nu k^\nu=\hbar^2\mu^2
 \end{equation}
+\begin{equation}
+	\phi(x)=\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^32k_0}\phi_{\mathbf{k}}=\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^32k_0}\left(a_\mathbf{k}e^{ikx\,\hbar^{-1}}+\bar a_\mathbf{k}e^{-ikx\,\hbar^{-1}}\right)
+\end{equation}
+$\frac{\td^3\mathbf{k}}{(2\pi\hbar)^32k_0}$ is a Lorentz-invariant measure. It is convenient to redefine $a_\mathbf{k}\to a_\mathbf{k}(2k_0)^{-\sfrac{1}{2}}$
+\begin{equation}
+	\phi(x)=\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^3\sqrt{2k_0}}\left(a_\mathbf{k}e^{ikx\,\hbar^{-1}}+\bar a_\mathbf{k}e^{-ikx\,\hbar^{-1}}\right)
+\end{equation}
+\begin{equation*}
+	\phi(x)\longrightarrow\hat{\phi}(x),\hspace{1.0cm}\Pi(x)\longrightarrow\hat{\Pi}(x),
+\end{equation*}
+\begin{equation*}
+	a_\mathbf{k}\longrightarrow\hat{a}_\mathbf{k},\hspace{1.0cm}\bar a_\mathbf{k}\longrightarrow\hat{a}_\mathbf{k}^\dagger,
+\end{equation*}
+
+\begin{equation}
+	\hat\phi(x)=\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^3\sqrt{2k_0}}\left(\hat a_\mathbf{k}e^{ikx\,\hbar^{-1}}+ \hat a_\mathbf{k}^\dagger e^{-ikx\,\hbar^{-1}}\right)
+\end{equation}
+
+\begin{subequations}
+	\begin{gather}
+		\left[\hat{\phi}(\mathbf{x}),\,\hat{\Pi}(\mathbf{y})\right]=i\hbar \,\delta^3\left(\mathbf{x}-\mathbf{y}\right)\hspace{1.0cm}\left[\hat{\phi}(\mathbf{x}),\,\hat{\phi}(\mathbf{y})\right]=\left[\hat{\Pi}(\mathbf{x}),\,\hat{\Pi}(\mathbf{y})\right]=0.\tag{\theequation \,\,a-c}
+	\end{gather}
+\end{subequations}
+\begin{subequations}\label{eq: general a operator commutator rules}
+	\begin{gather}
+		\left[\hat{a}_\mathbf{k},\,\hat{a}_\mathbf{q}^\dagger\right]=\left(2\pi\hbar^2\right)^3 \delta^3\left(\mathbf{k}-\mathbf{q}\right),\hspace{1.0cm}\left[\hat{a}_\mathbf{k},\,\hat{a}_\mathbf{q}\right]=\left[\hat{a}_\mathbf{k}^\dagger,\,\hat{a}_\mathbf{q}^\dagger\right]=0.\tag{\theequation \,\,a-c}
+	\end{gather}
+\end{subequations}
+\begin{multline}
+	\left[\hat{\phi}(\mathbf{x}),\,\hat{\Pi}(\mathbf{y})\right]=-\frac{1}{i\hbar}\int\frac{\td^3\mathbf{k}\td^3\mathbf{q}}{2(2\pi\hbar)^3}\sqrt{\frac{q_0}{k_0}}	\left\{\left[a_\mathbf{k},a_\mathbf{q}\right]e^{i\left(\mathbf{kx}+\mathbf{qy}\right)\hbar^{-1}}-\left[a_\mathbf{k},a_\mathbf{q}^\dagger\right]e^{i\left(\mathbf{kx}-\mathbf{qy}\right)\hbar^{-1}}-\right.\\
+	\left.-\left[a_\mathbf{q},a_\mathbf{k}^\dagger\right]e^{-i\left(\mathbf{kx}-\mathbf{qy}\right)\hbar^{-1}}-\left[a_\mathbf{k}^\dagger,a_\mathbf{q}^\dagger\right]e^{-i\left(\mathbf{kx}+\mathbf{qy}\right)\hbar^{-1}}\right\}=\frac{\alpha}{(2\pi\hbar^2)^3}i\hbar\delta^3\left(\mathbf{x}-\mathbf{y}\right)
+\end{multline}
+\begin{equation}
+	\hat{\mathcal{H}}=\int\left(\hat{\Pi}\partial_{0}\hat{\phi}-\hat{\mathcal{L}}\right)\td^3\mathbf{x}=\int\frac{c}{2}\left[\hat{\Pi}^2+\left(\mathbf{\nabla}\hat{\phi}\right)^2+\mu^2\hat{\phi}^2\right]\td^3\mathbf{x}
+\end{equation}
