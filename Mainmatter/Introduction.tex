@@ -47,41 +47,34 @@ this fact is of great use once the material Hamiltonian $\mathcal{H}_{\text{M}}$
 \end{equation}
 since it will later be used to spawn the Fock space after the quantization procedure; and thus assure no energy loses will be present on the theory.
 \section{Construction of Covariant Actions}
-The equivalence principle says that field equations must be invariant with respect to local Lorentz transformations $\Lambda(x)$. To work on a local flat spacetime, we use the tetrad formalism
-\begin{equation}
-	g_{\mu\nu}=e^a_\mu e^b_\nu \eta_{ab}
+Let $\Xi(x)$ be a tensorial field such that under a local Lorentzian transformation $\Lambda(x)$ transforms as $\tilde{\Xi}\equiv\rho_\Lambda\Xi$. The usual covariant derivative of the transformed field will be
+\begin{multline}\label{eq: covariant derivative general}
+	\nabla_\mu\tilde\Xi^{a_1,a_2,\hdots}_{\quad b_1,b_2,\hdots}\equiv \partial_\mu\tilde{\Xi}^{a_1,a_2,\hdots}_{\quad b_1,b_2,\hdots}+\Gamma^{a_1}_{\sigma\mu}\tilde\Xi^{\sigma,a_2,\hdots}_{\quad b_1,b_2,\hdots}+\hdots-\Gamma^{\sigma}_{b_1\mu}\tilde\Xi^{a_1,a_2,\hdots}_{\quad \sigma,b_2,\hdots}-\hdots=\\
+	=\left(\partial_\mu\rho_\Lambda\right)\Xi^{a_1,a_2,\hdots}_{\quad b_1,b_2,\hdots}+\rho_\Lambda\partial_\mu\Xi^{a_1,a_2,\hdots}_{\quad b_1,b_2,\hdots}+\Gamma^{a_1}_{\sigma\mu}\tilde\Xi^{\sigma,a_2,\hdots}_{\quad b_1,b_2,\hdots}+\hdots-\Gamma^{\sigma}_{b_1\mu}\tilde\Xi^{a_1,a_2,\hdots}_{\quad \sigma,b_2,\hdots}-\hdots.
+\end{multline}
+From this one can conclude that, for $\nabla_\mu\tilde{\Xi}(x)$ to transform as a tensor, one should redefine the covariant derivative $\nabla_\mu$ to add a term $\Gamma_\mu$ such that it transforms as
+\begin{equation}\label{eq: connection transformation rule}
+	\tilde{\Gamma}_\mu\equiv \rho_\Lambda\Gamma_\mu\rho_\Lambda^{-1}-\left(\partial_\mu\rho_\Lambda\right)\rho_\Lambda^{-1},
 \end{equation}
-partial derivatives transform like
+such term (that we should call connection), can be written as
 \begin{equation}
-	\partial_\mu\to\frac{\partial x^\nu}{\partial y^\mu}\partial_\nu
+	\Gamma_\mu\equiv \frac{1}{2}\Sigma^{AB}\omega_{AB\mu};
 \end{equation}
-but, we see that $e^\mu_a\partial_\mu$ is not covariant, since
+where $\Sigma^{AB}$ are to be understood as the Lorentz generators (the uppercase Latin indexes represent sums over a Minkowski background), and $\omega_{AB\mu}$ is the so called torsion free spin connection, defined as
 \begin{equation}
-	e^\mu_a\partial^a\phi(x)\to \Lambda^b_ae^\mu_b\partial_\mu\left[\rho\left(\Lambda\right)\phi(x)\right]= \Lambda^b_ae^\mu_b\left[\rho\left(\Lambda\right)\partial_\mu\phi+\partial_\mu\rho\left(\Lambda\right)\,\phi\right]
+	\omega_{AB\mu}\equiv e^\nu_A\left(\partial_\mu e_{B\nu}-\Gamma^\sigma_{\nu\mu}e_{B\sigma}\right).
 \end{equation}
-a covariant derivative $\nabla_\mu$ of some field $\varphi$ should transform as
+The new vector fields $e^\mu_A$ are known as the tetrad formalism coefficients, defined to transform general tensors to a local flat manifold, i.e.
 \begin{equation}
-	\nabla_a\varphi\to\Lambda_a^b\rho\left(\Lambda\right)\nabla_b\varphi
+	g_{\mu\nu}=e^A_\mu e^B_\nu \eta_{ab}.
 \end{equation}
-therefore we need to define a better derivative, a common option is
-\begin{equation}
-	\nabla_a\equiv e^\mu_a\left(\partial_\mu+\Gamma_\mu\right)
-\end{equation}
-where, for the derivative to be covariant, the connection $\Gamma_\mu$ must transform as
-\begin{equation}
-	\Gamma_\mu\to \rho\left(\Lambda\right)\Gamma_\mu\rho^{-1}\left(\Gamma\right)-\left[\partial_\mu\rho\left(\Lambda\right)\right]\rho^{-1}\left(\Lambda\right)
-\end{equation} 
-such connection can be written as
-\begin{equation}
-	\Gamma_\mu=\frac{1}{2}\Sigma^{ab}e^\nu_a\left(\partial_\mu e_{b\nu}-\Gamma^\sigma_{\nu\mu}e_{b\sigma}\right)\equiv \frac{1}{2}\Sigma^{ab}\omega_{ab\mu}
-\end{equation}
-where $\Sigma^{ab}$ are the Lorentz generators and $\omega_{ab\mu}\equiv e^\nu_a\left(\partial_\mu e_{b\nu}-\Gamma^\sigma_{\nu\mu}e_{b\sigma}\right)$ is the torsion free spin connection.
 
-Under the presence of a gauge field, we would also want the derivative to be gauge invariant, and thus, the gauge four-potential $A$ must be considered in the definition of the derivative
+Therefore, we define the covariant derivative as
 \begin{equation}\label{eq: Covariant derivative}
-	\nabla_a\equiv e^\mu_a\left(\partial_\mu+\Gamma_\mu-\frac{i}{\hbar}eA_\mu\right)
+	\nabla_\mu\Xi^{a_1,a_2,\hdots}_{\quad b_1,b_2,\hdots}\equiv \partial_\mu \Xi^{a_1,a_2,\hdots}_{\quad b_1,b_2,\hdots}+\Gamma_\mu+\Gamma^{a_1}_{\sigma\mu}\tilde\Xi^{\sigma,a_2,\hdots}_{\quad b_1,b_2,\hdots}+\hdots-\Gamma^{\sigma}_{b_1\mu}\tilde\Xi^{a_1,a_2,\hdots}_{\quad \sigma,b_2,\hdots}-\hdots.
 \end{equation}
-where $e$ is the coupling constant.
+
+If the field $\Xi^{a_1,a_2,\hdots}_{\quad b_1,b_2,\hdots}$ is coupled to a vector field $A_\mu$ the covariant derivative must be redefined as $\nabla_\mu'\equiv\nabla_\mu-\frac{i}{\hbar}eA_\mu$, where $e$ would be the coupling constant.
 \subsection{Some Basic Examples}
 \subsubsection{Scalar Field}
 The very first example given for a classical field is usually a (real) free scalar field $\phi(x)$ with some mass $m$; whose dynamics are given by the following action
