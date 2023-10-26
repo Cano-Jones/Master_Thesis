@@ -9,7 +9,7 @@
 \usepackage{xcolor} %Colors
 \usepackage{bookmark} %Book outline organization
 \usepackage[nottoc]{tocbibind} %Bibliografia en indice
-\usepackage[top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry} %Margins
+\usepackage[top=2.5cm, bottom=2.5cm, left=2.5cm, right=1.9cm]{geometry} %Margins
 \usepackage{xfrac} %Small fractions
 \usepackage{verbatim} %Comment blokcs
 
@@ -18,6 +18,9 @@
 \newcommand{\newchapter}[1]{{\vspace*{-0.7cm}\let\clearpage\relax \chapter{#1}\vspace*{-0.5cm}}}
 \newcommand\capmystring[1]{\capmystringaux#1\relax}
 \def\capmystringaux#1#2\relax{\uppercase{#1}\lowercase{#2}}
+\DeclareRobustCommand{\rchi}{{\mathpalette\irchi\relax}}
+\newcommand{\irchi}[2]{\raisebox{\depth}{$#1\chi$}} % inner command, used by \rchi
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%Other%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \addtokomafont{disposition}{\rmfamily} %Font
