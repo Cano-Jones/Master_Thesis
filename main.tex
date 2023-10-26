@@ -2,8 +2,6 @@
 
 \input{Preamble.sty}
 
-\DeclareRobustCommand{\rchi}{{\mathpalette\irchi\relax}}
-\newcommand{\irchi}[2]{\raisebox{\depth}{$#1\chi$}} % inner command, used by \rchi
 
 \begin{document}
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -18,8 +16,6 @@
 	\newpage
 	\pdfbookmark[0]{Abstract}{Abstract}
 	\input{Frontmatter/Abstract}
-	
-	
 	
 	
 	\pdfbookmark[0]{Table of Contents}{Table of Contents}
@@ -39,11 +35,17 @@
 	\newchapter{Introduction to QFT in Curved Spacetimes}
 	\input{Mainmatter/Introduction}
 	\newpage
-	\newchapter{Scalar Field in an Expanding Universe}
+	\newchapter{Scalar Fields in Expanding Universes}
 	\input{Mainmatter/ExpandingUniverse}
 	\newpage
-	\newchapter{Scalar Field in a de Sitter Universe}
-	\input{Mainmatter/Sitter}
+	\newchapter{The Unruh Effect}
+	\input{Mainmatter/UnruhEffect}
+	\newpage
+	\newchapter{Energy Momentum Tensor Renormalization}
+	\input{Mainmatter/EnergyMomentumTensor}
+	\newpage
+	\newchapter{Final Discussions}
+	\input{Mainmatter/FinalDiscussion}
 	\bookmarksetup{startatroot}
 	\nocite{*}
 	\bibliography{Biblio} %Fichero de bibliografía
@@ -57,6 +59,10 @@
 	\pagenumbering{Roman}
 	\newchapter{Scalar field in Minkowski background}\label{sec: Minkosky Scalar}
 	\input{Appendix/StandardScalarField}
+	\newpage
+	\newchapter{Notes on Used Spacetimes}
+	\input{Appendix/Geometry}
+	\newpage
 	\newchapter{Units}
 	\input{Appendix/Units}
 	\newchapter{Questions \& To-Do}
