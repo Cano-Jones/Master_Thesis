@@ -55,31 +55,31 @@ The most general solution $\rchi(x)$ of equation \cref{eq: Generalized Klein-Gor
 \end{equation}
 
 \section{Quantization}
+After promoting the fields to operators, and imposing commutation relations, one gets the following rules for the creation and annihilation operators from equations \ref{eq: general a operator commutator rules}
 \begin{subequations}\label{eq: a commutators expanding}
 	\begin{gather}
-		[\hat{a}_\mathbf{k},\hat{a}_\mathbf{q}^\dagger]=\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(v\bar v')}\delta^3(\mathbf{k}-\mathbf{q})\,,\hspace{1.0cm}[\hat{a}_\mathbf{k},\hat{a}_\mathbf{q}]=[\hat{a}_\mathbf{k}^\dagger,\hat{a}_\mathbf{q}^\dagger]=0\tag{\theequation \,\,a-c}
+		[\hat{a}_\mathbf{k},\hat{a}_\mathbf{q}^\dagger]=\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(v\bar v')}\delta^3(\mathbf{k}-\mathbf{q})\,,\hspace{1.0cm}[\hat{a}_\mathbf{k},\hat{a}_\mathbf{q}]=[\hat{a}_\mathbf{k}^\dagger,\hat{a}_\mathbf{q}^\dagger]=0\tag{\theequation \,\,a-c},
 	\end{gather}
 \end{subequations}
+to be able to verify the value of the proportional factor in \ref{eq: a commutators expanding}.a, lets compute the commutator between $\hat\rchi$ and $\hat\Pi$, i.e.
 \begin{multline}
 	\left[\hat{\rchi}(\mathbf{x}),\,\hat{\Pi}(\mathbf{y})\right]=\frac{1}{c}\int\frac{\td^3\mathbf{k}\td^3\mathbf{q}}{(2\pi\hbar)^6}\left\{\left[\hat{a}_\mathbf{k},\hat{a}_\mathbf{q}\right]v_\mathbf{k}v'_\mathbf{q}e^{-i\left(\mathbf{kx}+\mathbf{qy}\right)\hbar^{-1}}+\left[\hat{a}_\mathbf{k}^\dagger, \hat{a}_\mathbf{q}^\dagger\right]\bar v_\mathbf{k}\bar v_\mathbf{q}'e^{-i(\mathbf{kx}-\mathbf{qy})\hbar^{-1}}\right.+\\
 	+\left.\left[\hat{a}_\mathbf{k},\hat{a}_\mathbf{q}^\dagger\right] v_\mathbf{k}\bar v'_\mathbf{q}e^{-i(\mathbf{kx}-\mathbf{qy})\hbar^{-1}}-\left[\hat{a}_\mathbf{q},\hat{a}_\mathbf{k}^\dagger\right]\bar v_\mathbf{k}v_\mathbf{q}'e^{i(\mathbf{kx}-\mathbf{qy})\hbar^{-1}}\right\}
 \end{multline}
-using \cref{eq: a commutators expanding} and considering that the proportional factor of \ref{eq: a commutators expanding}.a to be $\alpha$
+using expresions \ref{eq: a commutators expanding} and considering that the proportional factor of \ref{eq: a commutators expanding}.a to be $\alpha$, previous expression simplify to the following one,
 \begin{equation}
-	\left[\hat{\rchi}(\mathbf{x}),\,\hat{\Pi}(\mathbf{y})\right]=\frac{\alpha}{c}\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^6}2i\text{Im}(v_\mathbf{k}\bar v_\mathbf{k}')e^{-i(\mathbf{kx}-\mathbf{qy})\hbar^{-1}}
+	\left[\hat{\rchi}(\mathbf{x}),\,\hat{\Pi}(\mathbf{y})\right]=\frac{\alpha}{c}\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^6}2i\text{Im}(v_\mathbf{k}\bar v_\mathbf{k}')e^{-i(\mathbf{kx}-\mathbf{qy})\hbar^{-1}};
 \end{equation}
-since $\text{Im}(v_\mathbf{k}\bar v_\mathbf{k}')$ was considered to be momentum independent,
+since $\text{Im}(v_\mathbf{k}\bar v_\mathbf{k}')$ was considered to be momentum independent, this implies that
 \begin{equation}
-	\left[\hat{\rchi}(\mathbf{x}),\,\hat{\Pi}(\mathbf{y})\right]=i\frac{2\alpha\text{Im}(v\bar v')}{c(2\pi\hbar)^3}\delta^3(\mathbf{x}-\mathbf{y})
+	\left[\hat{\rchi}(\mathbf{x}),\,\hat{\Pi}(\mathbf{y})\right]=i\frac{2\alpha\text{Im}(v\bar v')}{c(2\pi\hbar)^3}\delta^3(\mathbf{x}-\mathbf{y}),
 \end{equation}
 and, from equation \ref{eq: General canonical commutator}.a one can solve for $\alpha$, resulting in the value present in equation \ref{eq: a commutators expanding}.
 
-
-
-
-Let $\xi=0$, i.e. work in the nonminimally coupled scalar field; then the Hamiltonian will be
+\vspace*{0.25cm}
+The next step in the quantization procedure is to obtain the Hamiltonian $\hat{\mathcal{H}}$ that spans the Fock space; to do so, we use the definition in equation \ref{eq: General Hamiltonian} alongside the energy momentum tensor \ref{eq: Energy-Momentum scalar}. As a simplification, lets consider a minimally coupled theory, i.e. $\xi=0$; then the Hamiltonian will be
 \begin{equation}
-	\hat{\mathcal{H}}(t)=\int\frac{c}{2}\left[\hat{\Pi}^2+\left(\mathbf{\nabla}\hat{\rchi}\right)^2+\mu_{\text{eff}}^2(t)\hat{\rchi}^2\right]\td^3\mathbf{x}
+	\hat{\mathcal{H}}(t)=\int\frac{c}{2}\left[\hat{\Pi}^2+\left(\mathbf{\nabla}\hat{\rchi}\right)^2+\mu_{\text{eff}}^2(t)\hat{\rchi}^2\right]\td^3\mathbf{x}.
 \end{equation}
 \begin{comment}
 	\begin{multline}
@@ -107,18 +107,18 @@ Let $\xi=0$, i.e. work in the nonminimally coupled scalar field; then the Hamilt
 		+\left.\hat{a}^\dagger_\mathbf{k}\hat{a}^\dagger_{-\mathbf{k}}\left[\frac{1}{c^2}v^{'*}_\mathbf{k}v^{'*}_\mathbf{k}+\frac{1}{\hbar^2}\omega^2_\mathbf{k}(t)v^*_\mathbf{k}v^*_\mathbf{k}\right]\right\}
 	\end{multline}
 \end{comment}
-
-\begin{equation}
-	\hat{\mathcal{H}}=\frac{c}{2}\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^3}\left[\hat{a}_\mathbf{k}\hat{a}_{-\mathbf{k}}F_\mathbf{k}+\hat{a}^\dagger_\mathbf{k}\hat{a}^\dagger_{-\mathbf{k}}\bar F_\mathbf{k}+\left(2\hat{a}_\mathbf{k}^\dagger\hat{a}_\mathbf{k}+\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(v\bar v')}\delta^3(\mathbf{0})\right)E_\mathbf{k}\right]
+Substitution of the general expression of $\hat{\rchi}$ (from equation \ref{eq: Expanding General Solution}) and $\hat{\Pi}$ (remembering that $\Pi\equiv\partial_0\rchi$) one will get the following expansion,
+\begin{equation}\label{eq: Expanding Hamiltonian}
+	\hat{\mathcal{H}}=\frac{c}{2}\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^3}\left[\hat{a}_\mathbf{k}\hat{a}_{-\mathbf{k}}F_\mathbf{k}+\hat{a}^\dagger_\mathbf{k}\hat{a}^\dagger_{-\mathbf{k}}\bar F_\mathbf{k}+\left(2\hat{a}_\mathbf{k}^\dagger\hat{a}_\mathbf{k}+\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(v\bar v')}\delta^3(\mathbf{0})\right)E_\mathbf{k}\right],
 \end{equation}
-where
+where the functions $F_\mathbf{k}(t)$ and $E_\mathbf{k}(t)$ are defined as
 \begin{subequations}
 	\begin{gather}
 		F_\mathbf{k}(t)=\left(\frac{1}{\hbar c}\right)^2\left[\hbar^2v^{'2}_\mathbf{k}+\omega^2_\mathbf{k}(t)\,c^2 v_\mathbf{k}^2\right],\quad E_\mathbf{k}(t)=\left(\frac{1}{\hbar c}\right)^2\left[\hbar^2\big|v'_\mathbf{k}\big|^2+\omega^2_\mathbf{k}(t)\,c^2 \big|v_\mathbf{k}\big|^2\right].\tag{\theequation \,\,a,b}
 	\end{gather}
 \end{subequations}
 \section{Instantaneous Vacuum State}
-Note that the only way a vacuum state $|0\rangle$ could remain an eigenstate of the Hamiltonian at all times, would be if $F_\mathbf{k}=0$, which would mean
+Note that the only way a vacuum state $|0\rangle$ could remain an eigenstate of the Hamiltonian \ref{eq: Expanding Hamiltonian} at all times, would be if $F_\mathbf{k}(t)=0$, at all times, i.e.
 \begin{equation}
 	F_\mathbf{k}(t)=\left(\frac{1}{\hbar c}\right)^2\left[\hbar^2v^{'2}_\mathbf{k}+\omega^2_\mathbf{k}(t)\,c^2 v_\mathbf{k}^2\right]=0,
 \end{equation}
@@ -128,9 +128,9 @@ solving for $v_\mathbf{k}$ gives the following expression
 \end{equation}
 which is not compatible with \ref{eq: Expanding diff v} except for a time independent dispersion relation $\omega_\mathbf{k}$.
 
-The last result implies that, at different times one can (and should) define different vacuum states; and thus, we will define the \textit{instantaneous vacuum state} $|_{(v)}0\rangle$ as the one that at some time $t_0$ will minimize the energy density. Since all possible states are related by Bogolyubov transformations, finding the instantaneous vacumm state is the same as finding the set of functions $v_\mathbf{f}$ that are simultaneously solution of \ref{eq: Expanding diff v} and minimize
+The last result implies that, at different times, one can (and should) define different vacuum states; and thus, we will define the \textit{instantaneous vacuum state} $|_{(t_0)}0\rangle$ as the one that at some time $t_0$ will minimize the energy density. Since all possible states are related by Bogolyubov transformations, finding the instantaneous vacumm state is the same as finding the set of functions $v_\mathbf{f}$ that are simultaneously solution of \ref{eq: Expanding diff v} and minimize
 \begin{equation}
-	\langle_{(v)}0|\hat{\mathcal{H}}(t_0)|_{(v)}0\rangle=\rho(t_0)\delta^3(\mathbf{0})=\frac{\hbar c^2 \,\delta^3(\mathbf{0})}{4\text{Im}(v\bar v')}\int\td^3\mathbf{k}\,E_\mathbf{k}
+	\langle_{(t_0)}0|\hat{\mathcal{H}}(t_0)|_{(t_0)}0\rangle=\rho(t_0)\delta^3(\mathbf{0})=\frac{\hbar c^2 \,\delta^3(\mathbf{0})}{4\text{Im}(v\bar v')}\int\td^3\mathbf{k}\,E_\mathbf{k}
 \end{equation}
 To minimise the energy density of the vacuum state is to find the set of functions $v_\mathbf{k}$ that minimise $E_\mathbf{k}$. Suppose that $v_\mathbf{k}$ can be written as
 \begin{equation}
@@ -188,3 +188,48 @@ therefore
 	\langle_{(t_0)}0|\hat{\mathcal{H}}(t)|_{(t_0)}0\rangle=\delta^3(\mathbf{0})\int\td^3\mathbf{k}\left(\frac{1}{2}+\Big|\beta_\mathbf{k}\Big|^2\right)c\,\omega_\mathbf{k}(t)\geq \langle_{(t_0)}0|\hat{\mathcal{H}}(t_0)|_{(t_0)}0\rangle
 \end{equation}
 meaning, if $\beta_\mathbf{k}\not=0$ for all $\mathbf{k}$ then, at a time $t>t_0$ the energy density will be different in relation to the original vacuum.
+\section{Case of Study: de Sitter Universe}
+The de Sitter Universe is a flat FLRW metric with no matter or radiation, but it does have a a positive cosmological constant $\Lambda$. Per the Friedmann equations,
+\begin{equation}
+	\left(\frac{\dot{a}}{a}\right)^2=\frac{8\pi G\rho+\Lambda c^2}{3}-\frac{\kappa c^2}{a^2}
+\end{equation}
+the expansion parameter $a(t)$ will be equal to
+\begin{equation}
+	a(t)=a_1e^{H_\Lambda t}+a_2e^{-H_\Lambda t}\;,\hspace{1.0cm} H_\Lambda=\sqrt{\frac{\Lambda c^2}{3}}
+\end{equation}
+$a_2=0$
+\begin{equation}
+	\td l^2=c^2\td t^2-a^2(t)\td\mathbf{x}^2
+\end{equation}
+\begin{equation}
+	\eta\equiv -\int_t^\infty\frac{\td t'}{a(t')}=-\frac{1}{a_1\,H_\Lambda}e^{-H_\Lambda t}=-\frac{1}{a(t)H_\Lambda}
+\end{equation}
+\footnote{Considering $a_2\not=0$ one would obtain that
+	$$\eta=\frac{\arctan\left(\sqrt{\frac{a_2}{a_1}}e^{-H_\Lambda t}\right)}{H_\Lambda\sqrt{a_1a_2}}$$}
+\begin{equation}
+	\td l^2= \frac{1}{H_\Lambda\eta^2}\left[c^2\td\eta^2-\td \mathbf{x}^2\right]
+\end{equation}
+\begin{equation}
+	R=\frac{6}{c^2}\left[\frac{\ddot{a}}{a}+\left(\frac{\dot{a}}{a}\right)^2\right]=\frac{12}{c^2}H_\Lambda^2
+\end{equation}
+\begin{equation}
+	\omega^2_\mathbf{k}(\eta)=\mathbf{k}^2+\left[\left(\frac{mc^2}{H_\Lambda}\right)^2+2\left(6\xi-1\right)\hbar^2\right]\frac{1}{c^2\eta^2}
+\end{equation}
+\begin{equation}
+	v_\mathbf{k}''\hbar^2+\omega^2_\mathbf{k}(\eta)\,v_\mathbf{k}=0
+\end{equation}
+
+change of variables
+\begin{equation}
+	s\equiv -k\eta\hspace{1.0cm}v_\mathbf{k}\equiv \sqrt{s}f(s)
+\end{equation}
+\begin{equation}
+	s^2\frac{\td^2f}{\td s^2}+s\frac{\td f}{\td s}+\left(s^2-\nu^2\right)f(s)=0
+\end{equation}
+\begin{equation}
+	\nu^2\equiv \left(3-16\xi\right)\frac{3}{4}\frac{\hbar^2}{c^2}-\left(\frac{mc}{H_\Lambda}\right)^2
+\end{equation}
+\begin{equation}
+	f(s)=AJ_\nu(s)+BY_\nu(s)\implies v_\mathbf{k}(\eta)=\sqrt{k|\eta|}\left[A_\mathbf{k}J_\nu(k|\eta|)+B_\mathbf{k}Y_\nu(k|\eta|)\right]
+\end{equation}
+$J_\nu(x),\,Y_\nu(x)$ are the Bessel functions of the firs kind. For $\nu^2\geq 0$ $J_\nu$ and $Y_\nu$ will be real functions, but for $\nu<0$ they will be complex functions \cite{BesselComplex}. $\text{Im}(v\bar v')$ creates a restriction on the relation $B_\mathbf{k}=B_\mathbf{k}(A_\mathbf{k})$
