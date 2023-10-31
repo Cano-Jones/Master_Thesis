@@ -1,0 +1,112 @@
+\definecolor{gridcolor}{RGB}{255 216 234} 
+\definecolor{gridlabelcolor}{RGB}{255 24 131}
+
+\definecolor{Rightgrid}{RGB}{141, 195, 227} 
+\definecolor{RightEx}{RGB}{54, 98, 245}
+
+\definecolor{Leftgrid}{RGB}{222, 198, 247} 
+\definecolor{LeftEx}{RGB}{160, 76, 245}
+\begin{tikzpicture}[%
+	scale=3,%
+	GridRight/.style={draw=Rightgrid,thick},%
+	SubRight/.style={draw=Rightgrid,thin},%
+	GridLeft/.style={draw=Leftgrid,thick},%
+	SubLeft/.style={draw=Leftgrid,thin},%
+	ExRight/.style={draw=RightEx, thick},%
+	ExLeft/.style={draw=LeftEx, thick},%
+	tlabels/.style={pos=0.88,above,sloped,yshift=-0.3ex,RightEx},%
+	label/.style={%
+		postaction={%
+			decorate,%
+			transform shape,%
+			decoration={%
+				markings,%
+				mark=at position .65 with \node #1;%
+			}%
+		}%
+	},%
+	]%
+	\pgfmathdeclarefunction{arcosh}{1}{\pgfmathparse{ln(#1+sqrt(#1+1)*sqrt(#1-1))}}
+	\pgfmathsetmacro{\Xmax}{1.2}
+	\pgfmathsetmacro{\Tmax}{1.2}
+	\pgfmathsetmacro{\g}{1}
+	\newcommand\mylabelstyle\tiny
+	
+	% curves t=constant
+	\foreach \t in {-3,-2.9375,...,3}{%
+		\path[SubRight] (0,0) -- (\Xmax,{\Xmax*tanh(\g*\t)});
+	}
+	\foreach \t in {-3,-2.75,...,3}{%
+		\path[GridRight] (0,0) -- (\Xmax,{\Xmax*tanh(\g*\t)});
+	} 
+	\foreach \t in {-3,-2.9375,...,3}{%
+		\path[SubLeft] (0,0) -- (-\Xmax,{-\Xmax*tanh(\g*\t)});
+	}
+	\foreach \t in {-3,-2.75,...,3}{%
+		\path[GridLeft] (0,0) -- (-\Xmax,{-\Xmax*tanh(\g*\t)});
+	}   
+	
+	% curves x=constant
+	\foreach \xx in {0.05,0.1,...,\Xmax}{%
+		\path[SubRight]
+		plot[domain=-{arcosh(\Xmax/\xx)/\g}:{arcosh(\Xmax/\xx)/\g}]
+		({\xx*cosh(\g*\x)},{\xx*sinh(\g*\x)});  
+	}
+	\foreach \xx in {0.05,0.1,...,\Xmax}{%
+		\path[SubLeft]
+		plot[domain=-{-arcosh(\Xmax/\xx)/\g}:{-arcosh(\Xmax/\xx)/\g}]
+		({-\xx*cosh(\g*\x)},{-\xx*sinh(\g*\x)});  
+	}
+	\foreach \xx in {0.2,0.4,...,1}{%
+		\path[GridRight]
+		plot[domain=-{arcosh(\Xmax/\xx)/\g}:{arcosh(\Xmax/\xx)/\g}]
+		({\xx*cosh(\g*\x)},{\xx*sinh(\g*\x)});  
+	}
+	\foreach \xx in {0.2,0.4,...,1}{%
+		\path[GridLeft]
+		plot[domain=-{-arcosh(\Xmax/\xx)/\g}:{-arcosh(\Xmax/\xx)/\g}]
+		({-\xx*cosh(\g*\x)},{-\xx*sinh(\g*\x)});  
+	}
+	
+	\foreach \xx in {0.55}{%
+		\path[ExRight]
+		plot[domain=-{arcosh(\Xmax/\xx)/\g}:{arcosh(\Xmax/\xx)/\g}]
+		({\xx*cosh(\g*\x)},{\xx*sinh(\g*\x)});  
+	}
+	
+	\foreach \xx in {0.55}{%
+		\path[ExLeft]
+		plot[domain=-{-arcosh(\Xmax/\xx)/\g}:{-arcosh(\Xmax/\xx)/\g}]
+		({-\xx*cosh(\g*\x)},{-\xx*sinh(\g*\x)});  
+	}
+	
+	% curve labels
+	
+	\foreach \xx in {0.75}{%
+		\path[label={[above]{\mylabelstyle $\xi=$const}}]
+		plot[domain=-{arcosh(\Xmax/\xx)/\g}:{arcosh(\Xmax/\xx)/\g}]
+		({\xx*cosh(\g*\x)},{\xx*sinh(\g*\x)});  
+	}
+	
+	\foreach \xx in {0.75}{%
+		\path[label={[below]{\mylabelstyle $\tilde \xi=$const}}]
+		plot[domain=-{-arcosh(\Xmax/\xx)/\g}:{-arcosh(\Xmax/\xx)/\g}]
+		({-\xx*cosh(\g*\x)},{-\xx*sinh(\g*\x)});  
+	}
+	
+	% X-axis, T-axis, and dashed lines t=+/-infty 
+	\draw[very thick,-stealth] (-\Xmax,0) -- (\Xmax,0) node[below] {$x$};
+	\draw[thick,-stealth] (0,-\Tmax) -- (0,\Tmax) node[left] {$t$};
+	\draw[dashed] (0,0) -- (\Xmax,\Tmax) 
+	node[pos=0.37,above,sloped,yshift=-.3ex] {\mylabelstyle$\xi=-\infty$}
+	node[tlabels,black] {\mylabelstyle$\eta=\infty$};
+	\draw[dashed] (0,0) -- (\Xmax,-\Tmax)
+	node[tlabels,black] {\mylabelstyle$\eta=-\infty$};
+	
+	\draw[dashed] (0,0) -- (-\Xmax,-\Tmax) 
+	node[tlabels,black] {\mylabelstyle$\tilde\eta=-\infty$};
+	\draw[dashed] (0,0) -- (-\Xmax,\Tmax)
+	node[pos=0.37,above,sloped,yshift=-.3ex] {\mylabelstyle$\tilde\xi=-\infty$}
+	node[tlabels,black] {\mylabelstyle$\tilde\eta=\infty$};
+	
+\end{tikzpicture}
