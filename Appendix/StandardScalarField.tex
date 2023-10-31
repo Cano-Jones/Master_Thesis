@@ -38,12 +38,12 @@ $\frac{\td^3\mathbf{k}}{(2\pi\hbar)^32k_0}$ is a Lorentz-invariant measure. It i
 \end{subequations}
 \begin{subequations}\label{eq: general a operator commutator rules}
 	\begin{gather}
-		\left[\hat{a}_\mathbf{k},\,\hat{a}_\mathbf{q}^\dagger\right]=\left(2\pi\hbar^2\right)^3 \delta^3\left(\mathbf{k}-\mathbf{q}\right),\hspace{1.0cm}\left[\hat{a}_\mathbf{k},\,\hat{a}_\mathbf{q}\right]=\left[\hat{a}_\mathbf{k}^\dagger,\,\hat{a}_\mathbf{q}^\dagger\right]=0.\tag{\theequation \,\,a-c}
+		\left[\hat{a}_\mathbf{k},\,\hat{a}_\mathbf{q}^\dagger\right]=\left(2\pi\hbar\right)^3\hbar^2 \delta^3\left(\mathbf{k}-\mathbf{q}\right),\hspace{1.0cm}\left[\hat{a}_\mathbf{k},\,\hat{a}_\mathbf{q}\right]=\left[\hat{a}_\mathbf{k}^\dagger,\,\hat{a}_\mathbf{q}^\dagger\right]=0.\tag{\theequation \,\,a-c}
 	\end{gather}
 \end{subequations}
 \begin{multline}
-	\left[\hat{\phi}(\mathbf{x}),\,\hat{\Pi}(\mathbf{y})\right]=-\frac{1}{i\hbar}\int\frac{\td^3\mathbf{k}\td^3\mathbf{q}}{2(2\pi\hbar)^3}\sqrt{\frac{q_0}{k_0}}	\left\{\left[a_\mathbf{k},a_\mathbf{q}\right]e^{i\left(\mathbf{kx}+\mathbf{qy}\right)\hbar^{-1}}-\left[a_\mathbf{k},a_\mathbf{q}^\dagger\right]e^{i\left(\mathbf{kx}-\mathbf{qy}\right)\hbar^{-1}}-\right.\\
-	\left.-\left[a_\mathbf{q},a_\mathbf{k}^\dagger\right]e^{-i\left(\mathbf{kx}-\mathbf{qy}\right)\hbar^{-1}}-\left[a_\mathbf{k}^\dagger,a_\mathbf{q}^\dagger\right]e^{-i\left(\mathbf{kx}+\mathbf{qy}\right)\hbar^{-1}}\right\}=\frac{\alpha}{(2\pi\hbar^2)^3}i\hbar\delta^3\left(\mathbf{x}-\mathbf{y}\right)
+	\left[\hat{\phi}(\mathbf{x}),\,\hat{\Pi}(\mathbf{y})\right]=-\frac{1}{i\hbar}\int\frac{\td^3\mathbf{k}\td^3\mathbf{q}}{2(2\pi\hbar)^6}\sqrt{\frac{q_0}{k_0}}	\left\{\left[a_\mathbf{k},a_\mathbf{q}\right]e^{i\left(\mathbf{kx}+\mathbf{qy}\right)\hbar^{-1}}-\left[a_\mathbf{k},a_\mathbf{q}^\dagger\right]e^{i\left(\mathbf{kx}-\mathbf{qy}\right)\hbar^{-1}}-\right.\\
+	\left.-\left[a_\mathbf{q},a_\mathbf{k}^\dagger\right]e^{-i\left(\mathbf{kx}-\mathbf{qy}\right)\hbar^{-1}}-\left[a_\mathbf{k}^\dagger,a_\mathbf{q}^\dagger\right]e^{-i\left(\mathbf{kx}+\mathbf{qy}\right)\hbar^{-1}}\right\}=\frac{\alpha}{(2\pi\hbar)^3\hbar^2 }i\hbar\delta^3\left(\mathbf{x}-\mathbf{y}\right)
 \end{multline}
 \begin{equation}
 	\hat{\mathcal{H}}=\int\left(\hat{\Pi}\partial_{0}\hat{\phi}-\hat{\mathcal{L}}\right)\td^3\mathbf{x}=\int\frac{c}{2}\left[\hat{\Pi}^2+\left(\mathbf{\nabla}\hat{\phi}\right)^2+\mu^2\hat{\phi}^2\right]\td^3\mathbf{x}

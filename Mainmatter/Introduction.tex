@@ -186,7 +186,7 @@ Now, let $v(x)$ be a solution of the generalized Klein-Gordon equation \ref{eq: 
 \end{equation}
 where $a_i$ and $\bar a_i$ are constant factors, determined by the following external binary operation
 \begin{equation}
-	\langle \phi_1(x),\,\phi_2(x)\rangle\equiv i\int g^{0\nu}\left(\phi_1\overset{\text{\tiny$\leftrightarrow$}}{\partial}_\nu\bar \phi_2\right)\sqrt{-g}\,\td^3\mathbf{x},
+	\langle \phi_1(x),\,\phi_2(x)\rangle\equiv \frac{i}{\hbar}\int g^{0\nu}\left(\phi_1\overset{\text{\tiny$\leftrightarrow$}}{\partial}_\nu\bar \phi_2\right)\sqrt{-g}\,\td^3\mathbf{x},
 \end{equation}
 such that
 \begin{subequations}
@@ -221,13 +221,13 @@ It would be desirable to obtain a formulation similar to the well known scalar f
 \end{subequations}
 Thanks to the relation between the constant factors $a_i$ and the operation $\langle v_i,\,\phi\rangle$, one can obtain the following relation
 \begin{multline}
-	\left[\hat{a}_i,\,\hat{a}_j^\dagger\right]=-\int\left[\left(v_i\hat{\Pi}-g^{0\nu}\left(\partial_\nu v_i\right)\hat{\phi}\sqrt{-g}\right)\Big|_\mathbf{x},\,\left(\bar v_j\hat{\Pi}-g^{0\nu}\left(\partial_\nu v_j\right)\hat{\phi}\sqrt{-g}\right)\Big|_\mathbf{y}\right]\td^3\mathbf{x}\td^3\mathbf{y}=\\
-	=i\hbar\int g^{0\nu}\left(v_i\overset{\text{\tiny$\leftrightarrow$}}{\partial}_\nu \bar v_j\right)\sqrt{-g}\,\td^3\mathbf{x}=\hbar\langle v_i,\,v_j\rangle,
+	\left[\hat{a}_i,\,\hat{a}_j^\dagger\right]=-\frac{1}{\hbar^2}\int\left[\left(v_i\hat{\Pi}-g^{0\nu}\left(\partial_\nu v_i\right)\hat{\phi}\sqrt{-g}\right)\Big|_\mathbf{x},\,\left(\bar v_j\hat{\Pi}-g^{0\nu}\left(\partial_\nu v_j\right)\hat{\phi}\sqrt{-g}\right)\Big|_\mathbf{y}\right]\td^3\mathbf{x}\td^3\mathbf{y}=\\
+	=\frac{i}{\hbar}\int g^{0\nu}\left(v_i\overset{\text{\tiny$\leftrightarrow$}}{\partial}_\nu \bar v_j\right)\sqrt{-g}\,\td^3\mathbf{x}=\langle v_i,\,v_j\rangle,
 \end{multline}
 where the field commutators where used. Equivalently
 \begin{subequations}
 	\begin{gather}
-		\left[\hat{a}_i,\,\hat{a}_j\right]=-\hbar\,\langle v_i,\,\bar v_j\rangle,\quad \left[\hat{a}_i^\dagger,\,\hat{a}_j^\dagger\right]=-\hbar\,\langle \bar v_i,\,v_j\rangle. \tag{\theequation \,\,a,b}
+		\left[\hat{a}_i,\,\hat{a}_j\right]=-\langle v_i,\,\bar v_j\rangle,\quad \left[\hat{a}_i^\dagger,\,\hat{a}_j^\dagger\right]=-\langle \bar v_i,\,v_j\rangle. \tag{\theequation \,\,a,b}
 	\end{gather}
 \end{subequations}
 
