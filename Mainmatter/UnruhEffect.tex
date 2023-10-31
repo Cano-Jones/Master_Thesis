@@ -1,3 +1,88 @@
-TBD
+Flat $1+1$ spacetime, 
+\begin{equation}
+	\alpha^\mu\equiv\frac{\td^2x^\mu}{\td\tau^2}
+\end{equation}
+\begin{equation}
+	\alpha^2=\left(c\frac{\td^2 t}{\td\tau^2}\right)^2-\left(\frac{\td^2x}{\td\tau^2}\right)^2
+\end{equation}
+\begin{subequations}
+	\begin{gather}
+		t(\tau)=t_0+t_1\tau\pm\frac{c}{\alpha}\sinh\left(\frac{\alpha\tau}{c}\right),\quad x(\tau)=x_0+x_1\tau\pm\frac{c^2}{\alpha}\cosh\left(\frac{\alpha\tau}{c}\right).\tag{\theequation \,\,a,b}
+	\end{gather}
+\end{subequations}
+$t_0,t_1,x_0,x_1\in\mathbb{R}$ but since $c^2\td\tau^2=c^2\td t^2-\td x^2$ one deduces that $ct_1=x_1=0$, for simplicity we consider some coordinates in which $ct_0=x_0=0$.
+
+\begin{equation}
+	x^2-c^2t^2=\frac{c^2}{\alpha^2}
+\end{equation}
+\begin{wrapfigure}{r}{0.4\textwidth}
+	\centering{
+		\input{Images/TikzFigures/RindlerCoordinates.tex}
+		\caption{Rindler Coordinates (Left and Right charts).}
+		\label{fig: Rindler Coordinates}
+	}
+\end{wrapfigure}
+\begin{itemize}
+	\item $x>c|t|$
+	\begin{subequations}
+		\begin{gather}
+			t(\eta,\,\xi)\equiv \frac{c}{\alpha}\sinh\left(\frac{\alpha\eta}{c}\right)e^{\sfrac{\alpha\xi}{c^2}},\\ x(\eta,\,\xi)\equiv \frac{c^2}{\alpha}\cosh\left(\frac{\alpha\eta}{c}\right)e^{\sfrac{\alpha\xi}{c^2}},\tag{\theequation \,\,b}
+		\end{gather}
+	\end{subequations}
+	\item $x<c|t|$
+	\begin{subequations}
+		\begin{gather}
+			t(\tilde\eta,\,\tilde\xi)\equiv- \frac{c}{\alpha}\sinh\left(\frac{\alpha\tilde\eta}{c}\right)e^{\sfrac{\alpha\tilde\xi}{c^2}},\\ x(\tilde\eta,\,\tilde\xi)\equiv -\frac{c^2}{\alpha}\cosh\left(\frac{\alpha\tilde\eta}{c}\right)e^{\sfrac{\alpha\tilde\xi}{c^2}},\tag{\theequation \,\,b}
+		\end{gather}
+	\end{subequations}
+\end{itemize}
+
+
+$x^2-c^2t^2=\frac{c^2}{\alpha^2}e^{2\sfrac{\alpha\xi}{c^2}}$
+\begin{equation}
+	c^2\td \tau^2=e^{\sfrac{\alpha\xi}{c^2}}\left[c^2\td\eta^2-\td\xi^2\right]
+\end{equation}
+
+Now consider a massless and minimally coupled scalar field described by the action \ref{eq: General scalar field action}, the equation of motion would be \footnote{As it turns out, for $1+1$ the conformal invariance is obtained by a massless minimally coupled theory.}
+\begin{equation}
+	e^{-2\sfrac{\alpha\xi}{c^2}}\left[\partial^2_{c\eta}-\partial^2_\xi\right]\phi=0
+\end{equation}
+use of null coordinates $u\equiv c\eta-\xi$ $v\equiv c\eta+\xi$ 
+\begin{subequations}
+	\begin{gather}
+		\phi_\omega^u\equiv e^{i\omega u\,\hbar^{-1}},\quad \phi_\omega^v\equiv  a^v_\omega e^{i\omega v\,\hbar^{-1}},\quad\phi_\omega^{\tilde u}\equiv a^{\tilde u}_\omega e^{i\omega \tilde u\,\hbar^{-1}},\quad\phi_\omega^{\tilde v}\equiv  a^{\tilde v}_\omega e^{i\omega \tilde v\,\hbar^{-1}},\tag{\theequation \,\,a-d}
+	\end{gather}
+\end{subequations}
+
+
+
+
+$U\equiv ct-x$ and $V\equiv ct+x$
+\begin{subequations}
+	\begin{gather}
+		U(u,\,v)=-\frac{c^2}{\alpha}e^{-\sfrac{\alpha u}{c^2}},\hspace{1.0cm} V(u,\,v)=\frac{c^2}{\alpha}e^{\sfrac{\alpha v}{c^2}},
+	\end{gather}
+\end{subequations}
+$\phi\equiv\phi_u+\phi_v$
+\begin{equation}
+	\phi_u\equiv\int_0^\infty \frac{\td \omega}{(2\pi\hbar)\sqrt{2\omega}}\left\{\Theta(-U)\left[a^u_\omega\phi_\omega^u+\bar a^u_\omega\bar \phi_\omega^u \right]+\Theta(U)\left[a^{\tilde u}_\omega\phi_\omega^{\tilde u}+\bar a^{\tilde u}_\omega\bar \phi_\omega^{\tilde u} \right]\right\}
+\end{equation}
+\begin{equation}
+	\beta_{\Omega\omega}\propto \langle \Theta(-U)\phi^u_\Omega+\Theta(U)\phi^{\tilde u}_\Omega,\bar\phi_\omega^{U}\rangle=\frac{1}{2\hbar^2}\sqrt{\frac{\Omega}{\omega}}\int_{-\infty}^\infty\exp{\left\{i\left[\omega U(u)+\Omega u\right]\hbar^{-1}\right\}}\td u
+\end{equation}
+$z\equiv i\left(\sfrac{\omega c^2}{\alpha}\right)\exp{\left(\sfrac{a u}{c^2}\right)}$
+\begin{equation}
+	\beta_{\Omega\omega}\propto \frac{c^2}{\alpha\hbar^2}\Gamma\left(i\frac{\omega c^2}{\alpha\hbar }\right)\sqrt{\frac{\Omega}{\omega}}\left(\frac{c^2\omega}{\alpha\hbar }\right)^{-i\frac{\omega c^2}{\alpha\hbar}}e^{-\frac{\pi\omega c^2}{2\alpha\hbar}}
+\end{equation}
+\begin{equation}
+	N_\omega\equiv\langle_U 0|\hat{a}_\omega^\dagger\hat{a}_\omega|_U0\rangle=\int_0^\infty\frac{\td\omega}{(2\pi\hbar)\sqrt{2\omega}}|\beta_{\omega\omega}|\propto\frac{1}{e^{\frac{2\pi\omega c}{\alpha\hbar}}-1}\delta(0)
+\end{equation}
+\begin{equation}
+	T_0\equiv \frac{\alpha\hbar}{2\pi ck_B}
+\end{equation}
+This is not the temperature that would be measured by an accelerated Rindler observer; consider the \textit{conserved} energy $E_0$ measured by an observed in an stationary gravitational field, which relates to the energy measured by another observer by $E_0=\sqrt{g_00}\,E$, since the thermodynamical relation for the energy and the temperature comes from the entropy $\sfrac{1}{T_0}=\sfrac{\partial S}{E_0}$, then the proper temperature will be $T=\sqrt{g_{00}}\,T_0$; this is known as Tolman's law, and results in
+\begin{equation}
+	T_{\text{Unruh}}=\sqrt{g_{00}}\,T_0=\left(\alpha e^{-\sfrac{\alpha}{c^2}\xi}\right)\frac{\hbar}{2\pi ck_B}\equiv \frac{a\hbar}{2\pi ck_B}
+\end{equation}
 \section{Application to Black Holes: Hawking Radiation}
 TBD
