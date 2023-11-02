@@ -4,7 +4,11 @@ The methodology for the analysis of scalar fields in a general manifold was pres
 		\td l^2 =c^2\td t^2 -a^2(t)\left[\frac{\td r^2}{1-\kappa r^2}+r^2\td\Omega^2\right],\quad \td\Omega\equiv \td\theta^2+\sin^2\varphi\td\varphi^2,\tag{\theequation \,\,a,b}
 	\end{gather}
 \end{subequations}
-where $\kappa$ is the curvature of the space and $a(t)$ is the scale factor determining the expansion.
+where $\kappa$ is the curvature of the space and $a(t)$ is the scale factor determining the expansion. The associated curvature scalar $R$ is given by
+\begin{equation}\label{eq: FLRW Curvature}
+	R=\frac{6}{c^2}\left[\frac{\ddot{a}}{a}+\left(\frac{\dot{a}}{a}\right)^2\right],
+\end{equation}
+needed to the coupling of the field with gravity as previously stated.
 \section{Expanding scalar field action}
 The Weyl tensor associated to the metric presented in \cref{eq: FLRW metric} is identically zero, meaning that the metric is conformally flat, i.e. independently of the space curvature $\kappa$, and therefore there must exist a coordinate system where
 \begin{equation}\label{eq: Conformal FLRW}
@@ -191,45 +195,49 @@ meaning, if $\beta_\mathbf{k}\not=0$ for all $\mathbf{k}$ then, at a time $t>t_0
 \section{Case of Study: de Sitter Universe}
 The de Sitter Universe is a flat FLRW metric with no matter or radiation, but it does have a a positive cosmological constant $\Lambda$. Per the Friedmann equations,
 \begin{equation}
-	\left(\frac{\dot{a}}{a}\right)^2=\frac{8\pi G\rho+\Lambda c^2}{3}-\frac{\kappa c^2}{a^2}
+	\left(\frac{\dot{a}}{a}\right)^2=\frac{8\pi G\rho+\Lambda c^2}{3}-\frac{\kappa c^2}{a^2},\quad \left(\rho=\kappa=0\right)
 \end{equation}
 the expansion parameter $a(t)$ will be equal to
 \begin{equation}
-	a(t)=a_1e^{H_\Lambda t}+a_2e^{-H_\Lambda t}\;,\hspace{1.0cm} H_\Lambda=\sqrt{\frac{\Lambda c^2}{3}}
+	a(t)=a_1e^{H_\Lambda t}+a_2e^{-H_\Lambda t}\;,
 \end{equation}
-$a_2=0$
+where $H_\Lambda=\sqrt{\sfrac{\Lambda c^2}{3}}$ it's the Hubble-Lemaître constant. The most common choice is to set $a_2=0$, and thus, consider an always expanding universe.
+
+The line element describing the motion of particles through this universe is given by
 \begin{equation}
-	\td l^2=c^2\td t^2-a^2(t)\td\mathbf{x}^2
+	\td l^2=c^2\td t^2-a^2(t)\td\mathbf{x}^2,
 \end{equation}
-\begin{equation}
-	\eta\equiv -\int_t^\infty\frac{\td t'}{a(t')}=-\frac{1}{a_1\,H_\Lambda}e^{-H_\Lambda t}=-\frac{1}{a(t)H_\Lambda}
-\end{equation}
-\footnote{Considering $a_2\not=0$ one would obtain that
+more commonly expressed as a function of the conformal time $\eta$ defined as \footnote{Considering $a_2\not=0$ one would obtain that
 	$$\eta=\frac{\arctan\left(\sqrt{\frac{a_2}{a_1}}e^{-H_\Lambda t}\right)}{H_\Lambda\sqrt{a_1a_2}}$$}
 \begin{equation}
-	\td l^2= \frac{1}{H_\Lambda\eta^2}\left[c^2\td\eta^2-\td \mathbf{x}^2\right]
+	\eta\equiv -\int_t^\infty\frac{\td t'}{a(t')}=-\frac{1}{a_1\,H_\Lambda}e^{-H_\Lambda t}=-\frac{1}{a(t)H_\Lambda};
 \end{equation}
+and thus, the line element will be given by
 \begin{equation}
-	R=\frac{6}{c^2}\left[\frac{\ddot{a}}{a}+\left(\frac{\dot{a}}{a}\right)^2\right]=\frac{12}{c^2}H_\Lambda^2
+	\td l^2= \frac{1}{H_\Lambda\eta^2}\left[c^2\td\eta^2-\td \mathbf{x}^2\right],
 \end{equation}
-\begin{equation}
-	\omega^2_\mathbf{k}(\eta)=\mathbf{k}^2+\left[\left(\frac{mc^2}{H_\Lambda}\right)^2+2\left(6\xi-1\right)\hbar^2\right]\frac{1}{c^2\eta^2}
-\end{equation}
-\begin{equation}
-	v_\mathbf{k}''\hbar^2+\omega^2_\mathbf{k}(\eta)\,v_\mathbf{k}=0
-\end{equation}
+which has the same form as \ref{eq: Conformal FLRW}. 
 
-change of variables
+Now, from equation \ref{eq: FLRW Curvature} one can compute the curvature scalar $=H_\Lambda^2\sfrac{12}{c^2}$, and thus, the dispersion relation \ref{eq: Expanding dispersion relation} will be given by the following expression
 \begin{equation}
-	s\equiv -k\eta\hspace{1.0cm}v_\mathbf{k}\equiv \sqrt{s}f(s)
+	\omega^2_\mathbf{k}(\eta)=\mathbf{k}^2+\left[\left(\frac{mc^2}{H_\Lambda}\right)^2+2\left(6\xi-1\right)\hbar^2\right]\frac{1}{c^2\eta^2},
 \end{equation}
+from which one might obtain the solutions of the differential equation \ref{eq: Expanding diff v}; to do so it is best to use the following change of variables,
+\begin{subequations}
+	\begin{gather}
+		s\equiv -k\eta,\hspace{1.5cm}v_\mathbf{k}\equiv \sqrt{|s|}f(s),\tag{\theequation \,\,a,b}
+	\end{gather}
+\end{subequations}
+obtaining the Bessel's differential equation
 \begin{equation}
-	s^2\frac{\td^2f}{\td s^2}+s\frac{\td f}{\td s}+\left(s^2-\nu^2\right)f(s)=0
+	s^2\frac{\td^2f}{\td s^2}+s\frac{\td f}{\td s}+\left(s^2-\nu^2\right)f(s)=0,
 \end{equation}
+with a parameter
 \begin{equation}
-	\nu^2\equiv \left(3-16\xi\right)\frac{3}{4}\frac{\hbar^2}{c^2}-\left(\frac{mc}{H_\Lambda}\right)^2
+	\nu^2\equiv \left(3-16\xi\right)\frac{3}{4}\frac{\hbar^2}{c^2}-\left(\frac{mc}{H_\Lambda}\right)^2.
 \end{equation}
+The solutions of such differential equation are given by the so called Bessel functions of the first kind $J_\nu(s)$ and $Y_\nu(s)$; therefore the $v_\mathbf{k}$ functions can be deduced as
 \begin{equation}
 	f(s)=AJ_\nu(s)+BY_\nu(s)\implies v_\mathbf{k}(\eta)=\sqrt{k|\eta|}\left[A_\mathbf{k}J_\nu(k|\eta|)+B_\mathbf{k}Y_\nu(k|\eta|)\right]
 \end{equation}
-$J_\nu(x),\,Y_\nu(x)$ are the Bessel functions of the firs kind. For $\nu^2\geq 0$ $J_\nu$ and $Y_\nu$ will be real functions, but for $\nu<0$ they will be complex functions \cite{BesselComplex}. $\text{Im}(v\bar v')$ creates a restriction on the relation $B_\mathbf{k}=B_\mathbf{k}(A_\mathbf{k})$
+For $\nu^2\geq 0$, both $J_\nu$ and $Y_\nu$ will be real functions, but for $\nu<0$ they will be complex functions \cite{BesselComplex}; for simplicity, we will focus on the $\nu\geq 0$ case. In addition, consider that the choice of $\text{Im}(v\bar v')$ will translate in a restriction on the relation $B_\mathbf{k}=B_\mathbf{k}(A_\mathbf{k})$.
