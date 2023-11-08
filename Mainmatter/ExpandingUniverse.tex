@@ -185,7 +185,7 @@ and thus, it is possible to write $v_\mathbf{k}$ at an arbitrary time $t$ as
 	v_\mathbf{k}(\eta)=\alpha_\mathbf{k}v_\mathbf{k}(\eta_0)+\beta_\mathbf{k}\bar v_\mathbf{k}(\eta_0);
 \end{equation}
 where, recalling that $\text{Im}(v\bar v')$ is constant through time, the relation between $\alpha_\mathbf{k}$ and $\beta_\mathbf{k}$ must be
-\begin{equation}
+\begin{equation}\label{eq: Bogoliubov coefficients relation Expanding}
 	|\alpha_\mathbf{k}|^2-|\beta_\mathbf{k}|^2=1.
 \end{equation}
 The energy of the instantaneous vacuum state $|_{(\eta_0)}0\rangle$ at a time $\eta$ is given by $\langle_{(\eta_0)}0|\hat{\mathcal{H}}(\eta)|_{(\eta_0)}0\rangle$, were the hamiltonian $\hat{\mathcal{H}}(\eta)$ is given by expression \ref{eq: Expanding Hamiltonian}; to compute that, lets first obtain
@@ -231,7 +231,7 @@ Now, from equation \ref{eq: FLRW Curvature} one can compute the curvature scalar
 from which one might obtain the solutions of the differential equation \ref{eq: Expanding diff v}; to do so it is best to use the following change of variables,
 \begin{subequations}
 	\begin{gather}
-		s\equiv -k\eta,\hspace{1.5cm}v_\mathbf{k}\equiv \sqrt{s}f(s),\tag{\theequation \,\,a,b}
+		s\equiv -k\eta\frac{c}{\hbar},\hspace{1.5cm}v_\mathbf{k}\equiv \sqrt{s}f(s),\tag{\theequation \,\,a,b}
 	\end{gather}
 \end{subequations}
 obtaining the Bessel's differential equation
@@ -240,20 +240,20 @@ obtaining the Bessel's differential equation
 \end{equation}
 with a parameter
 \begin{equation}
-	\nu^2\equiv \left(3-16\xi\right)\frac{3}{4}\frac{\hbar^2}{c^2}-\left(\frac{mc}{H_\Lambda}\right)^2.
+	\nu^2\equiv \left(3-16\xi\right)\frac{3}{4}-\left(\frac{mc^2}{H_\Lambda\hbar }\right)^2.
 \end{equation}
 The solutions of such differential equation are given by the so called Bessel functions of the first kind $J_\nu(s)$ and $Y_\nu(s)$; therefore the $v_\mathbf{k}$ functions can be deduced as
 \begin{equation}\label{eq: de Sitter general v}
-	f(s)=AJ_\nu(s)+BY_\nu(s)\implies v_\mathbf{k}(\eta)=\sqrt{k|\eta|}\left[A_\mathbf{k}J_\nu(k|\eta|)+B_\mathbf{k}Y_\nu(k|\eta|)\right]
+	f(s)=AJ_\nu(s)+BY_\nu(s)\implies v_\mathbf{k}(\eta)=\sqrt{k|\eta|\frac{c}{\hbar}}\left[A_\mathbf{k}J_\nu(k|\eta|\frac{c}{\hbar})+B_\mathbf{k}Y_\nu(k|\eta|\frac{c}{\hbar})\right]
 \end{equation}
 For $\nu^2\geq 0$, both $J_\nu$ and $Y_\nu$ will be real functions, but for $\nu<0$ they will be complex functions \cite{BesselComplex}; for simplicity, we will focus on the $\nu\geq 0$ case. In addition, consider that the choice of $\text{Im}(v\bar v')$ will translate in a restriction on the relation between the  $A_\mathbf{k},\,B_\mathbf{k}$ parameters;
 \begin{equation}
-	\text{Im}\left(v\bar{v}'\right)=ik^2|\eta|\left(A_\mathbf{k}\bar{B}_\mathbf{k}-\bar{A}_\mathbf{k}B_\mathbf{k}\right)W\left[J_\nu\left(k|\eta|\right),\,Y_\nu\left(k|\eta|\right)\right],
+	\text{Im}\left(v\bar{v}'\right)=ik^2|\eta|\frac{c}{\hbar}\left(A_\mathbf{k}\bar{B}_\mathbf{k}-\bar{A}_\mathbf{k}B_\mathbf{k}\right)W\left[J_\nu\left(k|\eta|\right),\,Y_\nu\left(k|\eta|\right)\right],
 \end{equation}
-where $W[f,g]\equiv fg'-f'g$ its the Wronskian, particularly \cite[\href{https://dlmf.nist.gov/10.5}{10.5.2}]{DLMF} for the Bessel functions, one gets $W\left[J_\nu\left(k|\eta|\right),\,Y_\nu\left(k|\eta|\right)\right]=\frac{2}{\pi k|\eta|}$
+where $W[f,g]\equiv fg'-f'g$ its the Wronskian, particularly \cite[\href{https://dlmf.nist.gov/10.5}{10.5.2}]{DLMF} for the Bessel functions, one gets $W\left[J_\nu\left(s\right),\,Y_\nu\left(s\right)\right]=\frac{2}{\pi s}$
 and thus, the relation between the  $A_\mathbf{k},\,B_\mathbf{k}$ parameters will be
 \begin{equation}\label{eq: Relation A B de Sitter}
-	\left(A_\mathbf{k}\bar{B}_\mathbf{k}-\bar{A}_\mathbf{k}B_\mathbf{k}\right)=-\frac{i\pi}{2k}\text{Im}\left(v\bar{v}'\right).
+	\left(A_\mathbf{k}\bar{B}_\mathbf{k}-\bar{A}_\mathbf{k}B_\mathbf{k}\right)=-i\frac{\pi}{2k}\text{Im}\left(v\bar{v}'\right).
 \end{equation}
 As previously seen, the choice of a set of solutions of the Klein-Gordon equation, defines the choice of a vacuum; an example is the instantaneous vacuum, but for a de Sitter background there is a special choice, the Bunch-Davies vacuum\footnote{Also known as euclidean vacuum.}.
 \subsection{Bunch-Davies Vacuum}
@@ -265,7 +265,7 @@ which is the usual flat temporal mode function. The same limit can be taken over
 considering the asymptotic expressions for the Bessel functions \cite[\href{https://dlmf.nist.gov/10.7}{10.7.8}]{DLMF}, one obtains
 \begin{subequations}
 	\begin{gather}
-		v_\mathbf{k}(\eta)\approx \sqrt{\frac{2}{\pi}}\left[A_\mathbf{k}\cos\lambda_\nu+B_\mathbf{k}\sin\lambda_\nu\right],\quad \lambda_\nu\equiv k|\eta|-\frac{\pi}{2}\nu-\frac{\pi}{4}.\tag{\theequation \,\,a,b}
+		v_\mathbf{k}(\eta)\approx \sqrt{\frac{2}{\pi}}\left[A_\mathbf{k}\cos\lambda_\nu+B_\mathbf{k}\sin\lambda_\nu\right],\quad \lambda_\nu\equiv k|\eta|\frac{c}{\hbar}-\frac{\pi}{2}\nu-\frac{\pi}{4}.\tag{\theequation \,\,a,b}
 	\end{gather}
 \end{subequations}
 One could easily recover the flat temporal mode function by imposing the relation 
@@ -275,9 +275,14 @@ $B_\mathbf{k}=iA_\mathbf{k}$; this choice, alongside the relation \ref{eq: Relat
 \end{equation}
 where $H^{(1)}_\nu(s)\equiv J_\nu(s)+iY_\nu(s)$ is known as the Hankel function of the first kind.
 
-This vacuum state is of particular interest since it is not time dependent, is invariant under the de Sitter symmetry group and, for a conformal theory with natural units (i.e. $m=0$, $\xi=\sfrac{1}{6}$ and $\hbar=c=1$) the temporal mode function is given by\footnote{For such theory, $\nu=\sfrac{1}{2}$, and such value means that tha Hankel function can be written as $$H^{(1)}_{\sfrac{1}{2}}(s)=-i\sqrt{\frac{2}{\pi s}}e^{is}.$$}
+This vacuum state is of particular interest since it is not time dependent, is invariant under the de Sitter symmetry group and, for a conformal theory (i.e. $m=0$ and $\xi=\sfrac{1}{6}$) the temporal mode function is given by\footnote{For such theory, $\omega_\mathbf{k}=k$ and $\nu=\sfrac{1}{2}$; and for such value, the Hankel function can be written as $$H^{(1)}_{\sfrac{1}{2}}(s)=-i\sqrt{\frac{2}{\pi s}}e^{is}.$$}
 \begin{equation}
-	v_\mathbf{k}=-i\sqrt{\frac{\text{Im}\left(v\bar{v}'\right)}{2k}}e^{ik|\eta|}
+	v_\mathbf{k}(\eta)=-i\sqrt{\frac{\hbar\text{Im}\left( v\bar{v}'\right)}{ 2\omega_\mathbf{k}c}}e^{i\omega_\mathbf{k}|\eta|c\sfrac{}{\hbar}}
 \end{equation}
-\subsection{The Mottola-Allen Vacua}
-TBD
+which is (up to an irrelevant phase) the standard plane wave temporal mode function.
+
+Any other vacuum state can be obtained by a Bogoliubov transformation of the Bunch-Davies vacuum; from the relation of the Bogoliubov parameters in expression \ref{eq: Bogoliubov coefficients relation Expanding}, one could define a new set of temporal mode functions $\left\{u_\mathbf{k}\right\}$ as
+\begin{equation}
+	u_\mathbf{k}(\eta)\equiv \cosh\alpha \,v_\mathbf{k}(\eta)+e^{i\beta}\sinh\alpha \,\bar{v}_\mathbf{k}(\eta),
+\end{equation}
+where $0\leq \alpha<\infty$ and $-\pi\leq\beta<\pi$ are constant parameters defining the transformation. This new vacuum state denoted by $|_{(\alpha,\,\beta)}0\rangle$ is known as Mottola-Allen vacuum.
