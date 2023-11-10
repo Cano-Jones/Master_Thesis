@@ -90,7 +90,7 @@ The inclusion of such coupling is not a mere curiosity, since it's been proven \
 	g_{\mu\nu}\rightarrow \tilde{g}_{\mu\nu}\equiv \Omega^2(x)g_{\mu\nu},
 \end{equation}
 to prove this, lets first obtain the equations of motion using the Euler-Lagrange equation \ref{eq: Euler-Lagrange}, resulting in the generalized Klein-Gordon equation
-\begin{equation}
+\begin{equation}\label{eq: Klein-Gordon General}
 	\big[\partial_\nu\partial^\nu-\mu^2-\xi R\big]\phi=0,
 \end{equation}
 and then, a conformal transformation can be made to then, considering that the field will transform as $\phi\rightarrow\tilde{\phi}=\Omega^\beta\phi$, resulting on the following expression:
@@ -263,9 +263,11 @@ Quantization of the field is straightforward and equivalent to the method previo
 	v_i(x)\equiv\sum_j\left[\alpha_{ij}u_j(x)+\beta_{ij}\bar u_j(x)\right],
 \end{equation}
 where $\alpha_{ij}$ and $\beta_{ij}$ are known as Bogoliubov coefficients, that can be obtained as
-\begin{equation}\label{eq: Bogoliubov Coefficients General}
-	\alpha_{ij}\propto\langle v_i,\,u_j\rangle\hspace{1.0cm}\beta_{ij}\propto -\langle v_i,\,\bar u_j\rangle.
-\end{equation}
+\begin{subequations}\label{eq: Bogoliubov Coefficients General}
+	\begin{gather}
+		\alpha_{ij}\propto\langle v_i,\,u_j\rangle\hspace{1.0cm}\beta_{ij}\propto -\langle v_i,\,\bar u_j\rangle.\tag{\theequation \,\,a,b}
+	\end{gather}
+\end{subequations}
 
 Since the field is the same independently of the mode set chosen:
 \begin{equation}
@@ -286,7 +288,7 @@ Applying commutator rules \ref{eq: general a operator commutator rules} give new
 \end{equation}
 
 The reader might ask what the relevance of this transformation is, and it would be in its right to do so, since it is not a mere mathematical result. To see the reason of this transformation, one could compute the number of $v$ particles that are present in the $u$ vacuum; the computation is given by
-\begin{equation}
+\begin{equation}\label{eq: Bogoliubov Number particles general}
 	\langle_u0|\hat{N}_v|_u0\rangle=\sum_i\langle_u0|\hat{a}_i^\dagger\hat{a}_i|_u0\rangle=\sum_{i}\left[\sum_{jk}\beta_{ij}\bar \beta_{ik}\langle_u0|\hat{b}_j\hat{b}_k^\dagger|_u0\rangle\right]\propto \sum_{ij}|\beta_{ij}|^2.
 \end{equation}
 The usual expectation value of a term of the form $\langle0|\hat{N}|0\rangle$ is to be zero, and yet, it has been proven that this is not the case (in general) for the current scenario. The interpretation of such result is that the notion of "particle" is dependent on the choice of solutions of the Klein-Gorton equation; and thus, one could define different vacuum states for different situations.
