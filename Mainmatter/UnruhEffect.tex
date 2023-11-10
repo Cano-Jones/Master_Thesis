@@ -1,90 +1,100 @@
 \section{Accelerated Observers and Unruh Temperature}
-Flat $1+1$ spacetime, 
+In contrast to previous chapters, in this section there will be no effects of gravitation, and a flat $1+1$ spacetime (for simplicity) will be considered; the difference from the standard flat QFT, here a non inertial (accelerated) observed will be considered. Let an observer measure a self constant two-acceleration $\alpha^\mu\equiv \sfrac{\td^2 x^\mu}{\td\tau^2}$, and thus
 \begin{equation}
-	\alpha^\mu\equiv\frac{\td^2x^\mu}{\td\tau^2}
+	\alpha^2=\left(c\frac{\td^2 t}{\td\tau^2}\right)^2-\left(\frac{\td^2x}{\td\tau^2}\right)^2.
 \end{equation}
-\begin{equation}
-	\alpha^2=\left(c\frac{\td^2 t}{\td\tau^2}\right)^2-\left(\frac{\td^2x}{\td\tau^2}\right)^2
-\end{equation}
+Solutions of such differential equation can be written as
 \begin{subequations}
 	\begin{gather}
-		t(\tau)=t_0+t_1\tau\pm\frac{c}{\alpha}\sinh\left(\frac{\alpha\tau}{c}\right),\quad x(\tau)=x_0+x_1\tau\pm\frac{c^2}{\alpha}\cosh\left(\frac{\alpha\tau}{c}\right).\tag{\theequation \,\,a,b}
+		t(\tau)=t_0+t_1\tau\pm\frac{c}{\alpha}\sinh\left(\frac{\alpha\tau}{c}\right),\quad x(\tau)=x_0+x_1\tau\pm\frac{c^2}{\alpha}\cosh\left(\frac{\alpha\tau}{c}\right),\tag{\theequation \,\,a,b}
 	\end{gather}
 \end{subequations}
-$t_0,t_1,x_0,x_1\in\mathbb{R}$ but since $c^2\td\tau^2=c^2\td t^2-\td x^2$ one deduces that $ct_1=x_1=0$, for simplicity we consider some coordinates in which $ct_0=x_0=0$.
-
+where $t_0,t_1,x_0,x_1$ are constant real parameters. Since the trajectory must ensure that $c^2\td\tau^2=c^2\td t^2-\td x^2$, then the "velocities" must be such that $ct_1=x_1=0$; furthermore, for simplicity we consider some coordinates in which $ct_0=x_0=0$. Such trajectory can be described as the hyperbola
 \begin{equation}
-	x^2-c^2t^2=\frac{c^2}{\alpha^2}
+	x^2-c^2t^2=\frac{c^2}{\alpha^2}.
 \end{equation}
-\begin{wrapfigure}{r}{0.4\textwidth}
+There exists a coordinate system known as Rindler coordinates, that is specially useful in the description of accelerated observers, such coordinates do not map the whole spacetime, and must be divided into two maps: whereas $x>c|t|$ or otherwise. The coordinates used will be named as $(\eta,\xi)$ ($(\tilde\eta,\tilde\xi)$ if working in the second chart), the first could be understood as some sort of temporal coordinate, while the second as a parameter determining the acceleration of the observer.
+\begin{wrapfigure}[13]{r}{0.49\textwidth}
 	\centering{
 		\input{Images/TikzFigures/RindlerCoordinates.tex}
 		\caption{Rindler Coordinates (Left and Right charts).}
 		\label{fig: Rindler Coordinates}
 	}
 \end{wrapfigure}
+Such coordinate system can be written\footnote{The choice is not unique, depending on the definition of $\xi$ the exponential factor can be exchanged by a different form, such as $()1+\xi)$ or simply by $\xi$.} as:
 \begin{itemize}
-	\item $x>c|t|$
+	\item Chart $x>c|t|$ (\ref{fig: Rindler Coordinates} blue section),
 	\begin{subequations}
 		\begin{gather}
-			t(\eta,\,\xi)\equiv \frac{c}{\alpha}\sinh\left(\frac{\alpha\eta}{c}\right)e^{\sfrac{\alpha\xi}{c^2}},\\ x(\eta,\,\xi)\equiv \frac{c^2}{\alpha}\cosh\left(\frac{\alpha\eta}{c}\right)e^{\sfrac{\alpha\xi}{c^2}},\tag{\theequation \,\,b}
+			t(\eta,\,\xi)\equiv \frac{c}{\alpha}\sinh\left(\frac{\alpha\eta}{c}\right)e^{\sfrac{\alpha\xi}{c^2}},\tag{\theequation \,\,a}\\ x(\eta,\,\xi)\equiv \frac{c^2}{\alpha}\cosh\left(\frac{\alpha\eta}{c}\right)e^{\sfrac{\alpha\xi}{c^2}},\tag{\theequation \,\,b}
 		\end{gather}
 	\end{subequations}
-	\item $x<c|t|$
+	\item Chart $x<c|t|$ (\ref{fig: Rindler Coordinates} purple section),
 	\begin{subequations}
 		\begin{gather}
-			t(\tilde\eta,\,\tilde\xi)\equiv- \frac{c}{\alpha}\sinh\left(\frac{\alpha\tilde\eta}{c}\right)e^{\sfrac{\alpha\tilde\xi}{c^2}},\\ x(\tilde\eta,\,\tilde\xi)\equiv -\frac{c^2}{\alpha}\cosh\left(\frac{\alpha\tilde\eta}{c}\right)e^{\sfrac{\alpha\tilde\xi}{c^2}},\tag{\theequation \,\,b}
+			t(\tilde\eta,\,\tilde\xi)\equiv- \frac{c}{\alpha}\sinh\left(\frac{\alpha\tilde\eta}{c}\right)e^{\sfrac{\alpha\tilde\xi}{c^2}},\tag{\theequation \,\,a}\\ x(\tilde\eta,\,\tilde\xi)\equiv -\frac{c^2}{\alpha}\cosh\left(\frac{\alpha\tilde\eta}{c}\right)e^{\sfrac{\alpha\tilde\xi}{c^2}},\tag{\theequation \,\,b}
 		\end{gather}
 	\end{subequations}
 \end{itemize}
-
-
-$x^2-c^2t^2=\frac{c^2}{\alpha^2}e^{2\sfrac{\alpha\xi}{c^2}}$
+One can check that, these coordinates meet the following hyperbolic relation,
 \begin{equation}
-	c^2\td \tau^2=e^{\sfrac{\alpha\xi}{c^2}}\left[c^2\td\eta^2-\td\xi^2\right]
+	x^2-c^2t^2=\frac{c^2}{\alpha^2}e^{2\sfrac{\alpha\xi}{c^2}},
+\end{equation}
+and thus, an observer with some coordinates $(\eta,\xi)$ can be said to experience an acceleration $\alpha e^{-\xi\sfrac{}{c^2}}$. Using such coordinate system, the line element will be\footnote{Note that as it would be expected, the metric is conformally flat.},
+\begin{equation}
+	c^2\td \tau^2=e^{\sfrac{\alpha\xi}{c^2}}\left[c^2\td\eta^2-\td\xi^2\right].
 \end{equation}
 
-Now consider a massless and minimally coupled scalar field described by the action \ref{eq: General scalar field action}, the equation of motion would be \footnote{As it turns out, for $1+1$ the conformal invariance is obtained by a massless minimally coupled theory.}
+The fact that a non-inertial reference system will experience some deviations of a theory in relation to an inertial one should not surprise any reader, since its a basic result of elementary physics, and thus, it is also expected in a relativistic quantum theory to be true. To be able to demonstrate this, we will consider the simplest possible case, a massless and minimally coupled scalar field $\phi$; whose equation of motion given by the Klein-Gordon equation \ref{eq: Klein-Gordon General} will be
 \begin{equation}
-	e^{-2\sfrac{\alpha\xi}{c^2}}\left[\partial^2_{c\eta}-\partial^2_\xi\right]\phi=0
+	e^{-2\sfrac{\alpha\xi}{c^2}}\left[\partial^2_{c\eta}-\partial^2_\xi\right]\phi=0.
 \end{equation}
-use of null coordinates $u\equiv c\eta-\xi$ $v\equiv c\eta+\xi$ 
-\begin{subequations}
+Solutions of such equation are the usual plane waves\footnote{This is a direct result of the fact that, for a $1+1$ scalar theory, conformal symmetry is obtained for $m=\xi=0$.}, just as it would for an inertial observer. Since the solutions of an accelerated reference frame and an inertial observer are the same, it would seem that all phenomena will be described equally by both, but this is not the same, since their metric description will be different, and thus, the field will be related by a Bogoliubov transformation; that is the two observers might disagree on their definition of the vacuum state.
+
+In order to explicitly compute this, it will be useful to use the so called null coordinates $u\equiv c\eta-\xi$ and $v\equiv c\eta+\xi$ for the accelerated observer, and  $U\equiv ct-x$ and $V\equiv ct+x$; through which the solution of the equation of motion will be (depending on the needed chart)
+\begin{subequations}\label{eq: Unruh modes}
 	\begin{gather}
-		\phi_\omega^u\equiv e^{i\omega u\,\hbar^{-1}},\quad \phi_\omega^v\equiv  a^v_\omega e^{i\omega v\,\hbar^{-1}},\quad\phi_\omega^{\tilde u}\equiv a^{\tilde u}_\omega e^{i\omega \tilde u\,\hbar^{-1}},\quad\phi_\omega^{\tilde v}\equiv  a^{\tilde v}_\omega e^{i\omega \tilde v\,\hbar^{-1}},\tag{\theequation \,\,a-d}
+		\phi_\omega^u\equiv e^{i\omega u\,\hbar^{-1}},\quad \phi_\omega^v\equiv  e^{i\omega v\,\hbar^{-1}},\quad\phi_\omega^{\tilde u}\equiv e^{i\omega \tilde u\,\hbar^{-1}},\quad\phi_\omega^{\tilde v}\equiv  e^{i\omega \tilde v\,\hbar^{-1}}.\tag{\theequation \,\,a-d}
 	\end{gather}
 \end{subequations}
-
-
-
-
-$U\equiv ct-x$ and $V\equiv ct+x$
-\begin{subequations}
+In addition, null coordinates will also be used for the inertial observer those being $U\equiv ct-x$ and $V\equiv ct+x$; and the relation to the accelerated null coordinates will be
+\begin{subequations}\label{eq: Unruh Null coordinates relation}
 	\begin{gather}
-		U(u,\,v)=-\frac{c^2}{\alpha}e^{-\sfrac{\alpha u}{c^2}},\hspace{1.0cm} V(u,\,v)=\frac{c^2}{\alpha}e^{\sfrac{\alpha v}{c^2}},
+		U(u,\,v)=-\frac{c^2}{\alpha}e^{-\sfrac{\alpha u}{c^2}},\hspace{1.0cm} V(u,\,v)=\frac{c^2}{\alpha}e^{\sfrac{\alpha v}{c^2}}.\tag{\theequation \,\,a,b}
 	\end{gather}
 \end{subequations}
-$\phi\equiv\phi_u+\phi_v$
+Using null coordinates the field can be described as two independent non interactive fields (since there is no autointeration term), that is, $\phi\equiv\phi_u+\phi_v$; in what follows, we will only consider the $\phi_u$ field (defined bellow), but the same can be done for the $\phi_v$ field. Not, lets expand the $\phi_u$ field as a set of Rindler modes \ref{eq: Unruh modes}.a,c meaning
 \begin{equation}
-	\phi_u\equiv\int_0^\infty \frac{\td \omega}{(2\pi\hbar)\sqrt{2\omega}}\left\{\Theta(-U)\left[a^u_\omega\phi_\omega^u+\bar a^u_\omega\bar \phi_\omega^u \right]+\Theta(U)\left[a^{\tilde u}_\omega\phi_\omega^{\tilde u}+\bar a^{\tilde u}_\omega\bar \phi_\omega^{\tilde u} \right]\right\}
+	\phi_u\equiv\int_0^\infty \frac{\td \omega}{(2\pi\hbar)\sqrt{2\omega}}\left\{\Theta(-U)\left[a^u_\omega\phi_\omega^u+\bar a^u_\omega\bar \phi_\omega^u \right]+\Theta(U)\left[a^{\tilde u}_\omega\phi_\omega^{\tilde u}+\bar a^{\tilde u}_\omega\bar \phi_\omega^{\tilde u} \right]\right\};
 \end{equation}
+clearly, it can also be written in terms of planar waves in $U$ coordinates for the inertial observer.
+
+Since we were interested in the difference in vacuum states, we would need to obtain the Bogoliubov coefficients connecting the Rindler modes, with the inertial ones; to do so, we compute the coefficient $\beta_{\Omega,\omega}$ using \ref{eq: Bogoliubov Coefficients General}.b, obtaining
 \begin{equation}
-	\beta_{\Omega\omega}\propto \langle \Theta(-U)\phi^u_\Omega+\Theta(U)\phi^{\tilde u}_\Omega,\bar\phi_\omega^{U}\rangle=\frac{1}{2\hbar^2}\sqrt{\frac{\Omega}{\omega}}\int_{-\infty}^\infty\exp{\left\{i\left[\omega U(u)+\Omega u\right]\hbar^{-1}\right\}}\td u
+	\beta_{\Omega\omega}^u\propto \langle \phi^u_\Omega,\bar\phi_\omega^{U}\rangle=\frac{1}{2\hbar^2}\sqrt{\frac{\Omega}{\omega}}\int_{-\infty}^\infty\exp{\left\{i\left[\omega U(u)+\Omega u\right]\hbar^{-1}\right\}}\td u,
 \end{equation}
-$z\equiv i\left(\sfrac{\omega c^2}{\alpha}\right)\exp{\left(\sfrac{a u}{c^2}\right)}$
+where the expression for $U(u)$ is given by \ref{eq: Unruh Null coordinates relation}.a. This integral is solvable using the change of variables $z\equiv i\left(\sfrac{\omega\hbar c^2}{\alpha}\right)\exp{\!\left(-\sfrac{a u}{c^2}\right)}$ which will result on
 \begin{equation}
-	\beta_{\Omega\omega}\propto \frac{c^2}{\alpha\hbar^2}\Gamma\left(i\frac{\omega c^2}{\alpha\hbar }\right)\sqrt{\frac{\Omega}{\omega}}\left(\frac{c^2\omega}{\alpha\hbar }\right)^{-i\frac{\omega c^2}{\alpha\hbar}}e^{-\frac{\pi\omega c^2}{2\alpha\hbar}}
+	\int_{-\infty}^\infty\exp{\left\{i\left[\omega U(u)+\Omega u\right]\hbar^{-1}\right\}}\td u=\frac{1}{\alpha}\left(-i\frac{\alpha\hbar}{\omega c^2}\right)^{i\sfrac{c^2\Omega}{\alpha\hbar}}\int^\infty_0z^{i\sfrac{c^2\Omega}{\alpha\hbar}-1}e^{-z}\td z;
 \end{equation}
+where the integral is the Gamma function $\Gamma\left(i\sfrac{c^2\Omega}{\alpha\hbar}\right)$. This means that the Bogoliubov coefficient can be written as
 \begin{equation}
-	N_\omega\equiv\langle_U 0|\hat{a}_\omega^\dagger\hat{a}_\omega|_U0\rangle=\int_0^\infty\frac{\td\omega}{(2\pi\hbar)\sqrt{2\omega}}|\beta_{\omega\omega}|\propto\frac{1}{e^{\frac{2\pi\omega c}{\alpha\hbar}}-1}\delta(0)
+	\beta_{\Omega\omega}^u\propto \Gamma\left(i\frac{\Omega c^2}{\alpha\hbar }\right)\sqrt{\frac{\Omega}{\omega}}\left(\frac{c^2\omega}{\alpha\hbar }\right)^{-i\frac{\omega c^2}{\alpha\hbar}}e^{-\frac{\pi\Omega c^2}{2\alpha\hbar}}.
 \end{equation}
+Now, from \ref{eq: Bogoliubov Number particles general} we know how to compute the number of particles of some momentum $\Omega$ that an accelerated observer would measure in the inertial vacuum; that is
 \begin{equation}
-	T_0\equiv \frac{\alpha\hbar}{2\pi ck_B}
+	N_\Omega\equiv\langle_U 0|\left(\hat{a}_\Omega^u\right)^\dagger\hat{a}^u_\Omega|_U0\rangle\propto\int_0^\infty\frac{\td\Omega}{(2\pi\hbar)\sqrt{2\Omega}}|\beta^u_{\Omega\Omega}|\propto\frac{1}{e^{\frac{2\pi\Omega c}{\alpha\hbar}}-1}\delta(0).
 \end{equation}
-This is not the temperature that would be measured by an accelerated Rindler observer; consider the \textit{conserved} energy $E_0$ measured by an observed in an stationary gravitational field, which relates to the energy measured by another observer by $E_0=\sqrt{g_{00}}\,E$, since the thermodynamical relation for the energy and the temperature comes from the entropy $\sfrac{1}{T_0}=\sfrac{\partial S}{E_0}$, then the proper temperature will be $T=\sqrt{g_{00}}\,T_0$; this is known as Tolman's law, and results in
+This expression has some resemblance with the expected value of particles with energy $\Omega$ for Bose-Einstein statistics; if we were to interpret it as such (which is not an overreach, considering the bosonic nature of the scalar field particles), a temperature might be defined as
 \begin{equation}
-	T_{\text{Unruh}}=\sqrt{g_{00}}\,T_0=\left(\alpha e^{-\sfrac{\alpha}{c^2}\xi}\right)\frac{\hbar}{2\pi ck_B}\equiv \frac{a\hbar}{2\pi ck_B}
+	T_0\equiv \frac{\alpha\hbar}{2\pi ck_B}.
 \end{equation}
+This so called temperature though, cannot be interpreted as the temperature that an accelerated Rindler observer would measure, to obtain such value of the temperature, one should consider the Tolman's law\footnote{An sketch of a proof goes as follows: Consider some conserved energy $E_0$ measured by an observer in an stationary gravitational field, such energy relates to the energy measured by another observer by $E_0=\sqrt{g_{00}}E$; since the thermodynamic relation between energy and temperature comes from the entropy $T_0=\sfrac{\partial s}{\partial E_0}$, then the proper temperature must follow the relation given by the Tolman's law.}, stating that the proper temperature $T_{\text{Unruh}}$ is given by
+\begin{equation}
+	T_{\text{Unruh}}=\sqrt{g_{00}}\,T_0=\left(\alpha e^{-\sfrac{\alpha}{c^2}\xi}\right)\frac{\hbar}{2\pi ck_B}\equiv \frac{a\hbar}{2\pi ck_B};
+\end{equation}
+where $a$ is the acceleration measured by the non-inertial observer.
+
 \section{Application to Black Holes: Hawking Radiation}
 \begin{equation}
 	c^2\td\tau^2=\left(1-\frac{2GM}{c^2r}\right)c^2\td t^2-\left(1-\frac{2GM}{c^2r}\right)^{-1}\td r^2-r^2\left(\td\theta^2+\sin^2\theta\td\varphi^2\right)
