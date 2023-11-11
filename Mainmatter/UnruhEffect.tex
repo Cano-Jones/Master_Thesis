@@ -82,41 +82,66 @@ where the integral is the Gamma function $\Gamma\left(i\sfrac{c^2\Omega}{\alpha\
 	\beta_{\Omega\omega}^u\propto \Gamma\left(i\frac{\Omega c^2}{\alpha\hbar }\right)\sqrt{\frac{\Omega}{\omega}}\left(\frac{c^2\omega}{\alpha\hbar }\right)^{-i\frac{\omega c^2}{\alpha\hbar}}e^{-\frac{\pi\Omega c^2}{2\alpha\hbar}}.
 \end{equation}
 Now, from \ref{eq: Bogoliubov Number particles general} we know how to compute the number of particles of some momentum $\Omega$ that an accelerated observer would measure in the inertial vacuum; that is
-\begin{equation}
+\begin{equation}\label{eq: Bose Distribution Unruh}
 	N_\Omega\equiv\langle_U 0|\left(\hat{a}_\Omega^u\right)^\dagger\hat{a}^u_\Omega|_U0\rangle\propto\int_0^\infty\frac{\td\Omega}{(2\pi\hbar)\sqrt{2\Omega}}|\beta^u_{\Omega\Omega}|\propto\frac{1}{e^{\frac{2\pi\Omega c}{\alpha\hbar}}-1}\delta(0).
 \end{equation}
 This expression has some resemblance with the expected value of particles with energy $\Omega$ for Bose-Einstein statistics; if we were to interpret it as such (which is not an overreach, considering the bosonic nature of the scalar field particles), a temperature might be defined as
-\begin{equation}
+\begin{equation}\label{eq: Unruh temp_0}
 	T_0\equiv \frac{\alpha\hbar}{2\pi ck_B}.
 \end{equation}
-This so called temperature though, cannot be interpreted as the temperature that an accelerated Rindler observer would measure, to obtain such value of the temperature, one should consider the Tolman's law\footnote{An sketch of a proof goes as follows: Consider some conserved energy $E_0$ measured by an observer in an stationary gravitational field, such energy relates to the energy measured by another observer by $E_0=\sqrt{g_{00}}E$; since the thermodynamic relation between energy and temperature comes from the entropy $T_0=\sfrac{\partial s}{\partial E_0}$, then the proper temperature must follow the relation given by the Tolman's law.}, stating that the proper temperature $T_{\text{Unruh}}$ is given by
+This so called temperature though, cannot be interpreted as the temperature that an accelerated Rindler observer would measure, to obtain such value of the temperature, one should consider the Tolman's law\footnote{An sketch of a proof goes as follows: Consider some conserved energy $E_0$ measured by an observer in an stationary gravitational field, such energy relates to the energy measured by another observer by $E_0=\sqrt{g_{00}}E$; since the thermodynamic relation between energy and temperature comes from the entropy $s$ as $T_0=\sfrac{\partial s}{\partial E_0}$, then the proper temperature must follow the relation given by the Tolman's law.}, stating that the proper temperature $T_{\text{Unruh}}$ is given by
 \begin{equation}
 	T_{\text{Unruh}}=\sqrt{g_{00}}\,T_0=\left(\alpha e^{-\sfrac{\alpha}{c^2}\xi}\right)\frac{\hbar}{2\pi ck_B}\equiv \frac{a\hbar}{2\pi ck_B};
 \end{equation}
 where $a$ is the acceleration measured by the non-inertial observer.
 
 \section{Application to Black Holes: Hawking Radiation}
-\begin{equation}
-	c^2\td\tau^2=\left(1-\frac{2GM}{c^2r}\right)c^2\td t^2-\left(1-\frac{2GM}{c^2r}\right)^{-1}\td r^2-r^2\left(\td\theta^2+\sin^2\theta\td\varphi^2\right)
+According with the no hair conjecture, black holes can be univocally describe only by three parameters: its mass $M$, its angular momentum $J$ and its electric charge $Q$. For simplicity, lets consider a Schwarzschild black hole\footnote{This is the first found solution of the Einstein field equations \ref{eq: Einstein Field Equations} by Karl Schwarzschild in 1916; Einstein himself was quoted to be amazed by the simplicity and the speed of Schwarzschild's derivation.}, which considers $J=Q=0$; the line element describing the spacetime of such black hole can be written in spherical coordinates as
+\begin{equation}\label{eq: Schwarzschild line element}
+	c^2\td\tau^2=\left(1-\frac{2GM}{c^2r}\right)c^2\td t^2-\left(1-\frac{2GM}{c^2r}\right)^{-1}\td r^2-r^2\left(\td\theta^2+\sin^2\theta\td\varphi^2\right),
 \end{equation}
-$R_S\equiv\sfrac{2GM}{c^2}$
+where $R_S\equiv\sfrac{2GM}{c^2}$ is the so called \textit{Schwarzschild radius}; the apparent singularity at $r=R_S$ is (as we will show shortly) not a physical one, but a by-product of the coordinate system.
 
-consider a two dimensional black hole
-\begin{equation}
-	c^2\td\tau^2=\left(1-\frac{R_S}{r}\right)c^2\td t^2-\left(1-\frac{R_S}{r}\right)^{-1}\td r^2
+In order to simplify even more the problem (and to be able to create bridge to the previous section), lets consider a $1+1$ Schwarzschild black hole; to obtain such solution, simply take the limit $\td\theta=\td\varphi=0$ at the solution \ref{eq: Schwarzschild line element}. There are two interesting coordinate systems to describe this spacetime; the ''tortoise'' coordinates and the Kruskal–Szekeres coordinates; each with some precise interest. The first of the two comes from the use of the so called tortoise coordinate, given by the expression
+\begin{equation}\label{eq: Tortoise coordinate diff}
+	\td r^*\equiv \left(1-\frac{R_S}{r}\right)^{-1}\td r,
 \end{equation}
-tortoise coordinate
+meaning that the line element will be
 \begin{equation}
-	\td r^*\equiv \left(1-\frac{R_S}{r}\right)^{-1}\td r
+	c^2\td\tau^2=\left[1-\frac{R_S}{r\left(r^*\right)}\right]\left[c^2\td t^2-\td r^*\right];
 \end{equation}
+similarly to the previous section, it is useful to write it using null coordinates $u\equiv ct-r^*$ and $v\equiv ct+r^*$,
 \begin{equation}
-	c^2\td\tau^2=\left[1-\frac{R_S}{r\left(r^*\right)}\right]\left[c^2\td t^2-\td r^*\right]
-\end{equation}
-\footnote{From a non quantum point of view, one could consider the acceleration experienced by an observer situated at $r=R_S$ without angular momentum, which will be equal to $a=\sfrac{GM}{R_S^2}=\sfrac{c^4}{4GM}$}
-\begin{equation}
-	T_{\text{Hawking}}=\frac{\hbar c^3}{8\pi GMk_B}
+	c^2\td\tau^2=\left[1-\frac{R_S}{r\left(u,v\right)}\right]\left[\td u-\td v\right].
 \end{equation}
 
+Last expression can be rewritten considering that\footnote{To check this, one must use the integrated form of the tortoise coordinate \ref{eq: Tortoise coordinate diff} given by $$r^*(r)=r-R_S+R_S\ln\left(\frac{r}{R_S}-1\right).$$}
+\begin{equation}
+	1-\frac{R_S}{r\left(u,v\right)}=\frac{R_S}{r}\exp{\left(1-\frac{r}{R_S}\right)}\exp{\left(\frac{v-u}{2R_S}\right)}
+\end{equation} 
+and, defining the Kruskal–Szekeres null coordinates $(U,\,V)$ as
+\begin{subequations}\label{eq: Tortoise-Kruskal relation}
+	\begin{gather}
+		U\equiv -2R_Se^{-\sfrac{u}{2R_S}},\hspace{1.0cm}V\equiv 2R_Se^{\sfrac{v}{2R_S}},\tag{\theequation \,\,a,b}
+	\end{gather}
+\end{subequations}
+the line element can be written as
+\begin{equation}
+	c^2\tau^2=\frac{R_S}{r(U,V)}e^{1-\sfrac{r(U,V)}{R_S}}\td U\td V.
+\end{equation}
+Note that both coordinate systems make the metric conformally flat, and the relation between the null tortoise and null Kruskal–Szekeres coordinates given by \ref{eq: Tortoise-Kruskal relation} is the same as in \ref{eq: Unruh Null coordinates relation} considering $\alpha=\sfrac{c^2}{2R_S}$; therefore the procedure of the previous section can be used here, and thus, according to \ref{eq: Unruh temp_0}, a tortoise observer located at $r\to\infty$ will measure that the black hole emits a thermal bath of massless boson particles at a temperature 
+\begin{equation}
+	T_{\text{Hawking}}=\frac{\hbar c^3}{8\pi GMk_B}.
+\end{equation}
+If one where to consider a $3+1$ black hole described by the line element given by \ref{eq: Schwarzschild line element}, the Klein-Gordon equation would not be $\partial^\mu\partial_\nu\phi=0$, but would have an effective potential
+\begin{equation}
+	\mathcal{V}_{\text{eff}}\equiv\left(1-\frac{R_S}{r}\right)\left[\frac{R_S}{r^3}+\frac{l(l+1)}{r^2}\right],
+\end{equation}
+$l$ being the quantum orbital angular momentum of the state. The effect of such potential is such that an escaping wave, upon reaching $r\to\infty$ would have changed its frequency $\Omega$, reason for which \ref{eq: Bose Distribution Unruh} would be affected by some greybody factor $\Gamma(\Omega)$ 
+\begin{equation}
+	N_\Omega\propto\frac{\Gamma(\Omega)}{e^{\sfrac{\Omega}{k_BT_{\text{Hawking}}}}-1}\delta(\mathbf{0}).
+\end{equation}
+\subsection{Black Hole Thermodynamics}
 \begin{equation}
 	\td S=\left(\frac{\partial S}{\partial M}\right)\td M+\left(\frac{\partial S}{\partial J}\right)\td J+\left(\frac{\partial S}{\partial Q}\right)\td Q
 \end{equation}
