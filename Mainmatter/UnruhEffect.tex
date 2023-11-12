@@ -89,7 +89,7 @@ This expression has some resemblance with the expected value of particles with e
 \begin{equation}\label{eq: Unruh temp_0}
 	T_0\equiv \frac{\alpha\hbar}{2\pi ck_B}.
 \end{equation}
-This so called temperature though, cannot be interpreted as the temperature that an accelerated Rindler observer would measure, to obtain such value of the temperature, one should consider the Tolman's law\footnote{An sketch of a proof goes as follows: Consider some conserved energy $E_0$ measured by an observer in an stationary gravitational field, such energy relates to the energy measured by another observer by $E_0=\sqrt{g_{00}}E$; since the thermodynamic relation between energy and temperature comes from the entropy $s$ as $T_0=\sfrac{\partial s}{\partial E_0}$, then the proper temperature must follow the relation given by the Tolman's law.}, stating that the proper temperature $T_{\text{Unruh}}$ is given by
+This so called temperature though, cannot be interpreted as the temperature that an accelerated Rindler observer would measure, to obtain such value of the temperature, one should consider the Tolman's law\footnote{An sketch of a proof goes as follows: Consider some conserved energy $E_0$ measured by an observer in an stationary gravitational field, such energy relates to the energy measured by another observer by $E_0=\sqrt{g_{00}}E$; since the thermodynamic relation between energy and temperature comes from the entropy $S$ as $T_0=\sfrac{\partial S}{\partial E_0}$, then the proper temperature must follow the relation given by the Tolman's law.}, stating that the proper temperature $T_{\text{Unruh}}$ is given by
 \begin{equation}
 	T_{\text{Unruh}}=\sqrt{g_{00}}\,T_0=\left(\alpha e^{-\sfrac{\alpha}{c^2}\xi}\right)\frac{\hbar}{2\pi ck_B}\equiv \frac{a\hbar}{2\pi ck_B};
 \end{equation}
@@ -142,21 +142,23 @@ $l$ being the quantum orbital angular momentum of the state. The effect of such 
 	N_\Omega\propto\frac{\Gamma(\Omega)}{e^{\sfrac{\Omega}{k_BT_{\text{Hawking}}}}-1}\delta(\mathbf{0}).
 \end{equation}
 \subsection{Black Hole Thermodynamics}
+Once it has been proven that an observer can detect an emission of particles from a black hole, the question of the origin of the required energy for the creation of such particles arises. One can consider that the energy required to create Unruh particles can come from the energy used for the continuous acceleration, but this cannot be the answer for the Hawking radiation, since both observers are free falling. Therefore the only possible answer must be that the particles extract their energy directly from the black hole; meaning that a black hole must be in thermodynamic equilibrium with the field. This reasoning can be used to deduce the evolution of black holes; as stated before, black holes can be described univocally by three parameters, and thus, its entropy fundamental relation can be written as
 \begin{equation}
-	\td S=\left(\frac{\partial S}{\partial M}\right)\td M+\left(\frac{\partial S}{\partial J}\right)\td J+\left(\frac{\partial S}{\partial Q}\right)\td Q
+	\td S=\left(\frac{\partial S}{\partial M}\right)\td M+\left(\frac{\partial S}{\partial J}\right)\td J+\left(\frac{\partial S}{\partial Q}\right)\td Q.
 \end{equation}
-$Q=J=0$ $E=Mc^2$
+For a Schwarzschild black hole, this relation simplifies (since $Q=J=0$); and considering that the energy must equal $Mc^2$, then one can deduce the so called Bekenstein-Hawking \footnote{In reality, they presented their result not as a function of the mass $M$, but as a function of the surface area $A$, and thus, the proper Bekenstein-Hawking entropy would be $S_{BH}=\sfrac{c^3k_B}{\hbar G}A$.} entropy 
 \begin{equation}
-	\td S=\frac{c^2}{T_{\text{Hawking}}}\td M\implies S=\frac{4\pi Gk_B}{\hbar c}M^2
+	\td S=\frac{c^2}{T_{\text{Hawking}}}\td M\implies S_{\text{BH}}=\frac{4\pi Gk_B}{\hbar c}M^2.
 \end{equation}
-Bekenstein-Hawking \footnote{In reality, they presented their result not as a function of the mass $M$, but as a function of the surface area $A$, and thus, the proper Bekenstein-Hawking entropy would be $S_{BH}=\sfrac{c^3k_B}{\hbar G}A$.}
 
-Since black holes are the perfect example of a black body, we could use the Stefan-Boltzmann law for the luminosity $L$
+Since we are considering that the field extracts energy from the black hole, and the energy of the black hole is proportional to its mass; it is then clear that the black hole must be loosing mass. One can easily deduce the temporal mass expression considering the black hole as a black body, and thus following the Stefan-Boltzmann law for the luminosity $L$, i.e.
 \begin{equation}
-	L=-c^2\frac{\td M}{\td t}=\epsilon A \sigma T^4
+	L\equiv-c^2\frac{\td M}{\td t}=\epsilon A \sigma T^4_{\text{Hawking}}
 \end{equation}
-where $\sigma=\sfrac{\pi^2 k_B^4}{60\hbar^3c^2}$ its the Stefan-Boltzmann constant, $\epsilon$ is a factor of correction for possible greybody effects
-\begin{equation}
-	M(t)=M_0\left(1-\frac{t}{t_{BH}}\right)^{\sfrac{1}{3}},\quad t_{BH}\equiv 5120\frac{\pi G^2}{\epsilon\hbar c^4}M_0^3
-\end{equation}
-stellar black holes (the most numerous type) have masses around $100M_\odot$, meaning a time of evaporation of about $\sim 2.1\cdot10^{73}$ years.
+where $\sigma$ its the Stefan-Boltzmann constant and $\epsilon$ is a factor of correction for possible greybody effects and deviations from the use of the electromagnetic field (mostly lose of degrees of freedom). Solutions of such differential equation are
+\begin{subequations}
+	\begin{gather}
+		M(t)=M_0\left(1-\frac{t}{t_{BH}}\right)^{\sfrac{1}{3}},\quad t_{BH}\equiv 5120\frac{\pi G^2}{\epsilon\hbar c^4}M_0^3.\tag{\theequation \,\,a,b}
+	\end{gather}
+\end{subequations}
+To get an idea of the strength of such radiation, lets consider an average stellar black hole (the most numerous type), which masses around $100M_\odot$; considering that at $t=0$, a black hole has that mass, it would have lost all of it (it is said to have ``evaporated") in about $\sim 2.1\cdot10^{73}$ years, an unfathomable magnitude comparable to the age of the universe ($13.7\cdot 10^{9}$ years).
