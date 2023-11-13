@@ -37,7 +37,7 @@ Such coordinate system can be written\footnote{The choice is not unique, dependi
 	\end{subequations}
 \end{itemize}
 One can check that, these coordinates meet the following hyperbolic relation,
-\begin{equation}
+\begin{equation}\label{eq: Hyperbolic general acceleration Unruh}
 	x^2-c^2t^2=\frac{c^2}{\alpha^2}e^{2\sfrac{\alpha\xi}{c^2}},
 \end{equation}
 and thus, an observer with some coordinates $(\eta,\xi)$ can be said to experience an acceleration $\alpha e^{-\xi\sfrac{}{c^2}}$. Using such coordinate system, the line element will be\footnote{Note that as it would be expected, the metric is conformally flat.},
@@ -89,14 +89,14 @@ This expression has some resemblance with the expected value of particles with e
 \begin{equation}\label{eq: Unruh temp_0}
 	T_0\equiv \frac{\alpha\hbar}{2\pi ck_B}.
 \end{equation}
-This so called temperature though, cannot be interpreted as the temperature that an accelerated Rindler observer would measure, to obtain such value of the temperature, one should consider the Tolman's law\footnote{An sketch of a proof goes as follows: Consider some conserved energy $E_0$ measured by an observer in an stationary gravitational field, such energy relates to the energy measured by another observer by $E_0=\sqrt{g_{00}}E$; since the thermodynamic relation between energy and temperature comes from the entropy $S$ as $T_0=\sfrac{\partial S}{\partial E_0}$, then the proper temperature must follow the relation given by the Tolman's law.}, stating that the proper temperature $T_{\text{Unruh}}$ is given by
+This so called temperature though, cannot be interpreted as the temperature that an accelerated Rindler observer would measure (since it is dependent on the coordinate variable $\alpha$), to obtain such value of the temperature, one should consider the Tolman's law\footnote{An sketch of a proof goes as follows: Consider some conserved energy $E_0$ measured by an observer in an stationary gravitational field, such energy relates to the energy measured by another observer by $E_0=\sqrt{g_{00}}E$; since the thermodynamic relation between energy and temperature comes from the entropy $S$ as $T_0=\sfrac{\partial S}{\partial E_0}$, then the proper temperature must follow the relation given by the Tolman's law.}, stating that the proper temperature $T_{\text{Unruh}}$ is given by
 \begin{equation}
 	T_{\text{Unruh}}=\sqrt{g_{00}}\,T_0=\left(\alpha e^{-\sfrac{\alpha}{c^2}\xi}\right)\frac{\hbar}{2\pi ck_B}\equiv \frac{a\hbar}{2\pi ck_B};
 \end{equation}
-where $a$ is the acceleration measured by the non-inertial observer.
+where $a$ is the acceleration measured by the non-inertial observer, as stated on equation \ref{eq: Hyperbolic general acceleration Unruh}.
 
 \section{Application to Black Holes: Hawking Radiation}
-According with the no hair conjecture, black holes can be univocally describe only by three parameters: its mass $M$, its angular momentum $J$ and its electric charge $Q$. For simplicity, lets consider a Schwarzschild black hole\footnote{This is the first found solution of the Einstein field equations \ref{eq: Einstein Field Equations} by Karl Schwarzschild in 1916; Einstein himself was quoted to be amazed by the simplicity and the speed of Schwarzschild's derivation.}, which considers $J=Q=0$; the line element describing the spacetime of such black hole can be written in spherical coordinates as
+According with the no hair conjecture, black holes can be univocally describe only by three parameters: its mass $M$, its angular momentum $J$ and its electric charge $Q$. For simplicity, lets consider a Schwarzschild black hole\footnote{This is the first found solution of the Einstein field equations \ref{eq: Einstein Field Equations} by Karl Schwarzschild in 1916; Einstein himself was quoted to be amazed by the simplicity and the speed of Schwarzschild's derivation.}, which considers $J=Q=0$; the line element describing the spacetime of such black hole \cite{CanoJones} can be written in spherical coordinates as
 \begin{equation}\label{eq: Schwarzschild line element}
 	c^2\td\tau^2=\left(1-\frac{2GM}{c^2r}\right)c^2\td t^2-\left(1-\frac{2GM}{c^2r}\right)^{-1}\td r^2-r^2\left(\td\theta^2+\sin^2\theta\td\varphi^2\right),
 \end{equation}
@@ -133,7 +133,7 @@ Note that both coordinate systems make the metric conformally flat, and the rela
 \begin{equation}
 	T_{\text{Hawking}}=\frac{\hbar c^3}{8\pi GMk_B}.
 \end{equation}
-If one where to consider a $3+1$ black hole described by the line element given by \ref{eq: Schwarzschild line element}, the Klein-Gordon equation would not be $\partial^\mu\partial_\nu\phi=0$, but would have an effective potential
+If one where to consider a $3+1$ black hole \cite[sec.\,9.1.4]{QuantumEffects} described by the line element given by \ref{eq: Schwarzschild line element}, the Klein-Gordon equation would not be $\partial^\mu\partial_\nu\phi=0$, but would have an effective potential
 \begin{equation}
 	\mathcal{V}_{\text{eff}}\equiv\left(1-\frac{R_S}{r}\right)\left[\frac{R_S}{r^3}+\frac{l(l+1)}{r^2}\right],
 \end{equation}

@@ -47,7 +47,7 @@ this fact is of great use once the material Hamiltonian $\mathcal{H}_{\text{M}}$
 \end{equation}
 since it will later be used to spawn the Fock space after the quantization procedure; and thus assure no energy loses will be present on the theory.
 \section{Construction of Covariant Actions}
-Standard quantum field theory alongside the standard model of particle physics is one of (if not the) best tested theories of physics, reason which, one doesn't need to reinvent the actions that are used on it, only a small tweak is needed to make the theory general covariant; it has been previously given for granted that the  volume element will be $\sqrt{-g}\td^4x$, but there is another consideration, the derivatives, since in a general spacetime, they are not covariant, and thus, the inclusion of a covariant derivative $\nabla_\mu$ is needed.
+Standard quantum field theory alongside the standard model of particle physics is one of (if not the) best tested theories of physics, reason which, one doesn't need to reinvent the actions that are used on it, only a small tweak is needed to make the theory general covariant; it has been previously given for granted that the  volume element will be $\sqrt{-g}\,\td^4x$, but there is another consideration, the derivatives, since in a general spacetime, they are not covariant, and thus, the inclusion of a covariant derivative $\nabla_\mu$ is needed.
 
 Let $\Xi(x)$ be a tensorial field such that under a local Lorentzian transformation $\Lambda(x)$ transforms as $\tilde{\Xi}\equiv\rho_\Lambda\Xi$. The usual covariant derivative of the transformed field will be
 \begin{multline}\label{eq: covariant derivative general}
@@ -140,7 +140,7 @@ From the Euler-Lagrange equation \ref{eq: Euler-Lagrange}, its obtained the gene
 \begin{equation}
 	\left[i\gamma^\mu\left(\partial_\mu+\Gamma_\mu\right)-\mu\right]\psi=0.
 \end{equation}
-And from its definition in equation \ref{eq: Hilbert energy-momentum tensor}, the energy momentum tensor will have the following expression
+And from its definition in equation \ref{eq: Hilbert energy-momentum tensor}, the energy momentum tensor will have \cite[sec.\,3.8]{BirrelDavies} the following expression
 \begin{equation}
 	T_{\mu\nu}=\frac{1}{4}i\left\{\bar{\psi}\left(\gamma_\mu\nabla_\nu-\gamma_\nu\nabla_\mu\right)-\left[\left(\nabla_\mu\bar{\psi}\right)\gamma_\nu-\left(\nabla_\nu\bar{\psi}\right)\gamma_\mu\right]\right\}\psi.
 \end{equation}
@@ -172,7 +172,7 @@ The equations of motion resulting from the action \ref{eq: Electromagnetic actio
 	\nabla^\nu\nabla_\nu A_\mu+R_\mu^\sigma A_\sigma-\left(1-\alpha\right)\nabla_\mu\nabla^\nu A_\nu=0.
 \end{equation}
 
-And finally, as for completeness, the energy-momentum tensor given by \ref{eq: Hilbert energy-momentum tensor} is
+And finally, as for completeness, the energy-momentum tensor \cite[sec.\,3.8]{BirrelDavies} given by \ref{eq: Hilbert energy-momentum tensor} is
 \begin{multline}
 	T_{\mu\nu}=-\frac{1}{\mu_0}\left(F_{\mu\alpha}F^{\alpha\nu}-\frac{1}{4}g_{\mu\nu}F_{\alpha\beta}F^{\alpha\beta}\right)+\\
 	+\alpha\left\{A_\mu\left(\nabla_\nu\nabla_\rho A^\rho\right)+\left(\nabla_\mu\nabla_\rho A^\rho\right)A_\nu-g_{\mu\nu}\left[A^\rho\left(\nabla\rho\nabla_\sigma A^\sigma\right)+\frac{1}{2}\left(\nabla_\rho A^\rho\right)^2\right]\right\}.
@@ -293,33 +293,35 @@ The reader might ask what the relevance of this transformation is, and it would 
 \end{equation}
 The usual expectation value of a term of the form $\langle0|\hat{N}|0\rangle$ is to be zero, and yet, it has been proven that this is not the case (in general) for the current scenario. The interpretation of such result is that the notion of "particle" is dependent on the choice of solutions of the Klein-Gorton equation; and thus, one could define different vacuum states for different situations.
 
-\subsection{A Leap Towards a Continuum}
-Until now, it has been considered that the set of Klein-Gordon solutions could be categorised by a discrete set of parameters $i$, from a standard course in QFT, one of the main results is the fact that the solutions of the flat Klein-Gordon equations can be parametrised by a continuous $3$-dimensional vector $\mathbf{k}$ (which is interpreted to be the momentum of the particle). Since all computations in this section where made by considering a discrete set of parameters, it is relevant to consider the continuum case.
-
-A common computation in many fields of physics is the determination of the density of states $D(\mathbf{k})$ describing the number of modes with momentum between $\mathbf{k}$ and $\mathbf{k}+\td \mathbf{k}$. Consider a system with volume $V$, where the field goes to zero at its boundary; in this case, the permitted values of momenta must meet
-\begin{equation}
-	k^i=n^i\frac{\pi\hbar}{V^{\sfrac{1}{3}}}\,,\hspace{1.0cm}n^i\in\mathbb{N}
-\end{equation}
-Let $N(k)$ be the number of states with momentum modulus less than $k$, that is, the states such that
-\begin{equation}
-	n=\sqrt{\left(n^1\right)^2+\left(n^2\right)^2+\left(n^3\right)^2}<k\frac{V^{\sfrac{1}{3}}}{\pi\hbar}
-\end{equation}
-considering a flat momentum space\footnote{In contrast to modified theories of relativity in which this is not the case, like the $\kappa$-Poincaré relativity.} and a large enough volume, $N(k)$ will be essentially equal to an eight of the volume of a sphere with radius $kV^{\sfrac{1}{3}}\sfrac{}{\pi\hbar}$, that is
-\begin{equation}
-	N(k)\approx\frac{1}{8}\frac{4}{3}\pi\left(k\frac{V^{\sfrac{1}{3}}}{\pi\hbar}\right)^3=\frac{V}{6\pi^2\hbar^3}k^3
-\end{equation} 
-meaning, that the density of states will be
-\begin{equation}
-	D(\mathbf{k})\equiv D(k)=\frac{\td N(k)}{\td k}\approx\frac{V}{2\pi^2\hbar^3}k^2
-\end{equation}
-
-With this, one could approximate a discrete sum over a parameter $i$ to an integral over a continuum $\mathbf{k}$
-\begin{equation}
-	\sum_i f_i=\int_0^\infty D(k)f_k\td k\approx\int_0^\infty\frac{V}{2\pi^2\hbar^3} f_k k^2\td k\equiv\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^3}f_\mathbf{k}
-\end{equation}
-where it has been defined.
-\begin{equation}
-	4\pi V f_k k^2\equiv \int_{\theta=0}^{2\pi}\int_{\varphi=0}^\pi f_\mathbf{k}\sin\varphi \td\theta\td\varphi
-\end{equation}
-
-therefore $\sfrac{\td^3\mathbf{k}}{(2\pi\hbar)^3}$ is to be understood as the volume element of the momentum space.
+\begin{comment}
+	\subsection{A Leap Towards a Continuum}
+	Until now, it has been considered that the set of Klein-Gordon solutions could be categorised by a discrete set of parameters $i$, from a standard course in QFT, one of the main results is the fact that the solutions of the flat Klein-Gordon equations can be parametrised by a continuous $3$-dimensional vector $\mathbf{k}$ (which is interpreted to be the momentum of the particle). Since all computations in this section where made by considering a discrete set of parameters, it is relevant to consider the continuum case.
+	
+	A common computation in many fields of physics is the determination of the density of states $D(\mathbf{k})$ describing the number of modes with momentum between $\mathbf{k}$ and $\mathbf{k}+\td \mathbf{k}$. Consider a system with volume $V$, where the field goes to zero at its boundary; in this case, the permitted values of momenta must meet
+	\begin{equation}
+		k^i=n^i\frac{\pi\hbar}{V^{\sfrac{1}{3}}}\,,\hspace{1.0cm}n^i\in\mathbb{N}
+	\end{equation}
+	Let $N(k)$ be the number of states with momentum modulus less than $k$, that is, the states such that
+	\begin{equation}
+		n=\sqrt{\left(n^1\right)^2+\left(n^2\right)^2+\left(n^3\right)^2}<k\frac{V^{\sfrac{1}{3}}}{\pi\hbar}
+	\end{equation}
+	considering a flat momentum space\footnote{In contrast to modified theories of relativity in which this is not the case, like the $\kappa$-Poincaré relativity.} and a large enough volume, $N(k)$ will be essentially equal to an eight of the volume of a sphere with radius $kV^{\sfrac{1}{3}}\sfrac{}{\pi\hbar}$, that is
+	\begin{equation}
+		N(k)\approx\frac{1}{8}\frac{4}{3}\pi\left(k\frac{V^{\sfrac{1}{3}}}{\pi\hbar}\right)^3=\frac{V}{6\pi^2\hbar^3}k^3
+	\end{equation} 
+	meaning, that the density of states will be
+	\begin{equation}
+		D(\mathbf{k})\equiv D(k)=\frac{\td N(k)}{\td k}\approx\frac{V}{2\pi^2\hbar^3}k^2
+	\end{equation}
+	
+	With this, one could approximate a discrete sum over a parameter $i$ to an integral over a continuum $\mathbf{k}$
+	\begin{equation}
+		\sum_i f_i=\int_0^\infty D(k)f_k\td k\approx\int_0^\infty\frac{V}{2\pi^2\hbar^3} f_k k^2\td k\equiv\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^3}f_\mathbf{k}
+	\end{equation}
+	where it has been defined.
+	\begin{equation}
+		4\pi V f_k k^2\equiv \int_{\theta=0}^{2\pi}\int_{\varphi=0}^\pi f_\mathbf{k}\sin\varphi \td\theta\td\varphi
+	\end{equation}
+	
+	therefore $\sfrac{\td^3\mathbf{k}}{(2\pi\hbar)^3}$ is to be understood as the volume element of the momentum space.
+\end{comment}
