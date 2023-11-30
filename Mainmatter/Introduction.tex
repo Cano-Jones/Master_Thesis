@@ -1,19 +1,19 @@
-\section{The Universal Action}
+\section{Matter-Gravity Action}
 Consider a dynamic universe consisting of dark energy characterized by a cosmological constant $\Lambda$ and some material content described by a Lagrangian density $\mathcal{L}_{\text{M}}$. The action associated with such system would be
 \begin{equation}\label{eq: General Action}
 	S=\int\left[\frac{1}{2\kappa}\left(R-2\Lambda\right)+\mathcal{L}_{\text{M}}\right]\sqrt{-g}\,\td^4 x,
 \end{equation}
 where $\kappa\equiv\frac{8\pi G}{c^4}$ is known as the Einstein gravitational constant.
 
-The equations that would describe the dynamics of the system can be obtained by variations of the action presented in \cref{eq: General Action} and the stationary-action principle, which states that the path taken by the system will result in $\delta S=0$. The equations of motion of the matter content are dependant on its formulation; let the Lagrangian density of matter be described by some set $\left\{\phi^\alpha(x)\right\}$ of fields and their first covariant derivatives, i.e.
+The equations that would describe the classical dynamics of the system can be obtained by variations of the action presented in \cref{eq: General Action} and the stationary-action principle, which states that the path taken by the system will result in $\delta S=0$. The equations of motion of the matter fields are the Euler-Lagrange equations, obtained from a Lagrangian density of matter be described by some set $\left\{\phi^\alpha(x)\right\}$ which depends on the fields and their covariant derivatives, i.e.
 \begin{equation}
 	\mathcal{L}_{\text{M}}=\mathcal{L}_{\text{M}}\big[\phi^\alpha(x),\,\nabla_\mu\phi^\alpha(x)\big],
 \end{equation}
-then, variations of the action $S$ with respect of $\phi^\alpha$ will result in
+which can be derived from the variations of the action $S$ with respect of $\phi^\alpha$
 \begin{equation}
-	\delta S=\int\left[\frac{\partial \mathcal{L}_\text{M}}{\partial \phi^\alpha}\delta\phi^\alpha+\frac{\partial \mathcal{L}_\text{M}}{\partial\left(\nabla_\mu\phi^\alpha\right)}\nabla_\mu\left(\delta\phi^\alpha\right)\right]\sqrt{-g}\,\td^4x,
+	\delta S=\int\left[\frac{\partial \mathcal{L}_\text{M}}{\partial \phi^\alpha}\delta\phi^\alpha+\frac{\partial \mathcal{L}_\text{M}}{\partial\left(\nabla_\mu\phi^\alpha\right)}\nabla_\mu\left(\delta\phi^\alpha\right)\right]\sqrt{-g}\,\td^4x.
 \end{equation}
-and thus, after applying the generalized Gauss Theorem on a general manifold, alongside the stationary-action principle, one obtains the well known Euler-Lagrange equations
+After applying the generalized Gauss Theorem, the stationary-action principle leads to the aforementioned Euler-Lagrange equations
 \begin{equation}\label{eq: Euler-Lagrange}
 	\frac{\partial\mathcal{L}_{\text{M}}}{\partial\phi^\alpha}-\nabla_\mu\left[\frac{\partial \mathcal{L}_{\text{M}}}{\partial\left(\nabla_\mu\phi^\alpha\right)}\right]=0.
 \end{equation}
@@ -21,9 +21,9 @@ and thus, after applying the generalized Gauss Theorem on a general manifold, al
  
 On the other hand, variations of $S$ with respect to the inverse metric ($g^{\mu\nu}$) results in
 \begin{multline}
-	\delta S=\int \left[\frac{\sqrt{-g}}{2\kappa}\frac{\delta R}{\delta g^{\mu\nu}}+\frac{R}{2\kappa}\frac{1}{\sqrt{-g}}\frac{\delta \sqrt{-g}}{\delta g^{\mu\nu}}-\frac{\Lambda}{\kappa}\frac{1}{\sqrt{-g}}\frac{\delta\sqrt{-g}}{\delta g^{\mu\nu}}+\frac{\delta\mathcal{L}_{\text{M}}}{\delta g^{\mu\nu}}+\frac{\mathcal{L}_{\text{M}}}{\sqrt{-g}}\frac{\delta\sqrt{-g}}{\delta g^{\mu\nu}}\right]\delta g^{\mu\nu}\,\sqrt{-g}\,\td^4x;
+	\delta S=\int \left[\frac{1}{2\kappa}\frac{\delta R}{\delta g^{\mu\nu}}+\frac{R}{2\kappa}\frac{1}{\sqrt{-g}}\frac{\delta \sqrt{-g}}{\delta g^{\mu\nu}}-\frac{\Lambda}{\kappa}\frac{1}{\sqrt{-g}}\frac{\delta\sqrt{-g}}{\delta g^{\mu\nu}}+\frac{\delta\mathcal{L}_{\text{M}}}{\delta g^{\mu\nu}}+\frac{\mathcal{L}_{\text{M}}}{\sqrt{-g}}\frac{\delta\sqrt{-g}}{\delta g^{\mu\nu}}\right]\delta g^{\mu\nu}\,\sqrt{-g}\,\td^4x;
 \end{multline}
-and again, by imposing $\delta S=0$ and considering that
+and again, by imposing $\delta S=0$ and considering that (up to pure derivative terms)
 \begin{subequations}
 	\begin{gather}
 		\frac{\delta R}{\delta g^{\mu\nu}}=R_{\mu\nu},\hspace{1.0cm}\frac{1}{\sqrt{-g}}\frac{\delta\sqrt{-g}}{\delta g^{\mu\nu}}=-\frac{1}{2}g_{\mu\nu},\tag{\theequation \,\,a,b}
@@ -47,20 +47,9 @@ this fact is of great use once the material Hamiltonian $\mathcal{H}_{\text{M}}$
 \end{equation}
 since it will later be used to spawn the Fock space after the quantization procedure; and thus assure no energy loses will be present on the theory.
 \section{Construction of Covariant Actions}
-Standard quantum field theory alongside the standard model of particle physics is one of (if not the) best tested theories of physics, reason which, one doesn't need to reinvent the actions that are used on it, only a small tweak is needed to make the theory general covariant; it has been previously given for granted that the  volume element will be $\sqrt{-g}\,\td^4x$, but there is another consideration, the derivatives, since in a general spacetime, they are not covariant, and thus, the inclusion of a covariant derivative $\nabla_\mu$ is needed.
-
-Let $\Xi(x)$ be a tensorial field such that under a local Lorentzian transformation $\Lambda(x)$ transforms as $\tilde{\Xi}\equiv\rho_\Lambda\Xi$. The usual covariant derivative of the transformed field will be
-\begin{multline}\label{eq: covariant derivative general}
-	\nabla_\mu\tilde\Xi^{a_1,a_2,\hdots}_{\quad b_1,b_2,\hdots}\equiv \partial_\mu\tilde{\Xi}^{a_1,a_2,\hdots}_{\quad b_1,b_2,\hdots}+\Gamma^{a_1}_{\sigma\mu}\tilde\Xi^{\sigma,a_2,\hdots}_{\quad b_1,b_2,\hdots}+\hdots-\Gamma^{\sigma}_{b_1\mu}\tilde\Xi^{a_1,a_2,\hdots}_{\quad \sigma,b_2,\hdots}-\hdots=\\
-	=\left(\partial_\mu\rho_\Lambda\right)\Xi^{a_1,a_2,\hdots}_{\quad b_1,b_2,\hdots}+\rho_\Lambda\partial_\mu\Xi^{a_1,a_2,\hdots}_{\quad b_1,b_2,\hdots}+\Gamma^{a_1}_{\sigma\mu}\tilde\Xi^{\sigma,a_2,\hdots}_{\quad b_1,b_2,\hdots}+\hdots-\Gamma^{\sigma}_{b_1\mu}\tilde\Xi^{a_1,a_2,\hdots}_{\quad \sigma,b_2,\hdots}-\hdots.
-\end{multline}
-From this one can conclude that, for $\nabla_\mu\tilde{\Xi}(x)$ to transform as a tensor, one should redefine the covariant derivative $\nabla_\mu$ to add a term $\Gamma_\mu$ such that it transforms as
-\begin{equation}\label{eq: connection transformation rule}
-	\tilde{\Gamma}_\mu\equiv \rho_\Lambda\Gamma_\mu\rho_\Lambda^{-1}-\left(\partial_\mu\rho_\Lambda\right)\rho_\Lambda^{-1},
-\end{equation}
-such term (that we should call connection), can be written as
-\begin{equation}\label{eq: connection}
-	\Gamma_\mu\equiv \frac{1}{2}\Sigma^{AB}\omega_{AB\mu};
+Standard quantum field theory alongside the Standard Model of particle physics is one of (if not the) best tested theories of physics, reason which, one doesn't need to reinvent the actions that are used on it, only a small tweak is needed to make the theory general covariant; it has been previously given for granted that the  volume element will be $\sqrt{-g}\,\td^4x$; but there is another consideration, the derivatives cannot be simply $\partial_\mu$ since that is not (in general covariant). To correctly define a covariant derivative $\nabla_\mu$, one must introduce two elements: the first one is the known Christoffel symbols $\Gamma_{\alpha\beta}^\sigma$ which will contract the tensorial nature of the field; and the second one is the spin connection, given by
+\begin{equation}
+	\Gamma_\nu\equiv \frac{1}{2}\Sigma^{AB}\omega_{AB\mu};
 \end{equation}
 where $\Sigma^{AB}$ are to be understood as the Lorentz generators (the uppercase Latin indexes represent sums over a Minkowski background), and $\omega_{AB\mu}$ is the so called torsion free spin connection, defined as
 \begin{equation}
@@ -70,22 +59,52 @@ The new vector fields $e^\mu_A$ are known as the tetrad formalism coefficients, 
 \begin{equation}
 	g_{\mu\nu}=e^A_\mu e^B_\nu \eta_{ab}.
 \end{equation}
+As a last note, if the field is coupled to a vector field $A_\mu$ the covariant derivative must be redefined as $\nabla_\mu'\equiv\nabla_\mu-\frac{i}{\hbar}eA_\mu$, where $e$ would be the coupling constant.
 
-Therefore, we define the covariant derivative as
-\begin{equation}\label{eq: Covariant derivative}
-	\nabla_\mu\Xi^{a_1,a_2,\hdots}_{\quad b_1,b_2,\hdots}\equiv \partial_\mu \Xi^{a_1,a_2,\hdots}_{\quad b_1,b_2,\hdots}+\Gamma_\mu+\Gamma^{a_1}_{\sigma\mu}\tilde\Xi^{\sigma,a_2,\hdots}_{\quad b_1,b_2,\hdots}+\hdots-\Gamma^{\sigma}_{b_1\mu}\tilde\Xi^{a_1,a_2,\hdots}_{\quad \sigma,b_2,\hdots}-\hdots.
-\end{equation}
+\begin{comment}
+	
+	Standard quantum field theory alongside the Standard Model of particle physics is one of (if not the) best tested theories of physics, reason which, one doesn't need to reinvent the actions that are used on it, only a small tweak is needed to make the theory general covariant; it has been previously given for granted that the  volume element will be $\sqrt{-g}\,\td^4x$, but there is another consideration, the derivatives, since in a general spacetime, they are not covariant, and thus, the inclusion of a covariant derivative $\nabla_\mu$ is needed.
+	
+	Let $\Xi(x)$ be a tensorial field such that under a local Lorentzian transformation $\Lambda(x)$ transforms as $\tilde{\Xi}\equiv\rho_\Lambda\Xi$. The usual covariant derivative of the transformed field will be
+	\begin{multline}\label{eq: covariant derivative general}
+		\nabla_\mu\tilde\Xi^{a_1,a_2,\hdots}_{\quad b_1,b_2,\hdots}\equiv \partial_\mu\tilde{\Xi}^{a_1,a_2,\hdots}_{\quad b_1,b_2,\hdots}+\Gamma^{a_1}_{\sigma\mu}\tilde\Xi^{\sigma,a_2,\hdots}_{\quad b_1,b_2,\hdots}+\hdots-\Gamma^{\sigma}_{b_1\mu}\tilde\Xi^{a_1,a_2,\hdots}_{\quad \sigma,b_2,\hdots}-\hdots=\\
+		=\left(\partial_\mu\rho_\Lambda\right)\Xi^{a_1,a_2,\hdots}_{\quad b_1,b_2,\hdots}+\rho_\Lambda\partial_\mu\Xi^{a_1,a_2,\hdots}_{\quad b_1,b_2,\hdots}+\Gamma^{a_1}_{\sigma\mu}\tilde\Xi^{\sigma,a_2,\hdots}_{\quad b_1,b_2,\hdots}+\hdots-\Gamma^{\sigma}_{b_1\mu}\tilde\Xi^{a_1,a_2,\hdots}_{\quad \sigma,b_2,\hdots}-\hdots.
+	\end{multline}
+	From this one can conclude that, for $\nabla_\mu\tilde{\Xi}(x)$ to transform as a tensor, one should redefine the covariant derivative $\nabla_\mu$ to add a term $\Gamma_\mu$ such that it transforms as
+	\begin{equation}\label{eq: connection transformation rule}
+		\tilde{\Gamma}_\mu\equiv \rho_\Lambda\Gamma_\mu\rho_\Lambda^{-1}-\left(\partial_\mu\rho_\Lambda\right)\rho_\Lambda^{-1},
+	\end{equation}
+	such term (that we should call connection), can be written as
+	\begin{equation}\label{eq: connection}
+		\Gamma_\mu\equiv \frac{1}{2}\Sigma^{AB}\omega_{AB\mu};
+	\end{equation}
+	where $\Sigma^{AB}$ are to be understood as the Lorentz generators (the uppercase Latin indexes represent sums over a Minkowski background), and $\omega_{AB\mu}$ is the so called torsion free spin connection, defined as
+	\begin{equation}
+		\omega_{AB\mu}\equiv e^\nu_A\left(\partial_\mu e_{B\nu}-\Gamma^\sigma_{\nu\mu}e_{B\sigma}\right).
+	\end{equation}
+	The new vector fields $e^\mu_A$ are known as the tetrad formalism coefficients, defined to transform general tensors to a local flat manifold, i.e.
+	\begin{equation}
+		g_{\mu\nu}=e^A_\mu e^B_\nu \eta_{ab}.
+	\end{equation}
+	
+	Therefore, we define the covariant derivative as
+	\begin{equation}\label{eq: Covariant derivative}
+		\nabla_\mu\Xi^{a_1,a_2,\hdots}_{\quad b_1,b_2,\hdots}\equiv \partial_\mu \Xi^{a_1,a_2,\hdots}_{\quad b_1,b_2,\hdots}+\Gamma_\mu+\Gamma^{a_1}_{\sigma\mu}\tilde\Xi^{\sigma,a_2,\hdots}_{\quad b_1,b_2,\hdots}+\hdots-\Gamma^{\sigma}_{b_1\mu}\tilde\Xi^{a_1,a_2,\hdots}_{\quad \sigma,b_2,\hdots}-\hdots.
+	\end{equation}
+	
+	If the field $\Xi^{a_1,a_2,\hdots}_{\quad b_1,b_2,\hdots}$ is coupled to a vector field $A_\mu$ the covariant derivative must be redefined as $\nabla_\mu'\equiv\nabla_\mu-\frac{i}{\hbar}eA_\mu$, where $e$ would be the coupling constant.
+\end{comment}
 
-If the field $\Xi^{a_1,a_2,\hdots}_{\quad b_1,b_2,\hdots}$ is coupled to a vector field $A_\mu$ the covariant derivative must be redefined as $\nabla_\mu'\equiv\nabla_\mu-\frac{i}{\hbar}eA_\mu$, where $e$ would be the coupling constant.
+
 \subsection{Some Basic Examples}
 \subsubsection{Scalar Field}
 The very first example given for a classical field is usually a (real) free scalar field $\phi(x)$ with some mass $m$; whose dynamics are given by the following action
 \begin{equation}\label{eq: General scalar field action}
 	S\big[\phi\big]=\int\frac{1}{2}\Big[\partial_\nu\phi\,\partial^\nu\phi-\mu^2\phi^2-\xi R\phi^2\Big]\sqrt{-g}\;\td^4 x.
 \end{equation}
-The construction of such action arises from its Minkowskian counterpart (a primary study of the standard quantum field theory can be found in the appendix \ref{sec: Minkosky Scalar}); since the field in question is a scalar one, the covariant derivative \ref{eq: Covariant derivative} its simply $\partial_\nu$, the massive term of the action is dependant on a parameter $\mu\equiv\sfrac{mc}{\hbar}$, and an term is added as a coupling to gravity (through the Ricci scalar $R$) with a coupling constant $\xi$ \footnote{The field is said to be minimally coupled to gravity if $\xi=0$ and nonminimally coupled otherwise.}.
+The construction of such action arises from its Minkowskian counterpart (a primary study of the standard quantum field theory can be found in the appendix); since the field in question is scalar, the covariant derivative \ref{eq: Covariant derivative} its simply $\partial_\nu$, the massive term of the action is dependant on a parameter $\mu\equiv\sfrac{mc}{\hbar}$, and a term is added as a coupling to gravity (through the Ricci scalar $R$) with a coupling constant $\xi$ \footnote{The field is said to be minimally coupled to gravity if $\xi=0$ and nonminimally coupled otherwise.}.
 
-The inclusion of such coupling is not a mere curiosity, since it's been proven \cite{Bunch_Renorm} that a self interactive $\lambda\phi^4$ theory needs a term proportional to $R\phi^2$ to be renormalizable. Besides this, de addition of a term proportional to $R\phi^2$ adds a new symmetry to de action, since for a massless field $\mu=0$ with a coupling constant $\xi=\sfrac{1}{6}$, the action is invariant under conformal transformations, i.e.
+The inclusion of such coupling is not a mere curiosity, since it's been proven \cite{Bunch_Renorm} that a self interactive $\lambda\phi^4$ theory needs a term proportional to $R\phi^2$ to be renormalizable. Besides this, the addition of a term proportional to $R\phi^2$ adds a new symmetry to de action, since for a massless field $\mu=0$ with a coupling constant $\xi=\sfrac{1}{6}$, the action is invariant under conformal transformations, i.e.
 \begin{equation}\label{eq: Conformal Transformation}
 	g_{\mu\nu}\rightarrow \tilde{g}_{\mu\nu}\equiv \Omega^2(x)g_{\mu\nu},
 \end{equation}
@@ -106,7 +125,7 @@ Considering a massless field, a solution of this equation corresponds to the fol
 \end{subequations}
 proving the conformal invariance for such scenario.
 
-From its definition in equation \ref{eq: Hilbert energy-momentum tensor} and the action \ref{eq: General scalar field action}, one can obtain the expression for the energy momentum tensor
+From its definition in equation \ref{eq: Hilbert energy-momentum tensor} and the action \ref{eq: General scalar field action}, one can obtain the expression for the energy momentum tensor\footnote{Note that in a Minkowski background, the term $R\phi^2$ present in the action written in the equation \ref{eq: General scalar field action}, vanishes; but the energy momentum tensor $T_{\mu\nu}$ differs from the standard expression by a pure derivative term. The new tensor is known as the improved energy-momentum tensor.}
 \begin{equation}\label{eq: Energy-Momentum scalar}
 	T_{\mu\nu}=\partial_\mu\phi\,\partial_\nu\phi -\frac{1}{2}g_{\mu\nu}\left[\partial^\sigma\phi\partial_\sigma\phi-\mu^2\phi^2\right]+\xi\left[-R_{\mu\nu}+\frac{1}{2}g_{\mu\nu}R-g_{\mu\nu}\partial^\sigma\partial_\sigma+\partial_\mu\partial_\nu\right]\phi^2,
 \end{equation}
@@ -142,19 +161,20 @@ From the Euler-Lagrange equation \ref{eq: Euler-Lagrange}, its obtained the gene
 \end{equation}
 And from its definition in equation \ref{eq: Hilbert energy-momentum tensor}, the energy momentum tensor will have \cite[sec.\,3.8]{BirrelDavies} the following expression
 \begin{equation}
-	T_{\mu\nu}=\frac{1}{4}i\left\{\bar{\psi}\left(\gamma_\mu\nabla_\nu-\gamma_\nu\nabla_\mu\right)-\left[\left(\nabla_\mu\bar{\psi}\right)\gamma_\nu-\left(\nabla_\nu\bar{\psi}\right)\gamma_\mu\right]\right\}\psi.
+	T_{\mu\nu}=\frac{1}{4}i\left\{\bar{\psi}\left(\gamma_\mu\nabla_\nu-\gamma_\nu\nabla_\mu\right)-\left[\left(\nabla_\mu\bar{\psi}\right)\gamma_\nu-\left(\nabla_\nu\bar{\psi}\right)\gamma_\mu\right]\right\}\psi,
 \end{equation}
+with a trace of the form $T^\mu_\mu=4m\bar{\psi}\psi$, which is traceless for a massless field.
 
 A particularly interesting outcome of this field is the so called Schrödinger-Dirac equation, result of squaring the generalized Dirac operator $\left[i\gamma^\mu\left(\partial_\mu+\Gamma_\mu\right)-\mu\right]$ just as its done in a Minkowskian background to recover the Klein-Gordon equation,
 \begin{equation}
 	\left[\nabla_\nu\nabla^\nu-\mu^2-\frac{1}{4}R\right]\psi=0,
 \end{equation}
-this expression gives another "natural" choice for the scalar field coupling to gravity $\xi$, comparing it with the generalized Klein-Gordon equation \ref{eq: Generalized Klein-Gordon} finding $\xi=\sfrac{1}{4}$.
+this expression (known as the Weitzenböck formula) gives another "natural" choice for the scalar field coupling to gravity $\xi$; to obtain such value, one can compare it with the generalized Klein-Gordon equation \ref{eq: Generalized Klein-Gordon} finding $\xi=\sfrac{1}{4}$.
 
 \subsubsection{Electromagnetic Field}
 Having previously studied the Dirac field, it is expected to also include the electromagnetic field, which is described by the same action as in the Minkowskian background, that is,
 \begin{equation}\label{eq: Electromagnetic action}
-	S[A_\mu]=\int\left(-\frac{1}{4\mu_0 c}F_{\mu\nu}F^{\mu\nu}+\mathcal{L}_{\text{Gauge}}\right)\sqrt{-g}\td^4x,
+	S[A_\mu]=\int\left(-\frac{1}{4 c}F_{\mu\nu}F^{\mu\nu}+\mathcal{L}_{\text{Gauge}}\right)\sqrt{-g}\td^4x,
 \end{equation}
 where $\mathcal{L}_{\text{Gauge}}$ is a gauge fixing term of the form
 \begin{equation}
@@ -174,9 +194,10 @@ The equations of motion resulting from the action \ref{eq: Electromagnetic actio
 
 And finally, as for completeness, the energy-momentum tensor \cite[sec.\,3.8]{BirrelDavies} given by \ref{eq: Hilbert energy-momentum tensor} is
 \begin{multline}
-	T_{\mu\nu}=-\frac{1}{\mu_0}\left(F_{\mu\alpha}F^{\alpha\nu}-\frac{1}{4}g_{\mu\nu}F_{\alpha\beta}F^{\alpha\beta}\right)+\\
-	+\alpha\left\{A_\mu\left(\nabla_\nu\nabla_\rho A^\rho\right)+\left(\nabla_\mu\nabla_\rho A^\rho\right)A_\nu-g_{\mu\nu}\left[A^\rho\left(\nabla\rho\nabla_\sigma A^\sigma\right)+\frac{1}{2}\left(\nabla_\rho A^\rho\right)^2\right]\right\}.
+	T_{\mu\nu}=-\left(F_{\mu\alpha}F^{\alpha\nu}-\frac{1}{4}g_{\mu\nu}F_{\alpha\beta}F^{\alpha\beta}\right)+\\
+	+\alpha\left\{A_\mu\left(\nabla_\nu\nabla_\rho A^\rho\right)+\left(\nabla_\mu\nabla_\rho A^\rho\right)A_\nu-g_{\mu\nu}\left[A^\rho\left(\nabla\rho\nabla_\sigma A^\sigma\right)+\frac{1}{2}\left(\nabla_\rho A^\rho\right)^2\right]\right\};
 \end{multline}
+with a trace $T^\mu_\mu=-2\alpha\nabla_\nu\left(A^\nu \nabla_\rho A^\rho\right)$, which is contributed by the gauge fixing term only.
 \section{Scalar field Quantization}
 Thanks to its simplicity, the scalar field is a great field to work with, with the intent of showing some properties of a theory. For that reason, for what follows, all work will be done considering a real scalar field described by the action \ref{eq: General scalar field action}.
 
@@ -279,7 +300,7 @@ and, as a result of the orthogonality of the mode functions, the relation betwee
 		\hat{a}_i=\sum_j\left(\bar \alpha_{ij}\hat{b}_j-\bar \beta_{ij}\hat{b}_j^\dagger\right),\quad \hat{a}_i^\dagger=\sum_j\left(-\beta_{ij}\hat{b}_j+\alpha_{ij}\hat{b}_j^\dagger\right).\tag{\theequation \,\,a,b}
 	\end{gather}
 \end{subequations}
-Applying commutator rules \ref{eq: general a operator commutator rules} give new restrictions to the Bogoliubov coefficients
+Applying commutator rules present in equation \ref{eq: general a operator commutator rules}, give new restrictions to the Bogoliubov coefficients
 \begin{equation}
 	\left[\hat{a}_i,\,\hat{a}_j^\dagger\right]\propto\delta_{ij}\implies \sum_k\left(\bar \alpha_{ik}\alpha_{jk}-\bar \beta_{ik}\beta_{jk}\right)\propto\delta_{ij},
 \end{equation}
@@ -287,7 +308,7 @@ Applying commutator rules \ref{eq: general a operator commutator rules} give new
 	\left[\hat{a}_i,\,\hat{a}_j\right]=0\implies \sum_k\left(\bar \alpha_{jk}\bar \beta_{ik}-\bar \alpha_{ik}\bar \beta_{jk}\right)=0.
 \end{equation}
 
-The reader might ask what the relevance of this transformation is, and it would be in its right to do so, since it is not a mere mathematical result. To see the reason of this transformation, one could compute the number of $v$ particles that are present in the $u$ vacuum; the computation is given by
+One might ask what the relevance of this transformation is, and it would be in its right to do so, since it is not a mere mathematical result. To see the reason of this transformation, one could compute the number of $v$ particles that are present in the $u$ vacuum; the computation is given by
 \begin{equation}\label{eq: Bogoliubov Number particles general}
 	\langle_u0|\hat{N}_v|_u0\rangle=\sum_i\langle_u0|\hat{a}_i^\dagger\hat{a}_i|_u0\rangle=\sum_{i}\left[\sum_{jk}\beta_{ij}\bar \beta_{ik}\langle_u0|\hat{b}_j\hat{b}_k^\dagger|_u0\rangle\right]\propto \sum_{ij}|\beta_{ij}|^2.
 \end{equation}
