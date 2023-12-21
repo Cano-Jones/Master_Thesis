@@ -35,7 +35,7 @@ one obtains the Einstein field equations
 \end{equation}
 which are most commonly written in terms of the Hilbert energy-momentum tensor
 \begin{equation}\label{eq: Hilbert energy-momentum tensor}
-	T_{\mu\nu}\equiv \mathcal{L}_{\text{M}}g_{\mu\nu}-\frac{\delta\mathcal{L}_{\text{M}}}{\delta g^{\mu\nu}}=\frac{-2}{\sqrt{-g}}\frac{\delta \left(\mathcal{L}_{\text{M}}\sqrt{-g}\right)}{\delta g^{\mu\nu}}.
+	T_{\mu\nu}\equiv \mathcal{L}_{\text{M}}g_{\mu\nu}-2\frac{\delta\mathcal{L}_{\text{M}}}{\delta g^{\mu\nu}}=\frac{-2}{\sqrt{-g}}\frac{\delta \left(\mathcal{L}_{\text{M}}\sqrt{-g}\right)}{\delta g^{\mu\nu}}.
 \end{equation}
 This tensor is the source of the spacetime curvature, and must not be confused with the Noether's energy-momentum tensor since the two are not, in general, equivalent \cite{Energy-MomentumTensor}, but upon integration of the corresponding conserved currents, results are the same \cite{NoetherVsHilbert}. In addition of being symmetric, the Hilbert energy-momentum tensor is covariantly conserved, i.e.
 \begin{equation}
@@ -102,7 +102,7 @@ The very first example given for a classical field is usually a (real) free scal
 \begin{equation}\label{eq: General scalar field action}
 	S\big[\phi\big]=\int\frac{1}{2}\Big[\partial_\nu\phi\,\partial^\nu\phi-\mu^2\phi^2-\xi R\phi^2\Big]\sqrt{-g}\;\td^4 x.
 \end{equation}
-The construction of such action arises from its Minkowskian counterpart (a primary study of the standard quantum field theory can be found in the appendix); since the field in question is scalar, the covariant derivative \ref{eq: Covariant derivative} its simply $\partial_\nu$, the massive term of the action is dependant on a parameter $\mu\equiv\sfrac{mc}{\hbar}$, and a term is added as a coupling to gravity (through the Ricci scalar $R$) with a coupling constant $\xi$ \footnote{The field is said to be minimally coupled to gravity if $\xi=0$ and nonminimally coupled otherwise.}.
+The construction of such action arises from its Minkowskian counterpart (a primary study of the standard quantum field theory can be found in the appendix); since the field in question is scalar, the covariant derivative its simply $\partial_\nu$, the massive term of the action is dependant on a parameter $\mu\equiv\sfrac{mc}{\hbar}$, and a term is added as a coupling to gravity (through the Ricci scalar $R$) with a coupling constant $\xi$ \footnote{The field is said to be minimally coupled to gravity if $\xi=0$ and nonminimally coupled otherwise.}.
 
 The inclusion of such coupling is not a mere curiosity, since it's been proven \cite{Bunch_Renorm} that a self interactive $\lambda\phi^4$ theory needs a term proportional to $R\phi^2$ to be renormalizable. Besides this, the addition of a term proportional to $R\phi^2$ adds a new symmetry to de action, since for a massless field $\mu=0$ with a coupling constant $\xi=\sfrac{1}{6}$, the action is invariant under conformal transformations, i.e.
 \begin{equation}\label{eq: Conformal Transformation}
@@ -139,7 +139,7 @@ For spin $\sfrac{1}{2}$ particles, the Lorentz generators are
 \begin{equation}
 	\Sigma^{AB}=-\frac{i}{2}\sigma^{AB}=\frac{1}{4}\left[\gamma^A,\,\gamma^B\right],
 \end{equation}
-where $\Gamma^A$ are the flat gamma matrices. Therefore the covariant derivative \ref{eq: Covariant derivative} and the connection \ref{eq: connection} can be written as
+where $\Gamma^A$ are the flat gamma matrices. Therefore the covariant derivative  and the connection can be written as
 \begin{subequations}
 	\begin{gather}
 		\nabla_\mu\equiv\partial_\mu+\Gamma_\mu,\quad \Gamma_\mu=\frac{1}{8}\omega_{AB\mu}\left[\gamma^A,\,\gamma^B\right].
