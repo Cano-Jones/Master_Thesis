@@ -1,0 +1,49 @@
+\cite{DeWitt}
+\begin{equation}
+	g_{\mu\nu}(x)=\eta_{\mu\nu}+\frac{1}{3}R_{\mu\alpha\nu\beta}\,y^\alpha y^\beta-\frac{1}{6}\nabla\gamma R_{\mu\alpha\nu\beta}\,y^\alpha y^\beta y^\gamma+\left[\frac{1}{20}\nabla_\gamma\nabla_\delta\; R_{\mu\alpha\nu\beta}+\frac{2}{45}R_{\alpha\mu\beta\lambda}R^\lambda_{\;\gamma\nu\delta}\right]y^\alpha y^\beta y^\gamma y^\delta+\hdots
+\end{equation}
+\begin{equation}
+	\left[\partial_\nu\partial^\nu+\mu^2+\xi R(x)\right]G_F(x,x')=-\left[-g(x)\right]^{-\sfrac{1}{2}}\delta^{(d+1)}(x-x')
+\end{equation}
+\begin{equation}
+	\mathcal{G}_F(x,x')\equiv \left[-g(x)\right]^{-\sfrac{1}{4}}G_F(x,x')
+\end{equation}
+\begin{equation}
+	\mathcal{G}_F(x,x')=\int \frac{\td^{d+1}k}{(2\pi\hbar)^{d+1}}\mathcal{G}_F(k)e^{-iky\hbar^{-1}}
+\end{equation}
+\begin{multline}
+	\mathcal{G}_F(k)\approx\hbar^2\left(k^2-\mu^2\hbar^2\right)^{-1}-\hbar^4\left(\frac{1}{6}-\xi\right)\left[R-\frac{i}{2}\left(\nabla_\alpha R\right)\partial^\alpha+\frac{1}{3}a_{\alpha\beta}\partial^\alpha\partial^\beta\right]\left(k^2-\mu^2\hbar^2\right)^{-2}+\\
+	+\hbar^3\left[\frac{2}{3}a^\lambda_\lambda-\left(\frac{1}{6}-\xi\right)^2R^2\right]\left(k^2-\mu^2\hbar^2\right)^{-3}
+\end{multline}
+$\partial_\alpha\equiv\sfrac{\partial }{\partial k^\alpha}$
+\begin{equation}
+	a_{\alpha\beta}\equiv \left[\frac{1}{2}\left(\frac{1}{6}-\xi\right)+\frac{1}{120}\right]\nabla_\alpha\nabla_\beta\, R-\frac{1}{40}\nabla_\lambda\nabla^\lambda\,R_{\alpha\beta}-\frac{1}{30}R^{\;\lambda}_\alpha R_{\lambda\beta}+\frac{1}{60}R^{\kappa\;\lambda}_{\;\alpha\;\beta}R_{\kappa\lambda}+\frac{1}{60}R^{\lambda\mu\kappa}_{\;\;\;\alpha}R_{\lambda\mu\kappa\beta}
+\end{equation}
+\begin{equation}
+	\mathcal{G}_F(x,x')=\int \frac{\td^{d+1}k}{(2\pi\hbar)^{d+1}}e^{iky\hbar^{-1}}\left[a_0(x,x')-a_1(x,x')\frac{\partial}{\partial \mu^2}+a_2(x,x')\left(\frac{\partial}{\partial \mu^2}\right)^2\right]\hbar^2\left(k^2-\mu^2\hbar^2\right)^{-1}
+\end{equation}
+\begin{subequations}
+	\begin{gather}
+		a_0(x,x')=1,\quad a_1(x,x')=\left(\frac{1}{6}-\xi\right)\left(R-\frac{1}{2}\nabla_\alpha R\,y^\alpha\right)-\frac{1}{3}a_{\alpha\beta} y^\alpha y^\beta\tag{\theequation \,\,a,b}\\
+		a_2(x,x')=\frac{1}{2}\left(\frac{1}{6}-\xi\right)^2R^2+\frac{1}{3}a^\lambda_{\;\lambda}\tag{\theequation \,\,c}
+	\end{gather}
+\end{subequations}
+right hand side evaluated at $x'$
+\begin{equation}
+	\hbar^2(k^2-\mu^2\hbar^2+i\epsilon)^{-1}=-\int_0^\infty e^{-is(k^2-\mu^2\hbar^2+i\epsilon)\hbar^{-2}}
+\end{equation}
+\begin{equation}
+	\mathcal{G}_F(x,x')=-(4\pi)^{-\sfrac{(d+1)}{2}}\int_0^\infty F(x,x';is)\exp{\left[-is\mu^2+\frac{\sigma(x,x')}{2is}\right]}\,\td(is)
+\end{equation}
+$\sigma(x,x')\equiv\sfrac{1}{2}y_\alpha y^\alpha$
+
+upto adiabatic order $N$
+\begin{equation}
+	F(x,x';is)\equiv \sum_{n=0}^{\sfrac{N}{2}}a_n(x,x')(is)^n
+\end{equation}
+\begin{equation}
+	G_F^{\text{DS}}(x,y)\equiv -i\frac{\Delta^{1/2}(x,y)}{(4\pi)^{\sfrac{(d+1)}{2}}}\int^\infty_0F(x,y;is)\exp{\left[-is\mu^2+\frac{\sigma(x,y)}{2is}\right]}(is)^{-\sfrac{(d+1)}{2}}\,\td (is)
+\end{equation}
+\begin{equation}
+	\Delta(x,x')\equiv -\text{det}\left[\partial_\mu\partial_\nu\sigma(x,x')\right]\left[g(x)g(x')\right]^{-\sfrac{1}{2}}
+\end{equation}
