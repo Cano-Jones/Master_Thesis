@@ -1,5 +1,5 @@
 \section{Accelerated Observers and Unruh Temperature}
-In contrast to previous chapters, in this section there will be no effects of gravitation, and a flat $1+1$ spacetime (for simplicity) will be considered; the difference from the standard flat QFT, here a non inertial (accelerated) observed will be considered. Let an observer measure a self constant two-acceleration $\alpha^\mu\equiv \sfrac{\td^2 x^\mu}{\td\tau^2}$, and thus
+In contrast to previous chapters, in this section there will be no effects of gravitation, and a flat $1+1$ spacetime (for simplicity) will be considered; unlike standard flat QFT, here a non inertial (accelerated) observer will be considered. Let an observer measure a self constant two-acceleration $\alpha^\mu\equiv \sfrac{\td^2 x^\mu}{\td\tau^2}$, this quantity must meet the condition
 \begin{equation}
 	\alpha^2=\left(c\frac{\td^2 t}{\td\tau^2}\right)^2-\left(\frac{\td^2x}{\td\tau^2}\right)^2.
 \end{equation}
@@ -9,19 +9,19 @@ Solutions of such differential equation can be written as
 		t(\tau)=t_0+t_1\tau\pm\frac{c}{\alpha}\sinh\left(\frac{\alpha\tau}{c}\right),\quad x(\tau)=x_0+x_1\tau\pm\frac{c^2}{\alpha}\cosh\left(\frac{\alpha\tau}{c}\right),\tag{\theequation \,\,a,b}
 	\end{gather}
 \end{subequations}
-where $t_0,t_1,x_0,x_1$ are constant real parameters. Since the trajectory must ensure that $c^2\td\tau^2=c^2\td t^2-\td x^2$, then the "velocities" must be such that $ct_1=x_1=0$; furthermore, for simplicity we consider some coordinates in which $ct_0=x_0=0$. Such trajectory can be described as the hyperbola
+where $t_0,t_1,x_0,x_1$ are constant real parameters. Since the trajectory must ensure that $c^2\td\tau^2=c^2\td t^2-\td x^2$, then the ``velocities" must be such that $ct_1=x_1=0$; furthermore, for simplicity we consider some coordinates in which $ct_0=x_0=0$. Said trajectory can be described as the hyperbola
 \begin{equation}
 	x^2-c^2t^2=\frac{c^2}{\alpha^2}.
 \end{equation}
-There exists a coordinate system known as Rindler coordinates, that is specially useful in the description of accelerated observers, such coordinates do not map the whole spacetime, and must be divided into two maps: whereas $x>c|t|$ or otherwise. The coordinates used will be named as $(\eta,\xi)$ ($(\tilde\eta,\tilde\xi)$ if working in the second chart), the first could be understood as some sort of temporal coordinate, while the second as a parameter determining the acceleration of the observer.
+A coordinate system known as Rindler coordinates is specifically used in the description of accelerated observers; such coordinates do not map the whole spacetime, and must be divided into two maps: depending on if $x>c|t|$ or otherwise. The coordinates used will be named $(\eta,\xi)$ ($(\tilde\eta,\tilde\xi)$ if working in the second chart); the first could be understood as some sort of temporal coordinate,  while the second can be understood as a parameter determining the acceleration of the observer.
 \begin{wrapfigure}[13]{r}{0.49\textwidth}
 	\centering{
 		\input{Images/TikzFigures/RindlerCoordinates.tex}
-		\caption{Rindler Coordinates (Left and Right charts).}
+		\caption{Rindler Coordinate System.}
 		\label{fig: Rindler Coordinates}
 	}
 \end{wrapfigure}
-Such coordinate system can be written\footnote{The choice is not unique, depending on the definition of $\xi$ the exponential factor can be exchanged by a different form, such as $(1+\xi)$ or simply by $\xi$.} as:
+Said coordinate system can be written\footnote{The choice is not unique, depending on the definition of $\xi$ the exponential factor can be substituted by a different form, such as $(1+\xi)$ or simply by $\xi$.} as:
 \begin{itemize}
 	\item Chart $x>c|t|$ (\ref{fig: Rindler Coordinates} blue section),
 	\begin{subequations}
@@ -36,11 +36,11 @@ Such coordinate system can be written\footnote{The choice is not unique, dependi
 		\end{gather}
 	\end{subequations}
 \end{itemize}
-One can check that, these coordinates meet the following hyperbolic relation,
+One can check that these coordinates meet the following hyperbolic relation,
 \begin{equation}\label{eq: Hyperbolic general acceleration Unruh}
 	x^2-c^2t^2=\frac{c^2}{\alpha^2}e^{2\sfrac{\alpha\xi}{c^2}},
 \end{equation}
-and thus, an observer with some coordinates $(\eta,\xi)$ can be said to experience an acceleration $\alpha e^{-\xi\sfrac{}{c^2}}$. Using such coordinate system, the line element will be\footnote{Note that as it would be expected, the metric is conformally flat.},
+and thus, an observer with coordinates $(\eta,\xi)$ can be said to experience an acceleration $\alpha e^{-\alpha\xi\sfrac{}{c^2}}$. Using said coordinate system, the line element will be\footnote{Note that as it would be expected, the metric is conformally flat.},
 \begin{equation}
 	c^2\td \tau^2=e^{\sfrac{\alpha\xi}{c^2}}\left[c^2\td\eta^2-\td\xi^2\right].
 \end{equation}
@@ -49,39 +49,39 @@ The fact that a non-inertial reference system will experience some deviations of
 \begin{equation}
 	e^{-2\sfrac{\alpha\xi}{c^2}}\left[\partial^2_{c\eta}-\partial^2_\xi\right]\phi=0.
 \end{equation}
-Solutions of such equation are the usual plane waves\footnote{This is a direct result of the fact that, for a $1+1$ scalar theory, conformal symmetry is obtained for $m=\xi=0$.}, just as it would for an inertial observer. Since the solutions of an accelerated reference frame and an inertial observer are the same, it would seem that all phenomena will be described equally by both, but this is not the same, since their metric description will be different, and thus, the field will be related by a Bogoliubov transformation; that is the two observers might disagree on their definition of the vacuum state.
+Solutions of the previous equation are the usual plane waves\footnote{This is a direct result of the fact that, for a $1+1$ scalar theory, Weyl invariance is obtained for $m=\xi=0$.}, just as it would be for an inertial observer. Since the solutions of an accelerated reference frame and an inertial observer are the same, it would seem that all phenomena will be described equally by both, but it is in fact not the same, since their metric description will be different, and thus, the field will be related by a Bogoliubov transformation; that is, the two observers might disagree on their definition of the vacuum state.
 
-In order to explicitly compute this, it will be useful to use the so called null coordinates $u\equiv c\eta-\xi$ and $v\equiv c\eta+\xi$ for the accelerated observer, and  $U\equiv ct-x$ and $V\equiv ct+x$; through which the solution of the equation of motion will be (depending on the needed chart)
+In order to explicitly compute this, it will be useful to use the so-called null coordinates $u\equiv c\eta-\xi$ and $v\equiv c\eta+\xi$ for the accelerated observer, and  $U\equiv ct-x$ and $V\equiv ct+x$, through which the solution of the equation of motion will be (depending on the needed chart)
 \begin{subequations}\label{eq: Unruh modes}
 	\begin{gather}
 		\phi_\omega^u\equiv e^{i\omega u\,\hbar^{-1}},\quad \phi_\omega^v\equiv  e^{i\omega v\,\hbar^{-1}},\quad\phi_\omega^{\tilde u}\equiv e^{i\omega \tilde u\,\hbar^{-1}},\quad\phi_\omega^{\tilde v}\equiv  e^{i\omega \tilde v\,\hbar^{-1}}.\tag{\theequation \,\,a-d}
 	\end{gather}
 \end{subequations}
-In addition, null coordinates will also be used for the inertial observer those being $U\equiv ct-x$ and $V\equiv ct+x$; and the relation to the accelerated null coordinates will be
+In addition, null coordinates will also be used for the inertial observer, those being $U\equiv ct-x$ and $V\equiv ct+x$; and the relation to the accelerated null coordinates will be
 \begin{subequations}\label{eq: Unruh Null coordinates relation}
 	\begin{gather}
 		U(u,\,v)=-\frac{c^2}{\alpha}e^{-\sfrac{\alpha u}{c^2}},\hspace{1.0cm} V(u,\,v)=\frac{c^2}{\alpha}e^{\sfrac{\alpha v}{c^2}}.\tag{\theequation \,\,a,b}
 	\end{gather}
 \end{subequations}
-Using null coordinates the field can be described as two independent non interactive fields (since there is no autointeration term), that is, $\phi\equiv\phi_u+\phi_v$; in what follows, we will only consider the $\phi_u$ field (defined bellow), but the same can be done for the $\phi_v$ field. Not, lets expand the $\phi_u$ field as a set of Rindler modes \ref{eq: Unruh modes}.a,c meaning
+Using null coordinates, the field can be described as two independent non-interactive fields (since there is no autointeraction term), that is, $\phi\equiv\phi_u+\phi_v$; in what follows, we will only consider the $\phi_u$ field (defined below), but the same can be done for the $\phi_v$ field. Now, lets expand the $\phi_u$ field as a set of Rindler modes \ref{eq: Unruh modes}.a,c, meaning
 \begin{equation}
-	\phi_u\equiv\int_0^\infty \frac{\td \omega}{(2\pi\hbar)\sqrt{2\omega}}\left\{\Theta(-U)\left[a^u_\omega\phi_\omega^u+\bar a^u_\omega\bar \phi_\omega^u \right]+\Theta(U)\left[a^{\tilde u}_\omega\phi_\omega^{\tilde u}+\bar a^{\tilde u}_\omega\bar \phi_\omega^{\tilde u} \right]\right\};
+	\phi_u\equiv\int_0^\infty \frac{\td \omega}{(2\pi\hbar)\sqrt{2\omega}}\left\{\Theta(-U)\left[a^u_\omega\phi_\omega^u+\bar a^u_\omega\bar \phi_\omega^u \right]+\Theta(U)\left[a^{\tilde u}_\omega\phi_\omega^{\tilde u}+\bar a^{\tilde u}_\omega\bar \phi_\omega^{\tilde u} \right]\right\}.
 \end{equation}
-clearly, it can also be written in terms of planar waves in $U$ coordinates for the inertial observer.
+Clearly, it can also be written in terms of planar waves in $U$ coordinates for the inertial observer.
 
-Since we were interested in the difference in vacuum states, we would need to obtain the Bogoliubov coefficients connecting the Rindler modes, with the inertial ones; to do so, we compute the coefficient $\beta_{\Omega,\omega}$ using \ref{eq: Bogoliubov Coefficients General}.b, obtaining
+Since we were interested in the difference in vacuum states, we would need to obtain the Bogoliubov coefficients connecting the Rindler modes with the inertial ones; to do so, we compute the coefficient $\beta_{\Omega,\omega}$ using \ref{eq: Bogoliubov Coefficients General}.b, obtaining
 \begin{equation}
 	\beta_{\Omega\omega}^u\propto \langle \phi^u_\Omega,\bar\phi_\omega^{U}\rangle=\frac{1}{2\hbar^2}\sqrt{\frac{\Omega}{\omega}}\int_{-\infty}^\infty\exp{\left\{i\left[\omega U(u)+\Omega u\right]\hbar^{-1}\right\}}\td u,
 \end{equation}
-where the expression for $U(u)$ is given by \ref{eq: Unruh Null coordinates relation}.a. This integral is solvable using the change of variables $z\equiv i\left(\sfrac{\omega\hbar c^2}{\alpha}\right)\exp{\!\left(-\sfrac{a u}{c^2}\right)}$ which will result on
+where the expression for $U(u)$ is given by \ref{eq: Unruh Null coordinates relation}.a. This integral is solvable using the change of variables $z\equiv i\left(\sfrac{\omega\hbar c^2}{\alpha}\right)\exp{\!\left(-\sfrac{a u}{c^2}\right)}$ which will result in
 \begin{equation}
 	\int_{-\infty}^\infty\exp{\left\{i\left[\omega U(u)+\Omega u\right]\hbar^{-1}\right\}}\td u=\frac{1}{\alpha}\left(-i\frac{\alpha\hbar}{\omega c^2}\right)^{i\sfrac{c^2\Omega}{\alpha\hbar}}\int^\infty_0z^{i\sfrac{c^2\Omega}{\alpha\hbar}-1}e^{-z}\td z;
 \end{equation}
-where the integral is the Gamma function $\Gamma\left(i\sfrac{c^2\Omega}{\alpha\hbar}\right)$. This means that the Bogoliubov coefficient can be written as
+where the integral is the Gamma function $\Gamma\left(i\sfrac{c^2\Omega}{\alpha\hbar}\right)$. This means that the Bogoliubov coefficient $\beta_{\Omega\omega}^u$ can be written (up to some proportionality constant) as
 \begin{equation}
 	\beta_{\Omega\omega}^u\propto \Gamma\left(i\frac{\Omega c^2}{\alpha\hbar }\right)\sqrt{\frac{\Omega}{\omega}}\left(\frac{c^2\omega}{\alpha\hbar }\right)^{-i\frac{\omega c^2}{\alpha\hbar}}e^{-\frac{\pi\Omega c^2}{2\alpha\hbar}}.
 \end{equation}
-Now, from \ref{eq: Bogoliubov Number particles general} we know how to compute the number of particles of some momentum $\Omega$ that an accelerated observer would measure in the inertial vacuum; that is
+Now, from \ref{eq: Bogoliubov Number particles general} we know how to compute the number of particles of a given momentum $\Omega$ that an accelerated observer would measure in the inertial vacuum, that is
 \begin{equation}\label{eq: Bose Distribution Unruh}
 	N_\Omega\equiv\langle_U 0|\left(\hat{a}_\Omega^u\right)^\dagger\hat{a}^u_\Omega|_U0\rangle\propto\int_0^\infty\frac{\td\Omega}{(2\pi\hbar)\sqrt{2\Omega}}|\beta^u_{\Omega\Omega}|\propto\frac{1}{e^{\frac{2\pi\Omega c}{\alpha\hbar}}-1}\delta(0).
 \end{equation}
@@ -89,20 +89,20 @@ This expression has some resemblance with the expected value of particles with e
 \begin{equation}\label{eq: Unruh temp_0}
 	T_0\equiv \frac{\alpha\hbar}{2\pi ck_B}.
 \end{equation}
-This so called temperature though, cannot be interpreted as the temperature that an accelerated Rindler observer would measure (since it is dependent on the coordinate variable $\alpha$), to obtain such value of the temperature, one should consider the Tolman's law\footnote{An sketch of a proof goes as follows: Consider some conserved energy $E_0$ measured by an observer in an stationary gravitational field, such energy relates to the energy measured by another observer by $E_0=\sqrt{g_{00}}E$; since the thermodynamic relation between energy and temperature comes from the entropy $S$ as $T_0=\sfrac{\partial S}{\partial E_0}$, then the proper temperature must follow the relation given by the Tolman's law.}, stating that the proper temperature $T_{\text{Unruh}}$ is given by
+This expression corresponds to the temperature that a stationary observer would predict for an accelerated one, which is different than the temperature that the accelerated observer himself would measure. The relation between both expressions is given by Tolman's law\footnote{A sketch of a proof goes as follows: consider a conserved energy $E_0$ measured by an observer in a stationary gravitational field, said energy relates to the energy measured by another observer by $E_0=\sqrt{g_{00}}E$; since the thermodynamic relation between energy and temperature comes from the entropy $S$ as $T_0=\sfrac{\partial S}{\partial E_0}$, then the proper temperature must follow the relation given by Tolman's law.}, stating that the proper temperature $T_{\text{Unruh}}$ measured by the accelerating observer, is given by
 \begin{equation}
 	T_{\text{Unruh}}=\sqrt{g_{00}}\,T_0=\left(\alpha e^{-\sfrac{\alpha}{c^2}\xi}\right)\frac{\hbar}{2\pi ck_B}\equiv \frac{a\hbar}{2\pi ck_B};
 \end{equation}
-where $a$ is the acceleration measured by the non-inertial observer, as stated on equation \ref{eq: Hyperbolic general acceleration Unruh}.
+where $a$ is the acceleration measured by the non-inertial observer, as stated in equation \ref{eq: Hyperbolic general acceleration Unruh}.
 
 \section{Application to Black Holes: Hawking Radiation}
-According with the no hair conjecture, black holes can be univocally describe only by three parameters: its mass $M$, its angular momentum $J$ and its electric charge $Q$. For simplicity, lets consider a Schwarzschild black hole\footnote{This is the first found solution of the Einstein field equations \ref{eq: Einstein Field Equations} by Karl Schwarzschild in 1916; Einstein himself was quoted to be amazed by the simplicity and the speed of Schwarzschild's derivation.}, which considers $J=Q=0$; the line element describing the spacetime of such black hole \cite{CanoJones} can be written in spherical coordinates as
+According with the no hair conjecture, black holes can be univocally described only by three parameters: its mass $M$, its angular momentum $J$, and its electric charge $Q$. For simplicity, lets consider a Schwarzschild black hole\footnote{This is the first solution of the Einstein field equations \ref{eq: Einstein Field Equations}, found by Karl Schwarzschild in 1916; Einstein himself was quoted to be amazed by the simplicity and the speed of Schwarzschild's derivation.}, which considers that $J=Q=0$. The line element describing the spacetime of such black hole \cite{CanoJones} is given (using spherical coordinates) by
 \begin{equation}\label{eq: Schwarzschild line element}
 	c^2\td\tau^2=\left(1-\frac{2GM}{c^2r}\right)c^2\td t^2-\left(1-\frac{2GM}{c^2r}\right)^{-1}\td r^2-r^2\left(\td\theta^2+\sin^2\theta\td\varphi^2\right),
 \end{equation}
 where $R_S\equiv\sfrac{2GM}{c^2}$ is the so called \textit{Schwarzschild radius}; the apparent singularity at $r=R_S$ is (as we will show shortly) not a physical one, but a by-product of the coordinate system.
 
-In order to simplify even more the problem (and to be able to create bridge to the previous section), lets consider a $1+1$ Schwarzschild black hole; to obtain such solution, simply take the limit $\td\theta=\td\varphi=0$ at the solution \ref{eq: Schwarzschild line element}. There are two interesting coordinate systems to describe this spacetime; the ''tortoise'' coordinates and the Kruskal–Szekeres coordinates; each with some precise interest. The first of the two comes from the use of the so called tortoise coordinate, given by the expression
+In order to further simplify the problem (and to relate it back to the previous sections of the present thesis), lets consider a $1+1$ Schwarzschild black hole; to obtain such a solution, simply take the limit $\td\theta=\td\varphi=0$ at the solution \ref{eq: Schwarzschild line element}. There are two interesting coordinate systems to describe this spacetime; the ''tortoise'' coordinates and the Kruskal–Szekeres coordinates; each of which are interesting for different reasons. The first of the two comes from the use of the so-called tortoise coordinate, given by the expression
 \begin{equation}\label{eq: Tortoise coordinate diff}
 	\td r^*\equiv \left(1-\frac{R_S}{r}\right)^{-1}\td r,
 \end{equation}
@@ -125,40 +125,41 @@ and, defining the Kruskal–Szekeres null coordinates $(U,\,V)$ as
 		U\equiv -2R_Se^{-\sfrac{u}{2R_S}},\hspace{1.0cm}V\equiv 2R_Se^{\sfrac{v}{2R_S}},\tag{\theequation \,\,a,b}
 	\end{gather}
 \end{subequations}
-the line element can be written as
+the line element can be expressed as
 \begin{equation}
 	c^2\tau^2=\frac{R_S}{r(U,V)}e^{1-\sfrac{r(U,V)}{R_S}}\td U\td V.
 \end{equation}
-Note that both coordinate systems make the metric conformally flat, and the relation between the null tortoise and null Kruskal–Szekeres coordinates given by \ref{eq: Tortoise-Kruskal relation} is the same as in \ref{eq: Unruh Null coordinates relation} considering $\alpha=\sfrac{c^2}{2R_S}$; therefore the procedure of the previous section can be used here, and thus, according to \ref{eq: Unruh temp_0}, a tortoise observer located at $r\to\infty$ will measure that the black hole emits a thermal bath of massless boson particles at a temperature 
+Note that both coordinate systems make the metric conformally flat, and the relation between the null tortoise and null Kruskal–Szekeres coordinates given by equation \ref{eq: Tortoise-Kruskal relation} is the same as in the Unruh effect in equation \ref{eq: Unruh Null coordinates relation} (with the redefinition  $\alpha=\sfrac{c^2}{2R_S}$); therefore the procedure of the previous section can be used here, and thus, according to expression \ref{eq: Unruh temp_0} and Tolman's law, a tortoise observer located at $r\to\infty$ will measure that the black hole emits a thermal bath of massless boson particles at a temperature 
 \begin{equation}
 	T_{\text{Hawking}}=\frac{\hbar c^3}{8\pi GMk_B}.
 \end{equation}
-If one where to consider a $3+1$ black hole \cite[sec.\,9.1.4]{QuantumEffects} described by the line element given by \ref{eq: Schwarzschild line element}, the Klein-Gordon equation would not be $\partial^\mu\partial_\nu\phi=0$, but would have an effective potential
+If one were to consider a $3+1$ black hole \cite[sec.\,9.1.4]{QuantumEffects} described by the line element given by \ref{eq: Schwarzschild line element}, the Klein-Gordon equation would not be $\partial^\mu\partial_\nu\phi=0$, but would have an effective potential
 \begin{equation}
 	\mathcal{V}_{\text{eff}}\equiv\left(1-\frac{R_S}{r}\right)\left[\frac{R_S}{r^3}+\frac{l(l+1)}{r^2}\right],
 \end{equation}
-$l$ being the quantum orbital angular momentum of the state. The effect of such potential is such that an escaping wave, upon reaching $r\to\infty$ would have changed its frequency $\Omega$, reason for which \ref{eq: Bose Distribution Unruh} would be affected by some greybody factor $\Gamma(\Omega)$ 
+with $l$ being the quantum orbital angular momentum of the state. The effect of said potential is such that an escaping wave, upon reaching $r\to\infty$, would have changed its frequency $\Omega$, which is why equation \ref{eq: Bose Distribution Unruh} would be affected by a greybody factor $\Gamma(\Omega)$ 
 \begin{equation}
 	N_\Omega\propto\frac{\Gamma(\Omega)}{e^{\sfrac{\Omega}{k_BT_{\text{Hawking}}}}-1}\delta(\mathbf{0}).
 \end{equation}
+\newpage
 \subsection{Black Hole Thermodynamics}
-Once it has been proven that an observer can detect an emission of particles from a black hole, the question of the origin of the required energy for the creation of such particles arises. One can consider that the energy required to create Unruh particles can come from the energy used for the continuous acceleration, but this cannot be the answer for the Hawking radiation, since both observers are free falling. Therefore the only possible answer must be that the particles extract their energy directly from the black hole; meaning that a black hole must be in thermodynamic equilibrium with the field. This reasoning can be used to deduce the evolution of black holes; as stated before, black holes can be described univocally by three parameters, and thus, its entropy fundamental relation can be written as
+Once it has been proven that an observer can detect an emission of particles from a black hole, the question of the origin of the required energy for the creation of such particles arises. One can consider that the energy required to create Unruh particles can come from the energy used for continuous acceleration, but this cannot be the answer for the Hawking radiation, since both observers are free-falling. Therefore the only possible answer must be that the particles extract their energy directly from the black hole, meaning that a black hole must be in thermodynamic equilibrium with the field. This reasoning can be used to deduce the evolution of black holes; as stated before, black holes can be described univocally by three parameters, and thus, its  fundamental entropy relation can be written as
 \begin{equation}
 	\td S=\left(\frac{\partial S}{\partial M}\right)\td M+\left(\frac{\partial S}{\partial J}\right)\td J+\left(\frac{\partial S}{\partial Q}\right)\td Q.
 \end{equation}
-For a Schwarzschild black hole, this relation simplifies (since $Q=J=0$); and considering that the energy must equal $Mc^2$, then one can deduce the so called Bekenstein-Hawking \footnote{In reality, they presented their result not as a function of the mass $M$, but as a function of the surface area $A$, and thus, the proper Bekenstein-Hawking entropy would be $S_{BH}=\sfrac{c^3k_B}{\hbar G}A$.} entropy 
+For a Schwarzschild black hole, this relation simplifies (since $Q=J=0$), and considering that the energy must equal $Mc^2$, then one can deduce the so-called Bekenstein-Hawking \footnote{In reality, they presented their result not as a function of the mass $M$, but as a function of the surface area $A$, and thus, the proper Bekenstein-Hawking entropy would be $S_{BH}=\sfrac{c^3k_B}{\hbar G}A$.} entropy 
 \begin{equation}
 	\td S=\frac{c^2}{T_{\text{Hawking}}}\td M\implies S_{\text{BH}}=\frac{4\pi Gk_B}{\hbar c}M^2.
 \end{equation}
 
-Since we are considering that the field extracts energy from the black hole, and the energy of the black hole is proportional to its mass; it is then clear that the black hole must be loosing mass. One can easily deduce the temporal mass expression considering the black hole as a black body, and thus following the Stefan-Boltzmann law for the luminosity $L$, i.e.
+Since we are considering that the field extracts energy from the black hole, and the energy of the black hole is proportional to its mass, it is then clear that the black hole must be losing mass. One can easily deduce the temporal mass expression considering the black hole as a black body, and thus following the Stefan-Boltzmann law for the luminosity $L$, i.e.
 \begin{equation}
 	L\equiv-c^2\frac{\td M}{\td t}=\epsilon A \sigma T^4_{\text{Hawking}}
 \end{equation}
-where $\sigma$ its the Stefan-Boltzmann constant and $\epsilon$ is a factor of correction for possible greybody effects and deviations from the use of the electromagnetic field (mostly lose of degrees of freedom). Solutions of such differential equation are
+where $\sigma$ is the Stefan-Boltzmann constant and $\epsilon$ is a factor of correction for possible greybody effects and deviations from the use of the electromagnetic field (mostly loss of degrees of freedom). Solutions of such differential equation are
 \begin{subequations}
 	\begin{gather}
 		M(t)=M_0\left(1-\frac{t}{t_{BH}}\right)^{\sfrac{1}{3}},\quad t_{BH}\equiv 5120\frac{\pi G^2}{\epsilon\hbar c^4}M_0^3.\tag{\theequation \,\,a,b}
 	\end{gather}
 \end{subequations}
-To get an idea of the strength of such radiation, lets consider an average stellar black hole (the most numerous type), which masses around $100M_\odot$; considering that at $t=0$, a black hole has that mass, it would have lost all of it (it is said to have ``evaporated") in about $\sim 2.1\cdot10^{73}$ years, an unfathomable magnitude comparable to the age of the universe ($13.7\cdot 10^{9}$ years).
+To get an idea of the strength of said radiation, lets consider an average stellar black hole (the most numerous type), which masses around $100M_\odot$; considering that at $t=0$, a black hole has that mass, it would have lost all of it (it is said to have ``evaporated") in about $\sim 2.1\cdot10^{73}$ years, an unfathomable magnitude comparable to the age of the universe ($13.7\cdot 10^{9}$ years).

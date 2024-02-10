@@ -1,34 +1,35 @@
-Up to this moment, we have focused on the phenomenology of the quantum fields over the classical backgrounds; but we must not forget the dynamics of the gravitational field $g_{\mu\nu}$, given by equations of motion \ref{eq: Electromagnetic action}. This equations show that the source of gravitational dynamics is the energy-momentum tensor given by equation \ref{eq: Hilbert energy-momentum tensor}; but its here where we find a conundrum, since we are considering quantum fields, the tensor must be a quantum operator, even though the metric remains a classical quantity. The unification of both model is one of the most sought after theories of physics, and well out of scope of this thesis; therefore for what remains to be exposed, the so called semiclassical approximation will be used. This model considers both classical gravity and quantum fields, but imposes the hypothesis that the source of the gravity dynamics is given by the expected value of the energy-momentum tensor $\left\langle T_{\mu\nu}\right\rangle$, i.e.
+Up to this moment, we have focused on the phenomenology of the quantum fields on classical backgrounds; but we must not forget the dynamics of the gravitational field $g_{\mu\nu}$, given by equations of motion \ref{eq: Electromagnetic action}. These equations show that the source of gravitational dynamics is the energy-momentum tensor given by equation \ref{eq: Hilbert energy-momentum tensor}; but then a conundrum arises:  since we are considering quantum fields, the tensor must be a quantum operator, even though the metric remains a classical quantity. The unification of both models is one of the most sought after theories of Physics, and well out of scope of this thesis; therefore for the remaining sections, the so-called semiclassical approximation will be used. This model considers both classical gravity and quantum fields, but imposes the hypothesis that the source of the gravity dynamics is given by the expected value of the energy-momentum tensor $\left\langle T_{\mu\nu}\right\rangle$, i.e.
 \begin{equation}
 	R_{\mu\nu}-\frac{1}{2}g_{\mu\nu}R+\Lambda g_{\mu\nu}=\frac{8\pi G}{c^4}\left\langle T_{\mu\nu}\right\rangle.
 \end{equation}
-Here we found another problem, that is to correctly define this expected value from a classical view, which would mean to define what will be known as the effective action $W$; to be used as the matter action on the definition given by equation \ref{eq: Hilbert energy-momentum tensor}. This ad hoc hypothesis will result on other problems that will be solved  in the following sections.
+Here we encounter another problem, which is to correctly define this expected value from a classical perspective, which would entail defining what we know as the effective action $W$; to be used as the matter action on the definition given by equation \ref{eq: Hilbert energy-momentum tensor}. This ad hoc hypothesis will result in other problems that will be solved  in the following sections.
+\vspace{0.25cm}
 \section{The Effective Action $W$}
-To demonstrate the methodology, is sufficient to consider the vacuum expectation of a scalar field, which is described by the action presented at equation \ref{eq: General scalar field action}. To obtain the vacuum expectation value of $T_{\mu\nu}$, we use the path integral formulation of quantum field theory, where it can be computed as
+To demonstrate the methodology, it is sufficient to consider the vacuum expectation of a scalar field, which is described by the action presented in equation \ref{eq: General scalar field action}. To obtain the vacuum expectation value of $T_{\mu\nu}$, we use the path integral formulation of QFT, where it can be computed as
 \begin{equation}\label{eq: General effective action definition}
 	\langle T_{\mu\nu}\rangle =\frac{\int \mathcal{D}[\phi]\,T_{\mu\nu}\,e^{iS_\text{M}[\phi]\hbar^{-1}}}{\int \mathcal{D}[\phi]\,e^{iS_\text{M}[\phi]\hbar^{-1}}}\equiv \frac{-2}{\sqrt{-g}}\frac{\delta W}{\delta g^{\mu\nu}},
 \end{equation}
-the last equality will be the proper definition of the effective action $W$, the choice of such expression is done so it mimics the energy momentum tensor described by equation \ref{eq: Hilbert energy-momentum tensor}.
+the last equality will be the proper definition of the effective action $W$, action W, chosen so that it mimics the energy momentum tensor described by equation \ref{eq: Hilbert energy-momentum tensor}.
 
 It is possible to compute $W$ as a closed expression, to do this, consider the generating functional $Z[J]$ defined as
 \begin{equation}
 	Z[J]\equiv \int \mathcal{D}[\phi]\,\exp{\{iS_\text{M}[\phi]\hbar^{-1}+i\int\td^4J(x)\phi(x)\}};
 \end{equation}
-where $J(x)$ is some possible external current that will be consider zero for the following treatment. Substituting the definition of $T_{\mu\nu}$ (again, expression \ref{eq: Hilbert energy-momentum tensor}) on the previous equation, one finds the following relation
+where $J(x)$ is a possible external current that will be considered zero for the following treatment. Substituting the definition of $T_{\mu\nu}$ (again, expression \ref{eq: Hilbert energy-momentum tensor}) on the previous equation, one finds the following relation
 \begin{equation}
 	\langle T_{\mu\nu}\rangle=\frac{-2}{Z[0]\sqrt{-g}}\int \mathcal{D}[\phi]\,\frac{\delta S_\text{M}[\phi]}{\delta g^{\mu\nu}}\,e^{iS_\text{M}[\phi]\hbar^{-1}}=\frac{2i\hbar}{Z[0]\sqrt{-g}}\frac{\delta Z[0]}{\delta g^{\mu\nu}},
 \end{equation}
-comparing this expression with the definition on equation \ref{eq: General effective action definition}, it its easily solvable that
+comparing this expression with the definition in equation \ref{eq: General effective action definition}, it its easily solvable that
 \begin{equation}\label{eq: Effective Action Z[0]}
 	W=-i\hbar \ln\left( \frac{Z[0]}{\mu_0\hbar^{\sfrac{1}{2}}}\right)+\text{C};
 \end{equation}
-where we have introduced an integral constant C, and a constant $\mu_0$ with the same units as $\mu$ (that is, inverse of length), in order to maintain the argument of the logarithm dimensionless.
+where we have introduced an integral constant C, and a constant $\mu_0$ with the same units as $\mu$ (that is, inverse of length), in order to ensure that the argument of the logarithm remains dimensionless
 
-Since we are considering a particular field action, $W$ can be simplified even further, considering that the action $S_\text{M}[\phi]$ given by equation \ref{eq: General scalar field action} can be written as
+Since we are considering a particular field action, $W$ can be simplified even further, given that the action $S_\text{M}[\phi]$ given by equation \ref{eq: General scalar field action} can be written as
 \begin{equation}
 	S_\text{M}[\phi]=\frac{1}{2}\int\partial_\nu\!\left[\sqrt{-g}\,\phi\,\partial^\nu\!\phi\right]\td^4x-\int\frac{1}{2}\phi\left[\partial_\nu\partial^\nu+\mu^2+\xi R\right]\phi\,\sqrt{-g}\,\td^4x,
 \end{equation}
-where the first term is a total derivative and thus can be dropped. Next we could use the Dirac delta function to write
+where the first term is a total derivative and thus can be dropped. Then we can use the Dirac delta function to write
 \begin{equation}
 	\phi(x)=\int\phi(y)\frac{\delta^4(x-y)}{\sqrt{-g(x)}}\sqrt{-g(y)}\,\td^4 y;
 \end{equation}
@@ -37,19 +38,20 @@ meaning that the action might be expressed as
 	S_\text{M}[\phi]=-\frac{1}{2}\int\sqrt{-g(x)}\,\td^4x\int\phi(x)K(x,y)\phi(y)\sqrt{-g(y)}\,\td^4 y;
 \end{equation}
 where we defined the function
-$K(x,y)\equiv \left[\partial_\nu\partial^\nu+\mu^2+\xi R(x)\right]\delta^4(x-y)\sfrac{}{\sqrt{-g(x)}}$. But what exactly represents $K(x,y)$? Well, considering the definition of an inverse matrix
+$K(x,y)\equiv \left[\partial_\nu\partial^\nu+\mu^2+\xi R(x)\right]\delta^4(x-y)\sfrac{}{\sqrt{-g(x)}}$. But what exactly does $K(x,y)$ represent? Considering the definition of an inverse matrix
 \begin{equation}
 	\int K(x,y)K^{-1}(y,z)\,\sqrt{-g(y)}\,\td^4y=\frac{\delta^4(x-z)}{\sqrt{-g(z)}},
 \end{equation}
 one ends up with the following relation
 \begin{equation}
-	\left[\partial_\nu\partial^\nu+\mu^2+\xi R(x)\right]K^{-1}(x,z)=\frac{\delta^4(x-z)}{\sqrt{-g(z)}};
+	\left[\partial_\nu\partial^\nu+\mu^2+\xi R(x)\right]K^{-1}(x,z)=\frac{\delta^4(x-z)}{\sqrt{-g(z)}}.
 \end{equation}
-which is the definition of the Feynman propagator $G_F(x,z)$, meaning that
+
+This expression can be seen (provided that the appropriate boundary conditions at the poles of its Fourier transform are met) as the action of the (linear) differential operator $\left[\partial_\nu\partial^\nu+\mu^2+\xi R(x)\right]$ on a Green function $-K^{-1}(x,z)$; in particular, it represents the relation between said operator and the Feynman propagator $G_F(x,z)\equiv -i\langle 0|\text{T}\left(\phi(x)\phi(z)\right)|0\rangle$, meaning that
 \begin{equation}
 	K(x,y)=-G_F^{-1}(x,y).
 \end{equation}
-Using this relation, we can write the action as
+Using this relation, we can express the action as
 \begin{equation}
 	S_\text{M}[\phi]=\frac{1}{2}\int\sqrt{-g(x)}\,\td^4x\int\phi(x)G_F^{-1}(x,y)\phi(y)\sqrt{-g(y)}\,\td^4 y,
 \end{equation}
@@ -57,7 +59,7 @@ which can be interpreted as the product of matrices of continuous index $\phi^\d
 \begin{equation}
 	Z[0]=\int\mathcal{D}[\phi]\,\exp{\left\{i\frac{\phi^\dagger G_F^{-1}\phi}{2\hbar}\right\}}\propto\left[\hbar^{-1}\,\text{det}\left(-G_F\right)\right]^{-\sfrac{1}{2}}.
 \end{equation}
-Substituting this value in equation \ref{eq: Effective Action Z[0]}, and by appropriately choosing the value of the constant C to compensate for the proportionality factor \footnote{Nevertheless, if another choice were to be made, the sum of both the constant C and the logarithm of the proportionality factor, is not a function of the metric, and thus, it is irrelevant under variations of $g_{\mu\nu}$.}, one can deduce the following expression for the effective action
+Substituting this value in equation \ref{eq: Effective Action Z[0]}, and by appropriately choosing the value of the constant C to compensate for the proportionality factor \footnote{Nevertheless, if another choice were to be made, the sum of both the constant C and the logarithm of the proportionality factor is not a function of the metric, and thus, it is irrelevant under variations of $g_{\mu\nu}$.}, one can deduce the following expression for the effective action
 \begin{equation}\label{eq: Effective action W propagator}
 	W=-\frac{i\hbar}{2}\ln\left[\mu_0^{-2} \,\text{det}\left(-G_F\right)\right]=-\frac{i\hbar}{2}\text{Tr}\left[\ln\left(-\mu_0^{-2}G_F\right)\right].
 \end{equation}
@@ -67,15 +69,20 @@ Here we introduced the trace of the operator $\ln\left(-\mu_0^{-2}G_F\right)$, t
 \end{equation}
 which will be relevant in what follows.
 \subsection{Renormalization}
-Even for a flat background, it is well known that the energy-momentum tensor is divergent in nature; the main representative of such property is the vacuum energy (for example, one might see the Hamiltonian given by \ref{eq: Expanding Hamiltonian}). The usual workaround in standard quantum field theory, is to disregard the divergent terms, since the only physical relevant quantities are the differences in energy; this, obviously cannot be done when considering gravitational dynamics; but as we will show, this is not needed when the gravitational field is considered. 
-
-We use the dimensional regularization procedure in what follows, for which we would need to use the DeWitt-Schwinger representation of the propagator, given by
+Even for a flat background, it is well known that the energy-momentum tensor is divergent in nature; the main representative of said property is the vacuum energy (for example, one might see the Hamiltonian given by \ref{eq: Expanding Hamiltonian}). The solution to this issue is obtained by a renormalization program, in particular we use the dimensional regularization procedure in what follows, for which we would need to use the DeWitt-Schwinger representation of the propagator, given by
 \begin{equation}
-	G_F^{\text{DS}}(x,y)\equiv -i\frac{\Delta^{1/2}(x,y)}{(4\pi)^{\sfrac{(d+1)}{2}}}\int^\infty_0F(x,y;is)\exp{\left[-is\mu^2+\frac{\sigma(x,y)}{2is}\right]}(is)^{-\sfrac{(d+1)}{2}}\,\td (is);
+	G_F^{\text{DS}}(x,y,\mu)\equiv -i\frac{\Delta^{1/2}(x,y)}{(4\pi)^{\sfrac{(d+1)}{2}}}\int^\infty_0F(x,y;is)\exp{\left[-is\mu^2+\frac{\sigma(x,y)}{2is}\right]}(is)^{-\sfrac{(d+1)}{2}}\,\td (is);
 \end{equation}
-where $d$ indicates the number of spacial dimensions, $\Delta(x,y)\equiv -\text{det}\left[\partial_\mu\partial^\nu\sigma(x,y)\right]\left[g(x)g(y)\right]^{-\sfrac{1}{2}}$ is the so called Van Vleck determinant, $\sigma(x,y)\equiv\sfrac{1}{2}\left(x-y\right)^2$ is one half of the proper distance between two events $x$ and $y$ and $F(x,y;is)$ is a geometry-dependent function, which will be expanded as a power series of $(is)^n$; more information of such representation can be found in an annex.
+more information on this representation can be found in the appendix; as for now, the following definitions might be needed:
+\begin{itemize}
+	\item $d$ indicates the number of spacial dimensions.
+	\item $\Delta(x,y)\equiv -\text{det}\left[\partial_\mu\partial^\nu\sigma(x,y)\right]\left[g(x)g(y)\right]^{-\sfrac{1}{2}}$ is the so-called Van Vleck determinant.
+	\item $\sigma(x,y)$ is one half of the squared geodesic distance between two events $x$ and $y$.
+	\item $F(x,y;is)$ is a geometry-dependent function, which will be expanded as a power series of $(is)^n$.
+\end{itemize}
 
-Now, the propagator $G_F$ can be written as,
+
+The usefulness of said representation is apparent once the propagator $G_F$ is written in the following integral form
 \begin{equation}
 	G_F=-K^{-1}=-\int_0^\infty e^{-is K}\td (is),
 \end{equation}
@@ -85,40 +92,40 @@ which can be compared to the DeWitt-Schwinger representation to deduce the follo
 \end{equation}
 which in turn implies that
 \begin{equation}
-	\left\langle x\left|(is)^{-1}e^{-isK}\right|y\right\rangle=i\int_{\mu^2}^\infty\frac{\Delta^{1/2}(x,y)}{(4\pi)^{\sfrac{(d+1)}{2}}}F(x,y;is)\exp{\left[-is\mu^2+\frac{\sigma(x,y)}{2is}\right]}(is)^{-\sfrac{(d+1)}{2}}\,\td \left(\mu^2\right).
+	\left\langle x\left|(is)^{-1}e^{-isK}\right|y\right\rangle=i\int_{\mu^2}^\infty\frac{\Delta^{1/2}(x,y)}{(4\pi)^{\sfrac{(d+1)}{2}}}F(x,y;is)\exp{\left[-is\,m^2+\frac{\sigma(x,y)}{2is}\right]}(is)^{-\sfrac{(d+1)}{2}}\,\td m^2.
 \end{equation}
 
 The connection with the effective action $W$ given by equation \ref{eq: Effective action W propagator} comes from the exponential integral function, since
 \begin{equation}
 	\int_0^\infty(is)^{-1}e^{-is K}\td(is)=-\ln\left(\mu_0^2\,K\right)+\text{C}'=\ln\left(-\mu^{-2}_0\,G_F\right)+\text{C}';
 \end{equation}
-therefore, with the trace definition given in equation \ref{eq: Trace definition}, one deduces that the effective action can be written as the following function of the DeWitt-Schwinger representation of the propagator,
+therefore, with the trace definition given in equation \ref{eq: Trace definition}, one deduces that the effective action can be expressed as the following function of the DeWitt-Schwinger representation of the propagator,
 \begin{equation}
-	W=\frac{i\hbar}{2}  \int_{\mu^2}^\infty \td \left(\mu^2\right)\int G_F(x,x)\,\,\sqrt{-g(x)}\,\td^4x;
+	W=\frac{i\hbar}{2}  \int_{\mu^2}^\infty \td m^2\int G_F(x,x,m)\,\,\sqrt{-g(x)}\,\td^4x;
 \end{equation}
 from which one can define its Lagrangian,
 \begin{equation}
-	\mathcal{L}_{\text{eff}}\equiv \lim\limits_{y\to x}\frac{i\hbar c}{2}\int_{\mu^2}^\infty G_F^{\text{DS}}(x,y)\,\td\left(\mu^2\right);
+	\mathcal{L}_{\text{eff}}\equiv \lim\limits_{y\to x}\frac{i\hbar c}{2}\int_{\mu^2}^\infty G_F^{\text{DS}}(x,y, m)\,\td m^2;
 \end{equation}
-rom which we will base the renormalization procedure.
+from which we will base the renormalization procedure.
 
 
-The dimensional renormalization considers a theory with some spacial dimension $d$, which at the end will approach the value $d=3$; here we must consider the units of each quantity, since we desire that they remain the same of the $3+1$ case; upon integration of the last expression, one obtains 
+The dimensional renormalization considers a theory with some spacial dimension $d$, which at the end will approach the value $d=3$. Here we must consider the units of each quantity, since we desire that they remain the same of the $3+1$ case; upon integration of the last expression, one obtains 
 \begin{equation}
 	\mathcal{L}_{\text{eff}}=\lim\limits_{y\to x}\frac{\hbar c}{2\mu_0^{d-3}}\frac{\Delta^{1/2}(x,y)}{(4\pi)^{\sfrac{(d+1)}{2}}}\int^\infty_0F(x,y;is)\exp{\left[-is\mu^2+\frac{\sigma(x,y)}{2is}\right]}(is)^{-\sfrac{(d+3)}{2}}\,\td (is);
 \end{equation}
-where the term $\mu_0^{d-3}$ was introduced so that the units of $\mathcal{L}_{\text{eff}}$ remain to be the same as for $d=3$ (note that for such case, the term equals 1 with no units). Considering the values of $d$ for which this expression is convergent, and taking the limit $y\to x$; we can expand the function $F(x;is)$ as a power series of the form
+where the term $\mu_0^{d-3}$ was introduced so that the units of $\mathcal{L}_{\text{eff}}$ remain the same as for $d=3$ (note that for such case the term equals 1 with no units). Considering the values of $d$ for which this expression is convergent, and taking the limit $y\to x$; we can expand the function $F(x;is)$ as a power series of the form
 \begin{equation}
 	F(x;is)\approx \sum_{n=0}^\infty a_n(x)(is)^n;
 \end{equation}
 and obtain the following expression of the effective Lagrangian
-\begin{multline}
+\begin{multline}\label{eq: Effective lagrangian Gamma}
 	\mathcal{L}_{\text{eff}}=\frac{\hbar c}{2\mu_0^{d-3}}\frac{1}{(4\pi)^{\sfrac{(d+1)}{2}}}\sum_{n=0}^\infty a_n(x)\int^\infty_0\exp{\left(-is\mu^2\right)}(is)^{n-\sfrac{(d+3)}{2}}\,\td (is)=\\
 	=\frac{\hbar c}{2(4\pi)^{\sfrac{(d-1)}{2}}}\left(\frac{\mu}{\mu_0}\right)^{(d-3)}\sum_{n=0}^{\infty}a_n(x)\mu^{2(2-n)}\Gamma\left(n-\frac{d+1}{2}\right).
 \end{multline}
 
-Now we can pinpoint the divergences of the Lagrangian, which come from the terms proportional to $a_0(x),\,a_1(x)$ and $a_2(x)$ since the gamma functions diverge at those values of $n$ at the limit $d\to 3$ as follows:
-\begin{subequations}
+Now we can pinpoint the divergences of the Lagrangian, which come from the terms proportional to $a_0(x),\,a_1(x)$ and $a_2(x)$ since the Gamma functions diverge at those values of $n$ at the limit $d\to 3$ as follows:
+\begin{subequations}\label{eq: Gamma Expansion}
 	\begin{gather}
 		\Gamma\left(-\frac{d+1}{2}\right)=\frac{4}{d^2-1}\left(\frac{2}{3-d}-\gamma\right)+\mathcal{O}(d-3),\\
 		\Gamma\left(1-\frac{d+1}{2}\right)=\frac{2}{1-d}\left(\frac{2}{3-d}-\gamma\right)+\mathcal{O}(d-3),\\
@@ -126,8 +133,8 @@ Now we can pinpoint the divergences of the Lagrangian, which come from the terms
 	\end{gather}
 \end{subequations}
 
-From this, one can define the divergent term $\mathcal{L}_{\text{eff}}^\infty$ of the Lagrangian as\footnote{To obtain such expression, one must consider the following representation $$\left(\frac{\mu}{\mu_0}\right)^{d-3}=1+(d-3)\ln\left(\frac{\mu}{\mu_0}\right)+\mathcal{O}\left[(d-3)^2\right]$$}
-\begin{equation}
+From this, one can define the divergent term $\mathcal{L}_{\text{eff}}^\infty$ of the Lagrangian as\footnote{To obtain this expression, one must consider the following representation $$\left(\frac{\mu}{\mu_0}\right)^{d-3}=1+(d-3)\ln\left(\frac{\mu}{\mu_0}\right)+\mathcal{O}\left[(d-3)^2\right]$$}
+\begin{equation}\label{eq: Div effective lagrangian}
 	\mathcal{L}_{\text{eff}}^\infty=-\lim\limits_{d\to 3}\frac{\hbar c}{2(4\pi)^2}\left\{\frac{1}{d-3}+\frac{1}{2}\left[\gamma+2\ln\left(\frac{\mu}{\mu_0}\right)\right]\right\}\left[\mu^4a_0(x)-\mu^2a_1(x)+2a_2(x)\right];
 \end{equation}
 where  $a_0(x),\,a_1(x)$ and $a_2(x)$ are given by the following equations
@@ -137,28 +144,28 @@ where  $a_0(x),\,a_1(x)$ and $a_2(x)$ are given by the following equations
 		a_2(x)=\frac{1}{180}\left(R_{\alpha\beta\gamma\sigma}R^{\alpha\beta\gamma\sigma}-R_{\alpha\beta}R^{\alpha\beta}\right)-\frac{1}{6}\left(\frac{1}{5}-\xi\right)\partial_\nu\partial^\nu R+\frac{1}{2}\left(\frac{1}{6}-\xi\right)^2R^2;\tag{\theequation \,\,c}
 	\end{gather}
 \end{subequations}
-which are dependent of the metric geometry.
+which are dependent on the metric geometry.
 
-As we previously mentioned, we do not need to disregard the divergent terms of the theory, since they should be felt by the gravitational field; to solve this problem, one should pay attention to the geometry dependence of the divergence terms, finding that they could be reabsorbed into the Einstein field equations. Considering that the gravitational Lagrangian is given by $\mathcal{L}_G\equiv \sfrac{1}{2\kappa}\left(R-\Lambda\right)$, then we could define an effective gravitational Lagrangian as 
+As previously mentioned, we do not need to disregard the divergent terms of the theory, since they should be felt by the gravitational field; to solve this problem, one should pay attention to the geometry dependence of the divergence terms, finding that they could be reabsorbed into the Einstein field equations. Considering that the gravitational Lagrangian is given by $\mathcal{L}_G\equiv \sfrac{1}{2\kappa}\left(R-\Lambda\right)$, then we could define an effective gravitational Lagrangian as 
 \begin{equation}
-	\mathcal{L}_{\text{G}}'\equiv\mathcal{L}_{\text{G}}-\mathcal{L}_{\text{eff}}=\left(A+\frac{1}{2\kappa}\right)R-\left(B+\frac{1}{\kappa}\Lambda\right)-\lim\limits_{d\to 3}\frac{a_2(x)\hbar c}{(4\pi)^2}\left\{\frac{1}{d-3}+\frac{1}{2}\left[\gamma+2\ln\left(\frac{\mu}{\mu_0}\right)\right]\right\};
+	\mathcal{L}_{\text{G}}'\equiv\mathcal{L}_{\text{G}}-\mathcal{L}_{\text{eff}}^\infty=\left(A+\frac{1}{2\kappa}\right)R-\left(B+\frac{1}{\kappa}\Lambda\right)-\lim\limits_{d\to 3}\frac{a_2(x)\hbar c}{(4\pi)^2}\left\{\frac{1}{d-3}+\frac{1}{2}\left[\gamma+2\ln\left(\frac{\mu}{\mu_0}\right)\right]\right\};
 \end{equation}
-where two new (divergent) quantities where defined, 
+where two new (divergent) quantities were defined, 
 \begin{subequations}\label{eq: Effective Gravitational lagrangian}
 	\begin{gather}
-		A\equiv \lim\limits_{d\to 3}\frac{\mu^2\,\hbar c}{2(4\pi)^2}\left(\frac{1}{6}-\xi\right)\left\{\frac{1}{d-3}+\frac{1}{2}\left[\gamma+2\ln\left(\frac{\mu}{\mu_0}\right)\right]\right\},\\
-		B\equiv \lim\limits_{d\to 3}\frac{\mu^4\,\hbar c}{2(4\pi)^2}\left\{\frac{1}{d-3}+\frac{1}{2}\left[\gamma+2\ln\left(\frac{\mu}{\mu_0}\right)\right]\right\}.
+		A\equiv \lim\limits_{d\to 3}\frac{\mu^2\,\hbar c}{2(4\pi)^2}\left(\frac{1}{6}-\xi\right)\left\{\frac{1}{d-3}+\frac{1}{2}\left[\gamma+2\ln\left(\frac{\mu}{\mu_0}\right)\right]\right\},\tag{\theequation \,\,a}\\
+		B\equiv \lim\limits_{d\to 3}\frac{\mu^4\,\hbar c}{2(4\pi)^2}\left\{\frac{1}{d-3}+\frac{1}{2}\left[\gamma+2\ln\left(\frac{\mu}{\mu_0}\right)\right]\right\}.\tag{\theequation \,\,b}
 	\end{gather}
 \end{subequations}
-Doing so, would allow us to absorb the divergences and renormalize the both the gravitational constant $G$ and the cosmological constant $\Lambda$ as
+Doing so would allow us to absorb the divergences and renormalize both the gravitational constant $G$ and the cosmological constant $\Lambda$ as
 \begin{subequations}
 	\begin{gather}
 		G'\equiv G\left(1+2\kappa A\right)^{-1},\quad \Lambda'\equiv \left(\Lambda+B\kappa\right).\tag{\theequation \,\,a,b}
 	\end{gather}
 \end{subequations}
-But, what is the meaning of such absorption? One might ask how the renormalization can result on the known values of the constants, specially when the added terms are divergent. To answer this question, one must reconsider what is experimentally measured, i.e. the renormalized value $G'$ or the bare constant $G$? Since there is no way of measuring bare constants (since the fields are present even in the vacuum); the only measurable quantities would be the ones we called renormalized; and, as a result, one finds that the bare constants could be also divergent, but never to be measured.  
+But, what is the meaning of such an absorption? One might ask how the renormalization can result in the known values of the constants, specially when the added terms are divergent. To answer this question, one must reconsider what is experimentally measured, the renormalized value $G'$ or the bare constant $G$? Since there is no way of measuring bare constants (given that the fields are present even in the vacuum); the only measurable quantities would be the ones we called renormalized and, as a result, one finds that the bare constants could be also divergent, but never to be measured.  
 
-This absorption might work for the first two divergent terms (that is, $a_0(x)$ and $a_1(x)$), but as one can see at equation \ref{eq: Effective Gravitational lagrangian}, there are terms not present on the Einstein field Lagrangian, so one might ask about this extra term. From the expression of $a_2(x)$, one finds that the geometry dependence is of fourth order of derivatives of $g_{\mu\nu}$; which are not present on standard general relativity, but are considered on modified theories of gravity such as $f(R)$ gravity. In such theories \cite{TFG_Miguel}, the Hilbert action is modified as $S[g]=\int\frac{1}{2\kappa}f(R)\sqrt{-g}\,\td^4x$; where $f(R)$ could depend in an arbitrary number of higher order derivatives; such theories have some attractive qualities such as their renormalizable nature (at the expense of the need of the lost of unitarity as a result of an emergent ghost particle); and the absence of singularities on black hole solutions.
+This absorption might work for the first two divergent terms (that is, $a_0(x)$ and $a_1(x)$), but as shown in equation \ref{eq: Effective Gravitational lagrangian}, there are terms not present in the Einstein field Lagrangian, so one might ask about this extra term. From the expression of $a_2(x)$, one finds that the geometry dependence is of fourth order of derivatives of $g_{\mu\nu}$; which are not present on standard general relativity, but are considered on modified theories of gravity such as four derivatives Stelle theory \cite{Stelle_1978}. In such theories \cite{TFG_Miguel}, the Hilbert action is modified as $S[g]=\int\frac{1}{2\kappa}f(R)\sqrt{-g}\,\td^4x$, where the function $f(R)$ depends on a linear combination of up to four derivatives, usually described as $f(R)\equiv 2\Lambda+R+\alpha R^2-\beta R_{\mu\nu}R^{\mu\nu}$; such theories have some attractive qualities such as their renormalizable nature (at the expense of the need of the loss of unitarity as a result of an emergent ghost particle); and the absence of singularities on black hole solutions.
 
 With this, we can finally define our renormalized theory, given by the following action
 \begin{equation}
@@ -168,6 +175,57 @@ the expression of $W_{\text{ren}}$ is given by (see \cite{BirrelDavies} eq. 6.89
 \begin{equation}
 	W_{\text{ren}}=\int\left[\mathcal{L}_{\text{eff}}-\mathcal{L}_{\text{eff}}^{\infty}\right]\sqrt{-g}\,\td^4 x=-\frac{\hbar}{64\pi^2}\int\int_{0}^\infty\ln(is)\partial_{is}^3\left[F(x;is)e^{-is\mu^2}\right]\sqrt{-g}\,\td(is)\td^4x.
 \end{equation}
-Where we had to introduce higher derivative terms of the metric to be able to properly renormalize the theory, without the need to disregard some terms. 
 \section{The Conformal Anomaly}
-TBD
+As for many other quantum theories, some results resulting from the classical theory might break upon quantization, such is the case of the so-called conformal anomaly that will be discussed in this section.
+
+Considering a conformal scalar field described by the action \ref{eq: General scalar field action} with $\mu=0$ and $\xi=\sfrac{1}{6}$, it is easy to check that the energy momentum tensor is traceless (from equation \ref{eq: Scalar field EnergyMomentum Trace}), that is
+\begin{equation}
+	T_\nu^\nu=\frac{1}{2}\left(6\xi-1\right)\partial_\sigma\partial^\sigma\phi^2+\mu^2\phi^2=0;
+\end{equation}
+but the vacuum expectation of the renormalized trace (which we will simply denote as $\left\langle T^\nu_\nu\right\rangle_{\text{ren}}$) will not be zero.
+
+One can convince oneself that the vacuum expectation of the trace is indeed zero;
+\begin{equation}
+	\left\langle T^\nu_\nu\right\rangle\equiv \left\langle T^\nu_\nu\right\rangle_{\text{div}}+\left\langle T^\nu_\nu\right\rangle_{\text{ren}}=0;
+\end{equation}
+from which one obtains that $\left\langle T^\nu_\nu\right\rangle_{\text{ren}}=-\left\langle T^\nu_\nu\right\rangle_{\text{div}}$. Here we used the labels \textit{div} and \textit{ren} not to tell their finitude; but to determine the origin of those quantities, meaning that $\left\langle T^\nu_\nu\right\rangle_{\text{ren}}$ should be computed from $W_{\text{ren}}$; as we will see, both quantities will be finite.
+
+By doing this, it will be simpler to compute the expression for $\left\langle T^\nu_\nu\right\rangle_{\text{div}}$, from which we will later recover the desired value. To do so, we compute the effective divergent action $W_{\text{div}}$ from the effective divergent Lagrangian $\mathcal{L}_{\text{eff}}^\infty$; from equation \ref{eq: Effective lagrangian Gamma} one can see that the only relevant term for $W_{\text{div}}$ will be the term proportional to $a_2(x)$, resulting in
+\begin{equation}
+	W_{\text{div}}=\frac{\hbar }{2(4\pi)^2}\lim\limits_{\substack{d\to 3 \\ \mu\to 0}}\left(\frac{\mu}{\mu_0}\right)^{(d-3)}\!\!\Gamma\left(2-\frac{d-1}{2}\right)\int\,a_2(x)\sqrt{-g}\,\td^4x.
+\end{equation}
+For a conformal theory, $a_2(x)$ can be written as
+\begin{equation}
+	a_2(x)=\alpha\left[F(x)-\frac{2}{3}\partial_\sigma\partial^\sigma R\right]+\beta G(x)
+\end{equation}
+plus a term proportional to $(d-3)^2$ which will vanish once the limit $d\to 3$ is taken. In this form, the coefficients are $\alpha\equiv\sfrac{1}{120}$ and $\beta\equiv -\sfrac{1}{360}$; and the functions are given by
+\begin{subequations}
+	\begin{gather}
+		F(x)\equiv R^{\alpha\beta\gamma\delta}R_{\alpha\beta\gamma\delta}-2R^{\alpha\beta}R_{\alpha\beta}+\frac{1}{3}R^2,\quad G(x)\equiv R^{\alpha\beta\gamma\delta}R_{\alpha\beta\gamma\delta}-4R^{\alpha\beta}R_{\alpha\beta}+R^2.\tag{\theequation \,\,a,b}
+	\end{gather}	
+\end{subequations}
+To obtain the value of $\left\langle T^\nu_\nu\right\rangle_{\text{div}}$ one needs to compute
+\begin{equation}
+	\left\langle T^\nu_\nu\right\rangle_{\text{div}}\equiv \frac{2g^{\mu\nu}}{\sqrt{-g}}\frac{\delta W_{\text{div}}}{\delta g^{\mu\nu}};
+\end{equation}
+which can be done using the following equalities \cite{Duff77}
+\begin{subequations}
+	\begin{gather}
+		\frac{2g^{\mu\nu}}{\sqrt{-g}}\frac{\delta}{\delta g^{\mu\nu}}\int F(x)\sqrt{-g}\,\td^{d+1}x=-(d-3)\left[F(x)-\frac{2}{3}\partial_\sigma\partial^\sigma R\right],\tag{\theequation \,\,a}\\
+		\frac{2g^{\mu\nu}}{\sqrt{-g}}\frac{\delta}{\delta g^{\mu\nu}}\int G(x)\sqrt{-g}\,\td^{d+1}x=-(d-3)G(x).\tag{\theequation \,\,b}
+	\end{gather}
+\end{subequations}
+The result of said computation is given by the next expression
+\begin{equation}
+	\left\langle T^\nu_\nu\right\rangle_{\text{div}}=\frac{\hbar }{2(4\pi)}\lim\limits_{\substack{d\to 3 \\ \mu\to 0}}\left(\frac{\mu}{\mu_0}\right)^{(d-3)}\!\!\!\!(d-3)\,\Gamma\left(2-\frac{d-1}{2}\right)\left[\alpha\left[F(x)-\frac{2}{3}\partial_\sigma\partial^\sigma R\right]+\beta G(x)\right],
+\end{equation}
+which will deliver the value of $\left\langle T^\nu_\nu\right\rangle_{\text{ren}}$ once its relationship with its \textit{div} counterpart is considered alongside the Gamma function expansion given by equation \ref{eq: Gamma Expansion}.c and the definition of $a_2(x)$ (although there are some ambiguities resulting in the presence of total derivatives \cite{a2Ambig}, \cite{ASOREY}):
+\begin{equation}
+	\left\langle T^\nu_\nu\right\rangle_{\text{ren}}=-\frac{a_2(x)\hbar }{16\pi^2}.
+\end{equation}
+
+As it turns out \cite[sec. 6.4]{BirrelDavies} this is enough information to recover $\left\langle T^\nu_\mu\right\rangle_{\text{ren}}$ (that is, the vacuum expectation value of the tensor, not just its trace) if both the background and the quantum field are conformally flat. As a relevant cosmological example, one can compute the value of said quantity for a de Sitter universe described by a metric given by equation \ref{eq: Conformal FLRW} with a scale factor $a(t)=\exp{(H_\Lambda t)}$, resulting in 
+\begin{equation}
+	\left\langle T^\nu_\mu\right\rangle_{\text{ren}}=\frac{H_\Lambda^4\hbar}{960\pi^2c^4}\delta^\nu_\mu,
+\end{equation}
+which (as expected from a de Sitter Universe) corresponds with a ``dark energy'' with negative pressure $P$ and energy density $\rho=-P=\sfrac{H_\Lambda^4\hbar}{(960\pi^2c^4)}$.

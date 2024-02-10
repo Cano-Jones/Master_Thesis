@@ -14,7 +14,7 @@
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%FRONTMATTER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\frontmatter
-	\input{Frontmatter/Cover}
+	\input{Frontmatter/Cover_AltVersion}
 	\newpage
 	\leavevmode\thispagestyle{empty}
 	\newpage
@@ -24,8 +24,9 @@
 	\input{Frontmatter/Abstract}
 	
 	
-	\pdfbookmark[0]{Table of Contents}{Table of Contents}
+	
 	\tableofcontents
+	\pdfbookmark[0]{Table of Contents}{Table of Contents}
 	\newpage
 	\newchapter{Conventions}
 	\input{Frontmatter/Conventions}
@@ -47,30 +48,33 @@
 	\newchapter{The Unruh Effect}
 	\input{Mainmatter/UnruhEffect}
 	\newpage
-	\newchapter{Problems Relating to $T_{\mu\nu}$}
+	\newchapter{Problems Related to the Energy-Momentum Tensor}
 	\input{Mainmatter/EnergyMomentumTensor}
 	\newpage
-	\newchapter{Final Discussions}
+	\newchapter{Final Discussion}
 	\input{Mainmatter/FinalDiscussion}
 	\bookmarksetup{startatroot}
 	\nocite{*}
 	\bibliography{Biblio} %Fichero de bibliografía
-	\bibliographystyle{plain} %Estilo de bibliografía y cita
+	\bibliographystyle{abbrv} %Estilo de bibliografía y cita
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%BACKMATTER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\backmatter
 	\appendix
-	\pdfbookmark[-1]{Appendix}{Appendix}
+	\pdfbookmark[-1]{Appendices}{Appendices}
 	\pagenumbering{Roman}
-	\newchapter{Scalar field in Minkowski background}
+	\begin{center}
+		\Large{APPENDICES}
+	\end{center}
+\vspace{-0.5cm}
+	\newchapter{Scalar Field in Minkowski Background}
 	\input{Appendix/StandardScalarField}
 	\newpage
 	\newchapter{DeWitt-Schwinger Representation}
 	\input{Appendix/DeWitt}
 	\newpage
-	\newchapter{Questions \& To-Do}
-	\input{Appendix/Dudas}
+	\leavevmode\thispagestyle{empty}
 	
 	
 \end{document}

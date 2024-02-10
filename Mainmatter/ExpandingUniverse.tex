@@ -1,4 +1,4 @@
-The methodology for the analysis of scalar fields in a general manifold was presented in the previous chapter as a  preliminary for the rest of this work, and in particular of the present chapter. It is clear that the presence of symmetries of the theory will simplify computations, and thus, a great start might be an isotropic and homogeneous expanding universe, which is described by the so called Friedmann–Lemaître–Robertson–Walker metric. Using  reduced-circumference polar coordinates, the line element associated with such metric is written as
+The methodology for the analysis of scalar fields in a general manifold was presented in the previous chapter as a  preliminary for the rest of this thesis, and in particular of the present chapter. It is clear that the presence of symmetries of the theory will simplify computations, and thus, a helpful starting point might be an isotropic and homogeneous expanding universe, which is described by the so-called Friedmann–Lemaître–Robertson–Walker metric. Using  reduced-circumference polar coordinates, the line element associated with such metric is written as
 \begin{subequations}\label{eq: FLRW metric}
 	\begin{gather}
 		\td l^2 =c^2\td t^2 -a^2(t)\left[\frac{\td r^2}{1-\kappa r^2}+r^2\td\Omega^2\right],\quad \td\Omega\equiv \td\theta^2+\sin^2\varphi\td\varphi^2,\tag{\theequation \,\,a,b}
@@ -9,33 +9,35 @@ where $\kappa$ is the curvature of the space and $a(t)$ is the scale factor dete
 	R=\frac{6}{c^2}\left[\frac{\ddot{a}}{a}+\left(\frac{\dot{a}}{a}\right)^2\right],
 \end{equation}
 needed for the coupling of the field with gravity as previously stated.
-\section{Expanding scalar field action}
-The Weyl tensor associated to the metric presented in \cref{eq: FLRW metric} is identically zero, meaning that the metric is conformally flat, i.e. independently of the space curvature $\kappa$, and therefore there must exist a coordinate system where
+
+\vspace{0.25cm}
+\section{Expanding Scalar Field Action}
+The Weyl tensor associated to the metric presented in equation \ref{eq: FLRW metric} is identically zero, meaning that the metric is conformally flat, i.e. independent of the space curvature $\kappa$, and therefore there must exist a coordinate system where
 \begin{equation}\label{eq: Conformal FLRW}
-	\td l^2=a^2(\eta)\eta_{\mu\nu}\td x^\mu\td x^\nu=a^2(\eta)\left[c^2\td \eta^2-\td\mathbf{x}^2\right],
+	\td l^2=a^2(\eta)\eta_{\mu\nu}\td x^\mu\td x^\nu=a^2(\eta)\left[c^2\td \eta^2-\td\mathbf{x}^2\right];
 \end{equation}
-working in such coordinate system will give the opportunity to use some results of standard scalar field theory. To do so, the action presented in \cref{eq: General scalar field action} will be rewritten in terms of a new field $\rchi(x)\equiv a(\eta)\,\phi(x)$ using the fact that $\sqrt{-g}=a^4$ 
+working in such coordinate system will give the opportunity to use some results of standard scalar field theory. To do so, the action presented in \cref{eq: General scalar field action} will be rewritten in terms of a new field $\rchi(x)\equiv a(\eta)\,\phi(x)$ using the fact that $\sqrt{-g}=a^4$; this results in
 \begin{equation}
 	S[\rchi]=\int\frac{1}{2}\left[\partial_\nu\rchi\,\partial^\nu\rchi-\left(\mu^2a^2+\xi R a^2-c^2\frac{a''}{a}\right)\rchi^2-\partial_\eta\left(c^2\rchi^2\frac{a'}{a}\right)\right]\td^4 x,
 \end{equation}
 where $a'\equiv \partial_\eta a(\eta)$ and equivalently with $a''$.
 
-Dropping the time derivative will result on the following action for the sacalar $\rchi$ field
+Dropping the total time derivative will result in the following action for scalar field $\rchi$
 \begin{equation}
 	S[\rchi]=\int\frac{1}{2}\Big[\partial_\nu\rchi\,\partial^\nu\rchi-\left(\mu^2a^2+\xi R a^2-c^2\frac{a''}{a}\right)\rchi^2\Big]\td^4 x,
 \end{equation}
-being the main source for the current study. In order to obtain the expressions describing the dynamics of this field, the Euler-Lagrange equations in \cref{eq: Euler-Lagrange} will be used, resulting in the generalized Klein-Gordon equation
+which will be the focus of this chapter. In order to obtain the expressions describing the dynamics of this field, the Euler-Lagrange equations in \cref{eq: Euler-Lagrange} will be used, resulting in the generalized Klein-Gordon equation
 \begin{subequations}\label{eq: Generalized Klein-Gordon}
 	\begin{gather}
-		\left[\partial_\nu\partial^\nu+\mu_{\text{eff}}^2(t)\right]\rchi=0,\hspace{1.0cm}\mu_{\text{eff}}^2(t)=\left(\mu^2+\xi R\right)a^2-\frac{a''}{ac^2}.\tag{\theequation \,\,a,b}
+		\left[\partial_\nu\partial^\nu+\mu_{\text{eff}}^2(\eta)\right]\rchi=0,\hspace{1.0cm}\mu_{\text{eff}}^2(\eta)=\left(\mu^2+\xi R\right)a^2-\frac{a''}{ac^2}.\tag{\theequation \,\,a,b}
 	\end{gather}
 \end{subequations}
 
-Solutions of the \cref{eq: Generalized Klein-Gordon} are dependent on an integration constant related to the momentum $\mathbf{k}$, and are of the form
+Solutions of the equation \ref{eq: Generalized Klein-Gordon} are dependent on an integration constant related to the momentum $\mathbf{k}$, and are of the form
 \begin{equation}
 	\rchi_{\mathbf{k}}(x)=\alpha_\mathbf{k}v_\mathbf{k}(\eta)e^{ -i\mathbf{kx}\hbar^{-1}}+\bar\alpha_\mathbf{k}\bar v_\mathbf{k}(\eta)e^{ i\mathbf{kx}\hbar^{-1}},
 \end{equation}
-and upon substitution in \eqref{eq: Generalized Klein-Gordon}, one gets the following differential equation
+and upon substitution in \eqref{eq: Generalized Klein-Gordon}, one obtains the following differential equation
 \begin{equation}\label{eq: Expanding diff v}
 	v_\mathbf{k}''\,\hbar^2+\omega^2_\mathbf{k}(\eta)\,v_\mathbf{k}=0
 \end{equation}
@@ -44,11 +46,11 @@ where the dispersion relation $\omega_\mathbf{k}(\eta)$ is defined as,
 	\omega^2_{\mathbf k}(\eta)=\mathbf{k}^2+\hbar^2\mu_{\text{eff}}^2(\eta)=\mathbf{k}^2+\left(m^2c^2+\xi\hbar^2 R\right)a^2-\hbar^2\frac{a''}{ac^2}.
 \end{equation}
 
-Solving \cref{eq: Expanding diff v} will in turn give the form of the set of solutions $\left\{\rchi_{\mathbf{k}}\right\}$ needed to describe the general expression of $\rchi(x)$; since we are currently considering general expansion parameters and curvature scalars, the following computations will be made using a general set of $v_\mathbf{k}$ functions. This functions nevertheless have some interesting properties, such as being capable of a choice of normalization, and a constant of motion: the imaginary part of $v_\mathbf{k}\bar{v}_\mathbf{k}'$. Lets check the last statement
+Solving \cref{eq: Expanding diff v} will in turn give the form of the set of solutions $\left\{\rchi_{\mathbf{k}}\right\}$ needed to describe the general expression of $\rchi(x)$; since we are currently considering general expansion parameters and curvature scalars, the following computations will be carried out using a general set of $v_\mathbf{k}$ functions. These functions nevertheless have some interesting properties, such as being capable of a choice of normalization, and a constant of motion: the imaginary part of $v_\mathbf{k}\bar{v}_\mathbf{k}'$. The last statement can be verified by the following computation
 \begin{equation}
-	\frac{\partial}{\partial \eta }\text{Im}(v_\mathbf{k}\bar{v}_\mathbf{k}')=\frac{\partial}{\partial \eta}\left(\frac{v_\mathbf{k}\bar{v}_\mathbf{k}'-\bar v_\mathbf{k}v'_\mathbf{k}}{2i}\right)=\frac{v_\mathbf{k}\bar v_\mathbf{k}'-\bar v_\mathbf{k}v_\mathbf{k}''}{2i}=0
+	\frac{\partial}{\partial \eta }\text{Im}(v_\mathbf{k}\bar{v}_\mathbf{k}')=\frac{\partial}{\partial \eta}\left(\frac{v_\mathbf{k}\bar{v}_\mathbf{k}'-\bar v_\mathbf{k}v'_\mathbf{k}}{2i}\right)=\frac{v_\mathbf{k}\bar v_\mathbf{k}'-\bar v_\mathbf{k}v_\mathbf{k}''}{2i}=0;
 \end{equation}
-last step is result from dispersion relation. Since the functions $v_\mathbf{k}$ are capable to a choice in normalization, we will choose a set of solutions of \cref{eq: Expanding diff v} such that $\text{Im}(v_\mathbf{k}\bar{v}_\mathbf{k}')$ its independent of the momentum $\mathbf{k}$, and equal for all modes, this constant of motion will simply be defined as
+where the last step is result from dispersion relation. Since the functions $v_\mathbf{k}$ are capable of a choice in normalization, we will choose a set of solutions of \cref{eq: Expanding diff v} such that $\text{Im}(v_\mathbf{k}\bar{v}_\mathbf{k}')$ is independent of the momentum $\mathbf{k}$, and equal for all modes, this constant of motion will simply be defined as
 \begin{equation}
 	\text{Im}(v\bar{v}')\equiv \text{Im}(v_\mathbf{k}\bar{v}_\mathbf{k}'),\quad \forall\,\mathbf{k}.
 \end{equation}
@@ -59,18 +61,18 @@ The most general solution $\rchi(x)$ of equation \cref{eq: Generalized Klein-Gor
 \end{equation}
 
 \section{Quantization}
-After promoting the fields to operators, and imposing commutation relations, one gets the following rules for the creation and annihilation operators from equations \ref{eq: general a operator commutator rules}
+After promoting the fields to operators, and imposing commutation relations, one obtains the following rules for the creation and annihilation operators from equations \ref{eq: general a operator commutator rules}.a,b,c
 \begin{subequations}\label{eq: a commutators expanding}
 	\begin{gather}
-		[\hat{a}_\mathbf{k},\hat{a}_\mathbf{q}^\dagger]=\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(v\bar v')}\delta^3(\mathbf{k}-\mathbf{q})\,,\hspace{1.0cm}[\hat{a}_\mathbf{k},\hat{a}_\mathbf{q}]=[\hat{a}_\mathbf{k}^\dagger,\hat{a}_\mathbf{q}^\dagger]=0\tag{\theequation \,\,a-c},
+		[\hat{a}_\mathbf{k},\hat{a}_\mathbf{q}^\dagger]=\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(v\bar v')}\delta^3(\mathbf{k}-\mathbf{q})\,,\hspace{1.0cm}[\hat{a}_\mathbf{k},\hat{a}_\mathbf{q}]=[\hat{a}_\mathbf{k}^\dagger,\hat{a}_\mathbf{q}^\dagger]=0\tag{\theequation \,\,a-c}.
 	\end{gather}
 \end{subequations}
-to be able to verify the value of the proportional factor in \ref{eq: a commutators expanding}.a, lets compute the commutator between $\hat\rchi$ and $\hat\Pi$, i.e.
+To be able to verify the value of the proportional factor in \ref{eq: a commutators expanding}.a, lets compute the commutator between $\hat\rchi$ and $\hat\Pi$, i.e.
 \begin{multline}
 	\left[\hat{\rchi}(\mathbf{x}),\,\hat{\Pi}(\mathbf{y})\right]=\frac{1}{c}\int\frac{\td^3\mathbf{k}\td^3\mathbf{q}}{(2\pi\hbar)^6}\left\{\left[\hat{a}_\mathbf{k},\hat{a}_\mathbf{q}\right]v_\mathbf{k}v'_\mathbf{q}e^{-i\left(\mathbf{kx}+\mathbf{qy}\right)\hbar^{-1}}+\left[\hat{a}_\mathbf{k}^\dagger, \hat{a}_\mathbf{q}^\dagger\right]\bar v_\mathbf{k}\bar v_\mathbf{q}'e^{-i(\mathbf{kx}-\mathbf{qy})\hbar^{-1}}\right.+\\
 	+\left.\left[\hat{a}_\mathbf{k},\hat{a}_\mathbf{q}^\dagger\right] v_\mathbf{k}\bar v'_\mathbf{q}e^{-i(\mathbf{kx}-\mathbf{qy})\hbar^{-1}}-\left[\hat{a}_\mathbf{q},\hat{a}_\mathbf{k}^\dagger\right]\bar v_\mathbf{k}v_\mathbf{q}'e^{i(\mathbf{kx}-\mathbf{qy})\hbar^{-1}}\right\}
 \end{multline}
-using expresions \ref{eq: a commutators expanding} and considering that the proportional factor of \ref{eq: a commutators expanding}.a to be $\alpha$, previous expression simplify to the following one,
+using expresions \ref{eq: a commutators expanding}.a-c and considering that the proportional factor of \ref{eq: a commutators expanding}.a to be $\alpha$, the previous expression simplify to the following one,
 \begin{equation}
 	\left[\hat{\rchi}(\mathbf{x}),\,\hat{\Pi}(\mathbf{y})\right]=\frac{\alpha}{c}\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^6}2i\text{Im}(v_\mathbf{k}\bar v_\mathbf{k}')e^{-i(\mathbf{kx}-\mathbf{qy})\hbar^{-1}};
 \end{equation}
@@ -130,37 +132,41 @@ solving for $v_\mathbf{k}$ gives the following expression
 \begin{equation}
 	v_\mathbf{k}(\eta)=\text{C}\exp{\left[\pm \frac{c}{i\hbar}\int\omega_\mathbf{k}\left(\eta\right)\td \eta\right]},
 \end{equation}
-which is not compatible with \ref{eq: Expanding diff v} except for a time independent dispersion relation $\omega_\mathbf{k}$.
+which is not compatible with \ref{eq: Expanding diff v} except for a time-independent dispersion relation $\omega_\mathbf{k}$.
 
-The last result implies that, at different times, one can (and should) define different vacuum states; and thus, we will define the \textit{instantaneous vacuum state} $|_{(\eta_0)}0\rangle$ as the one that at some time $t_0$ will minimize the energy density. Since all possible states are related by Bogolyubov transformations, finding the instantaneous vacumm state is the same as finding the set of functions $v_\mathbf{f}$ that are simultaneously solution of \ref{eq: Expanding diff v} and minimize
+The last result implies that, at different times, one can (and should) define different vacuum states; and thus, we will define the \textit{instantaneous vacuum state} $|_{(\eta_0)}0\rangle$ as the one that at some time $\eta_0$ will minimize the energy density. Since all possible states are related by Bogolyubov transformations, finding the instantaneous vacumm state is the same as finding the set of functions $v_\mathbf{f}$ that are simultaneously solution of equation \ref{eq: Expanding diff v} and minimize
 \begin{equation}
 	\langle_{(\eta_0)}0|\hat{\mathcal{H}}(\eta_0)|_{(\eta_0)}0\rangle=\rho(\eta_0)\delta^3(\mathbf{0})=\frac{\hbar c^2 \,\delta^3(\mathbf{0})}{4\text{Im}(v\bar v')}\int\td^3\mathbf{k}\,E_\mathbf{k}
 \end{equation}
-To minimise the energy density of the vacuum state is to find the set of functions $v_\mathbf{k}$ that minimise $E_\mathbf{k}$. Suppose that $v_\mathbf{k}$ can be written as
+To minimize the energy density of the vacuum state is to find the set of functions $v_\mathbf{k}$ that minimize $E_\mathbf{k}$. Suppose that $v_\mathbf{k}$ can be written as
 \begin{equation}
 	v_\mathbf{k}=r_\mathbf{k}e^{i\alpha_\mathbf{k}}
 \end{equation}
-since Im$(v\bar v')$ was constant through time
+since Im$(v\bar v')$ was constant through time,
 \begin{equation}
-	r_\mathbf{k}^2\alpha'_\mathbf{k}=-\text{Im}(v\bar v')
+	r_\mathbf{k}^2\alpha'_\mathbf{k}=-\text{Im}(v\bar v').
 \end{equation}
-this means
+This means that
 \begin{equation}
 	E_\mathbf{k}=\left(\frac{1}{\hbar c}\right)^2\left\{\hbar^2\left[r^{'2}_\mathbf{k}+\text{Im}^2\left(v\bar v'\right)\frac{1}{r_\mathbf{k}^2}\right]+\omega^2_\mathbf{k}\,c^2r_\mathbf{k}^2\right\}
 \end{equation}
 the minimum of this function must fulfil $r'_\mathbf{k}(\eta_0)=0$. Now, if $\omega_\mathbf{k}^2(\eta_0)$ and $\text{Im}(v\bar v')$ have the same sign, the minimum of $E_\mathbf{k}$ happens when $r_\mathbf{k}(\eta_0)=\left[\frac{\hbar\text{Im}(v\bar v')}{\omega_\mathbf{k}(\eta_0)\,c}\right]^{1/2}$.
 
 If there is a minimum, then
-\begin{equation}
-	v_\mathbf{k}(\eta_0)=\left[\frac{\hbar\text{Im}(v\bar v')}{\omega_\mathbf{k}(\eta_0)\,c}\right]^{1/2}\!\!\!\!e^{i\alpha_\mathbf{k}(\eta_0)}\hspace{1.0cm}v'_\mathbf{k}(\eta_0)=-c\frac{\omega_\mathbf{k}(\eta_0)}{ih}\,v_\mathbf{k}(\eta_0)
-\end{equation}
+\begin{subequations}
+	\begin{gather}
+		v_\mathbf{k}(\eta_0)=\left[\frac{\hbar\text{Im}(v\bar v')}{\omega_\mathbf{k}(\eta_0)\,c}\right]^{1/2}\!\!\!\!e^{i\alpha_\mathbf{k}(\eta_0)},\hspace{1.0cm}v'_\mathbf{k}(\eta_0)=-c\frac{\omega_\mathbf{k}(\eta_0)}{ih}\,v_\mathbf{k}(\eta_0)\tag{\theequation \,\,a,b}
+	\end{gather}
+\end{subequations}
 under these functions,
+\begin{subequations}
+	\begin{gather}
+		E_\mathbf{k}(\eta_0)=2\frac{\text{Im}(v\bar v')}{\hbar c}\omega_\mathbf{k}(\eta_0),\quad  F_\mathbf{k}(\eta_0)=0;
+	\end{gather}
+\end{subequations}
+meaning that
 \begin{equation}
-	E_\mathbf{k}(\eta_0)=2\frac{\text{Im}(v\bar v')}{\hbar c}\omega_\mathbf{k}(\eta_0)\hspace{1.0cm}F_\mathbf{k}(\eta_0)=0
-\end{equation}
-meaning
-\begin{equation}
-	\hat{\mathcal{H}}(\eta_0)=\text{Im}(v\bar v')\frac{1}{\hbar}\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^3}\left(2\hat{a}_\mathbf{k}^\dagger\hat{a}_\mathbf{k}+\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(v\bar v')}\delta^3(\mathbf{0})\right)\omega_\mathbf{k}(t_0)
+	\hat{\mathcal{H}}(\eta_0)=\text{Im}(v\bar v')\frac{1}{\hbar}\int\frac{\td^3\mathbf{k}}{(2\pi\hbar)^3}\left(2\hat{a}_\mathbf{k}^\dagger\hat{a}_\mathbf{k}+\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(v\bar v')}\delta^3(\mathbf{0})\right)\omega_\mathbf{k}(t_0),
 \end{equation}
 which is equivalent to the standard Hamiltonian for a scalar field without the presence of gravity.
 
@@ -168,13 +174,13 @@ which is equivalent to the standard Hamiltonian for a scalar field without the p
 
 But what is the energy of the instantaneous vacuum at a different time? The relation of such energies can be computed considering that the field at some time $\eta$ can be described as some Bogoliubov transformation of the same field at a time $\eta_0$.
 
-From equations \ref{eq: Bogoliubov Coefficients General} one gets that the Bogoliubov coefficients will be given by
+From equations \ref{eq: Bogoliubov Coefficients General} one deduces that the Bogoliubov coefficients will be given by
 \begin{subequations}
 	\begin{gather}
 		\alpha_{\mathbf{kp}}=\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(v\bar v')}\langle \rchi_\mathbf{k}(\eta_0),\,\rchi_\mathbf{p}(\eta)\rangle,\hspace{1.0cm}\beta_{\mathbf{kp}}=-\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(v\bar v')}\langle \rchi_\mathbf{k}(\eta_0),\,\bar \rchi_\mathbf{p}(\eta)\rangle,\tag{\theequation \,\,a,b}
 	\end{gather}
 \end{subequations}
-and, since the field can be written as $\rchi_\mathbf{k}=v_\mathbf{k}e^{i\mathbf{kx}\sfrac{}{h}}$; from the definition of the binary operation $\langle\cdot,\cdot\rangle$ in expression \ref{eq: General Scalar Inner Product}, one can see that
+and, since the field can be expressed as $\rchi_\mathbf{k}=v_\mathbf{k}e^{i\mathbf{kx}\sfrac{}{h}}$; from the definition of the binary operation $\langle\cdot,\cdot\rangle$ in expression \ref{eq: General Scalar Inner Product}, one can see that
 \begin{subequations}
 	\begin{gather}
 		\alpha_{\mathbf{kp}}\propto \delta^3(\mathbf{k}-\mathbf{p}),\hspace{1.0cm}\beta_{\mathbf{kp}}\propto \delta^3(\mathbf{k}+\mathbf{p}),\tag{\theequation \,\,a,b}
@@ -192,14 +198,14 @@ The energy of the instantaneous vacuum state $|_{(\eta_0)}0\rangle$ at a time $\
 
 
 \begin{equation}
-	\langle_{(\eta_0)}0|\hat{a}^\dagger_\mathbf{k}(\eta)\hat{a}_\mathbf{k}(\eta)|_{(\eta_0)}0\rangle=\Big|\beta_\mathbf{k}\Big|^2\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(v\bar v')}\delta^3(\mathbf{0})
+	\langle_{(\eta_0)}0|\hat{a}^\dagger_\mathbf{k}(\eta)\hat{a}_\mathbf{k}(\eta)|_{(\eta_0)}0\rangle=\Big|\beta_\mathbf{k}\Big|^2\frac{(2\pi\hbar)^3\hbar c}{2\text{Im}(v\bar v')}\delta^3(\mathbf{0});
 \end{equation}
 therefore the energy of the instantaneous vacuum state $|_{(\eta_0)}0\rangle$ at a time $\eta$ is given by
 \begin{equation}
-	\langle_{(\eta_0)}0|\hat{\mathcal{H}}(\eta)|_{(\eta_0)}0\rangle=\delta^3(\mathbf{0})\int\td^3\mathbf{k}\left(\frac{1}{2}+\Big|\beta_\mathbf{k}\Big|^2\right)c\,\omega_\mathbf{k}(\eta)\geq \langle_{(\eta_0)}0|\hat{\mathcal{H}}(\eta_0)|_{(\eta_0)}0\rangle.
+	\langle_{(\eta_0)}0|\hat{\mathcal{H}}(\eta)|_{(\eta_0)}0\rangle=\delta^3(\mathbf{0})\int\td^3\mathbf{k}\left(\frac{1}{2}+\Big|\beta_\mathbf{k}\Big|^2\right)c\,\omega_\mathbf{k}(\eta)\not= \langle_{(\eta_0)}0|\hat{\mathcal{H}}(\eta_0)|_{(\eta_0)}0\rangle.
 \end{equation}
-As expected, the energy density will be bigger at a different time $\eta$ if $\beta_\mathbf{k}\not=0$ for all $\mathbf{k}$, since the definition of $|_{(\eta_0)}0\rangle$ is such state that minimizes the energy density at some particular time $\eta_0$; meaning that at a different time, other state must have a lower energy density.
-\section{Case of Study: de Sitter Universe}
+As expected, the energy density at different times will not be the same, since the definition of $|_{(\eta_0)}0\rangle$ is the state that minimizes the energy density at some particular time, meaning that other state must have a lower energy density at a different time.
+\section{Case Study: de Sitter Universe}
 The de Sitter Universe is a flat FLRW metric with no matter or radiation, but it does have a a positive cosmological constant $\Lambda$. Per the Friedmann equations,
 \begin{equation}
 	\left(\frac{\dot{a}}{a}\right)^2=\frac{8\pi G\rho+\Lambda c^2}{3}-\frac{\kappa c^2}{a^2},\quad \left(\rho=\kappa=0\right)
@@ -208,7 +214,7 @@ the expansion parameter $a(t)$ will be equal to
 \begin{equation}
 	a(t)=a_1e^{H_\Lambda t}+a_2e^{-H_\Lambda t}\;,
 \end{equation}
-where $H_\Lambda=\sqrt{\sfrac{\Lambda c^2}{3}}$ it's the Hubble-Lemaître constant. The most common choice is to set $a_2=0$, and thus, consider an always expanding universe.
+where $H_\Lambda=\sqrt{\sfrac{\Lambda c^2}{3}}$ is the Hubble-Lemaître constant. The most common choice is to set $a_2=0$, and thus, consider an always expanding universe.
 
 The line element describing the motion of particles through this universe is given by
 \begin{equation}
@@ -228,13 +234,13 @@ Now, from equation \ref{eq: FLRW Curvature} one can compute the curvature scalar
 \begin{equation}\label{eq: de Sitter dispersion relation}
 	\omega^2_\mathbf{k}(\eta)=\mathbf{k}^2+\left[\left(\frac{mc^2}{H_\Lambda}\right)^2+2\left(6\xi-1\right)\hbar^2\right]\frac{1}{c^2\eta^2},
 \end{equation}
-from which one might obtain the solutions of the differential equation \ref{eq: Expanding diff v}; to do so it is best to use the following change of variables,
+from which one might obtain the solutions of differential equation \ref{eq: Expanding diff v}; to do so it is best to use the following change of variables,
 \begin{subequations}
 	\begin{gather}
 		s\equiv -k\eta\frac{c}{\hbar},\hspace{1.5cm}v_\mathbf{k}\equiv \sqrt{s}f(s),\tag{\theequation \,\,a,b}
 	\end{gather}
 \end{subequations}
-obtaining the Bessel's differential equation
+obtaining Bessel's differential equation
 \begin{equation}
 	s^2\frac{\td^2f}{\td s^2}+s\frac{\td f}{\td s}+\left(s^2-\nu^2\right)f(s)=0,
 \end{equation}
@@ -242,22 +248,22 @@ with a parameter
 \begin{equation}
 	\nu^2\equiv \left(3-16\xi\right)\frac{3}{4}-\left(\frac{mc^2}{H_\Lambda\hbar }\right)^2.
 \end{equation}
-The solutions of such differential equation are given by the so called Bessel functions of the first kind $J_\nu(s)$ and $Y_\nu(s)$; therefore the $v_\mathbf{k}$ functions can be deduced as
+The solutions of said differential equation are given by the so called Bessel functions of the first kind $J_\nu(s)$ and $Y_\nu(s)$; therefore the $v_\mathbf{k}$ functions can be deduced as
 \begin{equation}\label{eq: de Sitter general v}
-	f(s)=AJ_\nu(s)+BY_\nu(s)\implies v_\mathbf{k}(\eta)=\sqrt{k|\eta|\frac{c}{\hbar}}\left[A_\mathbf{k}J_\nu(k|\eta|\frac{c}{\hbar})+B_\mathbf{k}Y_\nu(k|\eta|\frac{c}{\hbar})\right]
+	f(s)=AJ_\nu(s)+BY_\nu(s)\implies v_\mathbf{k}(\eta)=\sqrt{k|\eta|\frac{c}{\hbar}}\left[A_\mathbf{k}J_\nu(k|\eta|\sfrac{c}{\hbar})+B_\mathbf{k}Y_\nu(k|\eta|\sfrac{c}{\hbar})\right]
 \end{equation}
-For $\nu^2\geq 0$, both $J_\nu$ and $Y_\nu$ will be real functions, but for $\nu<0$ they will be complex functions \cite{BesselComplex}; for simplicity, we will focus on the $\nu\geq 0$ case. In addition, consider that the choice of $\text{Im}(v\bar v')$ will translate in a restriction on the relation between the  $A_\mathbf{k},\,B_\mathbf{k}$ parameters;
+For $\nu^2\geq 0$, both $J_\nu$ and $Y_\nu$ will be real functions, but for $\nu^2<0$ they will be complex functions \cite{BesselComplex}; for simplicity, we will focus on the $\nu^2\geq 0$ case. In addition, consider that the choice of $\text{Im}(v\bar v')$ will translate into a restriction on the relation between the  $A_\mathbf{k},\,B_\mathbf{k}$ parameters;
 \begin{equation}
 	\text{Im}\left(v\bar{v}'\right)=ik^2|\eta|\frac{c}{\hbar}\left(A_\mathbf{k}\bar{B}_\mathbf{k}-\bar{A}_\mathbf{k}B_\mathbf{k}\right)W\left[J_\nu\left(k|\eta|\right),\,Y_\nu\left(k|\eta|\right)\right],
 \end{equation}
-where $W[f,g]\equiv fg'-f'g$ its the Wronskian, particularly \cite[\href{https://dlmf.nist.gov/10.5}{10.5.2}]{DLMF} for the Bessel functions, one gets $W\left[J_\nu\left(s\right),\,Y_\nu\left(s\right)\right]=\frac{2}{\pi s}$
+where $W[f,g]\equiv fg'-f'g$ is the Wronskian, particularly \cite[\href{https://dlmf.nist.gov/10.5}{10.5.2}]{DLMF} for the Bessel functions, one obtains $W\left[J_\nu\left(s\right),\,Y_\nu\left(s\right)\right]=\frac{2}{\pi s}$
 and thus, the relation between the  $A_\mathbf{k},\,B_\mathbf{k}$ parameters will be
 \begin{equation}\label{eq: Relation A B de Sitter}
 	\left(A_\mathbf{k}\bar{B}_\mathbf{k}-\bar{A}_\mathbf{k}B_\mathbf{k}\right)=-i\frac{\pi}{2k}\text{Im}\left(v\bar{v}'\right).
 \end{equation}
-As previously seen, the choice of a set of solutions of the Klein-Gordon equation, defines the choice of a vacuum; an example is the instantaneous vacuum, but for a de Sitter background there is a special choice, the Bunch-Davies vacuum\footnote{Also known as euclidean vacuum.}.
+As previously seen, the choice of a set of solutions of the Klein-Gordon equation defines the choice of a vacuum; an example is the instantaneous vacuum, but for a de Sitter background there is a special choice, the Bunch-Davies vacuum\footnote{Also known as euclidean vacuum.}.
 \subsection{Bunch-Davies Vacuum}
-Consider the behaviour of the field on the distant past, that is, $k|\eta|\to\infty$; at this moment, the dispersion relation \ref{eq: de Sitter dispersion relation} is given by $\omega_\mathbf{k}\approx k$, therefore, the solutions of \ref{eq: Expanding diff v} are given by
+Consider the behaviour of the field in the distant past, that is, $k|\eta|\to\infty$; at this moment, the dispersion relation \ref{eq: de Sitter dispersion relation} is given by $\omega_\mathbf{k}\approx k$, therefore, the solutions of \ref{eq: Expanding diff v} are given by
 \begin{equation}
 	v_\mathbf{k}(\eta)\approx \frac{1}{\sqrt{2\omega_\mathbf{k}}}e^{i\omega_\mathbf{k}\eta},
 \end{equation}
@@ -271,18 +277,18 @@ considering the asymptotic expressions for the Bessel functions \cite[\href{http
 One could easily recover the flat temporal mode function by imposing the relation 
 $B_\mathbf{k}=iA_\mathbf{k}$; this choice, alongside the relation \ref{eq: Relation A B de Sitter}, meaning that  $|A_\mathbf{k}|=\sqrt{\sfrac{\pi}{4 k}\text{Im}\left(v\bar{v}'\right)}$; and therefore, the Bunch-Davies temporal mode functions are given (except for an irrelevant phase) by
 \begin{equation}
-	v_\mathbf{k}(\eta)=\sqrt{\frac{\pi}{4 }|\eta|\text{Im}\left(v\bar{v}'\right)}H^{(1)}_\nu\left(k|\eta|\right),
+	v_\mathbf{k}(\eta)=\sqrt{\frac{\pi}{4 }|\eta|\text{Im}\left(v\bar{v}'\right)}\,H^{(1)}_\nu\left(k|\eta|\right),
 \end{equation}
 where $H^{(1)}_\nu(s)\equiv J_\nu(s)+iY_\nu(s)$ is known as the Hankel function of the first kind.
 
-This vacuum state is of particular interest \cite{VacuumdeSitter} since it is not time dependent, is invariant under the de Sitter symmetry group and, for a conformal theory (i.e. $m=0$ and $\xi=\sfrac{1}{6}$) the temporal mode function is given by\footnote{For such theory, $\omega_\mathbf{k}=k$ and $\nu=\sfrac{1}{2}$; and for such value, the Hankel function can be written as $$H^{(1)}_{\sfrac{1}{2}}(s)=-i\sqrt{\frac{2}{\pi s}}e^{is}.$$}
+This vacuum state is of particular interest \cite{VacuumdeSitter} since it is not time dependent, it is invariant under the de Sitter symmetry group and, for a conformal theory (i.e. $m=0$ and $\xi=\sfrac{1}{6}$) the temporal mode function is given by\footnote{For such a theory, $\omega_\mathbf{k}=k$ and $\nu=\sfrac{1}{2}$; and for such value, the Hankel function can be written as $$H^{(1)}_{\sfrac{1}{2}}(s)=-i\sqrt{\frac{2}{\pi s}}e^{is}.$$}
 \begin{equation}
 	v_\mathbf{k}(\eta)=-i\sqrt{\frac{\hbar\text{Im}\left( v\bar{v}'\right)}{ 2\omega_\mathbf{k}c}}e^{i\omega_\mathbf{k}|\eta|c\sfrac{}{\hbar}}
 \end{equation}
 which is (up to an irrelevant phase) the standard plane wave temporal mode function.
 
-Any other vacuum state can be obtained by a Bogoliubov transformation of the Bunch-Davies vacuum; from the relation of the Bogoliubov parameters in expression \ref{eq: Bogoliubov coefficients relation Expanding}, one could define a new set of temporal mode functions $\left\{u_\mathbf{k}\right\}$ as
+Any other vacuum state can be obtained via a Bogoliubov transformation of the Bunch-Davies vacuum; from the relation of the Bogoliubov parameters in expression \ref{eq: Bogoliubov coefficients relation Expanding}, one could define a new set of temporal mode functions $\left\{u_\mathbf{k}\right\}$ as
 \begin{equation}
 	u_\mathbf{k}(\eta)\equiv \cosh\alpha \,v_\mathbf{k}(\eta)+e^{i\beta}\sinh\alpha \,\bar{v}_\mathbf{k}(\eta),
 \end{equation}
-where $0\leq \alpha<\infty$ and $-\pi\leq\beta<\pi$ are constant parameters defining the transformation. This new vacuum state denoted by $|_{(\alpha,\,\beta)}0\rangle$ is known as Mottola-Allen vacuum.
+where $0\leq \alpha<\infty$ and $-\pi\leq\beta<\pi$ are constant parameters defining the transformation. This new vacuum state denoted by $|_{(\alpha,\,\beta)}0\rangle$ is known as a Mottola-Allen vacuum.

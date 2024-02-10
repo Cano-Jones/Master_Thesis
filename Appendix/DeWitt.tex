@@ -1,49 +1,69 @@
-\cite{DeWitt}
+One of the most important objects in a theory of quantum fields are the correlation functions; in particular one of them takes on greater significance: the Feynman propagator $G_F(x,x')$, which can be defined for a free scalar field as the solution of the following homegeneous equation
 \begin{equation}
-	g_{\mu\nu}(x)=\eta_{\mu\nu}+\frac{1}{3}R_{\mu\alpha\nu\beta}\,y^\alpha y^\beta-\frac{1}{6}\nabla\gamma R_{\mu\alpha\nu\beta}\,y^\alpha y^\beta y^\gamma+\left[\frac{1}{20}\nabla_\gamma\nabla_\delta\; R_{\mu\alpha\nu\beta}+\frac{2}{45}R_{\alpha\mu\beta\lambda}R^\lambda_{\;\gamma\nu\delta}\right]y^\alpha y^\beta y^\gamma y^\delta+\hdots
+	\left[\partial_\nu\partial^\nu+\mu^2+\xi R(x)\right]G_F(x,x')=-\left[-g(x)\right]^{-\sfrac{1}{2}}\delta^{(d+1)}(x-x').
 \end{equation}
+
+In what follows, we will present a particularly useful representation of the scalar field propagator following the treatment given by \cite{DeWitt}. This representation has important applications on regularization, as was presented in the corresponding section of this thesis (sec. 4). 
+
+Before presenting the mathematical formalism, one must introduce the Riemann normal coordinates $y^\mu$ for a given given point $x$, whose origin is considered $x'$. Using these particular coordinates, one might expand
+\begin{equation}\label{eq: Metric in Riemann coordinates}
+	g_{\mu\nu}(x)=\eta_{\mu\nu}+\frac{1}{3}R_{\mu\alpha\nu\beta}\,y^\alpha y^\beta-\frac{1}{6}\nabla\gamma R_{\mu\alpha\nu\beta}\,y^\alpha y^\beta y^\gamma+\left[\frac{1}{20}\nabla_\gamma\nabla_\delta\; R_{\mu\alpha\nu\beta}+\frac{2}{45}R_{\alpha\mu\beta\lambda}R^\lambda_{\;\gamma\nu\delta}\right]y^\alpha y^\beta y^\gamma y^\delta+\hdots,
+\end{equation}
+where all coefficients are evaluated at $y=0$.
+
+Next, a new two-point function is defined from $G_F(x,x')$ as
 \begin{equation}
-	\left[\partial_\nu\partial^\nu+\mu^2+\xi R(x)\right]G_F(x,x')=-\left[-g(x)\right]^{-\sfrac{1}{2}}\delta^{(d+1)}(x-x')
+	\mathcal{G}_F(x,x')\equiv \left[-g(x)\right]^{-\sfrac{1}{4}}G_F(x,x'),
 \end{equation}
+alongside its Fourier transform
 \begin{equation}
-	\mathcal{G}_F(x,x')\equiv \left[-g(x)\right]^{-\sfrac{1}{4}}G_F(x,x')
+	\mathcal{G}_F(x,x')=\int \frac{\td^{d+1}k}{(2\pi\hbar)^{d+1}}\mathcal{G}_F(k)e^{-iky\hbar^{-1}};
 \end{equation}
-\begin{equation}
-	\mathcal{G}_F(x,x')=\int \frac{\td^{d+1}k}{(2\pi\hbar)^{d+1}}\mathcal{G}_F(k)e^{-iky\hbar^{-1}}
-\end{equation}
+where $ky\equiv \eta_\mu\nu k^\mu y^\nu$. 
+
+By using Riemann normal coordinates in the propagator equation, and converting to $k$-space, $\mathcal{G}_F(k)$ can be solved by iteration to any desired derivative order (also known as adiabatic order). In particular, for order $4$ one obtains
 \begin{multline}
 	\mathcal{G}_F(k)\approx\hbar^2\left(k^2-\mu^2\hbar^2\right)^{-1}-\hbar^4\left(\frac{1}{6}-\xi\right)\left[R-\frac{i}{2}\left(\nabla_\alpha R\right)\partial^\alpha+\frac{1}{3}a_{\alpha\beta}\partial^\alpha\partial^\beta\right]\left(k^2-\mu^2\hbar^2\right)^{-2}+\\
-	+\hbar^3\left[\frac{2}{3}a^\lambda_\lambda-\left(\frac{1}{6}-\xi\right)^2R^2\right]\left(k^2-\mu^2\hbar^2\right)^{-3}
+	+\hbar^3\left[\frac{2}{3}a^\lambda_\lambda-\left(\frac{1}{6}-\xi\right)^2R^2\right]\left(k^2-\mu^2\hbar^2\right)^{-3},
 \end{multline}
-$\partial_\alpha\equiv\sfrac{\partial }{\partial k^\alpha}$
+with the derivative referring to $k$-space, that is, $\partial_\alpha\equiv\sfrac{\partial }{\partial k^\alpha}$; and the element $a_{\alpha\beta}$ defined as
 \begin{equation}
-	a_{\alpha\beta}\equiv \left[\frac{1}{2}\left(\frac{1}{6}-\xi\right)+\frac{1}{120}\right]\nabla_\alpha\nabla_\beta\, R-\frac{1}{40}\nabla_\lambda\nabla^\lambda\,R_{\alpha\beta}-\frac{1}{30}R^{\;\lambda}_\alpha R_{\lambda\beta}+\frac{1}{60}R^{\kappa\;\lambda}_{\;\alpha\;\beta}R_{\kappa\lambda}+\frac{1}{60}R^{\lambda\mu\kappa}_{\;\;\;\alpha}R_{\lambda\mu\kappa\beta}
+	a_{\alpha\beta}\equiv \left[\frac{1}{2}\left(\frac{1}{6}-\xi\right)+\frac{1}{120}\right]\nabla_\alpha\nabla_\beta\, R-\frac{1}{40}\nabla_\lambda\nabla^\lambda\,R_{\alpha\beta}-\frac{1}{30}R^{\;\lambda}_\alpha R_{\lambda\beta}+\frac{1}{60}R^{\kappa\;\lambda}_{\;\alpha\;\beta}R_{\kappa\lambda}+\frac{1}{60}R^{\lambda\mu\kappa}_{\;\;\;\alpha}R_{\lambda\mu\kappa\beta}.
 \end{equation}
-\begin{equation}
-	\mathcal{G}_F(x,x')=\int \frac{\td^{d+1}k}{(2\pi\hbar)^{d+1}}e^{iky\hbar^{-1}}\left[a_0(x,x')-a_1(x,x')\frac{\partial}{\partial \mu^2}+a_2(x,x')\left(\frac{\partial}{\partial \mu^2}\right)^2\right]\hbar^2\left(k^2-\mu^2\hbar^2\right)^{-1}
+
+If one were to write
+\begin{equation}\label{eq: g_F before integral}
+	\mathcal{G}_F(x,x')=\int \frac{\td^{d+1}k}{(2\pi\hbar)^{d+1}}e^{iky\hbar^{-1}}\left[a_0(x,x')-a_1(x,x')\frac{\partial}{\partial \mu^2}+a_2(x,x')\left(\frac{\partial}{\partial \mu^2}\right)^2\right]\hbar^2\left(k^2-\mu^2\hbar^2\right)^{-1},
 \end{equation}
+then (up to fourth adiabatic order), the element $a_i(x,x')$  must equal
 \begin{subequations}
 	\begin{gather}
 		a_0(x,x')=1,\quad a_1(x,x')=\left(\frac{1}{6}-\xi\right)\left(R-\frac{1}{2}\nabla_\alpha R\,y^\alpha\right)-\frac{1}{3}a_{\alpha\beta} y^\alpha y^\beta\tag{\theequation \,\,a,b}\\
-		a_2(x,x')=\frac{1}{2}\left(\frac{1}{6}-\xi\right)^2R^2+\frac{1}{3}a^\lambda_{\;\lambda}\tag{\theequation \,\,c}
+		a_2(x,x')=\frac{1}{2}\left(\frac{1}{6}-\xi\right)^2R^2+\frac{1}{3}a^\lambda_{\;\lambda}\tag{\theequation \,\,c};
 	\end{gather}
 \end{subequations}
-right hand side evaluated at $x'$
-\begin{equation}
-	\hbar^2(k^2-\mu^2\hbar^2+i\epsilon)^{-1}=-\int_0^\infty e^{-is(k^2-\mu^2\hbar^2+i\epsilon)\hbar^{-2}}
-\end{equation}
-\begin{equation}
-	\mathcal{G}_F(x,x')=-(4\pi)^{-\sfrac{(d+1)}{2}}\int_0^\infty F(x,x';is)\exp{\left[-is\mu^2+\frac{\sigma(x,x')}{2is}\right]}\,\td(is)
-\end{equation}
-$\sigma(x,x')\equiv\sfrac{1}{2}y_\alpha y^\alpha$
+all right hand side elements evaluated at $x'$.
 
-upto adiabatic order $N$
+The next step is to consider the integral representation
 \begin{equation}
-	F(x,x';is)\equiv \sum_{n=0}^{\sfrac{N}{2}}a_n(x,x')(is)^n
+	\hbar^2(k^2-\mu^2\hbar^2+i\epsilon)^{-1}=-\int_0^\infty e^{-is(k^2-\mu^2\hbar^2+i\epsilon)\hbar^{-2}}\td(is),
 \end{equation}
+which, when added into equation \ref{eq: g_F before integral} will give as a result
 \begin{equation}
-	G_F^{\text{DS}}(x,y)\equiv -i\frac{\Delta^{1/2}(x,y)}{(4\pi)^{\sfrac{(d+1)}{2}}}\int^\infty_0F(x,y;is)\exp{\left[-is\mu^2+\frac{\sigma(x,y)}{2is}\right]}(is)^{-\sfrac{(d+1)}{2}}\,\td (is)
+	\mathcal{G}_F(x,x')=-(4\pi)^{-\sfrac{(d+1)}{2}}\int_0^\infty F(x,x';is)\exp{\left[-is\mu^2+\frac{\sigma(x,x')}{2is}\right]}\,\td(is),
 \end{equation}
+where $\sigma(x,x')\equiv\sfrac{1}{2}y_\alpha y^\alpha$ can be be understood as half of the squared geodesic distance between $x$ and $x'$. Here we have introduced the function $F(x,x';is)$ representing the dependence of the $a_i(x,x')$ terms up to an adiabatic order $N$, such that
 \begin{equation}
-	\Delta(x,x')\equiv -\text{det}\left[\partial_\mu\partial_\nu\sigma(x,x')\right]\left[g(x)g(x')\right]^{-\sfrac{1}{2}}
+	F(x,x';is)\equiv \sum_{n=0}^{\sfrac{N}{2}}a_n(x,x')(is)^n.
 \end{equation}
+
+Finally, using the relation between $\mathcal{G}_F(x,x')$ and the propagator $G_F(x,x')$, one can obtain what is known as the DeWitt-Schinger representation of the scalar propagator; given by
+\begin{equation}
+	G_F^{\text{DS}}(x,x')\equiv -i\frac{\Delta^{1/2}(x,x')}{(4\pi)^{\sfrac{(d+1)}{2}}}\int^\infty_0F(x,y;is)\exp{\left[-is\mu^2+\frac{\sigma(x,x')}{2is}\right]}(is)^{-\sfrac{(d+1)}{2}}\,\td (is);
+\end{equation}
+where $\Delta(x,x')$ is the so called Van Vleck determinant, defined as 
+\begin{equation}
+	\Delta(x,x')\equiv -\text{det}\left[\partial_\mu\partial_\nu\sigma(x,x')\right]\left[g(x)g(x')\right]^{-\sfrac{1}{2}}.
+\end{equation}
+
+As a last note, the equality only really holds if the closed expression of the function $F(x,x';is)$ is known, otherwise it must be understood as a limiting expansion, in which each $a_i(x,x')$ term follows some recursive rules.
