@@ -1,4 +1,6 @@
-# PROBLEMS OF QUANTUM FIELD THEORIES ON CURVED SPACETIMES
+<p align="center">
+  <img src="Images/Cover_Image.png" />
+</p>
 Quantum Field Theory is the fundamental theoretical framework of the Stan-
 dard Model of elementary particles. This theory is formulated in a Minkowski
 space-time. However, the actual space-time metric is never of that type. On
